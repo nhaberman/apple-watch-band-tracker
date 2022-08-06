@@ -17,6 +17,8 @@
 		0796D2F1289E131C00591131 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2C7289E131900591131 /* ContentView.swift */; };
 		0796D2F2289E131C00591131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0796D2C8289E131C00591131 /* Assets.xcassets */; };
 		0796D2F3289E131C00591131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0796D2C8289E131C00591131 /* Assets.xcassets */; };
+		07B1A995289E1A8000888109 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1A994289E1A8000888109 /* Functions.swift */; };
+		07B1A996289E1A8000888109 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B1A994289E1A8000888109 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		0796D2E6289E131C00591131 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0796D2EA289E131C00591131 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		0796D2EC289E131C00591131 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		07B1A994289E1A8000888109 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 			children = (
 				0796D2C6289E131900591131 /* Apple_Watch_Band_TrackerApp.swift */,
 				0796D2C7289E131900591131 /* ContentView.swift */,
+				07B1A994289E1A8000888109 /* Functions.swift */,
 				0796D2C8289E131C00591131 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -301,6 +305,7 @@
 			files = (
 				0796D2F0289E131C00591131 /* ContentView.swift in Sources */,
 				0796D2EE289E131C00591131 /* Apple_Watch_Band_TrackerApp.swift in Sources */,
+				07B1A995289E1A8000888109 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +315,7 @@
 			files = (
 				0796D2F1289E131C00591131 /* ContentView.swift in Sources */,
 				0796D2EF289E131C00591131 /* Apple_Watch_Band_TrackerApp.swift in Sources */,
+				07B1A996289E1A8000888109 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22NW9J6LJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -492,6 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22NW9J6LJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
