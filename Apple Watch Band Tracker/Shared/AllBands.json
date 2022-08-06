@@ -1,0 +1,30 @@
+{
+    "AllBands": [
+        {
+            "BandType": "SportBand",
+            "Color": "Black",
+            "Generation": 1
+            "Season": "Spring"
+            "Year": 2015
+        },
+        {
+            "BandType": "SportBand",
+            "Color": "White",
+            "Generation": 1
+            "Season": "Spring"
+            "Year": 2015
+        },
+        {
+            "BandType": "LinkBracelet",
+            "Color": "Silver",
+            "Season": "Spring"
+            "Year": 2015
+        },
+        {
+            "BandType": "LinkBracelet",
+            "Color": "SpaceBlack",
+            "Season": "Fall"
+            "Year": 2015
+        }
+    ]
+}
