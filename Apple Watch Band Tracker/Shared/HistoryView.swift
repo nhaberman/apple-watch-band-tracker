@@ -9,8 +9,11 @@ import SwiftUI
 
 struct HistoryView: View {
     init() {
-        Theme.navigationBarColors(background: .blue, titleColor: .white)
+        //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
+    
+    @State private var showTrackBandSheet = false
+    @State private var showSettingsSheet = false
     
     var body: some View {
         NavigationView {
@@ -23,8 +26,37 @@ struct HistoryView: View {
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .navigationTitle("History")
+            .navigationTitle("Band History")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        print("tapped settings")
+                        showSettingsSheet = true
+                    } label: {
+                        Label("Settings", systemImage: "gear.circle")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("tapped track band")
+                        showTrackBandSheet = true
+                    } label: {
+                        Label("Track Band", systemImage: "plus.circle")
+                    }
+                }
+            }
         }
+        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
+            print("goodbye track band sheet")
+        }, content: {
+            TrackBandView()
+        })
+        
+        .sheet(isPresented: $showSettingsSheet, onDismiss: {
+            print("goodbye settings sheet")
+        }, content: {
+            SettingsView()
+        })
     }
 }
 

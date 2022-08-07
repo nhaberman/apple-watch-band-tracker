@@ -9,8 +9,10 @@ import SwiftUI
 
 struct TrackBandView: View {
     init() {
-        Theme.navigationBarColors(background: .blue, titleColor: .white)
+        //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -34,8 +36,6 @@ struct TrackBandView: View {
                         Text("test1")
                     }
                 }
-                Text("Select Band Type")
-                    .padding()
                 
                 Text("Select Band Color")
                     .padding()
@@ -43,12 +43,35 @@ struct TrackBandView: View {
                 Text("Select Time")
                     .padding()
                 
-                Text("Button to save")
-                    .padding()
+                Button {
+                    print("Save Band")
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "applewatch.side.right")
+                            .font(.title)
+                        Text("Track Band")
+                    }
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding(6)
+                }
+                .buttonStyle(.borderedProminent)
+                .padding()
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Track Band")
-            
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("tapped cancel")
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Label("Cancel", systemImage: "xmark.circle")
+                    }
+                }
+            }
         }
     }
 }

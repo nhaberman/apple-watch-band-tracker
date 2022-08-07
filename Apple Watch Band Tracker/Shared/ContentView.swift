@@ -10,22 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            TrackBandView()
-                .tabItem {
-                    Label("Track", systemImage: "applewatch.side.right")
-                }.tag(1)
             HistoryView()
                 .tabItem {
                     Label("History", systemImage: "list.bullet")
+                }.tag(1)
+            BandsView()
+                .tabItem {
+                    Label("Bands", systemImage: "applewatch.side.right")
                 }.tag(2)
             StatsView()
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }.tag(3)
-            BandsView()
-                .tabItem {
-                    Label("Bands", systemImage: "square.stack.3d.up")
-                }.tag(4)
         }
     }
 }

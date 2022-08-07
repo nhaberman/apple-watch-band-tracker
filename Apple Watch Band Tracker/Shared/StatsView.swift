@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StatsView: View {
     init() {
-        Theme.navigationBarColors(background: .blue, titleColor: .white)
+        //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
     var body: some View {
