@@ -22,9 +22,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }.tag(3)
-            AllBandsView()
+            BandsView()
                 .tabItem {
-                    Label("All Bands", systemImage: "square.stack.3d.up")
+                    Label("Bands", systemImage: "square.stack.3d.up")
                 }.tag(4)
         }
     }

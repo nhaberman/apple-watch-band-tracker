@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HistoryView: View {
+    init() {
+        Theme.navigationBarColors(background: .blue, titleColor: .white)
+    }
+    
     var body: some View {
         NavigationView {
             VStack(

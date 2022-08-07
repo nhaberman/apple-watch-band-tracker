@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct StatsView: View {
+    init() {
+        Theme.navigationBarColors(background: .blue, titleColor: .white)
+    }
+    
     var body: some View {
         NavigationView {
             VStack(
@@ -34,7 +38,20 @@ struct StatsView_Previews: PreviewProvider {
 
 
 private var SampleWatchBands = [
-    WatchBand(bandType: BandType.SportBand, color: "Capri Blue", generation: 0, season: Season.spring, year: 2021),
-    WatchBand(bandType: BandType.ClassicBuckle, color: "Cosmos Blue", generation: 0, season: Season.fall, year: 2017),
-    WatchBand(bandType: BandType.SportBand, color: "Plum", generation: 0, season: Season.winter, year: 2020),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Capri Blue",
+        season: Season.spring,
+        year: 2021),
+    WatchBand(
+        bandType: BandType.ClassicBuckle,
+        color: "Saddle Brown",
+        generation: 3,
+        season: Season.fall,
+        year: 2017),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Plum",
+        season: Season.winter,
+        year: 2020),
 ]

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct TrackBandView: View {
+    init() {
+        Theme.navigationBarColors(background: .blue, titleColor: .white)
+    }
+    
     var body: some View {
         NavigationView {
             VStack(
@@ -44,6 +48,7 @@ struct TrackBandView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Track Band")
+            
         }
     }
 }
