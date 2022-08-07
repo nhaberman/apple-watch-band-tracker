@@ -35,6 +35,8 @@
 		07D273C8289EF28A006A8839 /* WatchBand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C6289EF28A006A8839 /* WatchBand.swift */; };
 		07D273CA28A028BC006A8839 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C928A028BC006A8839 /* SettingsView.swift */; };
 		07D273CB28A028BD006A8839 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C928A028BC006A8839 /* SettingsView.swift */; };
+		07D273CD28A04619006A8839 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273CC28A04619006A8839 /* Watch.swift */; };
+		07D273CE28A04619006A8839 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273CC28A04619006A8839 /* Watch.swift */; };
 		07E0F6BF289F354700E75E99 /* WatchBandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* WatchBandHistory.swift */; };
 		07E0F6C0289F354700E75E99 /* WatchBandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* WatchBandHistory.swift */; };
 		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
@@ -80,6 +82,7 @@
 		07D273C3289EF1B7006A8839 /* AllBands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllBands.json; sourceTree = "<group>"; };
 		07D273C6289EF28A006A8839 /* WatchBand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBand.swift; sourceTree = "<group>"; };
 		07D273C928A028BC006A8839 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		07D273CC28A04619006A8839 /* Watch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
 		07E0F6BE289F354700E75E99 /* WatchBandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +146,7 @@
 				07D273BD289EE9B7006A8839 /* BandsView.swift */,
 				07D273C0289EEAB1006A8839 /* BandType.swift */,
 				07D273C6289EF28A006A8839 /* WatchBand.swift */,
+				07D273CC28A04619006A8839 /* Watch.swift */,
 				07E0F6BE289F354700E75E99 /* WatchBandHistory.swift */,
 			);
 			path = Shared;
@@ -347,6 +351,7 @@
 			files = (
 				07D273C1289EEAB1006A8839 /* BandType.swift in Sources */,
 				07E0F6BF289F354700E75E99 /* WatchBandHistory.swift in Sources */,
+				07D273CD28A04619006A8839 /* Watch.swift in Sources */,
 				0796D2F0289E131C00591131 /* ContentView.swift in Sources */,
 				07D273BE289EE9B7006A8839 /* BandsView.swift in Sources */,
 				07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */,
@@ -366,6 +371,7 @@
 			files = (
 				07D273C2289EEAB1006A8839 /* BandType.swift in Sources */,
 				07E0F6C0289F354700E75E99 /* WatchBandHistory.swift in Sources */,
+				07D273CE28A04619006A8839 /* Watch.swift in Sources */,
 				0796D2F1289E131C00591131 /* ContentView.swift in Sources */,
 				07D273BF289EE9B7006A8839 /* BandsView.swift in Sources */,
 				07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */,

@@ -12,6 +12,8 @@ struct StatsView: View {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
+    @State private var showSettingsSheet = false
+    
     var body: some View {
         NavigationView {
             VStack(
@@ -23,11 +25,23 @@ struct StatsView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Stats")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        print("tapped settings")
+                        showSettingsSheet = true
+                    } label: {
+                        Label("Settings", systemImage: "gear.circle")
+                    }
+                }
+            }
         }
+        .sheet(isPresented: $showSettingsSheet, onDismiss: {
+            print("goodbye settings sheet")
+        }, content: {
+            SettingsView()
+        })
     }
-    
-    
-
 }
 
 struct StatsView_Previews: PreviewProvider {

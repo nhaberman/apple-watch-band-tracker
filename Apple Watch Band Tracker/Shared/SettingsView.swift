@@ -13,15 +13,17 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            VStack(
-                alignment: .leading
-            ) {
-                Text("setting 1")
-                    .padding()
-                
-                Text("setting 2")
-                    .padding()
+            ScrollView {
+                LazyVStack(
+                    alignment: .leading
+                ) {
+                    ForEach(1...100, id: \.self) {
+                        Text("Test Setting \($0)")
+                            .padding()
+                    }
+                }
             }
+            
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)

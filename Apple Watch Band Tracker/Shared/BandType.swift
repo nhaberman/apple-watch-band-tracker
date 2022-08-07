@@ -11,6 +11,7 @@ public enum BandType: String, CaseIterable, Identifiable {
     
     public var id: Self { self }
     
+    case None = "None"
     case SportBand = "Sport Band"
     case NikeSportBand = "Nike Sport Band"
     case SportLoop = "Sport Loop"

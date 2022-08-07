@@ -51,7 +51,6 @@ struct HistoryView: View {
         }, content: {
             TrackBandView()
         })
-        
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")
         }, content: {

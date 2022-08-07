@@ -12,6 +12,8 @@ struct BandsView: View {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
+    @State private var showSettingsSheet = false
+    
     var body: some View {
         NavigationView {
             VStack(
@@ -23,14 +25,23 @@ struct BandsView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Watch Bands")
-            .toolbar(content: {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(systemName: "arrow.right")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        print("tapped settings")
+                        showSettingsSheet = true
+                    } label: {
+                        Label("Settings", systemImage: "gear.circle")
+                    }
                 }
-            })
+            }
         }
+        .sheet(isPresented: $showSettingsSheet, onDismiss: {
+            print("goodbye settings sheet")
+        }, content: {
+            SettingsView()
+        })
     }
-        
 }
 
 struct BandsView_Previews: PreviewProvider {

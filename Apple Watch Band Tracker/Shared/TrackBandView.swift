@@ -14,34 +14,50 @@ struct TrackBandView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var selectedWatch: Watch = Watch()
+    @State private var selectedBandType: BandType = BandType.None
+    @State private var selectedBand: WatchBand = WatchBand()
+    @State private var selectedDate = Date()
+    @State private var useCurrentDate = true
+    
     var body: some View {
         NavigationView {
-            VStack(
-                alignment: .leading
-            ) {
-                GroupBox(
-                    label: Text("Select Apple Watch")) {
-                    List {
-                        Text("test1")
-                        Text("test1")
-                        Text("test1")
+            Form {
+                Section("Select the Apple Watch:") {
+                    Picker("Watch", selection: $selectedWatch) {
+                        ForEach(Watches, id: \.self) { watch in
+                            Text(watch.formattedName())
+                        }
                     }
                 }
-                
-                GroupBox(
-                    label: Text("Select Band Type")) {
+                Section("Select the Band:") {
                     List {
-                        Text("test1")
-                        Text("test1")
-                        Text("test1")
+                        Picker("Band Type", selection: $selectedBandType) {
+                            ForEach(BandType.allCases) { bandType in
+                                if (bandType != BandType.None) {
+                                    Text(bandType.rawValue)
+                                }
+                            }
+                        }
+                    }
+                    List {
+                        Picker("Band", selection: $selectedBand) {
+                            ForEach(WatchBands, id: \.self) { band in
+                                if (band.bandType == selectedBandType) {
+                                    Text(band.formattedColorName())
+                                }
+                            }
+                        }
                     }
                 }
-                
-                Text("Select Band Color")
-                    .padding()
-                
-                Text("Select Time")
-                    .padding()
+                Section("Select the Time:") {
+                    Toggle(isOn: $useCurrentDate) {
+                        Text("Use Current Time")
+                    }
+                    if (!useCurrentDate) {
+                        DatePicker("Time Worn", selection: $selectedDate)
+                    }
+                }
                 
                 Button {
                     print("Save Band")
@@ -52,14 +68,8 @@ struct TrackBandView: View {
                             .font(.title)
                         Text("Track Band")
                     }
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding(6)
                 }
-                .buttonStyle(.borderedProminent)
-                .padding()
-                
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Track Band")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -81,3 +91,65 @@ struct TrackBandView_Previews: PreviewProvider {
         TrackBandView()
     }
 }
+
+private var Watches = [
+    Watch(series: 0, color: "Stainless Steel", size: 42),
+    Watch(series: 0, color: "Stainless Steel", size: 38),
+    Watch(series: 2, color: "Space Black Stainless Steel", size: 42),
+    Watch(series: 3, color: "Space Gray Aluminum", edition: "Nike", size: 42),
+    Watch(series: 5, color: "Gold Stainless Steel", size: 44),
+    Watch(series: 5, color: "Space Black Stainless Steel", size: 44),
+    Watch(series: 7, color: "Titanium", edition: "Edition", size: 45),
+]
+
+
+private var WatchBands = [
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Capri Blue",
+        season: Season.spring,
+        year: 2021),
+    WatchBand(
+        bandType: BandType.ClassicBuckle,
+        color: "Saddle Brown",
+        generation: 3,
+        season: Season.fall,
+        year: 2017),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Plum",
+        season: Season.winter,
+        year: 2020),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Capri Blue",
+        season: Season.spring,
+        year: 2021),
+    WatchBand(
+        bandType: BandType.ClassicBuckle,
+        color: "Saddle Brown",
+        generation: 3,
+        season: Season.fall,
+        year: 2017),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Plum",
+        season: Season.winter,
+        year: 2020),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Capri Blue",
+        season: Season.spring,
+        year: 2021),
+    WatchBand(
+        bandType: BandType.ClassicBuckle,
+        color: "Saddle Brown",
+        generation: 3,
+        season: Season.fall,
+        year: 2017),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Plum",
+        season: Season.winter,
+        year: 2020),
+]
