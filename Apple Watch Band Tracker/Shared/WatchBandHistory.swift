@@ -13,6 +13,12 @@ class WatchBandHistory: Identifiable {
     var watchBand: WatchBand
     var timeWorn: Date
     
+    var dateWorn: String {
+        get {
+            return timeWorn.formatted(date: .complete, time: .omitted)
+        }
+    }
+    
     init(watchBand: WatchBand, timeWorn: Date) {
         self.watchBand = watchBand
         self.timeWorn = timeWorn
@@ -32,9 +38,7 @@ struct WatchBandHistoryView : View {
     
     var body: some View {
         HStack {
-            Image(systemName: "applewatch.side.right")
-                .resizable()
-                .frame(width: 40, height: 40, alignment: .center)
+            
             VStack(alignment: .leading) {
                 WatchBandView(watchBand: watchBandHistory.watchBand)
                 Text(watchBandHistory.timeWornString())

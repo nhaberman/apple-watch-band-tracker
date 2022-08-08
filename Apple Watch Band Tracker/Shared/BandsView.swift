@@ -19,8 +19,14 @@ struct BandsView: View {
             VStack(
                 alignment: .leading
             ) {
-                List(SampleWatchBandHistories) {
-                    WatchBandHistoryView(watchBandHistory: $0.self)
+                List(BandType.allCases) { value in
+                    if (value != BandType.None) {
+                        Text(value.rawValue)
+                    }
+                }
+                
+                List(SampleWatchBands) {
+                    WatchBandView(watchBand: $0.self)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -50,50 +56,21 @@ struct BandsView_Previews: PreviewProvider {
     }
 }
 
-private var SampleWatchBandHistories = [
-    WatchBandHistory(
-        watchBand: WatchBand(
-            bandType: BandType.SportBand,
-            color: "Capri Blue",
-            season: Season.spring,
-            year: 2021),
-        timeWorn: Date(timeIntervalSinceNow: -60)),
-    WatchBandHistory(
-        watchBand: WatchBand(
-            bandType: BandType.ClassicBuckle,
-            color: "Cosmos Blue",
-            generation: 4,
-            season: Season.fall,
-            year: 2017),
-        timeWorn: Date(timeIntervalSinceNow: -6000)),
-    WatchBandHistory(
-        watchBand: WatchBand(
-            bandType: BandType.SportBand,
-            color: "Plum",
-            season: Season.winter,
-            year: 2020),
-        timeWorn: Date(timeIntervalSinceNow: -40000)),
-    WatchBandHistory(
-        watchBand: WatchBand(
-            bandType: BandType.SportLoop,
-            color: "Midnight Blue",
-            generation: 2,
-            season: Season.fall,
-            year: 2019),
-        timeWorn: Date(timeIntervalSinceNow: -120000)),
-    WatchBandHistory(
-        watchBand: WatchBand(
-            bandType: BandType.ClassicBuckle,
-            color: "Dark Aubergine",
-            generation: 4,
-            season: Season.fall,
-            year: 2017),
-        timeWorn: Date(timeIntervalSinceNow: -140000)),
-    WatchBandHistory(
-        watchBand: WatchBand(
-            bandType: BandType.BraidedSoloLoop,
-            color: "Bright Green",
-            season: Season.spring,
-            year: 2022),
-        timeWorn: Date(timeIntervalSinceNow: -185000)),
+private var SampleWatchBands = [
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Capri Blue",
+        season: Season.spring,
+        year: 2021),
+    WatchBand(
+        bandType: BandType.ClassicBuckle,
+        color: "Saddle Brown",
+        generation: 3,
+        season: Season.fall,
+        year: 2017),
+    WatchBand(
+        bandType: BandType.SportBand,
+        color: "Plum",
+        season: Season.winter,
+        year: 2020),
 ]
