@@ -13,9 +13,10 @@ class WatchBandHistory: Identifiable {
     var watchBand: WatchBand
     var timeWorn: Date
     
-    var dateWorn: String {
+    var dateWorn: Date {
         get {
-            return timeWorn.formatted(date: .complete, time: .omitted)
+            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: timeWorn)
+            return Calendar.current.date(from: dateComponents)!
         }
     }
     

@@ -22,7 +22,7 @@ struct HistoryView: View {
             ) {
                 List {
                     ForEach(SampleWatchBandHistoriesGrouped) { item in
-                        Section(header: Text(item.historyDate)) {
+                        Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.WatchBandHistories) { subItem in
                                 WatchBandHistoryView(watchBandHistory: subItem.self)
                             }
@@ -83,7 +83,7 @@ struct HistoryView_Previews: PreviewProvider {
 
 
 struct HistoryDate: Identifiable {
-    let historyDate: String
+    let historyDate: Date
     let WatchBandHistories: [WatchBandHistory]
     let id = UUID()
 }
@@ -180,7 +180,7 @@ private let SampleWatchBandHistories = [
 func groupByDate() -> [HistoryDate] {
     var results = [HistoryDate]()
     
-    let allDates: [String] = SampleWatchBandHistories.map { history in
+    let allDates: [Date] = SampleWatchBandHistories.map { history in
         history.dateWorn
     }
     
