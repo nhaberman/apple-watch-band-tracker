@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HistoryView()
+            HistoryMenuView()
                 .tabItem {
                     Label("History", systemImage: "list.bullet")
                 }.tag(1)

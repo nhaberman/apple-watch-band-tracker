@@ -12,6 +12,8 @@ struct HistoryView: View {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
+    var lookbackDays : Int = Int.max
+    
     @State private var showTrackBandSheet = false
     @State private var showSettingsSheet = false
     
@@ -37,6 +39,7 @@ struct HistoryView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Band History")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
