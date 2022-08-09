@@ -27,6 +27,12 @@ class BandHistory: Identifiable {
         self.timeWorn = timeWorn
     }
     
+    init() {
+        self.band = Band()
+        self.watch = Watch()
+        self.timeWorn = Date()
+    }
+    
     func timeWornString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long

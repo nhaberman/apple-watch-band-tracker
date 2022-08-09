@@ -40,7 +40,11 @@ struct HistoryView: View {
                     if (item.historyDate > lookBackDate) {
                         Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.BandHistories) { subItem in
-                                BandHistoryView(bandHistory: subItem.self)
+                                NavigationLink {
+                                    BandHistoryDetailsView(bandHistory: subItem.self)
+                                } label: {
+                                    BandHistoryView(bandHistory: subItem.self)
+                                }
                             }
                         }
                     }
