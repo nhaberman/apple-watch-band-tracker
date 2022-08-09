@@ -19,8 +19,8 @@ struct BandHistoryDetailsView: View {
         VStack(alignment: .leading) {
             List {
                 BandView(band: bandHistory.band)
+                WatchView(watch: bandHistory.watch)
                 Text(bandHistory.timeWornString())
-                Text(bandHistory.watch.formattedName())
             }
         }
     }

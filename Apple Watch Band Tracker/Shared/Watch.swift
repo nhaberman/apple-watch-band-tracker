@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Watch: Identifiable, Hashable {
     static func == (lhs: Watch, rhs: Watch) -> Bool {
@@ -43,8 +44,8 @@ class Watch: Identifiable, Hashable {
     
     init() {
         self.series = 0
-        self.color = ""
-        self.edition = ""
+        self.color = "Gold"
+        self.edition = "Edition"
         self.size = 42
     }
     
@@ -55,15 +56,15 @@ class Watch: Identifiable, Hashable {
         result += formattedSeries()
         
         // color line
-        result += "\n\(color)"
+        result += "\n\(color)\n"
         
         // size line
-        result += "\n\(size)mm"
+        result += formattedSize()
         
         return result
     }
     
-    private func formattedSeries() -> String {
+    func formattedSeries() -> String {
         var result: String = ""
         
         if (series == 0) {
@@ -79,5 +80,37 @@ class Watch: Identifiable, Hashable {
         }
         
         return result
+    }
+    
+    func formattedSize() -> String {
+        return "\(size)mm"
+    }
+}
+
+struct WatchView : View {
+    let watch: Watch
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "applewatch")
+                .aspectRatio(contentMode: .fill)
+            VStack(alignment: .leading) {
+                Text(watch.formattedSeries())
+                    .fontWeight(Font.Weight.bold)
+                Text(watch.color)
+                Text(watch.formattedSize())
+            }
+        }
+    }
+}
+
+struct WatchView_Previews: PreviewProvider {
+    static var previews: some View {
+        WatchView(watch: Watch(
+            series: 7,
+            color: "Titanium",
+            edition: "Edition",
+            size: 45
+        ))
     }
 }

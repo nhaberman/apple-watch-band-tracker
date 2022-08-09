@@ -74,10 +74,14 @@ struct BandView : View {
     let band: Band
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(band.bandType.rawValue)
-                .fontWeight(Font.Weight.bold)
-            Text(band.formattedColorName())
+        HStack{
+            Image(systemName: "applewatch.side.right")
+                .aspectRatio(contentMode: .fill)
+            VStack(alignment: .leading) {
+                Text(band.bandType.rawValue)
+                    .fontWeight(Font.Weight.bold)
+                Text(band.formattedColorName())
+            }
         }
     }
 }
