@@ -12,8 +12,9 @@ struct HistoryView: View {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
-    init(lookBackDays : Int) {
+    init(lookBackDays : Int, pageTitle : String) {
         self.lookBackDays = lookBackDays
+        self.pageTitle = pageTitle
     }
     
     var lookBackDays : Int = 365*100
@@ -29,7 +30,6 @@ struct HistoryView: View {
     }
     
     @State private var showTrackBandSheet = false
-    @State private var showSettingsSheet = false
     
     var body: some View {
         VStack(
@@ -60,14 +60,6 @@ struct HistoryView: View {
         .navigationTitle(pageTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    print("tapped settings")
-                    showSettingsSheet = true
-                } label: {
-                    Label("Settings", systemImage: "gear.circle")
-                }
-            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     print("tapped track band")
@@ -81,11 +73,6 @@ struct HistoryView: View {
             print("goodbye track band sheet")
         }, content: {
             TrackBandView()
-        })
-        .sheet(isPresented: $showSettingsSheet, onDismiss: {
-            print("goodbye settings sheet")
-        }, content: {
-            SettingsView()
         })
     }
 }

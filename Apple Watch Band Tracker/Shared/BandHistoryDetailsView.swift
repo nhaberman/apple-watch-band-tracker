@@ -15,14 +15,48 @@ struct BandHistoryDetailsView: View {
         self.bandHistory = bandHistory
     }
     
+    @State private var showEditBandSheet = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             List {
-                BandView(band: bandHistory.band)
-                WatchView(watch: bandHistory.watch)
-                Text(bandHistory.timeWornString())
+                Section("Band") {
+                    BandView(band: bandHistory.band)
+                }
+                Section("Watch") {
+                    WatchView(watch: bandHistory.watch)
+                }
+                Section("Time Worn") {
+                    Text(bandHistory.timeWornString())
+                }
             }
         }
+        .navigationTitle("Band")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(role: .destructive) {
+                    print("tapped delete band")
+                    // delete band
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+                .buttonStyle(.borderless)
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    print("tapped edit band")
+                    showEditBandSheet = true
+                } label: {
+                    Label("Edit", systemImage: "square.and.pencil")
+                }
+            }
+        }
+        .sheet(isPresented: $showEditBandSheet, onDismiss: {
+            print("goodbye track band sheet")
+        }, content: {
+            TrackBandView()
+        })
     }
 }
 
