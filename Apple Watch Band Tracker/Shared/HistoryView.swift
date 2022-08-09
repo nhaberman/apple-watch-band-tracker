@@ -12,18 +12,32 @@ struct HistoryView: View {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
-    var lookbackDays : Int = Int.max
+    init(lookBackDays : Int) {
+        self.lookBackDays = lookBackDays
+    }
+    
+    var lookBackDays : Int = 365*100
+    var pageTitle : String = "No Title Supplied"
+    
+    var lookBackDate: Date {
+        get {
+            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: Date.now)
+            let today = Calendar.current.date(from: dateComponents)!
+            
+            return Date(timeInterval: (Double(lookBackDays * 24 * 20 * 20) * -1), since: today)
+        }
+    }
     
     @State private var showTrackBandSheet = false
     @State private var showSettingsSheet = false
     
     var body: some View {
-        NavigationView {
-            VStack(
-                alignment: .leading
-            ) {
-                List {
-                    ForEach(SampleBandHistoriesGrouped) { item in
+        VStack(
+            alignment: .leading
+        ) {
+            List {
+                ForEach(SampleBandHistoriesGrouped) { item in
+                    if (item.historyDate > lookBackDate) {
                         Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.BandHistories) { subItem in
                                 BandHistoryView(bandHistory: subItem.self)
@@ -31,31 +45,31 @@ struct HistoryView: View {
                         }
                     }
                 }
+            }
 //                List(SampleWatchBandHistories) {
 //                    WatchBandHistoryView(watchBandHistory: $0.self)
 //                    Text($0.self.dateWorn)
 //                }
-                .listStyle(.insetGrouped)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .navigationTitle("Band History")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        print("tapped settings")
-                        showSettingsSheet = true
-                    } label: {
-                        Label("Settings", systemImage: "gear.circle")
-                    }
+            .listStyle(.insetGrouped)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .navigationTitle(pageTitle)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    print("tapped settings")
+                    showSettingsSheet = true
+                } label: {
+                    Label("Settings", systemImage: "gear.circle")
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        print("tapped track band")
-                        showTrackBandSheet = true
-                    } label: {
-                        Label("Track Band", systemImage: "plus.circle")
-                    }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    print("tapped track band")
+                    showTrackBandSheet = true
+                } label: {
+                    Label("Track Band", systemImage: "plus.circle")
                 }
             }
         }

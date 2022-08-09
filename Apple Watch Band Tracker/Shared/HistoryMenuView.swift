@@ -23,22 +23,22 @@ struct HistoryMenuView: View {
                 List {
                     Section("Recent") {
                         NavigationLink {
-                            HistoryView()
+                            HistoryView(lookBackDays: 1)
                         } label: {
                             Label("Today", systemImage: "list.bullet")
                         }
                         NavigationLink {
-                            HistoryView()
+                            HistoryView(lookBackDays: 7)
                         } label: {
                             Label("This Week", systemImage: "list.bullet")
                         }
                         NavigationLink {
-                            HistoryView()
+                            HistoryView(lookBackDays: 30)
                         } label: {
                             Label("This Month", systemImage: "list.bullet")
                         }
                         NavigationLink {
-                            HistoryView()
+                            HistoryView(lookBackDays: 365)
                         } label: {
                             Label("Year to Date", systemImage: "list.bullet")
                         }
