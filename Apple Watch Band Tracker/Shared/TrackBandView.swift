@@ -16,7 +16,7 @@ struct TrackBandView: View {
     
     @State private var selectedWatch: Watch = Watch()
     @State private var selectedBandType: BandType = BandType.None
-    @State private var selectedBand: WatchBand = WatchBand()
+    @State private var selectedBand: Band = Band()
     @State private var selectedDate = Date()
     @State private var useCurrentDate = true
     
@@ -25,7 +25,7 @@ struct TrackBandView: View {
             Form {
                 Section("Select the Apple Watch:") {
                     Picker("Watch", selection: $selectedWatch) {
-                        ForEach(Watches, id: \.self) { watch in
+                        ForEach(SampleWatches, id: \.self) { watch in
                             Text(watch.formattedName())
                         }
                     }
@@ -42,7 +42,7 @@ struct TrackBandView: View {
                     }
                     List {
                         Picker("Band", selection: $selectedBand) {
-                            ForEach(WatchBands, id: \.self) { band in
+                            ForEach(SampleBands, id: \.self) { band in
                                 if (band.bandType == selectedBandType) {
                                     Text(band.formattedColorName())
                                 }
@@ -91,65 +91,3 @@ struct TrackBandView_Previews: PreviewProvider {
         TrackBandView()
     }
 }
-
-private var Watches = [
-    Watch(series: 0, color: "Stainless Steel", size: 42),
-    Watch(series: 0, color: "Stainless Steel", size: 38),
-    Watch(series: 2, color: "Space Black Stainless Steel", size: 42),
-    Watch(series: 3, color: "Space Gray Aluminum", edition: "Nike", size: 42),
-    Watch(series: 5, color: "Gold Stainless Steel", size: 44),
-    Watch(series: 5, color: "Space Black Stainless Steel", size: 44),
-    Watch(series: 7, color: "Titanium", edition: "Edition", size: 45),
-]
-
-
-private var WatchBands = [
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Capri Blue",
-        season: Season.spring,
-        year: 2021),
-    WatchBand(
-        bandType: BandType.ClassicBuckle,
-        color: "Saddle Brown",
-        generation: 3,
-        season: Season.fall,
-        year: 2017),
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Plum",
-        season: Season.winter,
-        year: 2020),
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Capri Blue",
-        season: Season.spring,
-        year: 2021),
-    WatchBand(
-        bandType: BandType.ClassicBuckle,
-        color: "Saddle Brown",
-        generation: 3,
-        season: Season.fall,
-        year: 2017),
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Plum",
-        season: Season.winter,
-        year: 2020),
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Capri Blue",
-        season: Season.spring,
-        year: 2021),
-    WatchBand(
-        bandType: BandType.ClassicBuckle,
-        color: "Saddle Brown",
-        generation: 3,
-        season: Season.fall,
-        year: 2017),
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Plum",
-        season: Season.winter,
-        year: 2020),
-]

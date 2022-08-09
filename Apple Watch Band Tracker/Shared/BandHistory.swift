@@ -1,5 +1,5 @@
 //
-//  WatchBandHistory.swift
+//  BandHistory.swift
 //  Apple Watch Band Tracker
 //
 //  Created by Nick Haberman on 8/6/22.
@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-class WatchBandHistory: Identifiable {
+class BandHistory: Identifiable {
     
-    var watchBand: WatchBand
+    var band: Band
+    var watch: Watch
     var timeWorn: Date
     
     var dateWorn: Date {
@@ -20,8 +21,9 @@ class WatchBandHistory: Identifiable {
         }
     }
     
-    init(watchBand: WatchBand, timeWorn: Date) {
-        self.watchBand = watchBand
+    init(band: Band, watch: Watch, timeWorn: Date) {
+        self.band = band
+        self.watch = watch
         self.timeWorn = timeWorn
     }
     
@@ -34,29 +36,34 @@ class WatchBandHistory: Identifiable {
     }
 }
 
-struct WatchBandHistoryView : View {
-    let watchBandHistory: WatchBandHistory
+struct BandHistoryView : View {
+    let bandHistory: BandHistory
     
     var body: some View {
         HStack {
-            
             VStack(alignment: .leading) {
-                WatchBandView(watchBand: watchBandHistory.watchBand)
-                Text(watchBandHistory.timeWornString())
+                BandView(band: bandHistory.band)
+                Text(bandHistory.timeWornString())
             }
         }
     }
 }
 
-struct WatchBandHistoryView_Previews: PreviewProvider {
+struct BandHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchBandHistoryView(watchBandHistory: WatchBandHistory(
-            watchBand: WatchBand(
+        BandHistoryView(bandHistory: BandHistory(
+            band: Band(
                 bandType: BandType.SportLoop,
                 color: "Midnight Blue",
                 generation: 2,
                 season: Season.spring,
                 year: 2021),
+            watch: Watch(
+                series: 7,
+                color: "Titanium",
+                edition: "Edition",
+                size: 45
+            ),
             timeWorn: Date()))
     }
 }

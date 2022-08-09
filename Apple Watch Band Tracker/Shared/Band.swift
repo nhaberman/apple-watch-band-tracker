@@ -1,5 +1,5 @@
 //
-//  WatchBand.swift
+//  Band.swift
 //  Apple Watch Band Tracker
 //
 //  Created by Nick Haberman on 8/6/22.
@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-class WatchBand: Identifiable, Hashable {
-    static func == (lhs: WatchBand, rhs: WatchBand) -> Bool {
+class Band: Identifiable, Hashable {
+    static func == (lhs: Band, rhs: Band) -> Bool {
         return lhs.bandType == rhs.bandType
             && lhs.color == rhs.color
             && lhs.generation == rhs.generation
@@ -70,21 +70,21 @@ class WatchBand: Identifiable, Hashable {
     
 }
 
-struct WatchBandView : View {
-    let watchBand: WatchBand
+struct BandView : View {
+    let band: Band
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(watchBand.bandType.rawValue)
+            Text(band.bandType.rawValue)
                 .fontWeight(Font.Weight.bold)
-            Text(watchBand.formattedColorName())
+            Text(band.formattedColorName())
         }
     }
 }
 
-struct WatchBandView_Previews: PreviewProvider {
+struct BandView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchBandView(watchBand: WatchBand(
+        BandView(band: Band(
             bandType: BandType.ClassicBuckle,
             color: "Saddle Brown",
             generation: 3,

@@ -25,12 +25,12 @@ struct BandsView: View {
                     }
                 }
                 
-                List(SampleWatchBands) {
-                    WatchBandView(watchBand: $0.self)
+                List(SampleBands) {
+                    BandView(band: $0.self)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .navigationTitle("Watch Bands")
+            .navigationTitle("Bands")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
@@ -55,22 +55,3 @@ struct BandsView_Previews: PreviewProvider {
         BandsView()
     }
 }
-
-private var SampleWatchBands = [
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Capri Blue",
-        season: Season.spring,
-        year: 2021),
-    WatchBand(
-        bandType: BandType.ClassicBuckle,
-        color: "Saddle Brown",
-        generation: 3,
-        season: Season.fall,
-        year: 2017),
-    WatchBand(
-        bandType: BandType.SportBand,
-        color: "Plum",
-        season: Season.winter,
-        year: 2020),
-]

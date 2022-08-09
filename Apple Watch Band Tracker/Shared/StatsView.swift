@@ -47,5 +47,3 @@ struct StatsView_Previews: PreviewProvider {
         StatsView()
     }
 }
-
-
