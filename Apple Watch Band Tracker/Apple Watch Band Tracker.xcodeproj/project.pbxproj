@@ -49,6 +49,10 @@
 		07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
 		07ED5D0D28A1F3630044469C /* HistoryMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D0C28A1F3630044469C /* HistoryMenuView.swift */; };
 		07ED5D0E28A1F3630044469C /* HistoryMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D0C28A1F3630044469C /* HistoryMenuView.swift */; };
+		07ED5D1328A345300044469C /* AllWatches.json in Resources */ = {isa = PBXBuildFile; fileRef = 07ED5D1228A345300044469C /* AllWatches.json */; };
+		07ED5D1428A345300044469C /* AllWatches.json in Resources */ = {isa = PBXBuildFile; fileRef = 07ED5D1228A345300044469C /* AllWatches.json */; };
+		07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D1528A345CC0044469C /* WatchRepository.swift */; };
+		07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D1528A345CC0044469C /* WatchRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,8 @@
 		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		07ED5D0C28A1F3630044469C /* HistoryMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMenuView.swift; sourceTree = "<group>"; };
+		07ED5D1228A345300044469C /* AllWatches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllWatches.json; sourceTree = "<group>"; };
+		07ED5D1528A345CC0044469C /* WatchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 				07D273C6289EF28A006A8839 /* Band.swift */,
 				07E0F6BE289F354700E75E99 /* BandHistory.swift */,
 				07032FFA28A1E4D7003388C8 /* Samples.swift */,
+				07ED5D1528A345CC0044469C /* WatchRepository.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				07D273C3289EF1B7006A8839 /* AllBands.json */,
+				07ED5D1228A345300044469C /* AllWatches.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -355,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D273C4289EF1B7006A8839 /* AllBands.json in Resources */,
+				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
 				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D273C5289EF1B7006A8839 /* AllBands.json in Resources */,
+				07ED5D1428A345300044469C /* AllWatches.json in Resources */,
 				0796D2F3289E131C00591131 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +408,7 @@
 				07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */,
 				07032FF228A1E11E003388C8 /* BandRepository.swift in Sources */,
 				0796D2EE289E131C00591131 /* Apple_Watch_Band_TrackerApp.swift in Sources */,
+				07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */,
 				07032FFB28A1E4D7003388C8 /* Samples.swift in Sources */,
 				07D273BB289EE9AD006A8839 /* StatsView.swift in Sources */,
 				07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
@@ -422,6 +433,7 @@
 				07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */,
 				07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */,
 				0796D2EF289E131C00591131 /* Apple_Watch_Band_TrackerApp.swift in Sources */,
+				07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */,
 				07032FFC28A1E4D7003388C8 /* Samples.swift in Sources */,
 				07D273BC289EE9AD006A8839 /* StatsView.swift in Sources */,
 				07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
