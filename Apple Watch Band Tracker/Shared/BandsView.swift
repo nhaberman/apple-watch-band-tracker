@@ -24,8 +24,9 @@ struct BandsView: View {
                         Text(value.rawValue)
                     }
                 }
+                let bandRepository = BandRepository()
                 
-                List(SampleBands) {
+                List(bandRepository.allBands) {
                     BandView(band: $0.self)
                 }
             }

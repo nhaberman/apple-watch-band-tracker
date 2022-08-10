@@ -27,7 +27,7 @@ class Band: Identifiable, Hashable {
         
     var bandType: BandType
     var color: String
-    var pin: String
+    //var pin: String
     var generation: Int
     var season: Season
     var year: Int
@@ -35,7 +35,7 @@ class Band: Identifiable, Hashable {
     init(bandType: BandType, color: String, generation: Int, season: Season, year: Int) {
         self.bandType = bandType
         self.color = color
-        self.pin = ""
+        //self.pin = ""
         self.generation = generation
         self.season = season
         self.year = year
@@ -44,7 +44,7 @@ class Band: Identifiable, Hashable {
     init(bandType: BandType, color: String, season: Season, year: Int) {
         self.bandType = bandType
         self.color = color
-        self.pin = ""
+        //self.pin = ""
         self.generation = 0
         self.season = season
         self.year = year
@@ -53,7 +53,7 @@ class Band: Identifiable, Hashable {
     init() {
         self.bandType = BandType.SportBand
         self.color = "Black"
-        self.pin = ""
+        //self.pin = ""
         self.generation = 0
         self.season = Season.spring
         self.year = 2015
