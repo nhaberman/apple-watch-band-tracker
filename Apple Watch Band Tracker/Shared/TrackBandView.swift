@@ -42,7 +42,7 @@ struct TrackBandView: View {
                     }
                     List {
                         Picker("Band", selection: $selectedBand) {
-                            ForEach(SampleBands, id: \.self) { band in
+                            ForEach(BandRepository().allBands, id: \.self) { band in
                                 if (band.bandType == selectedBandType) {
                                     Text(band.formattedColorName())
                                 }
