@@ -18,22 +18,15 @@ class BandRepository {
     func loadBands() {
         do {
             let allBandsFilePath = Bundle.main.url(forResource: "AllBands", withExtension: "json")
-            
             let allBandsFileContents = try String(contentsOf: allBandsFilePath!)
-            
-            //let allBandsJson = try? JSONSerialization.jsonObject(with: allBandsFileContents, options: JSONSerialization.ReadingOptions())
             let allBandsJson = allBandsFileContents.data(using: .utf8)!
-            
-            let allBandsTemp: AllBandsSource = try! JSONDecoder().decode(AllBandsSource.self, from: allBandsJson)
-            
-            allBands = allBandsTemp.allBands
-            
+            let allBandsSource: AllBandsSource = try! JSONDecoder().decode(AllBandsSource.self, from: allBandsJson)
+            allBands = allBandsSource.allBands
         }
         catch {
             print("unsuccessful")
             allBands = SampleBands
         }
-        
     }
 }
 

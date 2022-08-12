@@ -10,15 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HistoryMenuView()
+            HistoryMainView()
                 .tabItem {
                     Label("History", systemImage: "list.bullet")
                 }.tag(1)
-            BandsView()
+            BandsMainView()
                 .tabItem {
                     Label("Bands", systemImage: "applewatch.side.right")
                 }.tag(2)
-            StatsView()
+            StatsMainView()
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }.tag(3)

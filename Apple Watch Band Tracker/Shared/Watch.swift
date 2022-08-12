@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Watch: Identifiable, Hashable {
+class Watch: Identifiable, Hashable, Decodable {
     static func == (lhs: Watch, rhs: Watch) -> Bool {
         return lhs.series == rhs.series
             && lhs.color == rhs.color

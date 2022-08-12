@@ -1,58 +1,42 @@
 //
-//  AllBandsView.swift
+//  BandsTypeView.swift
 //  Apple Watch Band Tracker
 //
-//  Created by Nick Haberman on 8/6/22.
+//  Created by Nick Haberman on 8/11/22.
 //
 
 import SwiftUI
 
 struct BandsView: View {
-    init() {
-        //Theme.navigationBarColors(background: .blue, titleColor: .white)
+    init(bandType : BandType) {
+        self.bandType = bandType
     }
     
-    @State private var showSettingsSheet = false
+    var bandType : BandType
     
     var body: some View {
-        NavigationView {
-            VStack(
-                alignment: .leading
-            ) {
-                List(BandType.allCases) { value in
-                    if (value != BandType.None) {
-                        Text(value.rawValue)
-                    }
-                }
-                let bandRepository = BandRepository()
-                
-                List(bandRepository.allBands) {
-                    BandView(band: $0.self)
-                }
+        VStack(alignment: .leading) {
+            let bandRepository = BandRepository()
+            let bandList = bandRepository.allBands.filter { item in
+                item.bandType == self.bandType
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .navigationTitle("Bands")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        print("tapped settings")
-                        showSettingsSheet = true
+            List {
+                ForEach(bandList) { band in
+                    NavigationLink {
+                        HistoryView(band: band)
                     } label: {
-                        Label("Settings", systemImage: "gear.circle")
+                        BandView(band: band)
                     }
                 }
             }
         }
-        .sheet(isPresented: $showSettingsSheet, onDismiss: {
-            print("goodbye settings sheet")
-        }, content: {
-            SettingsView()
-        })
+        .navigationTitle(bandType.rawValue)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct BandsView_Previews: PreviewProvider {
     static var previews: some View {
-        BandsView()
+        BandsView(bandType: BandType.SportBand)
     }
 }

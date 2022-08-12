@@ -17,8 +17,14 @@ struct HistoryView: View {
         self.pageTitle = pageTitle
     }
     
+    init(band: Band) {
+        self.band = band
+        self.pageTitle = band.formattedColorName()
+    }
+    
     var lookBackDays : Int = 365*100
     var pageTitle : String = "No Title Supplied"
+    var band : Band? = nil
     
     var lookBackDate: Date {
         get {
@@ -49,14 +55,27 @@ struct HistoryView: View {
                         }
                     }
                 }
+                .swipeActions {
+                    Button(role: .destructive) {
+                        print("test delete")
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
+                .swipeActions {
+                    Button {
+                        print("test edit")
+                    } label: {
+                        Label("Edit", systemImage: "square.and.pencil")
+                    }
+                    .tint(.blue)
+                }
             }
-//                List(SampleWatchBandHistories) {
-//                    WatchBandHistoryView(watchBandHistory: $0.self)
-//                    Text($0.self.dateWorn)
-//                }
+            .refreshable(action: {
+                // code to refresh the list
+            })
             .listStyle(.insetGrouped)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .navigationTitle(pageTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {

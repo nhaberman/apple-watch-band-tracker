@@ -25,7 +25,7 @@ struct TrackBandView: View {
             Form {
                 Section("Select the Apple Watch:") {
                     Picker("Watch", selection: $selectedWatch) {
-                        ForEach(SampleWatches, id: \.self) { watch in
+                        ForEach(WatchRepository().allWatches, id: \.self) { watch in
                             Text(watch.formattedName())
                         }
                     }
