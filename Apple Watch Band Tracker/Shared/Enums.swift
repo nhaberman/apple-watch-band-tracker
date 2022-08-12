@@ -20,11 +20,11 @@ public enum BandType: String, CaseIterable, Identifiable, Decodable {
     case BraidedSoloLoop = "Braided Solo Loop"
     case WovenNylon = "Woven Nylon"
     case ClassicBuckle = "Classic Buckle"
+    case ModernBuckle = "Modern Buckle"
     case LeatherLoop = "Leather Loop"
     case LeatherLink = "Leather Link"
     case MilaneseLoop = "Milanese Loop"
     case LinkBracelet = "Link Bracelet"
-    case ModernBuckle = "Modern Buckle"
     case ThirdPartyBand = "Third Party Band"
 }
 

@@ -7,52 +7,17 @@
 
 import Foundation
 
-let SampleBands = [
-    Band(
-        bandType: BandType.SportBand,
+let SampleBands : [Band] = [
+    SportBand(
         color: "Capri Blue",
         season: Season.spring,
         year: 2021),
-    Band(
-        bandType: BandType.ClassicBuckle,
+    ClassicBuckle(
         color: "Saddle Brown",
-        generation: 3,
         season: Season.fall,
-        year: 2017),
-    Band(
-        bandType: BandType.SportBand,
-        color: "Plum",
-        season: Season.winter,
-        year: 2020),
-    Band(
-        bandType: BandType.SportBand,
-        color: "Capri Blue",
-        season: Season.spring,
-        year: 2021),
-    Band(
-        bandType: BandType.ClassicBuckle,
-        color: "Saddle Brown",
-        generation: 3,
-        season: Season.fall,
-        year: 2017),
-    Band(
-        bandType: BandType.SportBand,
-        color: "Plum",
-        season: Season.winter,
-        year: 2020),
-    Band(
-        bandType: BandType.SportBand,
-        color: "Capri Blue",
-        season: Season.spring,
-        year: 2021),
-    Band(
-        bandType: BandType.ClassicBuckle,
-        color: "Saddle Brown",
-        generation: 3,
-        season: Season.fall,
-        year: 2017),
-    Band(
-        bandType: BandType.SportBand,
+        year: 2017,
+        generation: 3),
+    SportBand(
         color: "Plum",
         season: Season.winter,
         year: 2020),
@@ -67,45 +32,44 @@ func generateSampleBandHistories() -> [BandHistory] {
         
         switch i % 5 {
         case 0:
-            band = Band(
-                bandType: BandType.SportBand,
+            band = SportBand(
                 color: "Midnight Blue",
-                generation: 2,
                 season: Season.fall,
-                year: 2018)
+                year: 2018,
+                generation: 2)
         case 1:
-            band = Band(
-                bandType: BandType.SportLoop,
+            band = SportLoop(
                 color: "Surf Blue",
                 season: Season.spring,
-                year: 2020)
+                year: 2020,
+                bandVersion: .thirdGen)
         case 2:
-            band = Band(
-                bandType: BandType.BraidedSoloLoop,
+            band = BraidedSoloLoop(
                 color: "Atlantic Blue",
                 season: Season.fall,
-                year: 2020)
+                year: 2020,
+                bandSize: 5)
         case 3:
-            band = Band(
-                bandType: BandType.LeatherLink,
+            band = LeatherLink(
                 color: "Midnight",
                 season: Season.fall,
-                year: 2021)
+                year: 2021,
+                bandSize: .smallMedium)
         default:
-            band = Band(
-                bandType: BandType.WovenNylon,
+            band = WovenNylon(
                 color: "Pearl",
                 season: Season.spring,
-                year: 2016)
+                year: 2016,
+                bandVersion: "")
         }
         
         switch i % 3 {
         case 0:
-            watch = Watch(series: 3, color: "Space Gray Aluminum", edition: "Nike", size: 42)
+            watch = Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike")
         case 1:
             watch = Watch(series: 5, color: "Gold Stainless Steel", size: 44)
         default:
-            watch = Watch(series: 7, color: "Titanium", edition: "Edition", size: 45)
+            watch = Watch(series: 7, color: "Titanium", size: 45, edition: "Edition")
         }
         
         let timeWorn = Date(timeIntervalSinceNow: (TimeInterval(i * -20000)))
@@ -146,8 +110,8 @@ let SampleWatches = [
     Watch(series: 0, color: "Stainless Steel", size: 42),
     Watch(series: 0, color: "Stainless Steel", size: 38),
     Watch(series: 2, color: "Space Black Stainless Steel", size: 42),
-    Watch(series: 3, color: "Space Gray Aluminum", edition: "Nike", size: 42),
+    Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike"),
     Watch(series: 5, color: "Gold Stainless Steel", size: 44),
     Watch(series: 5, color: "Space Black Stainless Steel", size: 44),
-    Watch(series: 7, color: "Titanium", edition: "Edition", size: 45),
+    Watch(series: 7, color: "Titanium", size: 45, edition: "Edition"),
 ]

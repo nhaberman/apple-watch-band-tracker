@@ -62,6 +62,16 @@ struct BandHistoryDetailsView: View {
 
 struct BandHistoryDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        BandHistoryDetailsView(bandHistory: BandHistory())
+        BandHistoryDetailsView(bandHistory: BandHistory(
+            band: ClassicBuckle(
+                color: "Dark Aubergine",
+                season: .fall,
+                year: 2017,
+                generation: 4),
+            watch: Watch(
+                series: 0,
+                color: "Stainless Steel",
+                size: 42),
+            timeWorn: Date()))
     }
 }

@@ -23,30 +23,16 @@ class Watch: Identifiable, Hashable, Decodable {
         hasher.combine(size)
     }
     
-    var series: Int
-    var color: String
-    var edition: String
-    var size: Int
+    var series: Int = 0
+    var color: String = ""
+    var edition: String = ""
+    var size: Int = 0
     
-    init(series: Int, color: String, edition: String, size: Int) {
+    init(series: Int, color: String, size: Int, edition: String = "") {
         self.series = series
         self.color = color
         self.edition = edition
         self.size = size
-    }
-    
-    init(series: Int, color: String, size: Int) {
-        self.series = series
-        self.color = color
-        self.edition = ""
-        self.size = size
-    }
-    
-    init() {
-        self.series = 0
-        self.color = "Gold"
-        self.edition = "Edition"
-        self.size = 42
     }
     
     func formattedName() -> String {
@@ -87,30 +73,3 @@ class Watch: Identifiable, Hashable, Decodable {
     }
 }
 
-struct WatchView : View {
-    let watch: Watch
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "applewatch")
-                .aspectRatio(contentMode: .fill)
-            VStack(alignment: .leading) {
-                Text(watch.formattedSeries())
-                    .fontWeight(Font.Weight.bold)
-                Text(watch.color)
-                Text(watch.formattedSize())
-            }
-        }
-    }
-}
-
-struct WatchView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchView(watch: Watch(
-            series: 7,
-            color: "Titanium",
-            edition: "Edition",
-            size: 45
-        ))
-    }
-}

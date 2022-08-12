@@ -25,38 +25,22 @@ class Band: Identifiable, Hashable, Decodable {
         hasher.combine(year)
     }
         
-    var bandType: BandType
-    var color: String
-    //var pin: String
-    var generation: Int
-    var season: Season
-    var year: Int
+    var bandType: BandType { get { return BandType.None }}
+    var color: String = "None"
+    var generation: Int = 0
+    var season: Season = Season.spring
+    var year: Int = 0
+    var edition: String = ""
+    var size: Int = 0
+    var colorOrder = 0
+    var dateOrder = 0
+    var logicalOrder = 0
     
-    init(bandType: BandType, color: String, generation: Int, season: Season, year: Int) {
-        self.bandType = bandType
+    init(color: String, season: Season, year: Int, generation: Int = 0) {
         self.color = color
-        //self.pin = ""
         self.generation = generation
         self.season = season
         self.year = year
-    }
-    
-    init(bandType: BandType, color: String, season: Season, year: Int) {
-        self.bandType = bandType
-        self.color = color
-        //self.pin = ""
-        self.generation = 0
-        self.season = season
-        self.year = year
-    }
-    
-    init() {
-        self.bandType = BandType.SportBand
-        self.color = "Black"
-        //self.pin = ""
-        self.generation = 0
-        self.season = Season.spring
-        self.year = 2015
     }
     
     func formattedColorName() -> String {
@@ -67,32 +51,204 @@ class Band: Identifiable, Hashable, Decodable {
             return self.color
         }
     }
-    
 }
 
-struct BandView : View {
-    let band: Band
+// Band Subclasses
+class SportBand : Band {
+    override var bandType: BandType { get { return BandType.SportBand }}
+    var pin: String = "Silver"
     
-    var body: some View {
-        HStack{
-            Image(systemName: "applewatch.side.right")
-                .aspectRatio(contentMode: .fill)
-            VStack(alignment: .leading) {
-                Text(band.bandType.rawValue)
-                    .fontWeight(Font.Weight.bold)
-                Text(band.formattedColorName())
-            }
+    init(color: String, season: Season, year: Int, pin: String = "", generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        
+        if(!pin.isEmpty) {
+            self.pin = pin
         }
     }
-}
-
-struct BandView_Previews: PreviewProvider {
-    static var previews: some View {
-        BandView(band: Band(
-            bandType: BandType.ClassicBuckle,
-            color: "Saddle Brown",
-            generation: 3,
-            season: Season.fall,
-            year: 2017))
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
     }
 }
+
+class NikeSportBand : Band {
+    override var bandType: BandType { get { return BandType.NikeSportBand }}
+    var pin: String = "Silver"
+    
+    init(color: String, season: Season, year: Int, pin: String = "", generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        
+        if(!pin.isEmpty) {
+            self.pin = pin
+        }
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class SportLoop : Band {
+    override var bandType: BandType { get { return BandType.SportLoop }}
+    var bandVersion : SportLoopVersion = .firstGen
+    
+    enum SportLoopVersion : Int, Decodable {
+        case firstGen = 1
+        case secondGen = 2
+        case thirdGen = 3
+        case fourthGen = 4
+        case fifthGen = 5
+    }
+    
+    init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .firstGen, generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandVersion = bandVersion
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class NikeSportLoop : Band {
+    override var bandType: BandType { get { return BandType.NikeSportLoop }}
+    var bandVersion : String = ""
+    
+    init(color: String, season: Season, year: Int, bandVersion: String = "", generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandVersion = bandVersion
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class SoloLoop : Band {
+    override var bandType: BandType { get { return BandType.SoloLoop }}
+    var bandSize : Int = 0
+    
+    init(color: String, season: Season, year: Int, bandSize: Int, generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandSize = bandSize
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class BraidedSoloLoop : Band {
+    override var bandType: BandType { get { return BandType.BraidedSoloLoop }}
+    var bandSize : Int = 0
+    
+    init(color: String, season: Season, year: Int, bandSize: Int, generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandSize = bandSize
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class WovenNylon : Band {
+    override var bandType: BandType { get { return BandType.WovenNylon }}
+    var bandVersion : String = ""
+    
+    init(color: String, season: Season, year: Int, bandVersion: String = "", generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandVersion = bandVersion
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class ClassicBuckle : Band {
+    override var bandType: BandType { get { return BandType.ClassicBuckle }}
+}
+
+class ModernBuckle : Band {
+    override var bandType: BandType { get { return BandType.ModernBuckle }}
+    var bandSize : BandSize = .small
+    
+    enum BandSize : String, Decodable {
+        case small = "S"
+        case medium = "M"
+        case large = "L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandSize = bandSize
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class LeatherLoop : Band {
+    override var bandType: BandType { get { return BandType.LeatherLoop }}
+    var bandSize : BandSize = .medium
+    
+    enum BandSize : String, Decodable {
+        case medium = "M"
+        case large = "L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandSize = bandSize
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class LeatherLink : Band {
+    override var bandType: BandType { get { return BandType.LeatherLink }}
+    var bandSize : BandSize = .smallMedium
+    
+    enum BandSize : String, Decodable {
+        case smallMedium = "S/M"
+        case mediumLarge = "M/L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandSize = bandSize
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class MilaneseLoop : Band {
+    override var bandType: BandType { get { return BandType.MilaneseLoop }}
+    
+}
+
+class LinkBracelet : Band {
+    override var bandType: BandType { get { return BandType.LinkBracelet }}
+    
+}
+
+class ThirdPartyBand : Band {
+    override var bandType: BandType { get { return BandType.ThirdPartyBand }}
+    var manufacturer : String = ""
+    
+    init(color: String, season: Season, year: Int, manufacturer: String = "", generation: Int = 0) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.manufacturer = manufacturer
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+

@@ -27,12 +27,6 @@ class BandHistory: Identifiable {
         self.timeWorn = timeWorn
     }
     
-    init() {
-        self.band = Band()
-        self.watch = Watch()
-        self.timeWorn = Date()
-    }
-    
     func timeWornString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
@@ -58,17 +52,17 @@ struct BandHistoryView : View {
 struct BandHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         BandHistoryView(bandHistory: BandHistory(
-            band: Band(
-                bandType: BandType.SportLoop,
+            band: SportLoop(
                 color: "Midnight Blue",
-                generation: 2,
-                season: Season.spring,
-                year: 2021),
+                season: .fall,
+                year: 2019,
+                bandVersion: .thirdGen,
+                generation: 2),
             watch: Watch(
                 series: 7,
                 color: "Titanium",
-                edition: "Edition",
-                size: 45
+                size: 45,
+                edition: "Edition"
             ),
             timeWorn: Date()))
     }

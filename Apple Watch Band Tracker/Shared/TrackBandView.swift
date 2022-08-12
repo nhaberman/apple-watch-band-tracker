@@ -14,11 +14,13 @@ struct TrackBandView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var selectedWatch: Watch = Watch()
+    @State private var selectedWatch: Watch = Watch(series: -1, color: "", size: 0)
     @State private var selectedBandType: BandType = BandType.None
-    @State private var selectedBand: Band = Band()
+    @State private var selectedBand: Band = Band(color: "", season: .spring, year: 0)
     @State private var selectedDate = Date()
     @State private var useCurrentDate = true
+    
+    private var bandRepository = BandRepository()
     
     var body: some View {
         NavigationView {
@@ -42,10 +44,8 @@ struct TrackBandView: View {
                     }
                     List {
                         Picker("Band", selection: $selectedBand) {
-                            ForEach(BandRepository().allBands, id: \.self) { band in
-                                if (band.bandType == selectedBandType) {
-                                    Text(band.formattedColorName())
-                                }
+                            ForEach(bandRepository.getBandsByType(selectedBandType), id: \.self) { band in
+                                Text(band.formattedColorName())
                             }
                         }
                     }

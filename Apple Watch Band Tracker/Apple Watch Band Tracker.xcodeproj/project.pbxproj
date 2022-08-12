@@ -49,6 +49,10 @@
 		07D273D828A54C02006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273D628A54C02006A8839 /* BandsHistoryView.swift */; };
 		07D273DD28A56086006A8839 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273DC28A56086006A8839 /* StatsView.swift */; };
 		07D273DE28A56086006A8839 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273DC28A56086006A8839 /* StatsView.swift */; };
+		07D273E228A6A92D006A8839 /* BandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E128A6A92D006A8839 /* BandView.swift */; };
+		07D273E328A6A92D006A8839 /* BandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E128A6A92D006A8839 /* BandView.swift */; };
+		07D273E528A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
+		07D273E628A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
 		07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
@@ -108,6 +112,8 @@
 		07D273D628A54C02006A8839 /* BandsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsHistoryView.swift; sourceTree = "<group>"; };
 		07D273DC28A56086006A8839 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		07D273DF28A67DAF006A8839 /* Apple-Watch-Band-Tracker--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Apple-Watch-Band-Tracker--iOS--Info.plist"; sourceTree = "<group>"; };
+		07D273E128A6A92D006A8839 /* BandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandView.swift; sourceTree = "<group>"; };
+		07D273E428A6B069006A8839 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
 		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		07ED5D0C28A1F3630044469C /* HistoryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainView.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		07032FF428A1E13C003388C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07D273E028A6A914006A8839 /* Objects */,
 				07D273D928A55E68006A8839 /* History */,
 				07D273DA28A55E6E006A8839 /* Bands */,
 				07D273DB28A55E74006A8839 /* Stats */,
@@ -273,6 +280,15 @@
 				07D273DC28A56086006A8839 /* StatsView.swift */,
 			);
 			name = Stats;
+			sourceTree = "<group>";
+		};
+		07D273E028A6A914006A8839 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				07D273E128A6A92D006A8839 /* BandView.swift */,
+				07D273E428A6B069006A8839 /* WatchView.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +464,7 @@
 				07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */,
 				07032FF228A1E11E003388C8 /* BandRepository.swift in Sources */,
 				0796D2EE289E131C00591131 /* Apple_Watch_Band_TrackerApp.swift in Sources */,
+				07D273E228A6A92D006A8839 /* BandView.swift in Sources */,
 				07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */,
 				07032FFB28A1E4D7003388C8 /* Samples.swift in Sources */,
 				07D273BB289EE9AD006A8839 /* StatsMainView.swift in Sources */,
@@ -457,6 +474,7 @@
 				07D273B8289EE97F006A8839 /* HistoryView.swift in Sources */,
 				07D273CA28A028BC006A8839 /* SettingsView.swift in Sources */,
 				07D273B5289EE7F1006A8839 /* TrackBandView.swift in Sources */,
+				07D273E528A6B069006A8839 /* WatchView.swift in Sources */,
 				07D273C7289EF28A006A8839 /* Band.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +494,7 @@
 				07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */,
 				07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */,
 				0796D2EF289E131C00591131 /* Apple_Watch_Band_TrackerApp.swift in Sources */,
+				07D273E328A6A92D006A8839 /* BandView.swift in Sources */,
 				07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */,
 				07032FFC28A1E4D7003388C8 /* Samples.swift in Sources */,
 				07D273BC289EE9AD006A8839 /* StatsMainView.swift in Sources */,
@@ -485,6 +504,7 @@
 				07D273B9289EE97F006A8839 /* HistoryView.swift in Sources */,
 				07D273CB28A028BD006A8839 /* SettingsView.swift in Sources */,
 				07D273B6289EE7F1006A8839 /* TrackBandView.swift in Sources */,
+				07D273E628A6B069006A8839 /* WatchView.swift in Sources */,
 				07D273C8289EF28A006A8839 /* Band.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

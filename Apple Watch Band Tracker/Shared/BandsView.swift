@@ -17,11 +17,9 @@ struct BandsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             let bandRepository = BandRepository()
-            let bandList = bandRepository.allBands.filter { item in
-                item.bandType == self.bandType
-            }
+            
             List {
-                ForEach(bandList) { band in
+                ForEach(bandRepository.getBandsByType(bandType)) { band in
                     NavigationLink {
                         HistoryView(band: band)
                     } label: {
