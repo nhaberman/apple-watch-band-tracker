@@ -1,5 +1,5 @@
 {
-    "sportBands": [
+    "allBands": [
         {
             "bandType": "Sport Band",
             "color": "Black",
@@ -728,8 +728,6 @@
             "season": "Spring",
             "year": 2022,
         },
-    ],
-    "nikeSportBands": [
         {
             "bandType": "Nike Sport Band",
             "color": "Black / Volt",
@@ -961,8 +959,6 @@
             "season": "Spring",
             "year": 2022,
         },
-    ],
-    "sportLoops": [
         {
             "bandType": "Sport Loop",
             "color": "Pink Sand",
@@ -1551,8 +1547,6 @@
             "season": "Summer",
             "year": 2022,
         },
-    ],
-    "nikeSportLoops": [
         {
             "bandType": "Nike Sport Loop",
             "color": "Black / Pure Platinum",
@@ -1735,306 +1729,6 @@
             "season": "Summer",
             "year": 2022,
         },
-    ],
-    "soloLoops": [
-        {
-            "bandType": "Solo Loop",
-            "color": "Red",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "White",
-            "generation": 1,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Black",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Pink Citrus",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Ginger",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Cyprus Green",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Deep Navy",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Kumquat",
-            "generation": 0,
-            "season": "Winter",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Northern Blue",
-            "generation": 0,
-            "season": "Winter",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Plum",
-            "generation": 0,
-            "season": "Winter",
-            "year": 2020,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Pistachio",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Tomales Blue",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Cantaloupe",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Chalk Pink",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Marigold",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Clover",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Abyss Blue",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Dark Cherry",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "English Lavender",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Starlight",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Nectarine",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Lemon Zest",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Mineral Green",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "Eucalyptus",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Solo Loop",
-            "color": "White",
-            "generation": 2,
-            "season": "Spring",
-            "year": 2022,
-        },
-    ],
-    "braidedSoloLoops": [
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Red",
-            "generation": 1,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Pink Punch",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Inverness Green",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Atlantic Blue",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Charcoal",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2020,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Electric Orange",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Pistachio",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Pride Edition",
-            "generation": 0,
-            "season": "Summer",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Red",
-            "generation": 2,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Maize",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Abyss Blue",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Dark Cherry",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "English Lavender",
-            "generation": 0,
-            "season": "Fall",
-            "year": 2021,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Black Unity",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Flamingo",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Starlight",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-        {
-            "bandType": "Braided Solo Loop",
-            "color": "Bright Green",
-            "generation": 0,
-            "season": "Spring",
-            "year": 2022,
-        },
-    ],
-    "wovenNylons": [
         {
             "bandType": "Woven Nylon",
             "color": "Gold / Red",
@@ -2266,8 +1960,300 @@
             "season": "Summer",
             "year": 2018,
         },
-    ],
-    "classicBuckles": [
+        {
+            "bandType": "Solo Loop",
+            "color": "Red",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "White",
+            "generation": 1,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Black",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Pink Citrus",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Ginger",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Cyprus Green",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Deep Navy",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Kumquat",
+            "generation": 0,
+            "season": "Winter",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Northern Blue",
+            "generation": 0,
+            "season": "Winter",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Plum",
+            "generation": 0,
+            "season": "Winter",
+            "year": 2020,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Pistachio",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Tomales Blue",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Cantaloupe",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Chalk Pink",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Marigold",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Clover",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Abyss Blue",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Dark Cherry",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "English Lavender",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Starlight",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Nectarine",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Lemon Zest",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Mineral Green",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "Eucalyptus",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Solo Loop",
+            "color": "White",
+            "generation": 2,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Red",
+            "generation": 1,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Pink Punch",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Inverness Green",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Atlantic Blue",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Charcoal",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2020,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Electric Orange",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Pistachio",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Pride Edition",
+            "generation": 0,
+            "season": "Summer",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Red",
+            "generation": 2,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Maize",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Abyss Blue",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Dark Cherry",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "English Lavender",
+            "generation": 0,
+            "season": "Fall",
+            "year": 2021,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Black Unity",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Flamingo",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Starlight",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
+        {
+            "bandType": "Braided Solo Loop",
+            "color": "Bright Green",
+            "generation": 0,
+            "season": "Spring",
+            "year": 2022,
+        },
         {
             "bandType": "Classic Buckle",
             "color": "Black",
@@ -2464,8 +2450,6 @@
             "season": "Spring",
             "year": 2018,
         },
-    ],
-    "modernBuckles": [
         {
             "bandType": "Modern Buckle",
             "color": "Midnight Blue",
@@ -2641,8 +2625,6 @@
             "season": "Fall",
             "year": 2021,
         },
-    ],
-    "leatherLoops": [
         {
             "bandType": "Leather Loop",
             "color": "Bright Blue",
@@ -2783,8 +2765,6 @@
             "season": "Fall",
             "year": 2020,
         },
-    ],
-    "leatherLinks": [
         {
             "bandType": "Leather Link",
             "color": "California Poppy",
@@ -2848,8 +2828,6 @@
             "season": "Fall",
             "year": 2021,
         },
-    ],
-    "milaneseLoops": [
         {
             "bandType": "Milanese Loop",
             "color": "Silver",
@@ -2885,8 +2863,6 @@
             "season": "Fall",
             "year": 2020,
         },
-    ],
-    "linkBracelets": [
         {
             "bandType": "Link Bracelet",
             "color": "Silver",
@@ -2901,80 +2877,5 @@
             "season": "Fall",
             "year": 2015,
         },
-    ],
-    "thirdPartyBands": [
-        {
-            "color": "Silver Metal Link",
-            "logicalOrder": 1,
-        },
-        {
-            "color": "Brown Leather",
-            "logicalOrder": 2,
-        },
-        {
-            "color": "Black Classic Buckle",
-            "logicalOrder": 3,
-        },
-        {
-            "color": "Black Link Bracelet",
-            "logicalOrder": 4,
-        },
-        {
-            "color": "Black Modern Buckle",
-            "logicalOrder": 5,
-        },
-        {
-            "color": "Space Gray Metal Link",
-            "logicalOrder": 6,
-        },
-        {
-            "color": "Silver/Rose Gold Metal Link",
-            "logicalOrder": 7,
-        },
-        {
-            "color": "Stainless Steel Metal Link",
-            "logicalOrder": 8,
-        },
-        {
-            "color": "Black Leather Sport Band",
-            "logicalOrder": 9,
-        },
-        {
-            "color": "Brown Silicon/Leather Band",
-            "logicalOrder": 10,
-        },
-        {
-            "color": "Modern Strap Rustic Brown",
-            "manufacturer": "Nomad",
-            "logicalOrder": 11,
-        },
-        {
-            "color": "Armor Case",
-            "manufacturer": "elago",
-            "logicalOrder": 12,
-        },
-    ],
-    "allBands": [
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     ]
 }

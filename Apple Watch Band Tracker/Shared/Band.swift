@@ -35,6 +35,7 @@ class Band: Identifiable, Hashable, Decodable {
     var colorOrder = 0
     var dateOrder = 0
     var logicalOrder = 0
+    var isOwned = true
     
     init(color: String, season: Season, year: Int, generation: Int = 0) {
         self.color = color
@@ -90,17 +91,18 @@ class NikeSportBand : Band {
 
 class SportLoop : Band {
     override var bandType: BandType { get { return BandType.SportLoop }}
-    var bandVersion : SportLoopVersion = .firstGen
+    var bandVersion : SportLoopVersion = .none
     
-    enum SportLoopVersion : Int, Decodable {
-        case firstGen = 1
-        case secondGen = 2
-        case thirdGen = 3
-        case fourthGen = 4
-        case fifthGen = 5
+    enum SportLoopVersion : String, Decodable {
+        case none = "None"
+        case shimmer = "Shimmer"
+        case fleck = "Fleck"
+        case twoTone = "Two-Tone"
+        case rails = "Rails"
+        case split = "Split"
     }
     
-    init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .firstGen, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .none, generation: Int = 0) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandVersion = bandVersion
     }
@@ -112,9 +114,16 @@ class SportLoop : Band {
 
 class NikeSportLoop : Band {
     override var bandType: BandType { get { return BandType.NikeSportLoop }}
-    var bandVersion : String = ""
+    var bandVersion : NikeSportLoopVersion = .none
     
-    init(color: String, season: Season, year: Int, bandVersion: String = "", generation: Int = 0) {
+    enum NikeSportLoopVersion : String, Decodable {
+        case none = "None"
+        case original = "Original"
+        case reflective = "Reflective"
+        case branded = "Branded"
+    }
+    
+    init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int = 0) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandVersion = bandVersion
     }
@@ -154,9 +163,17 @@ class BraidedSoloLoop : Band {
 
 class WovenNylon : Band {
     override var bandType: BandType { get { return BandType.WovenNylon }}
-    var bandVersion : String = ""
+    var bandVersion : WovenNylonVersion = .none
     
-    init(color: String, season: Season, year: Int, bandVersion: String = "", generation: Int = 0) {
+    enum WovenNylonVersion : String, Decodable {
+        case none = "None"
+        case original = "Original"
+        case stripe = "Stripe"
+        case check = "Checkered"
+        case pinstripe = "Pinstripe"
+    }
+    
+    init(color: String, season: Season, year: Int, bandVersion: WovenNylonVersion = .none, generation: Int = 0) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandVersion = bandVersion
     }

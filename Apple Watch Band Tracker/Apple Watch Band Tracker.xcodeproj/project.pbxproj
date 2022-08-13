@@ -53,6 +53,8 @@
 		07D273E328A6A92D006A8839 /* BandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E128A6A92D006A8839 /* BandView.swift */; };
 		07D273E528A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
 		07D273E628A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
+		07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273E728A6BAAE006A8839 /* AllBands_v1.json */; };
+		07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273E728A6BAAE006A8839 /* AllBands_v1.json */; };
 		07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
@@ -114,6 +116,7 @@
 		07D273DF28A67DAF006A8839 /* Apple-Watch-Band-Tracker--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Apple-Watch-Band-Tracker--iOS--Info.plist"; sourceTree = "<group>"; };
 		07D273E128A6A92D006A8839 /* BandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandView.swift; sourceTree = "<group>"; };
 		07D273E428A6B069006A8839 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
+		07D273E728A6BAAE006A8839 /* AllBands_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v1.json; sourceTree = "<group>"; };
 		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		07ED5D0C28A1F3630044469C /* HistoryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainView.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				07D273C3289EF1B7006A8839 /* AllBands.json */,
+				07D273E728A6BAAE006A8839 /* AllBands_v1.json */,
 				07ED5D1228A345300044469C /* AllWatches.json */,
 			);
 			name = Resources;
@@ -419,6 +423,7 @@
 				07D273C4289EF1B7006A8839 /* AllBands.json in Resources */,
 				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
 				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
+				07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +434,7 @@
 				07D273C5289EF1B7006A8839 /* AllBands.json in Resources */,
 				07ED5D1428A345300044469C /* AllWatches.json in Resources */,
 				0796D2F3289E131C00591131 /* Assets.xcassets in Resources */,
+				07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

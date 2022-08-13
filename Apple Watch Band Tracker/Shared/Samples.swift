@@ -42,7 +42,7 @@ func generateSampleBandHistories() -> [BandHistory] {
                 color: "Surf Blue",
                 season: Season.spring,
                 year: 2020,
-                bandVersion: .thirdGen)
+                bandVersion: .twoTone)
         case 2:
             band = BraidedSoloLoop(
                 color: "Atlantic Blue",
@@ -60,7 +60,7 @@ func generateSampleBandHistories() -> [BandHistory] {
                 color: "Pearl",
                 season: Season.spring,
                 year: 2016,
-                bandVersion: "")
+                bandVersion: .original)
         }
         
         switch i % 3 {

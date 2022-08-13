@@ -56,7 +56,7 @@ struct BandHistoryView_Previews: PreviewProvider {
                 color: "Midnight Blue",
                 season: .fall,
                 year: 2019,
-                bandVersion: .thirdGen,
+                bandVersion: .twoTone,
                 generation: 2),
             watch: Watch(
                 series: 7,
