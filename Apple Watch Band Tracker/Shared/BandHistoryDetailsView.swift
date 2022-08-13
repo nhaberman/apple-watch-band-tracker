@@ -21,7 +21,7 @@ struct BandHistoryDetailsView: View {
         VStack(alignment: .leading) {
             List {
                 Section("Band") {
-                    BandView(band: bandHistory.band)
+                    BandView(band: bandHistory.band, showBandType: true, showIcon: true)
                 }
                 Section("Watch") {
                     WatchView(watch: bandHistory.watch)

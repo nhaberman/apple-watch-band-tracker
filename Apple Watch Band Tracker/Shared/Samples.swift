@@ -107,8 +107,8 @@ func groupHistoriesByDate() -> [HistoryDate] {
 let SampleBandHistoriesGrouped: [HistoryDate] = groupHistoriesByDate()
 
 let SampleWatches = [
-    Watch(series: 0, color: "Stainless Steel", size: 42),
-    Watch(series: 0, color: "Stainless Steel", size: 38),
+    Watch(series: 0, color: "Silver Stainless Steel", size: 42),
+    Watch(series: 0, color: "Silver Stainless Steel", size: 38),
     Watch(series: 2, color: "Space Black Stainless Steel", size: 42),
     Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike"),
     Watch(series: 5, color: "Gold Stainless Steel", size: 44),

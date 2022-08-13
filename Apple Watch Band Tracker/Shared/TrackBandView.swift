@@ -20,7 +20,7 @@ struct TrackBandView: View {
     @State private var selectedDate = Date()
     @State private var useCurrentDate = true
     
-    private var bandRepository = BandRepository()
+    private let bandRepository = BandRepository()
     
     var body: some View {
         NavigationView {
@@ -45,7 +45,7 @@ struct TrackBandView: View {
                     List {
                         Picker("Band", selection: $selectedBand) {
                             ForEach(bandRepository.getBandsByType(selectedBandType), id: \.self) { band in
-                                Text(band.formattedColorName())
+                                Text(band.formattedName())
                             }
                         }
                     }

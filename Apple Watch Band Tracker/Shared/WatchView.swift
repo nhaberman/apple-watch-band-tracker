@@ -21,6 +21,25 @@ struct WatchView : View {
                 Text(watch.formattedSize())
             }
         }
+        //.background(getBackgroundColor())
+    }
+    
+    func getBackgroundColor() -> Color {
+        switch (watch.color) {
+        case "Silver Stainless Steel":
+            return Color.gray
+        case "Space Gray Aluminum":
+            return Color.red
+        case "Gold Stainless Steel":
+            return Color.green
+        case "Space Black Stainless Steel":
+            return Color.blue
+        case "Titanium":
+            return Color.orange
+            
+        default:
+            return Color.white
+        }
     }
 }
 

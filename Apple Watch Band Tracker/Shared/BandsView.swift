@@ -23,7 +23,7 @@ struct BandsView: View {
                     NavigationLink {
                         HistoryView(band: band)
                     } label: {
-                        BandView(band: band)
+                        BandView(band: band, showBandType: false)
                     }
                 }
             }

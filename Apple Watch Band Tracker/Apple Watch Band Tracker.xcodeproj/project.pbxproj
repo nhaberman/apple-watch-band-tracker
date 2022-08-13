@@ -33,8 +33,6 @@
 		07D273BF289EE9B7006A8839 /* BandsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273BD289EE9B7006A8839 /* BandsMainView.swift */; };
 		07D273C1289EEAB1006A8839 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C0289EEAB1006A8839 /* Enums.swift */; };
 		07D273C2289EEAB1006A8839 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C0289EEAB1006A8839 /* Enums.swift */; };
-		07D273C4289EF1B7006A8839 /* AllBands.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273C3289EF1B7006A8839 /* AllBands.json */; };
-		07D273C5289EF1B7006A8839 /* AllBands.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273C3289EF1B7006A8839 /* AllBands.json */; };
 		07D273C7289EF28A006A8839 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C6289EF28A006A8839 /* Band.swift */; };
 		07D273C8289EF28A006A8839 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C6289EF28A006A8839 /* Band.swift */; };
 		07D273CA28A028BC006A8839 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C928A028BC006A8839 /* SettingsView.swift */; };
@@ -55,6 +53,10 @@
 		07D273E628A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
 		07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273E728A6BAAE006A8839 /* AllBands_v1.json */; };
 		07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273E728A6BAAE006A8839 /* AllBands_v1.json */; };
+		07D273EB28A81F77006A8839 /* AllBands.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273EA28A81F77006A8839 /* AllBands.json */; };
+		07D273EC28A81F77006A8839 /* AllBands.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273EA28A81F77006A8839 /* AllBands.json */; };
+		07D273EE28A84070006A8839 /* BandHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273ED28A84070006A8839 /* BandHistoryView.swift */; };
+		07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273ED28A84070006A8839 /* BandHistoryView.swift */; };
 		07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
@@ -105,7 +107,6 @@
 		07D273BA289EE9AD006A8839 /* StatsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsMainView.swift; sourceTree = "<group>"; };
 		07D273BD289EE9B7006A8839 /* BandsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsMainView.swift; sourceTree = "<group>"; };
 		07D273C0289EEAB1006A8839 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		07D273C3289EF1B7006A8839 /* AllBands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllBands.json; sourceTree = "<group>"; };
 		07D273C6289EF28A006A8839 /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		07D273C928A028BC006A8839 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		07D273CC28A04619006A8839 /* Watch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
@@ -117,6 +118,8 @@
 		07D273E128A6A92D006A8839 /* BandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandView.swift; sourceTree = "<group>"; };
 		07D273E428A6B069006A8839 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
 		07D273E728A6BAAE006A8839 /* AllBands_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v1.json; sourceTree = "<group>"; };
+		07D273EA28A81F77006A8839 /* AllBands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands.json; sourceTree = "<group>"; };
+		07D273ED28A84070006A8839 /* BandHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryView.swift; sourceTree = "<group>"; };
 		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		07ED5D0C28A1F3630044469C /* HistoryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainView.swift; sourceTree = "<group>"; };
@@ -189,7 +192,7 @@
 		07032FF628A1E1A9003388C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				07D273C3289EF1B7006A8839 /* AllBands.json */,
+				07D273EA28A81F77006A8839 /* AllBands.json */,
 				07D273E728A6BAAE006A8839 /* AllBands_v1.json */,
 				07ED5D1228A345300044469C /* AllWatches.json */,
 			);
@@ -290,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				07D273E128A6A92D006A8839 /* BandView.swift */,
+				07D273ED28A84070006A8839 /* BandHistoryView.swift */,
 				07D273E428A6B069006A8839 /* WatchView.swift */,
 			);
 			name = Objects;
@@ -420,8 +424,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D273C4289EF1B7006A8839 /* AllBands.json in Resources */,
 				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
+				07D273EB28A81F77006A8839 /* AllBands.json in Resources */,
 				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
 				07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
@@ -431,8 +435,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D273C5289EF1B7006A8839 /* AllBands.json in Resources */,
 				07ED5D1428A345300044469C /* AllWatches.json in Resources */,
+				07D273EC28A81F77006A8839 /* AllBands.json in Resources */,
 				0796D2F3289E131C00591131 /* Assets.xcassets in Resources */,
 				07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
@@ -477,6 +481,7 @@
 				07D273D728A54C02006A8839 /* BandsHistoryView.swift in Sources */,
 				07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
 				07D273D128A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
+				07D273EE28A84070006A8839 /* BandHistoryView.swift in Sources */,
 				07D273B8289EE97F006A8839 /* HistoryView.swift in Sources */,
 				07D273CA28A028BC006A8839 /* SettingsView.swift in Sources */,
 				07D273B5289EE7F1006A8839 /* TrackBandView.swift in Sources */,
@@ -507,6 +512,7 @@
 				07D273D828A54C02006A8839 /* BandsHistoryView.swift in Sources */,
 				07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
 				07D273D228A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
+				07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */,
 				07D273B9289EE97F006A8839 /* HistoryView.swift in Sources */,
 				07D273CB28A028BD006A8839 /* SettingsView.swift in Sources */,
 				07D273B6289EE7F1006A8839 /* TrackBandView.swift in Sources */,

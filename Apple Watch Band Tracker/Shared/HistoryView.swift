@@ -19,12 +19,12 @@ struct HistoryView: View {
     
     init(band: Band) {
         self.band = band
-        self.pageTitle = band.formattedColorName()
+        self.pageTitle = band.formattedName()
     }
     
     var lookBackDays : Int = 365*100
     var pageTitle : String = "No Title Supplied"
-    var band : Band? = nil
+    var band : Band?
     
     var lookBackDate: Date {
         get {

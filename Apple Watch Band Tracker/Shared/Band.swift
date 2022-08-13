@@ -24,76 +24,195 @@ class Band: Identifiable, Hashable, Decodable {
         hasher.combine(season)
         hasher.combine(year)
     }
-        
-    var bandType: BandType { get { return BandType.None }}
-    var color: String = "None"
-    var generation: Int = 0
-    var season: Season = Season.spring
-    var year: Int = 0
-    var edition: String = ""
-    var size: Int = 0
-    var colorOrder = 0
-    var dateOrder = 0
-    var logicalOrder = 0
-    var isOwned = true
     
-    init(color: String, season: Season, year: Int, generation: Int = 0) {
+    // band properties
+    var bandType: BandType { BandType.None }
+    var color: String = ""
+    
+    // optional band properties
+    var season: Season? = nil
+    var year: Int? = nil
+    var generation: Int? = nil
+    var edition: String? = nil
+    
+    // sorting order properties
+    var colorOrder: Int? = nil
+    var dateOrder: Int? = nil
+    var logicalOrder: Int? = nil
+    
+    // owned band properties
+    var size: Int? = nil
+    var isOwned: Bool? = nil
+    
+    init(color: String, season: Season, year: Int, generation: Int? = nil) {
         self.color = color
         self.generation = generation
         self.season = season
         self.year = year
     }
     
-    func formattedColorName() -> String {
-        if (self.generation != 0) {
-            return "\(self.color) (Gen \(self.generation))"
+    func formattedName() -> String {
+        var result: String = self.color
+        
+        if self.generation != nil && self.edition != nil {
+            result += " (G\(self.generation!), \(self.edition!))"
+        }
+        else if self.generation != nil {
+            result += " (G\(self.generation!))"
+        }
+        else if self.edition != nil {
+            result += " (\(self.edition!))"
+        }
+        
+        return result
+    }
+    
+    func formattedDetails() -> String {
+        if self.generation != nil && self.edition != nil {
+            return "Gen \(self.generation!), \(self.edition!)"
+        }
+        else if self.generation != nil {
+            return "Gen \(self.generation!)"
+        }
+        else if self.edition != nil {
+            return "\(self.edition!)"
         }
         else {
-            return self.color
+            return ""
         }
     }
 }
 
 // Band Subclasses
 class SportBand : Band {
-    override var bandType: BandType { get { return BandType.SportBand }}
-    var pin: String = "Silver"
+    override var bandType: BandType { BandType.SportBand }
     
-    init(color: String, season: Season, year: Int, pin: String = "", generation: Int = 0) {
+    private var _pin: String?
+    var pin: String { _pin ?? defaultPin}
+    let defaultPin: String = "Silver"
+    
+    init(color: String, season: Season, year: Int, pin: String? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        
-        if(!pin.isEmpty) {
-            self.pin = pin
-        }
+        self._pin = pin
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _pin = try values.decodeIfPresent(String.self, forKey: ._pin)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize
+        case _pin = "pin"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.pin != defaultPin {
+            let pinDetails = "\(pin) Pin"
+            
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(pinDetails))"
+            }
+            else {
+                result += " (\(pinDetails))"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.pin != defaultPin {
+            let pinDetails = "\(pin) Pin"
+            
+            if result.count == 0 {
+                result = pinDetails
+            }
+            else {
+                result += ", \(pinDetails)"
+            }
+        }
+        
+        return result
     }
 }
 
 class NikeSportBand : Band {
-    override var bandType: BandType { get { return BandType.NikeSportBand }}
-    var pin: String = "Silver"
+    override var bandType: BandType { BandType.NikeSportBand }
     
-    init(color: String, season: Season, year: Int, pin: String = "", generation: Int = 0) {
+    private var _pin: String?
+    var pin: String { _pin ?? defaultPin}
+    let defaultPin: String = "Silver"
+    
+    init(color: String, season: Season, year: Int, pin: String = "", generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        
-        if(!pin.isEmpty) {
-            self.pin = pin
-        }
+        self._pin = pin
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _pin = try values.decodeIfPresent(String.self, forKey: ._pin)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize
+        case _pin = "pin"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.pin != defaultPin {
+            let pinDetails = "\(pin) Pin"
+            
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(pinDetails))"
+            }
+            else {
+                result += " (\(pinDetails))"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.pin != defaultPin {
+            let pinDetails = "\(pin) Pin"
+            
+            if result.count == 0 {
+                result = pinDetails
+            }
+            else {
+                result += ", \(pinDetails)"
+            }
+        }
+        
+        return result
     }
 }
 
 class SportLoop : Band {
-    override var bandType: BandType { get { return BandType.SportLoop }}
-    var bandVersion : SportLoopVersion = .none
+    override var bandType: BandType { BandType.SportLoop }
     
-    enum SportLoopVersion : String, Decodable {
+    private var _bandVersion: SportLoopVersion?
+    var bandVersion: SportLoopVersion { _bandVersion ?? .none}
+    
+    enum SportLoopVersion: String, Decodable {
         case none = "None"
         case shimmer = "Shimmer"
         case fleck = "Fleck"
@@ -102,42 +221,62 @@ class SportLoop : Band {
         case split = "Split"
     }
     
-    init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .none, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .none, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self.bandVersion = bandVersion
+        self._bandVersion = bandVersion
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandVersion = try values.decodeIfPresent(SportLoopVersion.self, forKey: ._bandVersion)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize
+        case _bandVersion = "bandVersion"
     }
 }
 
 class NikeSportLoop : Band {
-    override var bandType: BandType { get { return BandType.NikeSportLoop }}
-    var bandVersion : NikeSportLoopVersion = .none
+    override var bandType: BandType  { BandType.NikeSportLoop }
     
-    enum NikeSportLoopVersion : String, Decodable {
+    private var _bandVersion: NikeSportLoopVersion?
+    var bandVersion: NikeSportLoopVersion { _bandVersion ?? .none}
+    
+    enum NikeSportLoopVersion: String, Decodable {
         case none = "None"
         case original = "Original"
         case reflective = "Reflective"
         case branded = "Branded"
     }
     
-    init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self.bandVersion = bandVersion
+        self._bandVersion = bandVersion
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandVersion = try values.decodeIfPresent(NikeSportLoopVersion.self, forKey: ._bandVersion)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize
+        case _bandVersion = "bandVersion"
     }
 }
 
 class SoloLoop : Band {
-    override var bandType: BandType { get { return BandType.SoloLoop }}
-    var bandSize : Int = 0
+    override var bandType: BandType { BandType.SoloLoop }
+    var bandSize: Int?
     
-    init(color: String, season: Season, year: Int, bandSize: Int, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandSize: Int, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandSize = bandSize
     }
@@ -148,10 +287,10 @@ class SoloLoop : Band {
 }
 
 class BraidedSoloLoop : Band {
-    override var bandType: BandType { get { return BandType.BraidedSoloLoop }}
-    var bandSize : Int = 0
+    override var bandType: BandType { BandType.BraidedSoloLoop }
+    var bandSize: Int?
     
-    init(color: String, season: Season, year: Int, bandSize: Int, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandSize: Int, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandSize = bandSize
     }
@@ -162,10 +301,12 @@ class BraidedSoloLoop : Band {
 }
 
 class WovenNylon : Band {
-    override var bandType: BandType { get { return BandType.WovenNylon }}
-    var bandVersion : WovenNylonVersion = .none
+    override var bandType: BandType { BandType.WovenNylon }
     
-    enum WovenNylonVersion : String, Decodable {
+    private var _bandVersion: WovenNylonVersion?
+    var bandVersion: WovenNylonVersion { _bandVersion ?? .none}
+    
+    enum WovenNylonVersion: String, Decodable {
         case none = "None"
         case original = "Original"
         case stripe = "Stripe"
@@ -173,33 +314,37 @@ class WovenNylon : Band {
         case pinstripe = "Pinstripe"
     }
     
-    init(color: String, season: Season, year: Int, bandVersion: WovenNylonVersion = .none, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandVersion: WovenNylonVersion = .none, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self.bandVersion = bandVersion
+        self._bandVersion = bandVersion
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandVersion = try values.decodeIfPresent(WovenNylonVersion.self, forKey: ._bandVersion)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize
+        case _bandVersion = "bandVersion"
     }
 }
 
 class ClassicBuckle : Band {
-    override var bandType: BandType { get { return BandType.ClassicBuckle }}
+    override var bandType: BandType { BandType.ClassicBuckle }
 }
 
 class ModernBuckle : Band {
-    override var bandType: BandType { get { return BandType.ModernBuckle }}
-    var bandSize : BandSize = .small
+    override var bandType: BandType { BandType.ModernBuckle }
+    var bandSize: BandSize?
     
-    enum BandSize : String, Decodable {
+    enum BandSize: String, Decodable {
         case small = "S"
         case medium = "M"
         case large = "L"
-    }
-    
-    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int = 0) {
-        super.init(color: color, season: season, year: year, generation: generation)
-        self.bandSize = bandSize
     }
     
     required init(from decoder: Decoder) throws {
@@ -208,15 +353,15 @@ class ModernBuckle : Band {
 }
 
 class LeatherLoop : Band {
-    override var bandType: BandType { get { return BandType.LeatherLoop }}
-    var bandSize : BandSize = .medium
+    override var bandType: BandType { BandType.LeatherLoop }
+    var bandSize: BandSize?
     
-    enum BandSize : String, Decodable {
+    enum BandSize: String, Decodable {
         case medium = "M"
         case large = "L"
     }
     
-    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandSize = bandSize
     }
@@ -227,15 +372,15 @@ class LeatherLoop : Band {
 }
 
 class LeatherLink : Band {
-    override var bandType: BandType { get { return BandType.LeatherLink }}
-    var bandSize : BandSize = .smallMedium
+    override var bandType: BandType { BandType.LeatherLink }
+    var bandSize: BandSize?
     
-    enum BandSize : String, Decodable {
+    enum BandSize: String, Decodable {
         case smallMedium = "S/M"
         case mediumLarge = "M/L"
     }
     
-    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int = 0) {
+    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandSize = bandSize
     }
@@ -246,26 +391,41 @@ class LeatherLink : Band {
 }
 
 class MilaneseLoop : Band {
-    override var bandType: BandType { get { return BandType.MilaneseLoop }}
-    
+    override var bandType: BandType { BandType.MilaneseLoop }
 }
 
 class LinkBracelet : Band {
-    override var bandType: BandType { get { return BandType.LinkBracelet }}
-    
+    override var bandType: BandType { BandType.LinkBracelet }
 }
 
 class ThirdPartyBand : Band {
-    override var bandType: BandType { get { return BandType.ThirdPartyBand }}
-    var manufacturer : String = ""
+    override var bandType: BandType { BandType.ThirdPartyBand }
+    var manufacturer: String?
     
-    init(color: String, season: Season, year: Int, manufacturer: String = "", generation: Int = 0) {
+    init(color: String, season: Season, year: Int, manufacturer: String? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.manufacturer = manufacturer
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        manufacturer = try values.decodeIfPresent(String.self, forKey: .manufacturer)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize, manufacturer
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if manufacturer != nil {
+            result = manufacturer! + " " + result
+        }
+        
+        return result
     }
 }
-
