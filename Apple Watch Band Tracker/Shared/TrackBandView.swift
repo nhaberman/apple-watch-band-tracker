@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct TrackBandView: View {
-    init() {
+    init(_ repository: BandHistoryRepository) {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
+        self.repository = repository
     }
+    
+    let repository: BandHistoryRepository
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -61,6 +64,10 @@ struct TrackBandView: View {
                 
                 Button {
                     print("Save Band")
+                    
+                    var bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
+                    repository.trackBand(bandHistory: bandHistory)
+                    
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     HStack {
@@ -88,6 +95,6 @@ struct TrackBandView: View {
 
 struct TrackBandView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackBandView()
+        TrackBandView(BandHistoryRepository(false))
     }
 }

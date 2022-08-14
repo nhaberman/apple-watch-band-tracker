@@ -166,7 +166,6 @@
 				07D273D928A55E68006A8839 /* History */,
 				07D273DA28A55E6E006A8839 /* Bands */,
 				07D273DB28A55E74006A8839 /* Stats */,
-				0796D2C7289E131900591131 /* ContentView.swift */,
 				07D273C928A028BC006A8839 /* SettingsView.swift */,
 				07D273B4289EE7F1006A8839 /* TrackBandView.swift */,
 				07D273D028A28BB6006A8839 /* BandHistoryDetailsView.swift */,
@@ -218,6 +217,7 @@
 				07032FF528A1E18D003388C8 /* Models */,
 				07032FF428A1E13C003388C8 /* Views */,
 				0796D2C6289E131900591131 /* Apple_Watch_Band_TrackerApp.swift */,
+				0796D2C7289E131900591131 /* ContentView.swift */,
 				07E0F6C1289F63DA00E75E99 /* Theme.swift */,
 				0796D2C8289E131C00591131 /* Assets.xcassets */,
 			);

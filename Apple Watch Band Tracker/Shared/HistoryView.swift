@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct HistoryView: View {
-    init() {
-        //Theme.navigationBarColors(background: .blue, titleColor: .white)
-    }
+//    init() {
+//        //Theme.navigationBarColors(background: .blue, titleColor: .white)
+//    }
     
-    init(lookBackDays : Int, pageTitle : String) {
+    init(repository: BandHistoryRepository, lookBackDays : Int, pageTitle : String) {
+        self.repository = repository
         self.lookBackDays = lookBackDays
         self.pageTitle = pageTitle
     }
     
-    init(band: Band) {
+    init(repository: BandHistoryRepository, band: Band) {
+        self.repository = repository
         self.band = band
         self.pageTitle = band.formattedName()
     }
     
+    var repository: BandHistoryRepository
     var lookBackDays : Int = 365*100
     var pageTitle : String = "No Title Supplied"
     var band : Band?
@@ -42,7 +45,7 @@ struct HistoryView: View {
             alignment: .leading
         ) {
             List {
-                ForEach(SampleBandHistoriesGrouped) { item in
+                ForEach(groupBandHistoriesByDate()) { item in
                     if (item.historyDate > lookBackDate) {
                         Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.BandHistories) { subItem in
@@ -78,27 +81,52 @@ struct HistoryView: View {
         }
         .navigationTitle(pageTitle)
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    print("tapped track band")
-                    showTrackBandSheet = true
-                } label: {
-                    Label("Track Band", systemImage: "plus.circle")
-                }
-            }
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    print("tapped track band")
+//                    showTrackBandSheet = true
+//                } label: {
+//                    Label("Track Band", systemImage: "plus.circle")
+//                }
+//            }
+//        }
+//        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
+//            print("goodbye track band sheet")
+//        }, content: {
+//            TrackBandView()
+//        })
+    }
+    
+    func groupBandHistoriesByDate() -> [HistoryDate]{
+        var results = [HistoryDate]()
+        
+        let allDates: [Date] = repository.bandHistories.map { history in
+            history.dateWorn
         }
-        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
-            print("goodbye track band sheet")
-        }, content: {
-            TrackBandView()
-        })
+        
+        let distinctDates = Array(Set(allDates).sorted(by: >))
+        
+        for date in distinctDates {
+            let histories = repository.bandHistories.filter {item in
+                item.dateWorn == date
+            }
+            
+            let itemToAdd = HistoryDate(historyDate: date, BandHistories: histories)
+            
+            results.append(itemToAdd)
+        }
+        
+        return results
     }
 }
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView()
+        HistoryView(repository: BandHistoryRepository(false), band: SportBand(
+            color: "Capri Blue",
+            season: Season.spring,
+            year: 2021))
     }
 }
 

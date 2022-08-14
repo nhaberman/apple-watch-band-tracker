@@ -7,18 +7,20 @@
 
 import SwiftUI
 
+let repository = BandHistoryRepository()
+
 struct ContentView: View {
     var body: some View {
         TabView {
-            HistoryMainView()
+            HistoryMainView(repository)
                 .tabItem {
                     Label("History", systemImage: "list.bullet")
                 }.tag(1)
-            BandsMainView()
+            BandsMainView(repository)
                 .tabItem {
                     Label("Bands", systemImage: "applewatch.side.right")
                 }.tag(2)
-            StatsMainView()
+            StatsMainView(repository)
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
                 }.tag(3)

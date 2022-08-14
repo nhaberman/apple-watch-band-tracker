@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct StatsMainView: View {
-    init() {
+    init(_ repository: BandHistoryRepository) {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
+        self.repository = repository
     }
+    
+    let repository: BandHistoryRepository
     
     @State private var showSettingsSheet = false
     
@@ -52,6 +55,6 @@ struct StatsMainView: View {
 
 struct StatsMainView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsMainView()
+        StatsMainView(BandHistoryRepository(false))
     }
 }

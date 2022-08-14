@@ -33,30 +33,30 @@ struct BandHistoryDetailsView: View {
         }
         .navigationTitle("Band")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(role: .destructive) {
-                    print("tapped delete band")
-                    // delete band
-                } label: {
-                    Label("Delete", systemImage: "trash")
-                }
-                .buttonStyle(.borderless)
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    print("tapped edit band")
-                    showEditBandSheet = true
-                } label: {
-                    Label("Edit", systemImage: "square.and.pencil")
-                }
-            }
-        }
-        .sheet(isPresented: $showEditBandSheet, onDismiss: {
-            print("goodbye track band sheet")
-        }, content: {
-            TrackBandView()
-        })
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button(role: .destructive) {
+//                    print("tapped delete band")
+//                    // delete band
+//                } label: {
+//                    Label("Delete", systemImage: "trash")
+//                }
+//                .buttonStyle(.borderless)
+//            }
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    print("tapped edit band")
+//                    showEditBandSheet = true
+//                } label: {
+//                    Label("Edit", systemImage: "square.and.pencil")
+//                }
+//            }
+//        }
+//        .sheet(isPresented: $showEditBandSheet, onDismiss: {
+//            print("goodbye track band sheet")
+//        }, content: {
+//            TrackBandView()
+//        })
     }
 }
 

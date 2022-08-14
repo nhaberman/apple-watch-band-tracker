@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct BandsMainView: View {
-    init() {
+    init(_ repository: BandHistoryRepository) {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
+        self.repository = repository
     }
+    
+    let repository: BandHistoryRepository
     
     @State private var showSettingsSheet = false
     
@@ -22,7 +25,7 @@ struct BandsMainView: View {
                 List(BandType.allCases) { value in
                     if (value != BandType.None) {
                         NavigationLink {
-                            BandsView(bandType: value)
+                            BandsView(repository: repository, bandType: value)
                         } label: {
                             Label(value.rawValue, systemImage: "applewatch.side.right")
                         }
@@ -52,6 +55,6 @@ struct BandsMainView: View {
 
 struct BandsMainView_Previews: PreviewProvider {
     static var previews: some View {
-        BandsMainView()
+        BandsMainView(BandHistoryRepository(false))
     }
 }

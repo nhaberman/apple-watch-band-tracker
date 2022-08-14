@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct HistoryMainView: View {
-    init() {
+    init(_ repository: BandHistoryRepository) {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
+        self.repository = repository
     }
     
-    let repository: BandHistoryRepository = BandHistoryRepository()
+    let repository: BandHistoryRepository
     
     @State private var showTrackBandSheet = false
     @State private var showSettingsSheet = false
@@ -22,46 +23,46 @@ struct HistoryMainView: View {
             List {
                 Section("Recent") {
                     NavigationLink {
-                        HistoryView(lookBackDays: 1, pageTitle: "Recent")
+                        HistoryView(repository: repository, lookBackDays: 1, pageTitle: "Recent")
                     } label: {
                         Label("Today", systemImage: "list.bullet")
                     }
                     NavigationLink {
-                        HistoryView(lookBackDays: 7, pageTitle: "This Week")
+                        HistoryView(repository: repository, lookBackDays: 7, pageTitle: "This Week")
                     } label: {
                         Label("This Week", systemImage: "list.bullet")
                     }
                     NavigationLink {
-                        HistoryView(lookBackDays: 30, pageTitle: "This Month")
+                        HistoryView(repository: repository, lookBackDays: 30, pageTitle: "This Month")
                     } label: {
                         Label("This Month", systemImage: "list.bullet")
                     }
                     NavigationLink {
-                        HistoryView(lookBackDays: 365, pageTitle: "Year to Date")
+                        HistoryView(repository: repository, lookBackDays: 365, pageTitle: "Year to Date")
                     } label: {
                         Label("Year to Date", systemImage: "list.bullet")
                     }
                 }
                 Section("By Year") {
                     NavigationLink {
-                        HistoryView()
+                        HistoryView(repository: repository, lookBackDays: 2, pageTitle: "2022")
                     } label: {
                         Label("2022", systemImage: "calendar")
                     }
                     NavigationLink {
-                        HistoryView()
+                        HistoryView(repository: repository, lookBackDays: 2, pageTitle: "2021")
                     } label: {
                         Label("2021", systemImage: "calendar")
                     }
                     NavigationLink {
-                        HistoryView()
+                        HistoryView(repository: repository, lookBackDays: 2, pageTitle: "2020")
                     } label: {
                         Label("2020", systemImage: "calendar")
                     }
                 }
                 Section("All") {
                     NavigationLink {
-                        HistoryView()
+                        HistoryView(repository: repository, lookBackDays: 2000, pageTitle: "All Bands")
                     } label: {
                         Label("All Bands", systemImage: "applewatch.side.right")
                     }
@@ -91,7 +92,7 @@ struct HistoryMainView: View {
         .sheet(isPresented: $showTrackBandSheet, onDismiss: {
             print("goodbye track band sheet")
         }, content: {
-            TrackBandView()
+            TrackBandView(repository)
         })
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")
@@ -103,6 +104,6 @@ struct HistoryMainView: View {
 
 struct HistoryMainView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryMainView()
+        HistoryMainView(BandHistoryRepository(false))
     }
 }

@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct BandsView: View {
-    init(bandType : BandType) {
+    init(repository: BandHistoryRepository, bandType : BandType) {
+        self.repository = repository
         self.bandType = bandType
     }
     
+    let repository: BandHistoryRepository
     var bandType : BandType
     
     var body: some View {
@@ -21,7 +23,7 @@ struct BandsView: View {
             List {
                 ForEach(bandRepository.getBandsByType(bandType)) { band in
                     NavigationLink {
-                        HistoryView(band: band)
+                        HistoryView(repository: repository, band: band)
                     } label: {
                         BandView(band: band, showBandType: false)
                     }
@@ -35,6 +37,6 @@ struct BandsView: View {
 
 struct BandsView_Previews: PreviewProvider {
     static var previews: some View {
-        BandsView(bandType: BandType.SportBand)
+        BandsView(repository: BandHistoryRepository(false), bandType: BandType.SportBand)
     }
 }

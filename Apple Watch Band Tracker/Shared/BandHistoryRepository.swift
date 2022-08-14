@@ -12,9 +12,14 @@ class BandHistoryRepository {
     
     var bandHistories: [BandHistory]
     
-    init() {
+    init(_ loadHistories: Bool = true) {
         bandHistories = [BandHistory]()
-        loadHistory()
+        if loadHistories {
+            loadHistory()
+        }
+        else {
+            bandHistories = SampleBandHistories
+        }
     }
     
     func trackBand(bandHistory: BandHistory, addBandHistory: Bool = true) -> Bool {
