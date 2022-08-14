@@ -8,7 +8,18 @@
 import Foundation
 import SwiftUI
 
-class BandHistory: Identifiable, Decodable, Encodable {
+class BandHistory: Identifiable, Hashable, Decodable, Encodable {
+    static func == (lhs: BandHistory, rhs: BandHistory) -> Bool {
+        return lhs.band == rhs.band
+            && lhs.watch == rhs.watch
+            && lhs.timeWorn == rhs.timeWorn
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(band)
+        hasher.combine(watch)
+        hasher.combine(timeWorn)
+    }
     
     var band: Band
     var watch: Watch
