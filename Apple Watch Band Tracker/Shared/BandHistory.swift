@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class BandHistory: Identifiable {
+class BandHistory: Identifiable, Decodable, Encodable {
     
     var band: Band
     var watch: Watch

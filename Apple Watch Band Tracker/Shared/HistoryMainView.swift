@@ -12,6 +12,8 @@ struct HistoryMainView: View {
         //Theme.navigationBarColors(background: .blue, titleColor: .white)
     }
     
+    let repository: BandHistoryRepository = BandHistoryRepository()
+    
     @State private var showTrackBandSheet = false
     @State private var showSettingsSheet = false
     

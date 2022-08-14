@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Band: Identifiable, Hashable, Decodable {
+class Band: Identifiable, Hashable, Decodable, Encodable {
     static func == (lhs: Band, rhs: Band) -> Bool {
         return lhs.bandType == rhs.bandType
             && lhs.color == rhs.color
