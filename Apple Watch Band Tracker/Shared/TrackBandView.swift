@@ -65,8 +65,12 @@ struct TrackBandView: View {
                 Button {
                     print("Save Band")
                     
-                    var bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
-                    repository.trackBand(bandHistory: bandHistory)
+                    let bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
+                    let wasSuccessful = repository.trackBand(bandHistory: bandHistory)
+                    
+//                    if wasSuccessful {
+//                        Alert(title: Text("Error"), message: Text("Could not track band"), dismissButton: .cancel())
+//                    }
                     
                     presentationMode.wrappedValue.dismiss()
                 } label: {

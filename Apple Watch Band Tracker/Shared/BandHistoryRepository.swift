@@ -71,7 +71,10 @@ class BandHistoryRepository {
                 do {
                     let fileContents = try String(contentsOf: file)
                     let json = fileContents.data(using: .utf8)!
-                    let bandHistories: [BandHistory] = try! JSONDecoder().decode(AllBandHistories.self, from: json).bandHistories
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategy = .iso8601
+                    
+                    let bandHistories: [BandHistory] = try! jsonDecoder.decode(AllBandHistories.self, from: json).bandHistories
                     
                     self.bandHistories.append(contentsOf: bandHistories)
                 }
@@ -125,7 +128,11 @@ class BandHistoryRepository {
         
         // create the JSON representation of the bands to save
         let allBandHistories = AllBandHistories(bandHistoriesToSave)
-        let jsonData = try JSONEncoder().encode(allBandHistories)
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        jsonEncoder.dateEncodingStrategy = .iso8601
+        
+        let jsonData = try jsonEncoder.encode(allBandHistories)
         let jsonString = String(data: jsonData, encoding: .utf8)
         
         // save the bands to the file
