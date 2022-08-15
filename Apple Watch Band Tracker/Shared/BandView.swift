@@ -43,10 +43,6 @@ struct BandView : View {
 
 struct BandView_Previews: PreviewProvider {
     static var previews: some View {
-        BandView(band: LeatherLink(
-            color: "Saddle Brown",
-            season: Season.fall,
-            year: 2022,
-            bandSize: .smallMedium))
+        BandView(band: BandRepository.sample.allBands.leatherLinks[0])
     }
 }

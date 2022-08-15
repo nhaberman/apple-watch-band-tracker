@@ -9,44 +9,77 @@ import SwiftUI
 
 struct HistoryView: View {
 //    init() {
-//        //Theme.navigationBarColors(background: .blue, titleColor: .white)
+//        Theme.navigationBarColors(background: .blue, titleColor: .white)
 //    }
     
-    init(repository: BandHistoryRepository, lookBackDays : Int, pageTitle : String) {
-        self.repository = repository
-        self.lookBackDays = lookBackDays
+    // define the repositories that this view will use
+    private var repository: BandHistoryRepository
+    
+    init() {
+        self.repository = BandHistoryRepository.sample
+        self.pageTitle = "Sample History"
+        self.startDate = Date.distantPast
+        self.endDate = Date.distantFuture
+    }
+    
+    init(pageTitle: String, lookBackType: HistoryLookBack, lookBackYear: Int = 0) {
+        self.repository = GlobalBandHistoryRepository
         self.pageTitle = pageTitle
-    }
-    
-    init(repository: BandHistoryRepository, band: Band) {
-        self.repository = repository
-        self.band = band
-        self.pageTitle = band.formattedName()
-    }
-    
-    var repository: BandHistoryRepository
-    var lookBackDays : Int = 365*100
-    var pageTitle : String = "No Title Supplied"
-    var band : Band?
-    
-    var lookBackDate: Date {
-        get {
-            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: Date.now)
-            let today = Calendar.current.date(from: dateComponents)!
+        
+        // calculate the start and end dates based on the type of lookback
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .weekday], from: Date())
+        let todaysDate = Calendar.current.date(from: dateComponents)!
+        
+        switch (lookBackType) {
+        case .currentDay:
+            self.startDate = todaysDate
+            self.endDate = Date.distantFuture
+        case .currentWeek:
+            self.startDate = Calendar.current.date(byAdding: .day, value: -1 * (dateComponents.weekday! - 1), to: todaysDate)!
+            self.endDate = Date.distantFuture
+        case .currentMonth:
+            self.startDate = Calendar.current.date(byAdding: .day, value: -1 * (dateComponents.day! - 1), to: todaysDate)!
+            self.endDate = Date.distantFuture
+        case .currentYear:
+            let firstOfMonth = Calendar.current.date(byAdding: .day, value: -1 * (dateComponents.day! - 1), to: todaysDate)!
+            self.startDate = Calendar.current.date(byAdding: .month, value: -1 * (dateComponents.month! - 1), to: firstOfMonth)!
+            self.endDate = Date.distantFuture
+        case .specificYear:
+            let startDateComponents = DateComponents.init(year: lookBackYear, month: 1, day: 1)
+            let endDateComponents = DateComponents.init(year: lookBackYear + 1, month: 1, day: 1)
             
-            return Date(timeInterval: (Double(lookBackDays * 24 * 20 * 20) * -1), since: today)
+            self.startDate = Calendar.current.date(from: startDateComponents)!
+            self.endDate = Calendar.current.date(from: endDateComponents)!
+        case .all:
+            self.startDate = Date.distantPast
+            self.endDate = Date.distantFuture
+        case .none:
+            self.startDate = Date()
+            self.endDate = Date()
         }
+        
+        print(pageTitle)
+        print("start date:  \(startDate)")
+        print("end date:  \(endDate)")
     }
+    
+    var startDate: Date
+    var endDate: Date
+    var pageTitle: String = "No Title Supplied"
     
     @State private var showTrackBandSheet = false
+    
+    enum HistoryLookBack {
+        case none, currentDay, currentWeek, currentMonth, currentYear, specificYear, all
+    }
     
     var body: some View {
         VStack(
             alignment: .leading
         ) {
             List {
-                ForEach(groupBandHistoriesByDate()) { item in
-                    if (item.historyDate > lookBackDate) {
+                ForEach(repository.getHistoriesGroupedByDate()) { item in
+                    if (item.historyDate >= startDate && item.historyDate <= endDate) {
                         Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.BandHistories) { subItem in
                                 NavigationLink {
@@ -81,57 +114,26 @@ struct HistoryView: View {
         }
         .navigationTitle(pageTitle)
         .navigationBarTitleDisplayMode(.inline)
-//        .toolbar {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                Button {
-//                    print("tapped track band")
-//                    showTrackBandSheet = true
-//                } label: {
-//                    Label("Track Band", systemImage: "plus.circle")
-//                }
-//            }
-//        }
-//        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
-//            print("goodbye track band sheet")
-//        }, content: {
-//            TrackBandView()
-//        })
-    }
-    
-    func groupBandHistoriesByDate() -> [HistoryDate]{
-        var results = [HistoryDate]()
-        
-        let allDates: [Date] = repository.bandHistories.map { history in
-            history.dateWorn
-        }
-        
-        let distinctDates = Array(Set(allDates).sorted(by: >))
-        
-        for date in distinctDates {
-            let histories = repository.bandHistories.filter {item in
-                item.dateWorn == date
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    print("tapped track band")
+                    showTrackBandSheet = true
+                } label: {
+                    Label("Track Band", systemImage: "plus.circle")
+                }
             }
-            
-            let itemToAdd = HistoryDate(historyDate: date, BandHistories: histories)
-            
-            results.append(itemToAdd)
         }
-        
-        return results
+        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
+            print("goodbye track band sheet")
+        }, content: {
+            TrackBandView()
+        })
     }
 }
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView(repository: BandHistoryRepository(false), band: SportBand(
-            color: "Capri Blue",
-            season: Season.spring,
-            year: 2021))
+        HistoryView()
     }
-}
-
-struct HistoryDate: Identifiable {
-    let historyDate: Date
-    let BandHistories: [BandHistory]
-    let id = UUID()
 }

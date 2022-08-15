@@ -10,11 +10,14 @@ import SwiftUI
 
 class Band: Identifiable, Hashable, Decodable, Encodable {
     static func == (lhs: Band, rhs: Band) -> Bool {
-        return lhs.bandType == rhs.bandType
+        var temp = lhs.bandType == rhs.bandType
             && lhs.color == rhs.color
             && lhs.generation == rhs.generation
+            && lhs.edition == rhs.edition
             && lhs.season == rhs.season
             && lhs.year == rhs.year
+        
+        return temp
     }
     
     func hash(into hasher: inout Hasher) {
@@ -339,54 +342,86 @@ class ClassicBuckle : Band {
 
 class ModernBuckle : Band {
     override var bandType: BandType { BandType.ModernBuckle }
-    var bandSize: BandSize?
+    
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none}
     
     enum BandSize: String, Decodable {
+        case none = "None"
         case small = "S"
         case medium = "M"
         case large = "L"
     }
     
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
+    }
+    
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
     }
 }
 
 class LeatherLoop : Band {
     override var bandType: BandType { BandType.LeatherLoop }
-    var bandSize: BandSize?
+    
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none}
     
     enum BandSize: String, Decodable {
+        case none = "None"
         case medium = "M"
         case large = "L"
     }
     
-    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int? = nil) {
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self.bandSize = bandSize
+        self._bandSize = bandSize
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
     }
 }
 
 class LeatherLink : Band {
     override var bandType: BandType { BandType.LeatherLink }
-    var bandSize: BandSize?
+    
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none}
     
     enum BandSize: String, Decodable {
+        case none = "None"
         case smallMedium = "S/M"
         case mediumLarge = "M/L"
     }
     
-    init(color: String, season: Season, year: Int, bandSize: BandSize, generation: Int? = nil) {
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self.bandSize = bandSize
+        self._bandSize = bandSize
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
     }
 }
 
@@ -402,7 +437,7 @@ class ThirdPartyBand : Band {
     override var bandType: BandType { BandType.ThirdPartyBand }
     var manufacturer: String?
     
-    init(color: String, season: Season, year: Int, manufacturer: String? = nil, generation: Int? = nil) {
+    init(color: String, season: Season = .spring, year: Int = 0, manufacturer: String? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.manufacturer = manufacturer
     }

@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct BandsView: View {
-    init(repository: BandHistoryRepository, bandType : BandType) {
-        self.repository = repository
-        self.bandType = bandType
+    
+    // define the repositories that this view will use
+    private var bandRepository: BandRepository
+    
+    init(bandType: BandType? = nil) {
+        if bandType == nil {
+            self.bandType = .SportBand
+            self.bandRepository = BandRepository.sample
+        }
+        else {
+            self.bandType = bandType!
+            self.bandRepository = GlobalBandRepository
+        }
     }
     
-    let repository: BandHistoryRepository
     var bandType : BandType
+    
+    @State private var showTrackBandSheet = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,7 +34,7 @@ struct BandsView: View {
             List {
                 ForEach(bandRepository.getBandsByType(bandType)) { band in
                     NavigationLink {
-                        HistoryView(repository: repository, band: band)
+                        BandsHistoryView(band: band)
                     } label: {
                         BandView(band: band, showBandType: false)
                     }
@@ -32,11 +43,26 @@ struct BandsView: View {
         }
         .navigationTitle(bandType.rawValue)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    print("tapped track band")
+                    showTrackBandSheet = true
+                } label: {
+                    Label("Track Band", systemImage: "plus.circle")
+                }
+            }
+        }
+        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
+            print("goodbye track band sheet")
+        }, content: {
+            TrackBandView()
+        })
     }
 }
 
 struct BandsView_Previews: PreviewProvider {
     static var previews: some View {
-        BandsView(repository: BandHistoryRepository(false), bandType: BandType.SportBand)
+        BandsView()
     }
 }

@@ -8,14 +8,23 @@
 import Foundation
 
 class WatchRepository {
-    var allWatches : [Watch]
+    // sample repository
+    static let sample = WatchRepository(false)
     
-    init() {
+    var allWatches: [Watch]
+    
+    init(_ loadHistories: Bool = true) {
         self.allWatches = [Watch]()
-        loadWatches()
+        
+        if loadHistories {
+            loadWatches()
+        }
+        else {
+            allWatches = sampleWatches
+        }
     }
     
-    func loadWatches() {
+    private func loadWatches() {
         do {
             let allWatchesFilePath = Bundle.main.url(forResource: "AllWatches", withExtension: "json")
             let allWatchesFileContents = try String(contentsOf: allWatchesFilePath!)
@@ -25,9 +34,16 @@ class WatchRepository {
         }
         catch {
             print("unsuccessful")
-            allWatches = SampleWatches
         }
     }
+    
+    private let sampleWatches = [
+        Watch(series: 0, color: "Silver Stainless Steel", size: 42),
+        Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike"),
+        Watch(series: 5, color: "Gold Stainless Steel", size: 44),
+        Watch(series: 5, color: "Space Black Stainless Steel", size: 44),
+        Watch(series: 7, color: "Titanium", size: 45, edition: "Edition"),
+    ]
 }
 
 struct AllWatchesSource: Decodable {

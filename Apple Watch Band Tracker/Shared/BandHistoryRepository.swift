@@ -9,16 +9,19 @@ import Foundation
 import SwiftUI
 
 class BandHistoryRepository {
+    // sample repository
+    static let sample = BandHistoryRepository(false)
     
     var bandHistories: [BandHistory]
     
     init(_ loadHistories: Bool = true) {
-        bandHistories = [BandHistory]()
+        self.bandHistories = [BandHistory]()
+        
         if loadHistories {
             loadHistory()
         }
         else {
-            bandHistories = SampleBandHistories
+            bandHistories = sampleBandHistories
         }
     }
     
@@ -31,6 +34,9 @@ class BandHistoryRepository {
             bandHistories.removeAll(where: { $0 == bandHistory })
         }
         
+        // sort the history
+        bandHistories.sort()
+        
         // update the file that will store the new band history
         let calendarComponents = Calendar.current.dateComponents([.year,.month], from: bandHistory.timeWorn)
         let year = calendarComponents.year!
@@ -42,6 +48,47 @@ class BandHistoryRepository {
         } catch {
             return false
         }
+    }
+    
+    func getYearsWithHistory() -> [BandYear] {
+        let allYears: [Int] = bandHistories.map { history in
+            let calendarComponents = Calendar.current.dateComponents([.year], from: history.timeWorn)
+            return calendarComponents.year!
+        }
+        
+        return Set(allYears).sorted(by: >).map { year in
+            BandYear(year: year)
+        }
+    }
+    
+    func getHistoriesGroupedByDate() -> [HistoryDate] {
+        var result = [HistoryDate]()
+        
+        let allDates: [Date] = bandHistories.map { history in
+            history.dateWorn
+        }
+        
+        let distinctDates = Array(Set(allDates).sorted(by: >))
+        
+        for date in distinctDates {
+            let histories = bandHistories.filter {item in
+                item.dateWorn == date
+            }.sorted(by: {$0.timeWorn > $1.timeWorn})
+            
+            let itemToAdd = HistoryDate(historyDate: date, BandHistories: histories)
+            
+            result.append(itemToAdd)
+        }
+        
+        return result
+    }
+    
+    func getHistoriesForBand(band: Band) -> [BandHistory] {
+        var temp = bandHistories.filter { item in
+            item.band == band
+        }
+        
+        return temp
     }
     
     private func getRepositoryFolder() throws -> URL {
@@ -82,10 +129,12 @@ class BandHistoryRepository {
                     print("file \(file.lastPathComponent) could not be decoded")
                 }
             }
+            
+            // sort the history
+            bandHistories.sort()
         }
         catch {
             print("load history was unsuccessful")
-            bandHistories = SampleBandHistories
         }
     }
     
@@ -94,28 +143,8 @@ class BandHistoryRepository {
         let currentMonthFileName = "BandHistory.\(year).\(month).json"
         
         // get the file
-        //let fileManager = FileManager.default
         let folderUrl = try getRepositoryFolder()
         let fileUrl = folderUrl.appendingPathComponent(currentMonthFileName)
-        
-//            if fileManager.fileExists(atPath: fileUrl.path) {
-//                // get file contents
-//            }
-//            else {
-//
-//            }
-        
-        // get the list of bands to save to the file
-//            var bandHistoriesToSave: [BandHistory] = [BandHistory]()
-//            for bandHistory in bandHistories {
-//                let calendarComponents = Calendar.current.dateComponents([.year,.month], from: bandHistory.timeWorn)
-//                let bandYear = calendarComponents.year!
-//                let bandMonth = calendarComponents.month!
-//
-//                if bandYear == year && bandMonth == month {
-//                    bandHistoriesToSave.append(bandHistory)
-//                }
-//            }
         
         // get the list of bands to save to the file
         let bandHistoriesToSave = bandHistories.filter { bandHistory in
@@ -139,23 +168,52 @@ class BandHistoryRepository {
         try jsonString?.write(toFile: fileUrl.path, atomically: false, encoding: .utf8)
     }
     
-    func test() {
-        do {
-            let folderUrl = try getRepositoryFolder()
-            let fileUrl = folderUrl.appendingPathComponent("testname.txt")
+    private var sampleBandHistories: [BandHistory] {
+        var result = [BandHistory]()
+        
+        let watches: [Watch] = [
+            Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike"),
+            Watch(series: 5, color: "Gold Stainless Steel", size: 44),
+            Watch(series: 7, color: "Titanium", size: 45, edition: "Edition"),
+        ]
+        
+        let bands: [Band] = [
+            SportBand(
+                color: "Midnight Blue",
+                season: Season.fall,
+                year: 2018,
+                generation: 2),
+            SportLoop(
+                color: "Surf Blue",
+                season: Season.spring,
+                year: 2020,
+                bandVersion: .twoTone),
+            BraidedSoloLoop(
+                color: "Atlantic Blue",
+                season: Season.fall,
+                year: 2020,
+                bandSize: 5),
+            LeatherLink(
+                color: "Midnight",
+                season: Season.fall,
+                year: 2021,
+                bandSize: .smallMedium),
+            WovenNylon(
+                color: "Pearl",
+                season: Season.spring,
+                year: 2016,
+                bandVersion: .original),
+        ]
+        
+        for i in 1...1000 {
+            let band = bands[i % 5]
+            let watch = watches[i % 3]
+            let timeWorn = Date(timeIntervalSinceNow: (TimeInterval(i * -20000)))
             
-            var dataToWrite = "Apple Watch Band Tracker\n\n"
-            let date = Date()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .full
-            dateFormatter.timeStyle = .full
-            dataToWrite += dateFormatter.string(from: date)
-            
-            try dataToWrite.write(toFile: fileUrl.path, atomically: false, encoding: String.Encoding.utf8)
+            result.append(BandHistory(band: band, watch: watch, timeWorn: timeWorn))
         }
-        catch {
-            print("file write test unsuccessful")
-        }
+        
+        return result
     }
 }
 
@@ -165,4 +223,15 @@ struct AllBandHistories: Decodable, Encodable {
     init(_ bandHistories: [BandHistory]) {
         self.bandHistories = bandHistories
     }
+}
+
+struct HistoryDate: Identifiable {
+    let historyDate: Date
+    let BandHistories: [BandHistory]
+    let id = UUID()
+}
+
+struct BandYear: Identifiable {
+    let year: Int
+    let id = UUID()
 }

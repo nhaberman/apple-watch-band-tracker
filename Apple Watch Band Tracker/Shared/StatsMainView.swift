@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct StatsMainView: View {
-    init(_ repository: BandHistoryRepository) {
-        //Theme.navigationBarColors(background: .blue, titleColor: .white)
-        self.repository = repository
+//    init() {
+//        Theme.navigationBarColors(background: .blue, titleColor: .white)
+//    }
+    
+    // define the repositories that this view will use
+    private var repository: BandHistoryRepository
+    
+    init(_ isPreview: Bool = false) {
+        if isPreview {
+            self.repository = BandHistoryRepository.sample
+        }
+        else {
+            self.repository = GlobalBandHistoryRepository
+        }
     }
     
-    let repository: BandHistoryRepository
-    
+    @State private var showTrackBandSheet = false
     @State private var showSettingsSheet = false
     
     var body: some View {
@@ -43,6 +53,14 @@ struct StatsMainView: View {
                         Label("Settings", systemImage: "gear.circle")
                     }
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("tapped track band")
+                        showTrackBandSheet = true
+                    } label: {
+                        Label("Track Band", systemImage: "plus.circle")
+                    }
+                }
             }
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
@@ -50,11 +68,16 @@ struct StatsMainView: View {
         }, content: {
             SettingsView()
         })
+        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
+            print("goodbye track band sheet")
+        }, content: {
+            TrackBandView()
+        })
     }
 }
 
 struct StatsMainView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsMainView(BandHistoryRepository(false))
+        StatsMainView(false)
     }
 }

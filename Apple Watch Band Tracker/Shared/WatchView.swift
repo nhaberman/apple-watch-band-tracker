@@ -45,11 +45,6 @@ struct WatchView : View {
 
 struct WatchView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchView(watch: Watch(
-            series: 7,
-            color: "Titanium",
-            size: 45,
-            edition: "Edition"
-        ))
+        WatchView(watch: WatchRepository.sample.allWatches[0])
     }
 }

@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct TrackBandView: View {
-    init(_ repository: BandHistoryRepository) {
-        //Theme.navigationBarColors(background: .blue, titleColor: .white)
-        self.repository = repository
-    }
-    
-    let repository: BandHistoryRepository
+//    init() {
+//        Theme.navigationBarColors(background: .blue, titleColor: .white)
+//    }
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -23,18 +20,9 @@ struct TrackBandView: View {
     @State private var selectedDate = Date()
     @State private var useCurrentDate = true
     
-    private let bandRepository = BandRepository()
-    
     var body: some View {
         NavigationView {
             Form {
-                Section("Select the Apple Watch:") {
-                    Picker("Watch", selection: $selectedWatch) {
-                        ForEach(WatchRepository().allWatches, id: \.self) { watch in
-                            Text(watch.formattedName())
-                        }
-                    }
-                }
                 Section("Select the Band:") {
                     List {
                         Picker("Band Type", selection: $selectedBandType) {
@@ -47,9 +35,16 @@ struct TrackBandView: View {
                     }
                     List {
                         Picker("Band", selection: $selectedBand) {
-                            ForEach(bandRepository.getBandsByType(selectedBandType), id: \.self) { band in
+                            ForEach(GlobalBandRepository.getBandsByType(selectedBandType), id: \.self) { band in
                                 Text(band.formattedName())
                             }
+                        }
+                    }
+                }
+                Section("Select the Apple Watch:") {
+                    Picker("Watch", selection: $selectedWatch) {
+                        ForEach(WatchRepository().allWatches, id: \.self) { watch in
+                            Text(watch.formattedName())
                         }
                     }
                 }
@@ -66,7 +61,7 @@ struct TrackBandView: View {
                     print("Save Band")
                     
                     let bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
-                    let wasSuccessful = repository.trackBand(bandHistory: bandHistory)
+                    let wasSuccessful = GlobalBandHistoryRepository.trackBand(bandHistory: bandHistory)
                     
 //                    if wasSuccessful {
 //                        Alert(title: Text("Error"), message: Text("Could not track band"), dismissButton: .cancel())
@@ -99,6 +94,6 @@ struct TrackBandView: View {
 
 struct TrackBandView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackBandView(BandHistoryRepository(false))
+        TrackBandView()
     }
 }

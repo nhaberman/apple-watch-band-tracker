@@ -22,19 +22,6 @@ struct BandHistoryView : View {
 
 struct BandHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        BandHistoryView(bandHistory: BandHistory(
-            band: SportLoop(
-                color: "Midnight Blue",
-                season: .fall,
-                year: 2019,
-                bandVersion: .twoTone,
-                generation: 2),
-            watch: Watch(
-                series: 7,
-                color: "Titanium",
-                size: 45,
-                edition: "Edition"
-            ),
-            timeWorn: Date()))
+        BandHistoryView(bandHistory: BandHistoryRepository.sample.bandHistories[0])
     }
 }

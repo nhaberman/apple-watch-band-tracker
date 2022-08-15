@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct BandsMainView: View {
-    init(_ repository: BandHistoryRepository) {
-        //Theme.navigationBarColors(background: .blue, titleColor: .white)
-        self.repository = repository
-    }
+//    init() {
+//        Theme.navigationBarColors(background: .blue, titleColor: .white)
+//    }
     
-    let repository: BandHistoryRepository
-    
+    @State private var showTrackBandSheet = false
     @State private var showSettingsSheet = false
     
     var body: some View {
@@ -25,7 +23,7 @@ struct BandsMainView: View {
                 List(BandType.allCases) { value in
                     if (value != BandType.None) {
                         NavigationLink {
-                            BandsView(repository: repository, bandType: value)
+                            BandsView(bandType: value)
                         } label: {
                             Label(value.rawValue, systemImage: "applewatch.side.right")
                         }
@@ -43,6 +41,14 @@ struct BandsMainView: View {
                         Label("Settings", systemImage: "gear.circle")
                     }
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("tapped track band")
+                        showTrackBandSheet = true
+                    } label: {
+                        Label("Track Band", systemImage: "plus.circle")
+                    }
+                }
             }
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
@@ -50,11 +56,16 @@ struct BandsMainView: View {
         }, content: {
             SettingsView()
         })
+        .sheet(isPresented: $showTrackBandSheet, onDismiss: {
+            print("goodbye track band sheet")
+        }, content: {
+            TrackBandView()
+        })
     }
 }
 
 struct BandsMainView_Previews: PreviewProvider {
     static var previews: some View {
-        BandsMainView(BandHistoryRepository(false))
+        BandsMainView()
     }
 }
