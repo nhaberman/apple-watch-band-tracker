@@ -57,10 +57,6 @@ struct HistoryView: View {
             self.startDate = Date()
             self.endDate = Date()
         }
-        
-        print(pageTitle)
-        print("start date:  \(startDate)")
-        print("end date:  \(endDate)")
     }
     
     var startDate: Date
@@ -78,7 +74,7 @@ struct HistoryView: View {
             alignment: .leading
         ) {
             List {
-                ForEach(repository.getHistoriesGroupedByDate()) { item in
+                ForEach(repository.groupedBandHistories) { item in
                     if (item.historyDate >= startDate && item.historyDate <= endDate) {
                         Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.BandHistories) { subItem in
@@ -109,6 +105,7 @@ struct HistoryView: View {
             }
             .refreshable(action: {
                 // code to refresh the list
+                await repository.getHistoriesGroupedByDateAsync()
             })
             .listStyle(.insetGrouped)
         }

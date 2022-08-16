@@ -15,7 +15,7 @@ struct TrackBandView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var selectedWatch: Watch = Watch(series: -1, material: .none, finish: .none, size: 0)
-    @State private var selectedBandType: BandType = BandType.None
+    @State private var selectedBandType: BandType = .None
     @State private var selectedBand: Band = Band(color: "", season: .spring, year: 0)
     @State private var selectedDate = Date()
     @State private var useCurrentDate = true
@@ -34,10 +34,12 @@ struct TrackBandView: View {
                             }
                         }
                     }
-                    List {
-                        Picker("Band", selection: $selectedBand) {
-                            ForEach(GlobalBandRepository.getBandsByType(selectedBandType), id: \.self) { band in
-                                Text(band.formattedName())
+                    if selectedBandType != .None {
+                        List {
+                            Picker("Band", selection: $selectedBand) {
+                                ForEach(GlobalBandRepository.getBandsByType(selectedBandType), id: \.self) { band in
+                                    Text(band.formattedName())
+                                }
                             }
                         }
                     }
