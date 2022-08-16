@@ -156,7 +156,7 @@ class SportBand : Band {
     
     override func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.pin, forKey: .pin)
+        try container.encodeIfPresent(self.pin, forKey: .pin)
         try super.encode(to: encoder)
     }
     
@@ -219,7 +219,7 @@ class NikeSportBand : Band {
     
     override func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.pin, forKey: .pin)
+        try container.encodeIfPresent(self.pin, forKey: .pin)
         try super.encode(to: encoder)
     }
     

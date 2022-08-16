@@ -16,7 +16,6 @@ class BandHistoryRepository {
     
     init(_ loadHistories: Bool = true) {
         self.bandHistories = [BandHistory]()
-        self.groupedBandHistories = [HistoryDate]()
         
         if loadHistories {
             loadHistory()
@@ -24,11 +23,7 @@ class BandHistoryRepository {
         else {
             bandHistories = sampleBandHistories
         }
-        
-        getHistoriesGroupedByDate()
     }
-    
-    var groupedBandHistories: [HistoryDate]
     
     func trackBand(bandHistory: BandHistory, addBandHistory: Bool = true) -> Bool {
         // add or remove the band to or from the band history
@@ -66,14 +61,8 @@ class BandHistoryRepository {
         }
     }
     
-    func getHistoriesGroupedByDate() {
-        Task {
-            await getHistoriesGroupedByDateAsync()
-        }
-    }
-    
-    func getHistoriesGroupedByDateAsync() async {
-        self.groupedBandHistories = [HistoryDate]()
+    func getHistoriesGroupedByDate() -> [HistoryDate] {
+        var results = [HistoryDate]()
         
         let allDates: [Date] = bandHistories.map { history in
             history.dateWorn
@@ -88,8 +77,10 @@ class BandHistoryRepository {
             
             let itemToAdd = HistoryDate(historyDate: date, BandHistories: histories)
             
-            groupedBandHistories.append(itemToAdd)
+            results.append(itemToAdd)
         }
+        
+        return results
     }
     
     func getHistoriesForBand(band: Band) -> [BandHistory] {
