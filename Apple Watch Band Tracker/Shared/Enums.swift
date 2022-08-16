@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum BandType: String, CaseIterable, Identifiable, Decodable, Encodable {
+public enum BandType: String, CaseIterable, Identifiable, Codable {
     
     public var id: Self { self }
     
@@ -28,7 +28,7 @@ public enum BandType: String, CaseIterable, Identifiable, Decodable, Encodable {
     case ThirdPartyBand = "Third Party Band"
 }
 
-public enum Season: String, CaseIterable, Identifiable, Decodable, Encodable {
+public enum Season: String, CaseIterable, Identifiable, Codable {
     
     public var id: Self { self }
     

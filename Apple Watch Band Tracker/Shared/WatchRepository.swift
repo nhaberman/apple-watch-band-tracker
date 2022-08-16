@@ -46,6 +46,6 @@ class WatchRepository {
     ]
 }
 
-struct AllWatchesSource: Decodable {
+struct AllWatchesSource: Codable {
     var allWatches: [Watch]
 }

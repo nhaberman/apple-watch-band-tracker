@@ -144,7 +144,7 @@ class BandRepository {
     }
 }
 
-struct AllBandsSource: Decodable {
+struct AllBandsSource: Codable {
     var sportBands : [SportBand] = [SportBand]()
     var nikeSportBands : [NikeSportBand] = [NikeSportBand]()
     var sportLoops : [SportLoop] = [SportLoop]()

@@ -84,11 +84,9 @@ class BandHistoryRepository {
     }
     
     func getHistoriesForBand(band: Band) -> [BandHistory] {
-        var temp = bandHistories.filter { item in
+        bandHistories.filter { item in
             item.band == band
         }
-        
-        return temp
     }
     
     private func getRepositoryFolder() throws -> URL {
@@ -217,7 +215,7 @@ class BandHistoryRepository {
     }
 }
 
-struct AllBandHistories: Decodable, Encodable {
+struct AllBandHistories: Codable {
     var bandHistories: [BandHistory]
     
     init(_ bandHistories: [BandHistory]) {

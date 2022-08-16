@@ -55,6 +55,8 @@
 		07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273ED28A84070006A8839 /* BandHistoryView.swift */; };
 		07D273F228AACB72006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273F128AACB72006A8839 /* BandsHistoryView.swift */; };
 		07D273F328AACB72006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273F128AACB72006A8839 /* BandsHistoryView.swift */; };
+		07D273F528AB3DB1006A8839 /* AllBands_v2.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273F428AB3DB1006A8839 /* AllBands_v2.json */; };
+		07D273F628AB3DB1006A8839 /* AllBands_v2.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273F428AB3DB1006A8839 /* AllBands_v2.json */; };
 		07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
@@ -117,6 +119,7 @@
 		07D273EA28A81F77006A8839 /* AllBands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands.json; sourceTree = "<group>"; };
 		07D273ED28A84070006A8839 /* BandHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryView.swift; sourceTree = "<group>"; };
 		07D273F128AACB72006A8839 /* BandsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsHistoryView.swift; sourceTree = "<group>"; };
+		07D273F428AB3DB1006A8839 /* AllBands_v2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v2.json; sourceTree = "<group>"; };
 		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		07ED5D0C28A1F3630044469C /* HistoryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainView.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				07D273EA28A81F77006A8839 /* AllBands.json */,
+				07D273F428AB3DB1006A8839 /* AllBands_v2.json */,
 				07D273E728A6BAAE006A8839 /* AllBands_v1.json */,
 				07ED5D1228A345300044469C /* AllWatches.json */,
 			);
@@ -406,6 +410,7 @@
 			files = (
 				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
 				07D273EB28A81F77006A8839 /* AllBands.json in Resources */,
+				07D273F528AB3DB1006A8839 /* AllBands_v2.json in Resources */,
 				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
 				07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
@@ -417,6 +422,7 @@
 			files = (
 				07ED5D1428A345300044469C /* AllWatches.json in Resources */,
 				07D273EC28A81F77006A8839 /* AllBands.json in Resources */,
+				07D273F628AB3DB1006A8839 /* AllBands_v2.json in Resources */,
 				0796D2F3289E131C00591131 /* Assets.xcassets in Resources */,
 				07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
