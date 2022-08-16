@@ -170,9 +170,9 @@ class BandHistoryRepository {
         var result = [BandHistory]()
         
         let watches: [Watch] = [
-            Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike"),
-            Watch(series: 5, color: "Gold Stainless Steel", size: 44),
-            Watch(series: 7, color: "Titanium", size: 45, edition: "Edition"),
+            Watch(series: 3, material: .aluminum, finish: .spaceGray, size: 42, edition: "Nike"),
+            Watch(series: 5, material: .stainlessSteel, finish: .gold, size: 44),
+            Watch(series: 7, material: .titanium, finish: .silver, size: 45, edition: "Edition"),
         ]
         
         let bands: [Band] = [

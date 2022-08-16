@@ -37,3 +37,35 @@ public enum Season: String, CaseIterable, Identifiable, Codable {
     case fall = "Fall"
     case winter = "Winter"
 }
+
+public enum WatchCaseMaterial: String, Identifiable, Codable {
+    public var id: Self { self }
+    
+    case none = "none"
+    case aluminum = "Aluminum"
+    case stainlessSteel = "Stainless Steel"
+    case titanium = "Titanium"
+    case ceramic = "Ceramic"
+    case gold = "Gold"
+}
+
+public enum WatchCaseFinish: String, Identifiable, Codable {
+    public var id: Self { self }
+    
+    case none = "none"
+    case silver = "Silver"
+    case spaceGray = "Space Gray"
+    case gold = "Gold"
+    case roseGold = "Rose Gold"
+    case blue = "Blue"
+    case red = "Red"
+    case green = "Green"
+    case starlight = "Starlight"
+    case midnight = "Midnight"
+    case spaceBlack = "Space Black"
+    case graphite = "Graphite"
+    case yellowGoldEdition = "Yellow"
+    case roseGoldEdition = "Rose"
+    case whiteCeramic = "White"
+    case grayCeramic = "Gray"
+}

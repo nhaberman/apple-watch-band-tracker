@@ -14,11 +14,12 @@ struct TrackBandView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var selectedWatch: Watch = Watch(series: -1, color: "", size: 0)
+    @State private var selectedWatch: Watch = Watch(series: -1, material: .none, finish: .none, size: 0)
     @State private var selectedBandType: BandType = BandType.None
     @State private var selectedBand: Band = Band(color: "", season: .spring, year: 0)
     @State private var selectedDate = Date()
     @State private var useCurrentDate = true
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
@@ -59,15 +60,7 @@ struct TrackBandView: View {
                 
                 Button {
                     print("Save Band")
-                    
-                    let bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
-                    let wasSuccessful = GlobalBandHistoryRepository.trackBand(bandHistory: bandHistory)
-                    
-//                    if wasSuccessful {
-//                        Alert(title: Text("Error"), message: Text("Could not track band"), dismissButton: .cancel())
-//                    }
-                    
-                    presentationMode.wrappedValue.dismiss()
+                    saveBand()
                 } label: {
                     HStack {
                         Image(systemName: "applewatch.side.right")
@@ -76,6 +69,15 @@ struct TrackBandView: View {
                     }
                 }
             }
+            .alert(isPresented: $showingAlert) {
+                Alert(
+                    title: Text("Unable to Track Band"),
+                    message: Text("A value is required for all fields in order to track the band."),
+                    dismissButton: .default(Text("OK")))
+            }
+//            .actionSheet(isPresented: $showingAlert) {
+//                ActionSheet(title: Text("Unable to Track Band"), message: Text("A value is required for all fields in order to track the band."), buttons: [.default(Text("one")){}, .default(Text("two")){ presentationMode.wrappedValue.dismiss()}, .cancel()])
+//            }
             .navigationTitle("Track Band")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -90,6 +92,25 @@ struct TrackBandView: View {
             }
         }
     }
+    
+    func saveBand() {
+        // confirm that a band and watch were selected
+        if selectedWatch.series == -1 || selectedBandType == .None || selectedBand.color == "" {
+            showingAlert = true
+        }
+        else {
+            let bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
+            let wasSuccessful = GlobalBandHistoryRepository.trackBand(bandHistory: bandHistory)
+            
+            if !wasSuccessful {
+                showingAlert = true
+            }
+            else {
+                presentationMode.wrappedValue.dismiss()
+            }
+        }
+    }
+    
 }
 
 struct TrackBandView_Previews: PreviewProvider {

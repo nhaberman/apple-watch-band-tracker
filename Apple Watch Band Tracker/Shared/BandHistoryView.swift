@@ -19,8 +19,7 @@ struct BandHistoryView : View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40, alignment: .center)
                 .symbolRenderingMode(.hierarchical)
-                //.foregroundStyle(.blue, .black)
-                .foregroundColor(.accentColor)
+                .foregroundStyle(bandHistory.watch.getDisplayColor())
             VStack(alignment: .leading) {
                 BandView(band: bandHistory.band, showBandType: true, showIcon: false)
                 Text(bandHistory.timeWornString())

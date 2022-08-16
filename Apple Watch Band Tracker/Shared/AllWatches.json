@@ -3,51 +3,47 @@
     "allWatches": [
         {
             "series": 0,
-            "color": "Stainless Steel",
-            "edition": "",
+            "material": "Stainless Steel",
+            "finish": "Silver",
             "size": 42
         },
         {
             "series": 0,
-            "color": "Stainless Steel",
-            "edition": "",
+            "material": "Stainless Steel",
+            "finish": "Silver",
             "size": 38
         },
         {
             "series": 2,
-            "color": "Space Black Stainless Steel",
-            "edition": "",
+            "material": "Stainless Steel",
+            "finish": "Space Black",
             "size": 42
         },
         {
             "series": 3,
-            "color": "Space Gray Aluminum",
+            "material": "Aluminum",
+            "finish": "Space Gray",
             "edition": "Nike",
             "size": 42
         },
         {
             "series": 5,
-            "color": "Gold Stainless Steel",
-            "edition": "",
+            "material": "Stainless Steel",
+            "finish": "Gold",
             "size": 44
         },
         {
             "series": 5,
-            "color": "Space Black Stainless Steel",
-            "edition": "",
+            "material": "Stainless Steel",
+            "finish": "Space Black",
             "size": 44
         },
         {
             "series": 7,
-            "color": "Titanium",
-            "edition": "edition",
+            "material": "Titanium",
+            "finish": "Silver",
+            "edition": "Edition",
             "size": 45
         },
-        {
-            "series": 8,
-            "color": "Titanium",
-            "edition": "Pro",
-            "size": 48
-        }
     ]
 }

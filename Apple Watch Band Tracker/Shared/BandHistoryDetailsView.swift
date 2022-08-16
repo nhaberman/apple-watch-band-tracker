@@ -70,7 +70,8 @@ struct BandHistoryDetailsView_Previews: PreviewProvider {
                 generation: 4),
             watch: Watch(
                 series: 0,
-                color: "Stainless Steel",
+                material: .stainlessSteel,
+                finish: .silver,
                 size: 42),
             timeWorn: Date()))
     }

@@ -11,43 +11,36 @@ import SwiftUI
 class Watch: Identifiable, Hashable, Codable {
     static func == (lhs: Watch, rhs: Watch) -> Bool {
         return lhs.series == rhs.series
-            && lhs.color == rhs.color
+            && lhs.material == rhs.material
+            && lhs.finish == rhs.finish
             && lhs.edition == rhs.edition
             && lhs.size == rhs.size
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(series)
-        hasher.combine(color)
+        hasher.combine(material)
+        hasher.combine(finish)
         hasher.combine(edition)
         hasher.combine(size)
     }
     
-    var series: Int = 0
-    var color: String = ""
-    var edition: String = ""
+    var series: Int
+    var material: WatchCaseMaterial
+    var finish: WatchCaseFinish
+    var edition: String?
     var size: Int = 0
     
-    init(series: Int, color: String, size: Int, edition: String = "") {
+    init(series: Int, material: WatchCaseMaterial, finish: WatchCaseFinish, size: Int, edition: String? = nil) {
         self.series = series
-        self.color = color
+        self.material = material
+        self.finish = finish
         self.edition = edition
         self.size = size
     }
     
     func formattedName() -> String {
-        var result: String = ""
-        
-        // series line
-        result += formattedSeries()
-        
-        // color line
-        result += "\n\(color)\n"
-        
-        // size line
-        result += formattedSize()
-        
-        return result
+        "\(formattedSeries())\n\(formattedColor())\n\(formattedSize())"
     }
     
     func formattedSeries() -> String {
@@ -61,15 +54,93 @@ class Watch: Identifiable, Hashable, Codable {
         }
         
         // edition
-        if (edition != "") {
-            result += " (\(edition))"
+        if (edition != nil) {
+            result += " (\(edition!))"
         }
         
         return result
     }
     
+    func formattedColor() -> String {
+        if (material == .stainlessSteel || material == .titanium) && finish == .silver {
+            return material.rawValue
+        }
+        else {
+            return finish.rawValue + " " + material.rawValue
+        }
+    }
+    
     func formattedSize() -> String {
         return "\(size)mm"
     }
+    
+    func getDisplayColor() -> Color {
+        switch material {
+        case .aluminum:
+            switch finish {
+            case .silver:
+                return Color.accentColor
+            case .spaceGray:
+                return Color.gray
+            case .gold:
+                return Color("")
+            case .roseGold:
+                return Color.accentColor
+            case .blue:
+                return Color.accentColor
+            case .red:
+                return Color.accentColor
+            case .green:
+                return Color.accentColor
+            case .starlight:
+                return Color.accentColor
+            case .midnight:
+                return Color.accentColor
+            default:
+                return Color.accentColor
+            }
+        case .stainlessSteel:
+            switch finish {
+            case .silver:
+                return Color.gray.opacity(0.5)
+            case .gold:
+                return Color.yellow
+            case .spaceBlack:
+                return Color.black
+            case .graphite:
+                return Color.accentColor
+            default:
+                return Color.accentColor
+            }
+        case .titanium:
+            switch finish {
+            case .silver:
+                return Color.gray.opacity(0.75)
+            case .spaceBlack:
+                return Color.accentColor
+            default:
+                return Color.accentColor
+            }
+        case .ceramic:
+            switch finish {
+            case .whiteCeramic:
+                return Color.accentColor
+            case .grayCeramic:
+                return Color.accentColor
+            default:
+                return Color.accentColor
+            }
+        case .gold:
+            switch finish {
+            case .yellowGoldEdition:
+                return Color.accentColor
+            case .roseGoldEdition:
+                return Color.accentColor
+            default:
+                return Color.accentColor
+            }
+        default:
+            return Color.accentColor
+        }
+    }
 }
-

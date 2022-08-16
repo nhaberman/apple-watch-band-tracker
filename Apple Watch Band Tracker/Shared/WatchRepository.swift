@@ -38,11 +38,11 @@ class WatchRepository {
     }
     
     private let sampleWatches = [
-        Watch(series: 0, color: "Silver Stainless Steel", size: 42),
-        Watch(series: 3, color: "Space Gray Aluminum", size: 42, edition: "Nike"),
-        Watch(series: 5, color: "Gold Stainless Steel", size: 44),
-        Watch(series: 5, color: "Space Black Stainless Steel", size: 44),
-        Watch(series: 7, color: "Titanium", size: 45, edition: "Edition"),
+        Watch(series: 0, material: .stainlessSteel, finish: .silver, size: 42),
+        Watch(series: 3, material: .aluminum, finish: .spaceGray, size: 42, edition: "Nike"),
+        Watch(series: 5, material: .stainlessSteel, finish: .gold, size: 44),
+        Watch(series: 5, material: .stainlessSteel, finish: .spaceBlack, size: 44),
+        Watch(series: 7, material: .titanium, finish: .silver, size: 45, edition: "Edition"),
     ]
 }
 
