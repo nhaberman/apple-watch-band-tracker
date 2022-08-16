@@ -10,12 +10,49 @@ import SwiftUI
 
 class Band: Identifiable, Hashable, Codable {
     static func == (lhs: Band, rhs: Band) -> Bool {
-        return lhs.bandType == rhs.bandType
-            && lhs.color == rhs.color
-            && lhs.generation == rhs.generation
-            && lhs.edition == rhs.edition
-            && lhs.season == rhs.season
-            && lhs.year == rhs.year
+        if lhs.bandType != rhs.bandType {
+            return false
+        }
+        else {
+            let baseEquality = lhs.color == rhs.color
+                && lhs.generation == rhs.generation
+                && lhs.edition == rhs.edition
+                && lhs.season == rhs.season
+                && lhs.year == rhs.year
+            
+            switch lhs.bandType {
+            case .SportBand:
+                return baseEquality && (lhs as! SportBand).pin == (rhs as! SportBand).pin
+            case .NikeSportBand:
+                return baseEquality && (lhs as! NikeSportBand).pin == (rhs as! NikeSportBand).pin
+            case .SportLoop:
+                return baseEquality && (lhs as! SportLoop).bandVersion == (rhs as! SportLoop).bandVersion
+            case .NikeSportLoop:
+                return baseEquality && (lhs as! NikeSportLoop).bandVersion == (rhs as! NikeSportLoop).bandVersion
+            case .SoloLoop:
+                return baseEquality && (lhs as! SoloLoop).bandSize == (rhs as! SoloLoop).bandSize
+            case .BraidedSoloLoop:
+                return baseEquality && (lhs as! BraidedSoloLoop).bandSize == (rhs as! BraidedSoloLoop).bandSize
+            case .WovenNylon:
+                return baseEquality && (lhs as! WovenNylon).bandVersion == (rhs as! WovenNylon).bandVersion
+            case .ClassicBuckle:
+                return baseEquality
+            case .ModernBuckle:
+                return baseEquality && (lhs as! ModernBuckle).bandSize == (rhs as! ModernBuckle).bandSize
+            case .LeatherLoop:
+                return baseEquality && (lhs as! LeatherLoop).bandSize == (rhs as! LeatherLoop).bandSize
+            case .LeatherLink:
+                return baseEquality && (lhs as! LeatherLink).bandSize == (rhs as! LeatherLink).bandSize
+            case .MilaneseLoop:
+                return baseEquality
+            case .LinkBracelet:
+                return baseEquality
+            case .ThirdPartyBand:
+                return baseEquality && (lhs as! ThirdPartyBand).manufacturer == (rhs as! ThirdPartyBand).manufacturer
+            default:
+                return baseEquality
+            }
+        }
     }
     
     func hash(into hasher: inout Hasher) {
@@ -42,7 +79,7 @@ class Band: Identifiable, Hashable, Codable {
     var logicalOrder: Int? = nil
     
     // owned band properties
-    var size: Int? = nil
+    var watchSize: Int? = nil
     var isOwned: Bool? = nil
     
     init(color: String, season: Season, year: Int, generation: Int? = nil) {
@@ -53,10 +90,20 @@ class Band: Identifiable, Hashable, Codable {
         self.year = year
     }
     
-    // coding keys for specific band properties
-//    enum CodingKeys: String, CodingKey {
-//        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
-//    }
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(self.bandType, forKey: .bandType)
+        try container.encodeIfPresent(self.color, forKey: .color)
+        try container.encodeIfPresent(self.season, forKey: .season)
+        try container.encodeIfPresent(self.year, forKey: .year)
+        try container.encodeIfPresent(self.generation, forKey: .generation)
+        try container.encodeIfPresent(self.edition, forKey: .edition)
+        try container.encodeIfPresent(self.colorOrder, forKey: .colorOrder)
+        try container.encodeIfPresent(self.dateOrder, forKey: .dateOrder)
+        try container.encodeIfPresent(self.logicalOrder, forKey: .logicalOrder)
+        try container.encodeIfPresent(self.watchSize, forKey: .watchSize)
+        try container.encodeIfPresent(self.isOwned, forKey: .isOwned)
+    }
     
     func formattedName() -> String {
         var result: String = self.color
@@ -92,13 +139,11 @@ class Band: Identifiable, Hashable, Codable {
 
 // Band Subclasses
 class SportBand : Band {
-    private var _pin: String?
-    var pin: String { _pin ?? defaultPin}
-    let defaultPin: String = "Silver"
+    var pin: String?
     
     init(color: String, season: Season, year: Int, pin: String? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self._pin = pin
+        self.pin = pin
         self.bandType = .SportBand
     }
     
@@ -106,20 +151,25 @@ class SportBand : Band {
         try super.init(from: decoder)
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        _pin = try values.decodeIfPresent(String.self, forKey: ._pin)
+        pin = try values.decodeIfPresent(String.self, forKey: .pin)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.pin, forKey: .pin)
+        try super.encode(to: encoder)
     }
     
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
-        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
-        case _pin = "pin"
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, pin
     }
     
     override func formattedName() -> String {
         var result = super.formattedName()
         
-        if self.pin != defaultPin {
-            let pinDetails = "\(pin) Pin"
+        if self.pin != nil {
+            let pinDetails = "\(pin!) Pin"
             
             if result.last == ")" {
                 result.removeLast()
@@ -136,8 +186,8 @@ class SportBand : Band {
     override func formattedDetails() -> String {
         var result = super.formattedDetails()
         
-        if self.pin != defaultPin {
-            let pinDetails = "\(pin) Pin"
+        if self.pin != nil {
+            let pinDetails = "\(pin!) Pin"
             
             if result.count == 0 {
                 result = pinDetails
@@ -152,13 +202,11 @@ class SportBand : Band {
 }
 
 class NikeSportBand : Band {
-    private var _pin: String?
-    var pin: String { _pin ?? defaultPin}
-    let defaultPin: String = "Silver"
+    var pin: String?
     
     init(color: String, season: Season, year: Int, pin: String = "", generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
-        self._pin = pin
+        self.pin = pin
         self.bandType = .NikeSportBand
     }
     
@@ -166,20 +214,25 @@ class NikeSportBand : Band {
         try super.init(from: decoder)
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        _pin = try values.decodeIfPresent(String.self, forKey: ._pin)
+        pin = try values.decodeIfPresent(String.self, forKey: .pin)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.pin, forKey: .pin)
+        try super.encode(to: encoder)
     }
     
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
-        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
-        case _pin = "pin"
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, pin
     }
     
     override func formattedName() -> String {
         var result = super.formattedName()
         
-        if self.pin != defaultPin {
-            let pinDetails = "\(pin) Pin"
+        if self.pin != nil {
+            let pinDetails = "\(pin!) Pin"
             
             if result.last == ")" {
                 result.removeLast()
@@ -196,8 +249,8 @@ class NikeSportBand : Band {
     override func formattedDetails() -> String {
         var result = super.formattedDetails()
         
-        if self.pin != defaultPin {
-            let pinDetails = "\(pin) Pin"
+        if self.pin != nil {
+            let pinDetails = "\(pin!) Pin"
             
             if result.count == 0 {
                 result = pinDetails
@@ -237,6 +290,12 @@ class SportLoop : Band {
         _bandVersion = try values.decodeIfPresent(SportLoopVersion.self, forKey: ._bandVersion)
     }
     
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandVersion, forKey: ._bandVersion)
+        try super.encode(to: encoder)
+    }
+    
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
@@ -268,6 +327,12 @@ class NikeSportLoop : Band {
         _bandVersion = try values.decodeIfPresent(NikeSportLoopVersion.self, forKey: ._bandVersion)
     }
     
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandVersion, forKey: ._bandVersion)
+        try super.encode(to: encoder)
+    }
+    
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
@@ -291,6 +356,12 @@ class SoloLoop : Band {
         bandSize = try values.decodeIfPresent(Int.self, forKey: .bandSize)
     }
     
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(self.bandSize, forKey: .bandSize)
+        try super.encode(to: encoder)
+    }
+    
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, bandSize
@@ -311,6 +382,12 @@ class BraidedSoloLoop : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         bandSize = try values.decodeIfPresent(Int.self, forKey: .bandSize)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(self.bandSize, forKey: .bandSize)
+        try super.encode(to: encoder)
     }
     
     // coding keys for specific band properties
@@ -342,6 +419,12 @@ class WovenNylon : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         _bandVersion = try values.decodeIfPresent(WovenNylonVersion.self, forKey: ._bandVersion)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandVersion, forKey: ._bandVersion)
+        try super.encode(to: encoder)
     }
     
     // coding keys for specific band properties
@@ -386,6 +469,12 @@ class ModernBuckle : Band {
         _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
     }
     
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
+    }
+    
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
@@ -416,6 +505,12 @@ class LeatherLoop : Band {
         _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
     }
     
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
+    }
+    
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
@@ -444,6 +539,12 @@ class LeatherLink : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
     }
     
     // coding keys for specific band properties
@@ -489,6 +590,12 @@ class ThirdPartyBand : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         manufacturer = try values.decodeIfPresent(String.self, forKey: .manufacturer)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(self.manufacturer, forKey: .manufacturer)
+        try super.encode(to: encoder)
     }
     
     // coding keys for specific band properties

@@ -29,7 +29,12 @@ struct BandView : View {
                     Text(band.bandType.rawValue)
                         .fontWeight(Font.Weight.bold)
                 }
-                Text(band.color)
+                if band.bandType == .ThirdPartyBand {
+                    Text(band.formattedName())
+                }
+                else {
+                    Text(band.color)
+                }
                 
                 let details = band.formattedDetails()
                 if details.count > 0 {

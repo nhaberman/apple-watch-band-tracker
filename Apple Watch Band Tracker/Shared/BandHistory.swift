@@ -42,12 +42,48 @@ class BandHistory: Identifiable, Comparable, Hashable, Codable {
         self.timeWorn = timeWorn
     }
     
-//    required init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        watch = try container.decode(Watch.self, forKey: .watch)
-//        timeWorn = try container.decode(Date.self, forKey: .timeWorn)
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        watch = try container.decode(Watch.self, forKey: .watch)
+        timeWorn = try container.decode(Date.self, forKey: .timeWorn)
+        
+        // decode the band depending on the type
+        let object = try container.decode(Band.self, forKey: .band)
+        
+        switch (object.bandType) {
+        case .SportBand:
+            band = try container.decode(SportBand.self, forKey: .band)
+        case .NikeSportBand:
+            band = try container.decode(NikeSportBand.self, forKey: .band)
+        case .SportLoop:
+            band = try container.decode(SportLoop.self, forKey: .band)
+        case .NikeSportLoop:
+            band = try container.decode(NikeSportLoop.self, forKey: .band)
+        case .SoloLoop:
+            band = try container.decode(SoloLoop.self, forKey: .band)
+        case .BraidedSoloLoop:
+            band = try container.decode(BraidedSoloLoop.self, forKey: .band)
+        case .WovenNylon:
+            band = try container.decode(WovenNylon.self, forKey: .band)
+        case .ClassicBuckle:
+            band = try container.decode(ClassicBuckle.self, forKey: .band)
+        case .ModernBuckle:
+            band = try container.decode(ModernBuckle.self, forKey: .band)
+        case .LeatherLoop:
+            band = try container.decode(LeatherLoop.self, forKey: .band)
+        case .LeatherLink:
+            band = try container.decode(LeatherLink.self, forKey: .band)
+        case .MilaneseLoop:
+            band = try container.decode(MilaneseLoop.self, forKey: .band)
+        case .LinkBracelet:
+            band = try container.decode(LinkBracelet.self, forKey: .band)
+        case .ThirdPartyBand:
+            band = try container.decode(ThirdPartyBand.self, forKey: .band)
+        default:
+            band = object
+        }
+        
 //
-//        // decode the band depending on the type
 //        if let object = try? container.decode(SportBand.self, forKey: .band) {
 //            band = object
 //        } else if let object = try? container.decode(NikeSportBand.self, forKey: .band) {
@@ -79,7 +115,14 @@ class BandHistory: Identifiable, Comparable, Hashable, Codable {
 //        } else {
 //            band = try container.decode(Band.self, forKey: .band)
 //        }
-//    }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.band, forKey: .band)
+        try container.encode(self.watch, forKey: .watch)
+        try container.encode(self.timeWorn, forKey: .timeWorn)
+    }
     
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {

@@ -10,10 +10,19 @@ import SwiftUI
 struct BandHistoryView : View {
     let bandHistory: BandHistory
     
+    var bandColor = 2
+    
     var body: some View {
         HStack {
+            Image(systemName: "applewatch.side.right")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40, alignment: .center)
+                .symbolRenderingMode(.hierarchical)
+                //.foregroundStyle(.blue, .black)
+                .foregroundColor(.accentColor)
             VStack(alignment: .leading) {
-                BandView(band: bandHistory.band, showBandType: true, showIcon: true)
+                BandView(band: bandHistory.band, showBandType: true, showIcon: false)
                 Text(bandHistory.timeWornString())
             }
         }

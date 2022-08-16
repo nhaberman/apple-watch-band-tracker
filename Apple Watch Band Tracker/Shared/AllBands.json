@@ -460,7 +460,6 @@
             "color": "Light Gray",
             "season": "Fall",
             "year": 2019,
-            "pin": "Titanium",
             "edition": "Edition",
         },
         {
@@ -468,7 +467,6 @@
             "color": "Dark Gray",
             "season": "Fall",
             "year": 2019,
-            "pin": "Space Black Titanium",
             "edition": "Edition",
         },
         {
@@ -618,7 +616,6 @@
             "color": "Black Unity",
             "season": "Spring",
             "year": 2021,
-            "pin": "Space Black",
             "edition": "2021",
         },
         {
@@ -708,21 +705,18 @@
             "color": "Black / Cool Gray",
             "season": "Fall",
             "year": 2016,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
             "color": "Black / Volt",
             "season": "Fall",
             "year": 2016,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
             "color": "Anthracite / Black",
             "season": "Spring",
             "year": 2017,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
@@ -760,7 +754,6 @@
             "color": "Obsidian / Black",
             "season": "Summer",
             "year": 2017,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
@@ -779,14 +772,12 @@
             "color": "Cargo Khaki / Black",
             "season": "Spring",
             "year": 2018,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
             "color": "Black / White",
             "season": "Spring",
             "year": 2018,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
@@ -799,14 +790,12 @@
             "color": "Olive Flak / Black",
             "season": "Winter",
             "year": 2018,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
             "color": "Celestial Teal / Black",
             "season": "Winter",
             "year": 2018,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
@@ -825,7 +814,6 @@
             "color": "Black / Hyper Grape",
             "season": "Spring",
             "year": 2019,
-            "pin": "Space Black",
         },
         {
             "bandType": "Nike Sport Band",
