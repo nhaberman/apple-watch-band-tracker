@@ -26,13 +26,19 @@ struct BandsView: View {
     var bandType : BandType
     
     @State private var showTrackBandSheet = false
+    @State private var selectedSortOrder = BandSortOrder.date
     
     var body: some View {
         VStack(alignment: .leading) {
-            let bandRepository = BandRepository()
+            Picker("Sort Order", selection: $selectedSortOrder) {
+                ForEach(BandSortOrder.allCases) { bandSortOrder in
+                    Text(bandSortOrder.rawValue.capitalized)
+                }
+            }
+            .pickerStyle(.segmented)
             
             List {
-                ForEach(bandRepository.getBandsByType(bandType)) { band in
+                ForEach(bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder)) { band in
                     NavigationLink {
                         BandsHistoryView(band: band)
                     } label: {

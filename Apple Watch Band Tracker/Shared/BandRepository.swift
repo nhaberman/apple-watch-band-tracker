@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class BandRepository {
     // sample repository
@@ -36,38 +37,49 @@ class BandRepository {
         }
     }
     
-    func getBandsByType(_ bandType: BandType) -> [Band] {
+    func getBandsByType(_ bandType: BandType, sortOrder: BandSortOrder = .logical) -> [Band] {
+        var results: [Band]
+        
         switch(bandType) {
         case .SportBand:
-            return allBands.sportBands
+            results = allBands.sportBands
         case .NikeSportBand:
-            return allBands.nikeSportBands
+            results = allBands.nikeSportBands
         case .SportLoop:
-            return allBands.sportLoops
+            results = allBands.sportLoops
         case .NikeSportLoop:
-            return allBands.nikeSportLoops
+            results = allBands.nikeSportLoops
         case .SoloLoop:
-            return allBands.soloLoops
+            results = allBands.soloLoops
         case .BraidedSoloLoop:
-            return allBands.braidedSoloLoops
+            results = allBands.braidedSoloLoops
         case .WovenNylon:
-            return allBands.wovenNylons
+            results = allBands.wovenNylons
         case .ClassicBuckle:
-            return allBands.classicBuckles
+            results = allBands.classicBuckles
         case .ModernBuckle:
-            return allBands.modernBuckles
+            results = allBands.modernBuckles
         case .LeatherLoop:
-            return allBands.leatherLoops
+            results = allBands.leatherLoops
         case .LeatherLink:
-            return allBands.leatherLinks
+            results = allBands.leatherLinks
         case .MilaneseLoop:
-            return allBands.milaneseLoops
+            results = allBands.milaneseLoops
         case .LinkBracelet:
-            return allBands.linkBracelets
+            results = allBands.linkBracelets
         case .ThirdPartyBand:
-            return allBands.thirdPartyBands
+            results = allBands.thirdPartyBands
         default:
-            return [Band]()
+            results = [Band]()
+        }
+        
+        switch sortOrder {
+        case .date:
+            return results.sorted(by: {$0.dateOrder ?? 0 > $1.dateOrder ?? 0})
+        case .color:
+            return results.sorted(by: {$0.colorOrder ?? 0 > $1.colorOrder ?? 0})
+        case .logical:
+            return results.sorted(by: {$0.logicalOrder ?? 0 > $1.logicalOrder ?? 0})
         }
     }
     

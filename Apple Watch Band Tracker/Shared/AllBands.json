@@ -7,6 +7,9 @@
             "year": 2015,
             "generation": 1,
             "pin": "Silver",
+            "colorOrder": 1,
+            "dateOrder": 2,
+            "logicalOrder": 3,
         },
         {
             "bandType": "Sport Band",
@@ -28,6 +31,9 @@
             "color": "Green",
             "season": "Spring",
             "year": 2015,
+            "colorOrder": 4,
+            "dateOrder": 1,
+            "logicalOrder": 4,
         },
         {
             "bandType": "Sport Band",
@@ -55,6 +61,9 @@
             "season": "Fall",
             "year": 2015,
             "generation": 1,
+            "colorOrder": 3,
+            "dateOrder": 3,
+            "logicalOrder": 1,
         },
         {
             "bandType": "Sport Band",

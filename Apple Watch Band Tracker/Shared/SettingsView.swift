@@ -16,6 +16,8 @@ struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var selectedSortOrder: BandSortOrder = .logical
+    
     init(_ isPreview: Bool = false) {
         if isPreview {
             self.repository = BandHistoryRepository.sample
@@ -34,6 +36,15 @@ struct SettingsView: View {
             List {
                 Section("Band Repository Directory") {
                     Text(repository.getRepositoryFolderSafe())
+                }
+                Section("Default Band Sort Order") {
+                    Picker("Sort Order", selection: $selectedSortOrder) {
+                        ForEach(BandSortOrder.allCases) { bandSortOrder in
+                            Text(bandSortOrder.rawValue.capitalized)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    Text(selectedSortOrder.rawValue)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
