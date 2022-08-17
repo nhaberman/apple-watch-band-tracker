@@ -38,7 +38,7 @@ struct TrackBandView: View {
                         List {
                             let bandsByType = GlobalBandRepository.getBandsByType(selectedBandType, sortOrder: .logical)
                             Picker("Band", selection: $selectedBand) {
-                                ForEach(bandsByType) { band in
+                                ForEach(bandsByType, id: \.self) { band in
                                     Text(band.formattedName())
                                 }
                             }
