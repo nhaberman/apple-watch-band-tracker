@@ -22,7 +22,11 @@ struct BandView : View {
         HStack{
             if showIcon {
                 Image(systemName: "applewatch.side.right")
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
+                    .frame(width: 40, height: 40, alignment: .center)
+                    .symbolRenderingMode(.hierarchical)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
             }
             VStack(alignment: .leading) {
                 if showBandType {
@@ -40,6 +44,7 @@ struct BandView : View {
                 if details.count > 0 {
                     Text(band.formattedDetails())
                         .fontWeight(Font.Weight.thin)
+                        .font(.system(size: 12))
                 }
             }
         }
@@ -48,6 +53,6 @@ struct BandView : View {
 
 struct BandView_Previews: PreviewProvider {
     static var previews: some View {
-        BandView(band: BandRepository.sample.allBands.leatherLinks[0])
+        BandView(band: BandRepository.sample.allBands.classicBuckles[0], showBandType: true, showIcon: true)
     }
 }

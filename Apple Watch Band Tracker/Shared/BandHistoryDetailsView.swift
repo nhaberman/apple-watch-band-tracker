@@ -21,12 +21,14 @@ struct BandHistoryDetailsView: View {
         List {
             Section("Band") {
                 BandView(band: bandHistory.band, showBandType: true, showIcon: true)
+                    .frame(minHeight: 75)
             }
             Section("Watch") {
                 WatchView(watch: bandHistory.watch)
+                    .frame(minHeight: 75)
             }
             Section("Time Worn") {
-                Text(bandHistory.timeWornString())
+                Label(bandHistory.timeWornString(), systemImage: "calendar.badge.clock")
             }
         }
         .navigationTitle("Band")

@@ -13,14 +13,8 @@ struct BandsView: View {
     private var bandRepository: BandRepository
     
     init(bandType: BandType? = nil) {
-        if bandType == nil {
-            self.bandType = .SportBand
-            self.bandRepository = BandRepository.sample
-        }
-        else {
-            self.bandType = bandType!
-            self.bandRepository = GlobalBandRepository
-        }
+        self.bandType = bandType ?? .ClassicBuckle
+        self.bandRepository = bandType == nil ? BandRepository.sample : GlobalBandRepository
     }
     
     var bandType : BandType
@@ -47,6 +41,7 @@ struct BandsView: View {
                         BandsHistoryView(band: band)
                     } label: {
                         BandView(band: band, showBandType: false)
+                            .frame(height: 32)
                     }
                 }
             }

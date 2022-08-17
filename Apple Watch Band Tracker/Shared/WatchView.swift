@@ -18,6 +18,7 @@ struct WatchView : View {
                 .frame(width: 40, height: 40, alignment: .center)
                 .symbolRenderingMode(.hierarchical)
                 .foregroundStyle(watch.getDisplayColor())
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
             VStack(alignment: .leading) {
                 Text(watch.formattedSeries())
                     .fontWeight(.bold)

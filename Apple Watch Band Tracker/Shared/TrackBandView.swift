@@ -18,7 +18,6 @@ struct TrackBandView: View {
     @State private var selectedBandType: BandType = .None
     @State private var selectedBand: Band = Band(color: "", season: .spring, year: 0)
     @State private var selectedDate = Date()
-    @State private var selectedSortOrder = BandSortOrder.date
     @State private var useCurrentDate = true
     @State private var showingAlert = false
     
@@ -37,14 +36,9 @@ struct TrackBandView: View {
                     }
                     if selectedBandType != .None {
                         List {
-//                            Picker("Sort Order", selection: $selectedSortOrder) {
-//                                ForEach(BandSortOrder.allCases) { bandSortOrder in
-//                                    Text(bandSortOrder.rawValue.capitalized)
-//                                }
-//                            }
-//                            .pickerStyle(.segmented)
+                            let bandsByType = GlobalBandRepository.getBandsByType(selectedBandType, sortOrder: .logical)
                             Picker("Band", selection: $selectedBand) {
-                                ForEach(GlobalBandRepository.getBandsByType(selectedBandType, sortOrder: selectedSortOrder), id: \.self) { band in
+                                ForEach(bandsByType) { band in
                                     Text(band.formattedName())
                                 }
                             }
@@ -125,5 +119,6 @@ struct TrackBandView: View {
 struct TrackBandView_Previews: PreviewProvider {
     static var previews: some View {
         TrackBandView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
