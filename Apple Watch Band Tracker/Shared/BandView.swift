@@ -31,8 +31,9 @@ struct BandView : View {
             VStack(alignment: .leading) {
                 if showBandType {
                     Text(band.bandType.rawValue)
-                        .fontWeight(Font.Weight.bold)
+                        .font(.headline)
                 }
+                
                 if band.bandType == .ThirdPartyBand {
                     Text(band.formattedName())
                 }
@@ -43,8 +44,7 @@ struct BandView : View {
                 let details = band.formattedDetails()
                 if details.count > 0 {
                     Text(band.formattedDetails())
-                        .fontWeight(Font.Weight.thin)
-                        .font(.system(size: 12))
+                        .font(.caption)
                 }
             }
         }

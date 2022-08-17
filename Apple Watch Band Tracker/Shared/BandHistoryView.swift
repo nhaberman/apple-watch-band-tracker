@@ -24,7 +24,8 @@ struct BandHistoryView : View {
             }
             Divider()
             Text(bandHistory.timeWornString())
-                .font(.system(size: 14, weight: .medium, design: .rounded))
+                .font(.footnote)
+                .fontWeight(.medium)
         }
         .padding(5)
     }

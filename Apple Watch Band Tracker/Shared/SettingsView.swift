@@ -34,9 +34,21 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
+                Section("About") {
+                    let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+                    
+                    HStack {
+                        Text("Version")
+                        Spacer()
+                        Text(appVersion)
+                            .foregroundColor(.gray)
+                    }
+                }
+                
                 Section("Band Repository Directory") {
                     Text(repository.getRepositoryFolderSafe())
                 }
+                
                 Section("Default Band Sort Order") {
                     Picker("Sort Order", selection: $selectedSortOrder) {
                         ForEach(BandSortOrder.allCases) { bandSortOrder in
@@ -46,6 +58,8 @@ struct SettingsView: View {
                     .pickerStyle(.segmented)
                     Text(selectedSortOrder.rawValue)
                 }
+                
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Settings")

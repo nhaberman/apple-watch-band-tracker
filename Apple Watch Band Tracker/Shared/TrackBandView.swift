@@ -67,7 +67,9 @@ struct TrackBandView: View {
                 } label: {
                     HStack {
                         Image(systemName: "applewatch.side.right")
-                            .font(.title)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20, alignment: .center)
                         Text("Track Band")
                     }
                 }
