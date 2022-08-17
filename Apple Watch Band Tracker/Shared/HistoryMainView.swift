@@ -89,6 +89,8 @@ struct HistoryMainView: View {
                     }
                 }
             }
+            
+            Label("Please select a section to begin...", systemImage: "sparkles.rectangle.stack")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")

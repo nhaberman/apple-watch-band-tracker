@@ -40,7 +40,6 @@ struct StatsMainView: View {
                         Label("test", systemImage: "macpro.gen3")
                     }
                 }
-                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Stats")
@@ -62,6 +61,8 @@ struct StatsMainView: View {
                     }
                 }
             }
+            
+            Label("Please select something to begin...", systemImage: "sparkles.rectangle.stack")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")
