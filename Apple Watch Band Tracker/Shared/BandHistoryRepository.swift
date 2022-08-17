@@ -103,6 +103,15 @@ class BandHistoryRepository {
         return repositoryFolderUrl
     }
     
+    func getRepositoryFolderSafe() -> String {
+        do {
+            return try getRepositoryFolder().path
+        }
+        catch {
+            return "{repository directory not found}"
+        }
+    }
+    
     private func loadHistory() {
         do {
             let fileManager = FileManager.default

@@ -18,17 +18,15 @@ struct BandHistoryDetailsView: View {
     @State private var showEditBandSheet = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            List {
-                Section("Band") {
-                    BandView(band: bandHistory.band, showBandType: true, showIcon: true)
-                }
-                Section("Watch") {
-                    WatchView(watch: bandHistory.watch)
-                }
-                Section("Time Worn") {
-                    Text(bandHistory.timeWornString())
-                }
+        List {
+            Section("Band") {
+                BandView(band: bandHistory.band, showBandType: true, showIcon: true)
+            }
+            Section("Watch") {
+                WatchView(watch: bandHistory.watch)
+            }
+            Section("Time Worn") {
+                Text(bandHistory.timeWornString())
             }
         }
         .navigationTitle("Band")
