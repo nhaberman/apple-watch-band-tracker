@@ -37,11 +37,13 @@ struct BandsView: View {
                 let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder)
                 
                 ForEach(searchText == "" ? bandsByType : bandsByType.filter({ $0.color.contains(searchText)}), id: \.self) { band in
-                    NavigationLink {
-                        BandsHistoryView(band: band)
-                    } label: {
-                        BandView(band: band, showBandType: false)
-                            .frame(height: 32)
+                    if(band.isOwned ?? false) {
+                        NavigationLink {
+                            BandsHistoryView(band: band)
+                        } label: {
+                            BandView(band: band, showBandType: false)
+                                .frame(height: 32)
+                        }
                     }
                 }
             }

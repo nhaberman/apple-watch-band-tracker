@@ -88,6 +88,7 @@ class Band: Identifiable, Hashable, Codable {
         self.generation = generation
         self.season = season
         self.year = year
+        self.isOwned = true
     }
     
     func encode(to encoder: Encoder) throws {
@@ -404,7 +405,7 @@ class WovenNylon : Band {
         case none = "None"
         case original = "Original"
         case stripe = "Stripe"
-        case check = "Checkered"
+        case check = "Checked"
         case pinstripe = "Pinstripe"
     }
     
