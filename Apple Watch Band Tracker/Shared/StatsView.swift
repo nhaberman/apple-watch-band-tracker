@@ -9,7 +9,18 @@ import SwiftUI
 
 struct StatsView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack(
+            alignment: .leading
+        ) {
+            List {
+                ForEach(WatchRepository.sample.allWatches) { watch     in
+                    WatchView(watch: watch)
+                }
+            }
+            .listStyle(.insetGrouped)
+        }
+        .navigationTitle("All Watches")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
