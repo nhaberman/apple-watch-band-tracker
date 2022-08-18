@@ -75,72 +75,7 @@ class Watch: Identifiable, Hashable, Codable {
     }
     
     func getDisplayColor() -> Color {
-        switch material {
-        case .aluminum:
-            switch finish {
-            case .silver:
-                return Color.accentColor
-            case .spaceGray:
-                return Color.gray
-            case .gold:
-                return Color("")
-            case .roseGold:
-                return Color.accentColor
-            case .blue:
-                return Color.accentColor
-            case .red:
-                return Color.accentColor
-            case .green:
-                return Color.accentColor
-            case .starlight:
-                return Color.accentColor
-            case .midnight:
-                return Color.accentColor
-            default:
-                return Color.accentColor
-            }
-        case .stainlessSteel:
-            switch finish {
-            case .silver:
-                return Color.gray.opacity(0.5)
-            case .gold:
-                return Color.yellow
-            case .spaceBlack:
-                return Color.black
-            case .graphite:
-                return Color.accentColor
-            default:
-                return Color.accentColor
-            }
-        case .titanium:
-            switch finish {
-            case .silver:
-                return Color.gray.opacity(0.75)
-            case .spaceBlack:
-                return Color.accentColor
-            default:
-                return Color.accentColor
-            }
-        case .ceramic:
-            switch finish {
-            case .whiteCeramic:
-                return Color.accentColor
-            case .grayCeramic:
-                return Color.accentColor
-            default:
-                return Color.accentColor
-            }
-        case .gold:
-            switch finish {
-            case .yellowGoldEdition:
-                return Color.accentColor
-            case .roseGoldEdition:
-                return Color.accentColor
-            default:
-                return Color.accentColor
-            }
-        default:
-            return Color.accentColor
-        }
+        let colorName = (finish.rawValue.capitalized + material.rawValue.capitalized).replacingOccurrences(of: " ", with: "")
+        return Color(colorName)
     }
 }

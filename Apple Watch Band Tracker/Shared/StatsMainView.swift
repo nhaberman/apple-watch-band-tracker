@@ -37,7 +37,7 @@ struct StatsMainView: View {
                     NavigationLink {
                         StatsView()
                     } label: {
-                        Label("test", systemImage: "macpro.gen3")
+                        Label("Watches", systemImage: "applewatch.watchface")
                     }
                 }
             }
