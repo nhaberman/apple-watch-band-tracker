@@ -179,11 +179,11 @@
 			isa = PBXGroup;
 			children = (
 				07D273C0289EEAB1006A8839 /* Enums.swift */,
-				07032FF128A1E11E003388C8 /* BandRepository.swift */,
-				07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */,
-				07D273CC28A04619006A8839 /* Watch.swift */,
 				07D273C6289EF28A006A8839 /* Band.swift */,
 				07E0F6BE289F354700E75E99 /* BandHistory.swift */,
+				07D273CC28A04619006A8839 /* Watch.swift */,
+				07032FF128A1E11E003388C8 /* BandRepository.swift */,
+				07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */,
 				07ED5D1528A345CC0044469C /* WatchRepository.swift */,
 			);
 			name = Models;

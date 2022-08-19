@@ -20,46 +20,46 @@ struct StatsView: View {
             .listStyle(.insetGrouped)
             
             List {
-                HStack {
-                    Text("Sport Bands")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.sportBands.count))
-                }
-                HStack {
-                    Text("Nike Sport Bands")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.nikeSportBands.count))
-                }
-                HStack {
-                    Text("Sport Loops")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.sportLoops.count))
-                }
-                HStack {
-                    Text("Nike Sport Loops")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.nikeSportLoops.count))
-                }
-                HStack {
-                    Text("Solo Loops")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.soloLoops.count))
-                }
-                HStack {
-                    Text("Braided Solo Loops")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.braidedSoloLoops.count))
-                }
-                HStack {
-                    Text("Woven Nylons")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.wovenNylons.count))
-                }
-                HStack {
-                    Text("Classic Buckles")
-                    Spacer()
-                    Text(String(GlobalBandRepository.allBands.classicBuckles.count))
-                }
+//                HStack {
+//                    Text("Sport Bands")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.sportBands.count))
+//                }
+//                HStack {
+//                    Text("Nike Sport Bands")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.nikeSportBands.count))
+//                }
+//                HStack {
+//                    Text("Sport Loops")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.sportLoops.count))
+//                }
+//                HStack {
+//                    Text("Nike Sport Loops")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.nikeSportLoops.count))
+//                }
+//                HStack {
+//                    Text("Solo Loops")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.soloLoops.count))
+//                }
+//                HStack {
+//                    Text("Braided Solo Loops")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.braidedSoloLoops.count))
+//                }
+//                HStack {
+//                    Text("Woven Nylons")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.wovenNylons.count))
+//                }
+//                HStack {
+//                    Text("Classic Buckles")
+//                    Spacer()
+//                    Text(String(GlobalBandRepository.allBands.classicBuckles.count))
+//                }
 //                HStack {
 //                    Text("Modern Buckles")
 //                    Spacer()
@@ -68,12 +68,12 @@ struct StatsView: View {
                 HStack {
                     Text("Leather Loops")
                     Spacer()
-                    Text(String(GlobalBandRepository.allBands.leatherLoops.count))
+//                    Text(String(GlobalBandRepository.allBands.leatherLoops.count))
                 }
                 HStack {
                     Text("Leather Links")
                     Spacer()
-                    Text(String(GlobalBandRepository.allBands.leatherLinks.count))
+//                    Text(String(GlobalBandRepository.allBands.leatherLinks.count))
                 }
 //                HStack {
 //                    Text("Milanese Loops")

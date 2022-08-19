@@ -20,7 +20,7 @@ struct BandsHistoryView: View {
         if band == nil {
             self.bandRepository = BandRepository.sample
             self.repository = BandHistoryRepository.sample
-            self.band = bandRepository.allBands.sportBands[0]
+            self.band = bandRepository.allBands[0]
         }
         else {
             self.bandRepository = GlobalBandRepository

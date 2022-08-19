@@ -12,16 +12,16 @@ class BandRepository {
     // sample repository
     static let sample = BandRepository(false)
     
-    var allBands: AllBandsSource
+    var allBands: [Band]
     
     init(_ loadHistories: Bool = true) {
-        self.allBands = AllBandsSource()
+        self.allBands = [Band]()
         
         if loadHistories {
             loadBands()
         }
         else {
-            self.allBands = sampleBands
+            self.allBands = sampleBands2
         }
     }
     
@@ -30,7 +30,22 @@ class BandRepository {
             let filePath = Bundle.main.url(forResource: "AllBands", withExtension: "json")
             let fileContents = try String(contentsOf: filePath!)
             let json = fileContents.data(using: .utf8)!
-            allBands = try! JSONDecoder().decode(AllBandsSource.self, from: json)
+            let source = try! JSONDecoder().decode(AllBandsSource.self, from: json)
+            
+            allBands.append(contentsOf: source.sportBands)
+            allBands.append(contentsOf: source.nikeSportBands)
+            allBands.append(contentsOf: source.sportLoops)
+            allBands.append(contentsOf: source.nikeSportLoops)
+            allBands.append(contentsOf: source.soloLoops)
+            allBands.append(contentsOf: source.braidedSoloLoops)
+            allBands.append(contentsOf: source.wovenNylons)
+            allBands.append(contentsOf: source.classicBuckles)
+            allBands.append(contentsOf: source.modernBuckles)
+            allBands.append(contentsOf: source.leatherLoops)
+            allBands.append(contentsOf: source.leatherLinks)
+            allBands.append(contentsOf: source.milaneseLoops)
+            allBands.append(contentsOf: source.linkBracelets)
+            allBands.append(contentsOf: source.thirdPartyBands)
         }
         catch {
             print("unsuccessful")
@@ -38,39 +53,8 @@ class BandRepository {
     }
     
     func getBandsByType(_ bandType: BandType, sortOrder: BandSortOrder = .logical) -> [Band] {
-        var results: [Band]
-        
-        switch(bandType) {
-        case .SportBand:
-            results = allBands.sportBands
-        case .NikeSportBand:
-            results = allBands.nikeSportBands
-        case .SportLoop:
-            results = allBands.sportLoops
-        case .NikeSportLoop:
-            results = allBands.nikeSportLoops
-        case .SoloLoop:
-            results = allBands.soloLoops
-        case .BraidedSoloLoop:
-            results = allBands.braidedSoloLoops
-        case .WovenNylon:
-            results = allBands.wovenNylons
-        case .ClassicBuckle:
-            results = allBands.classicBuckles
-        case .ModernBuckle:
-            results = allBands.modernBuckles
-        case .LeatherLoop:
-            results = allBands.leatherLoops
-        case .LeatherLink:
-            results = allBands.leatherLinks
-        case .MilaneseLoop:
-            results = allBands.milaneseLoops
-        case .LinkBracelet:
-            results = allBands.linkBracelets
-        case .ThirdPartyBand:
-            results = allBands.thirdPartyBands
-        default:
-            results = [Band]()
+        let results: [Band] = allBands.filter { band in
+            band.bandType == bandType
         }
         
         switch sortOrder {
@@ -83,77 +67,22 @@ class BandRepository {
         }
     }
     
-    private var sampleBands: AllBandsSource {
-        var source = AllBandsSource()
-        source.sportBands.append(SportBand(
-            color: "Capri Blue",
-            season: .spring,
-            year: 2021))
-        source.nikeSportBands.append(NikeSportBand(
-            color: "Obsidian / Black",
-            season: .summer,
-            year: 2017))
-        source.sportLoops.append(SportLoop(
-            color: "Red",
-            season: .fall,
-            year: 2018,
-            bandVersion: .fleck,
-            generation: 1))
-        source.nikeSportLoops.append(NikeSportLoop(
-            color: "Purple Pulse",
-            season: .fall,
-            year: 2020,
-            bandVersion: .reflective))
-        source.soloLoops.append(SoloLoop(
-            color: "Plum",
-            season: .winter,
-            year: 2020,
-            bandSize: 6))
-        source.braidedSoloLoops.append(BraidedSoloLoop(
-            color: "Charcoal",
-            season: .fall,
-            year: 2020,
-            bandSize: 5))
-        source.wovenNylons.append(WovenNylon(
-            color: "Pearl",
-            season: .spring,
-            year: 2016,
-            bandVersion: .original))
-        source.classicBuckles.append(ClassicBuckle(
-            color: "Saddle Brown",
-            season: .spring,
-            year: 2016,
-            generation: 3))
-        source.modernBuckles.append(ModernBuckle(
-            color: "Black",
-            season: .spring,
-            year: 2015,
-            bandSize: .large,
-            generation: 1))
-        source.leatherLoops.append(LeatherLoop(
-            color: "Bright Blue",
-            season: .spring,
-            year: 2015,
-            bandSize: .large))
-        source.leatherLinks.append(LeatherLink(
-            color: "Dark Cherry",
-            season: .fall,
-            year: 2021,
-            bandSize: .smallMedium))
-        source.milaneseLoops.append(MilaneseLoop(
-            color: "Silver",
-            season: .spring,
-            year: 2015))
-        source.linkBracelets.append(LinkBracelet(
-            color: "Space Black",
-            season: .fall,
-            year: 2021))
-        source.thirdPartyBands.append(ThirdPartyBand(
-            color: "Modern Strap Rustic Brown",
-            manufacturer: "Nomad"))
-        
-        return source
-    }
+    private var sampleBands2: [Band] = [
+        SportBand(color: "Capri Blue", season: .spring, year: 2021),
+        NikeSportBand(color: "Obsidian / Black", season: .summer, year: 2017),
+        SportLoop(color: "Red", season: .fall, year: 2018, bandVersion: .fleck, generation: 1),
+        NikeSportLoop(color: "Purple Pulse", season: .fall, year: 2020, bandVersion: .reflective),
+        SoloLoop(color: "Plum", season: .winter, year: 2020, bandSize: 6),
+        BraidedSoloLoop(color: "Charcoal", season: .fall, year: 2020, bandSize: 5),
+        WovenNylon(color: "Pearl", season: .spring, year: 2016, bandVersion: .original),
+        ClassicBuckle(color: "Saddle Brown", season: .spring, year: 2016, generation: 3),
+        ModernBuckle(color: "Black", season: .spring, year: 2015, bandSize: .large, generation: 1),
+        LeatherLoop(color: "Bright Blue", season: .spring, year: 2015, bandSize: .large),
+        LeatherLink(color: "Dark Cherry", season: .fall, year: 2021, bandSize: .smallMedium),
+        MilaneseLoop(color: "Silver", season: .spring, year: 2015),
+        LinkBracelet(color: "Space Black", season: .fall, year: 2021),
+        ThirdPartyBand(color: "Modern Strap Rustic Brown", manufacturer: "Nomad")
+    ]
 }
 
 struct AllBandsSource: Codable {

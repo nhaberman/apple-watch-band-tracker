@@ -53,6 +53,6 @@ struct BandView : View {
 
 struct BandView_Previews: PreviewProvider {
     static var previews: some View {
-        BandView(band: BandRepository.sample.allBands.classicBuckles[0], showBandType: true, showIcon: true)
+        BandView(band: BandRepository.sample.allBands[0], showBandType: true, showIcon: true)
     }
 }
