@@ -63,7 +63,8 @@ class Band: Identifiable, Hashable, Codable {
         hasher.combine(year)
     }
     
-    // band properties
+    // required band properties
+    var bandID: UUID?
     var bandType: BandType
     var color: String
     
@@ -83,6 +84,7 @@ class Band: Identifiable, Hashable, Codable {
     var isOwned: Bool? = nil
     
     init(color: String, season: Season, year: Int, generation: Int? = nil) {
+        self.bandID = UUID()
         self.bandType = .None
         self.color = color
         self.generation = generation
@@ -92,7 +94,12 @@ class Band: Identifiable, Hashable, Codable {
     }
     
     func encode(to encoder: Encoder) throws {
+        
+        // temp for now
+        self.bandID = UUID()
+        
         var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(self.bandID, forKey: .bandID)
         try container.encodeIfPresent(self.bandType, forKey: .bandType)
         try container.encodeIfPresent(self.color, forKey: .color)
         try container.encodeIfPresent(self.season, forKey: .season)
@@ -136,6 +143,13 @@ class Band: Identifiable, Hashable, Codable {
             return ""
         }
     }
+}
+
+struct BandTraits {
+    // owned band properties
+    var watchSize: Int? = nil
+    var isOwned: Bool? = nil
+    var isFavorite: Bool? = nil
 }
 
 // Band Subclasses
