@@ -33,11 +33,29 @@ struct StatsMainView: View {
                 alignment: .leading
             ) {
                 // put stats stuff here
-                List {
-                    NavigationLink {
-                        StatsView()
-                    } label: {
-                        Label("Watches", systemImage: "applewatch.watchface")
+                Form {
+                    List {
+                        NavigationLink {
+                            StatsView()
+                        } label: {
+                            Label("Watches", systemImage: "applewatch.watchface")
+                        }
+                    }
+                    
+                    if let currentBandHistory = GlobalBandHistoryRepository.getCurrentBand() {
+                        Section("Current Band") {
+                            BandHistoryView(bandHistory: currentBandHistory)
+                        }
+                        
+                        let mostRecentWornBand = GlobalBandHistoryRepository.getHistoriesForBand(band: currentBandHistory.band)
+                        
+                        if mostRecentWornBand.count >= 2 {
+                            let mostRecentBeforeNow = mostRecentWornBand[1]
+                            
+                            Section("Last worn on:") {
+                                BandHistoryView(bandHistory: mostRecentBeforeNow)
+                            }
+                        }
                     }
                 }
             }

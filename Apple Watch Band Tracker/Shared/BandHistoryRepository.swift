@@ -50,6 +50,15 @@ class BandHistoryRepository {
         }
     }
     
+    func getCurrentBand() -> BandHistory? {
+        if !bandHistories.isEmpty {
+            return bandHistories.last
+        }
+        else {
+            return nil
+        }
+    }
+    
     func getYearsWithHistory() -> [BandYear] {
         let allYears: [Int] = bandHistories.map { history in
             let calendarComponents = Calendar.current.dateComponents([.year], from: history.timeWorn)
