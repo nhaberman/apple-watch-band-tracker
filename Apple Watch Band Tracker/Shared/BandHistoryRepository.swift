@@ -174,7 +174,7 @@ class BandHistoryRepository {
         // create the JSON representation of the bands to save
         let allBandHistories = AllBandHistories(bandHistoriesToSave)
         let jsonEncoder = JSONEncoder()
-        jsonEncoder.outputFormatting = .prettyPrinted
+        jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
         jsonEncoder.dateEncodingStrategy = .iso8601
         
         let jsonData = try jsonEncoder.encode(allBandHistories)

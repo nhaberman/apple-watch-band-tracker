@@ -47,14 +47,22 @@ class BandRepository {
             allBands.append(contentsOf: source.linkBracelets)
             allBands.append(contentsOf: source.thirdPartyBands)
             
-            // temp for now
+            // save a copy of loaded bands for reference
+            saveBands(source)
+        }
+        catch {
+            print("unsuccessful")
+        }
+    }
+    
+    private func saveBands(_ source: AllBandsSource) {
+        do {
             let fileName = "AllBandsGenerated.json"
             let fileManager = FileManager.default
             let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             let fileUrl = folderUrl.appendingPathComponent(fileName)
             
             let jsonEncoder = JSONEncoder()
-            //jsonEncoder.outputFormatting = .prettyPrinted
             jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
             let jsonData = try jsonEncoder.encode(source)
             let jsonString = String(data: jsonData, encoding: .utf8)

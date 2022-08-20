@@ -11,6 +11,8 @@
 		07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF128A1E11E003388C8 /* BandRepository.swift */; };
 		07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */; };
 		07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */; };
+		072FDFAA28B1A05F0002BCCE /* AllBands_v3.json in Resources */ = {isa = PBXBuildFile; fileRef = 072FDFA928B1A05F0002BCCE /* AllBands_v3.json */; };
+		072FDFAB28B1A05F0002BCCE /* AllBands_v3.json in Resources */ = {isa = PBXBuildFile; fileRef = 072FDFA928B1A05F0002BCCE /* AllBands_v3.json */; };
 		0796D2DF289E131C00591131 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2DE289E131C00591131 /* Tests_iOS.swift */; };
 		0796D2E1289E131C00591131 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */; };
 		0796D2EB289E131C00591131 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2EA289E131C00591131 /* Tests_macOS.swift */; };
@@ -89,6 +91,7 @@
 /* Begin PBXFileReference section */
 		07032FF128A1E11E003388C8 /* BandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandRepository.swift; sourceTree = "<group>"; };
 		07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryRepository.swift; sourceTree = "<group>"; };
+		072FDFA928B1A05F0002BCCE /* AllBands_v3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v3.json; sourceTree = "<group>"; };
 		0796D2C6289E131900591131 /* Apple_Watch_Band_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_Watch_Band_TrackerApp.swift; sourceTree = "<group>"; };
 		0796D2C7289E131900591131 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0796D2C8289E131C00591131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				07D273EA28A81F77006A8839 /* AllBands.json */,
+				072FDFA928B1A05F0002BCCE /* AllBands_v3.json */,
 				07D273F428AB3DB1006A8839 /* AllBands_v2.json */,
 				07D273E728A6BAAE006A8839 /* AllBands_v1.json */,
 				07ED5D1228A345300044469C /* AllWatches.json */,
@@ -411,6 +415,7 @@
 				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
 				07D273EB28A81F77006A8839 /* AllBands.json in Resources */,
 				07D273F528AB3DB1006A8839 /* AllBands_v2.json in Resources */,
+				072FDFAA28B1A05F0002BCCE /* AllBands_v3.json in Resources */,
 				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
 				07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
@@ -423,6 +428,7 @@
 				07ED5D1428A345300044469C /* AllWatches.json in Resources */,
 				07D273EC28A81F77006A8839 /* AllBands.json in Resources */,
 				07D273F628AB3DB1006A8839 /* AllBands_v2.json in Resources */,
+				072FDFAB28B1A05F0002BCCE /* AllBands_v3.json in Resources */,
 				0796D2F3289E131C00591131 /* Assets.xcassets in Resources */,
 				07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */,
 			);
