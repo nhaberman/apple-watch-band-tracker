@@ -106,11 +106,11 @@ class Band: Identifiable, Hashable, Codable {
         try container.encodeIfPresent(self.year, forKey: .year)
         try container.encodeIfPresent(self.generation, forKey: .generation)
         try container.encodeIfPresent(self.edition, forKey: .edition)
-        //try container.encodeIfPresent(self.colorOrder, forKey: .colorOrder)
-        //try container.encodeIfPresent(self.dateOrder, forKey: .dateOrder)
-        //try container.encodeIfPresent(self.logicalOrder, forKey: .logicalOrder)
+        try container.encodeIfPresent(self.colorOrder, forKey: .colorOrder)
+        try container.encodeIfPresent(self.dateOrder, forKey: .dateOrder)
+        try container.encodeIfPresent(self.logicalOrder, forKey: .logicalOrder)
         try container.encodeIfPresent(self.watchSize, forKey: .watchSize)
-        //try container.encodeIfPresent(self.isOwned, forKey: .isOwned)
+        try container.encodeIfPresent(self.isOwned, forKey: .isOwned)
     }
     
     func formattedName() -> String {

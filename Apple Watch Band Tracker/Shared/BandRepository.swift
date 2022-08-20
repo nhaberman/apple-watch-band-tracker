@@ -46,6 +46,20 @@ class BandRepository {
             allBands.append(contentsOf: source.milaneseLoops)
             allBands.append(contentsOf: source.linkBracelets)
             allBands.append(contentsOf: source.thirdPartyBands)
+            
+            // temp for now
+            let fileName = "AllBandsGenerated.json"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            
+            let jsonEncoder = JSONEncoder()
+            //jsonEncoder.outputFormatting = .prettyPrinted
+            jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+            let jsonData = try jsonEncoder.encode(source)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            
+            try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
         }
         catch {
             print("unsuccessful")
