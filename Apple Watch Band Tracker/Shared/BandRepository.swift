@@ -21,7 +21,7 @@ class BandRepository {
             loadBands()
         }
         else {
-            self.allBands = sampleBands2
+            self.allBands = sampleBands
         }
     }
     
@@ -48,7 +48,12 @@ class BandRepository {
             allBands.append(contentsOf: source.thirdPartyBands)
             
             // save a copy of loaded bands for reference
-            saveBands(source)
+            //saveBands(source)
+            
+            // set all bands as 'owned' for now temporarily
+            for band in allBands {
+                band.isOwned = true
+            }
         }
         catch {
             print("unsuccessful")
@@ -74,22 +79,37 @@ class BandRepository {
         }
     }
     
-    func getBandsByType(_ bandType: BandType, sortOrder: BandSortOrder = .logical) -> [Band] {
+    func getBandsByType(_ bandType: BandType, sortOrder: BandSortOrder = .logical, sortDirection: SortOrder = .forward) -> [Band] {
         let results: [Band] = allBands.filter { band in
             band.bandType == bandType
         }
         
         switch sortOrder {
         case .date:
-            return results.sorted(by: {$0.dateOrder ?? 0 > $1.dateOrder ?? 0})
+            switch sortDirection {
+            case .forward:
+                return results.sorted(by: {$0.dateOrder ?? 0 < $1.dateOrder ?? 0})
+            case .reverse:
+                return results.sorted(by: {$0.dateOrder ?? 0 > $1.dateOrder ?? 0})
+            }
         case .color:
-            return results.sorted(by: {$0.colorOrder ?? 0 > $1.colorOrder ?? 0})
+            switch sortDirection {
+            case .forward:
+                return results.sorted(by: {$0.colorOrder ?? 0 < $1.colorOrder ?? 0})
+            case .reverse:
+                return results.sorted(by: {$0.colorOrder ?? 0 > $1.colorOrder ?? 0})
+            }
         case .logical:
-            return results.sorted(by: {$0.logicalOrder ?? 0 > $1.logicalOrder ?? 0})
+            switch sortDirection {
+            case .forward:
+                return results.sorted(by: {$0.logicalOrder ?? 0 < $1.logicalOrder ?? 0})
+            case .reverse:
+                return results.sorted(by: {$0.logicalOrder ?? 0 > $1.logicalOrder ?? 0})
+            }
         }
     }
     
-    private var sampleBands2: [Band] = [
+    private var sampleBands: [Band] = [
         SportBand(color: "Capri Blue", season: .spring, year: 2021),
         NikeSportBand(color: "Obsidian / Black", season: .summer, year: 2017),
         SportLoop(color: "Red", season: .fall, year: 2018, bandVersion: .fleck, generation: 1),

@@ -21,20 +21,32 @@ struct BandsView: View {
     
     @State private var showTrackBandSheet = false
     @State private var selectedSortOrder = BandSortOrder.date
+    @State private var selectedSortDirection = SortOrder.forward
     @State private var searchText = ""
     
     var body: some View {
         VStack(alignment: .leading) {
-            Picker("Sort Order", selection: $selectedSortOrder) {
-                ForEach(BandSortOrder.allCases) { bandSortOrder in
-                    Text(bandSortOrder.rawValue.capitalized + " Sort")
+            HStack(alignment: .lastTextBaseline) {
+                Text("Sort By:")
+                    .font(.system(size: 14))
+                Picker("Sort Order", selection: $selectedSortOrder) {
+                    ForEach(BandSortOrder.allCases) { bandSortOrder in
+                        Text(bandSortOrder.rawValue.capitalized)
+                    }
                 }
+                .pickerStyle(.menu)
+                .frame(width: 100, alignment: .leading)
+                Picker("Sort Direction", selection: $selectedSortDirection) {
+                    Text("Asc").tag(SortOrder.forward)
+                    Text("Desc").tag(SortOrder.reverse)
+                }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
             .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             
+            
             List {
-                let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder)
+                let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder, sortDirection: selectedSortDirection)
                 
                 ForEach(searchText == "" ? bandsByType : bandsByType.filter({ $0.color.contains(searchText)}), id: \.self) { band in
                     if(band.isOwned ?? false) {
