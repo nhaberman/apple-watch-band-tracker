@@ -26,9 +26,9 @@ struct BandsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack(alignment: .lastTextBaseline) {
+            HStack {
                 Text("Sort By:")
-                    .font(.system(size: 14))
+                    .font(Font.custom("System", size: 14, relativeTo: .body))
                 Picker("Sort Order", selection: $selectedSortOrder) {
                     ForEach(BandSortOrder.allCases) { bandSortOrder in
                         Text(bandSortOrder.rawValue.capitalized)
@@ -44,7 +44,6 @@ struct BandsView: View {
             }
             .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             
-            
             List {
                 let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder, sortDirection: selectedSortDirection)
                 
@@ -57,6 +56,22 @@ struct BandsView: View {
                                 .frame(height: 32)
                         }
                     }
+                }
+                .swipeActions {
+                    Button {
+                        print("test save as owned")
+                    } label: {
+                        Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
+                    }
+                    .tint(.blue)
+                }
+                .swipeActions {
+                    Button {
+                        print("test save as favorite")
+                    } label: {
+                        Label("Favorite", systemImage: "star.fill")   //star.slash.fill
+                    }
+                    .tint(.purple)
                 }
             }
             .searchable(text: $searchText)

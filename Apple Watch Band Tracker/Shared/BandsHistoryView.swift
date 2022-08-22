@@ -72,12 +72,26 @@ struct BandsHistoryView: View {
         .navigationTitle(pageTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .primaryAction) {
                 Button {
                     print("tapped track band")
                     showTrackBandSheet = true
                 } label: {
                     Label("Track Band", systemImage: "plus.circle")
+                }
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.status) {
+                Button {
+                    print("test save as owned")
+                } label: {
+                    Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
+                }
+            }
+            ToolbarItem(placement: .status) {
+                Button {
+                    print("test save as favorite")
+                } label: {
+                    Label("Favorite", systemImage: "star.fill")   //star.slash.fill
                 }
             }
         }
