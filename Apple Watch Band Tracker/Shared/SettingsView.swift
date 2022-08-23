@@ -25,9 +25,9 @@ struct SettingsView: View {
             self.watchRepository = WatchRepository.sample
         }
         else {
-            self.repository = GlobalBandHistoryRepository
-            self.bandRepository = GlobalBandRepository
-            self.watchRepository = GlobalWatchRepository
+            self.repository = BandHistoryRepository.default
+            self.bandRepository = BandRepository.default
+            self.watchRepository = WatchRepository.default
         }
     }
     

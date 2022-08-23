@@ -36,7 +36,7 @@ struct TrackBandView: View {
                     }
                     if selectedBandType != .None {
                         List {
-                            let bandsByType = GlobalBandRepository.getBandsByType(selectedBandType, sortOrder: .logical)
+                            let bandsByType = BandRepository.default.getBandsByType(selectedBandType, sortOrder: .logical)
                             Picker("Band", selection: $selectedBand) {
                                 ForEach(bandsByType, id: \.self) { band in
                                     if (band.isOwned ?? false) {
@@ -107,7 +107,7 @@ struct TrackBandView: View {
         }
         else {
             let bandHistory = BandHistory(band: selectedBand, watch: selectedWatch, timeWorn: selectedDate)
-            let wasSuccessful = GlobalBandHistoryRepository.trackBand(bandHistory: bandHistory)
+            let wasSuccessful = BandHistoryRepository.default.trackBand(bandHistory: bandHistory)
             
             if !wasSuccessful {
                 showingAlert = true

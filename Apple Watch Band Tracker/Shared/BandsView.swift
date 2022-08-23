@@ -14,7 +14,7 @@ struct BandsView: View {
     
     init(bandType: BandType? = nil) {
         self.bandType = bandType ?? .ClassicBuckle
-        self.bandRepository = bandType == nil ? BandRepository.sample : GlobalBandRepository
+        self.bandRepository = bandType == nil ? BandRepository.sample : BandRepository.default
     }
     
     var bandType : BandType

@@ -20,7 +20,7 @@ struct StatsMainView: View {
             self.repository = BandHistoryRepository.sample
         }
         else {
-            self.repository = GlobalBandHistoryRepository
+            self.repository = BandHistoryRepository.default
         }
     }
     
@@ -42,12 +42,12 @@ struct StatsMainView: View {
                         }
                     }
                     
-                    if let currentBandHistory = GlobalBandHistoryRepository.getCurrentBand() {
+                    if let currentBandHistory = BandHistoryRepository.default.getCurrentBand() {
                         Section("Current Band") {
                             BandHistoryView(bandHistory: currentBandHistory)
                         }
                         
-                        let mostRecentWornBand = GlobalBandHistoryRepository.getHistoriesForBand(band: currentBandHistory.band)
+                        let mostRecentWornBand = BandHistoryRepository.default.getHistoriesForBand(band: currentBandHistory.band)
                         
                         if mostRecentWornBand.count >= 2 {
                             let mostRecentBeforeNow = mostRecentWornBand[1]

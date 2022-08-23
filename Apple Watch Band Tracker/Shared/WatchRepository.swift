@@ -8,8 +8,9 @@
 import Foundation
 
 class WatchRepository {
-    // sample repository
+    // static repositories
     static let sample = WatchRepository(false)
+    static let `default` = WatchRepository()
     
     var allWatches: [Watch]
     

@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 class BandRepository {
-    // sample repository
+    // static repositories
     static let sample = BandRepository(false)
+    static let `default` = BandRepository()
     
     var allBands: [Band]
     

@@ -23,7 +23,7 @@ struct HistoryView: View {
     }
     
     init(pageTitle: String, lookBackType: HistoryLookBack, lookBackYear: Int = 0) {
-        self.repository = GlobalBandHistoryRepository
+        self.repository = BandHistoryRepository.default
         self.pageTitle = pageTitle
         
         // calculate the start and end dates based on the type of lookback

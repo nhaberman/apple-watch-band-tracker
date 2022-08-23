@@ -23,8 +23,8 @@ struct BandsHistoryView: View {
             self.band = bandRepository.allBands[0]
         }
         else {
-            self.bandRepository = GlobalBandRepository
-            self.repository = GlobalBandHistoryRepository
+            self.bandRepository = BandRepository.default
+            self.repository = BandHistoryRepository.default
             self.band = band!
         }
     }

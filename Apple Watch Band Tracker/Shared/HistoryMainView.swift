@@ -20,7 +20,7 @@ struct HistoryMainView: View {
             self.repository = BandHistoryRepository.sample
         }
         else {
-            self.repository = GlobalBandHistoryRepository
+            self.repository = BandHistoryRepository.default
         }
     }
     

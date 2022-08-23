@@ -15,8 +15,3 @@ struct Apple_Watch_Band_TrackerApp: App {
         }
     }
 }
-
-// define the repositories here that will be used throughout the app
-let GlobalBandRepository = BandRepository()
-let GlobalBandHistoryRepository = BandHistoryRepository()
-let GlobalWatchRepository = WatchRepository()
