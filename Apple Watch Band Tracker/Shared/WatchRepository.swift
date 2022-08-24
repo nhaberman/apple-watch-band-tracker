@@ -32,9 +32,37 @@ class WatchRepository {
             let allWatchesJson = allWatchesFileContents.data(using: .utf8)!
             let allWatchesSource: AllWatchesSource = try! JSONDecoder().decode(AllWatchesSource.self, from: allWatchesJson)
             allWatches = allWatchesSource.allWatches
+            
+            // save a copy of loaded watches for reference
+            saveWatches(allWatchesSource)
         }
         catch {
             print("unsuccessful")
+        }
+    }
+    
+    private func saveWatches(_ source: AllWatchesSource) {
+        do {
+            let fileName = "AllWatches.json"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+            let jsonData = try jsonEncoder.encode(source)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            
+            try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
+        }
+        catch {
+            print("unsuccessful")
+        }
+    }
+    
+    func getWatchByID(_ watchID: UUID) -> Watch? {
+        return allWatches.first { watch in
+            watch.watchID == watchID
         }
     }
     

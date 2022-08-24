@@ -25,6 +25,7 @@ class Watch: Identifiable, Hashable, Codable {
         hasher.combine(size)
     }
     
+    var watchID: UUID
     var series: Int
     var material: WatchCaseMaterial
     var finish: WatchCaseFinish
@@ -32,6 +33,7 @@ class Watch: Identifiable, Hashable, Codable {
     var size: Int = 0
     
     init(series: Int, material: WatchCaseMaterial, finish: WatchCaseFinish, size: Int, edition: String? = nil) {
+        self.watchID = UUID()
         self.series = series
         self.material = material
         self.finish = finish
