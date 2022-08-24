@@ -64,7 +64,7 @@ class Band: Identifiable, Hashable, Codable {
     }
     
     // required band properties
-    var bandID: UUID?
+    var bandID: UUID
     var bandType: BandType
     var color: String
     
@@ -94,10 +94,6 @@ class Band: Identifiable, Hashable, Codable {
     }
     
     func encode(to encoder: Encoder) throws {
-        
-        // temp for now
-        self.bandID = UUID()
-        
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(self.bandID, forKey: .bandID)
         try container.encodeIfPresent(self.bandType, forKey: .bandType)

@@ -49,7 +49,7 @@ class BandRepository {
             allBands.append(contentsOf: source.thirdPartyBands)
             
             // save a copy of loaded bands for reference
-            //saveBands(source)
+            saveBands(source)
             
             // set all bands as 'owned' for now temporarily
             for band in allBands {
@@ -63,7 +63,7 @@ class BandRepository {
     
     private func saveBands(_ source: AllBandsSource) {
         do {
-            let fileName = "AllBandsGenerated.json"
+            let fileName = "AllBands.json"
             let fileManager = FileManager.default
             let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             let fileUrl = folderUrl.appendingPathComponent(fileName)
@@ -77,6 +77,12 @@ class BandRepository {
         }
         catch {
             print("unsuccessful")
+        }
+    }
+    
+    func getBandByID(_ bandID: UUID) -> Band? {
+        return allBands.first { band in
+            band.bandID == bandID
         }
     }
     

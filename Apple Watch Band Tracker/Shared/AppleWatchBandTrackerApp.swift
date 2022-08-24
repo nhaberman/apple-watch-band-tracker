@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Apple_Watch_Band_TrackerApp: App {
+struct AppleWatchBandTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
