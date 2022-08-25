@@ -14,9 +14,23 @@ class BandRepository {
     static let `default` = BandRepository()
     
     var allBands: [Band]
+    var defaultSortOrder: BandSortOrder {
+        didSet {
+            UserDefaults.standard.set(defaultSortOrder.rawValue, forKey: "DefaultBandSortOrder")
+        }
+    }
+    var defaultSortDirection: SortOrder {
+        didSet {
+            UserDefaults.standard.set(defaultSortDirection, forKey: "DefaultBandSortDirection")
+        }
+    }
     
     init(_ loadHistories: Bool = true) {
         self.allBands = [Band]()
+        
+        // read default sort orders
+        self.defaultSortOrder = UserDefaults.standard.object(forKey: "DefaultBandSortOrder") as? BandSortOrder ?? .logical
+        self.defaultSortDirection = UserDefaults.standard.object(forKey: "DefaultBandSortDirection") as? SortOrder ?? .forward
         
         if loadHistories {
             loadBands()

@@ -91,6 +91,10 @@ struct SettingsView: View {
                 }
             }
         }
+        .onDisappear {
+            bandRepository.defaultSortOrder = selectedSortOrder
+            bandRepository.defaultSortDirection = selectedSortDirection
+        }
     }
 }
 
