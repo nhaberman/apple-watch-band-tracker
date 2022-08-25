@@ -48,31 +48,32 @@ struct BandsView: View {
                 let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder, sortDirection: selectedSortDirection)
                 
                 ForEach(searchText == "" ? bandsByType : bandsByType.filter({ $0.color.contains(searchText)}), id: \.self) { band in
-                    if(band.isOwned ?? false) {
-                        NavigationLink {
-                            BandsHistoryView(band: band)
+                    NavigationLink {
+                        BandsHistoryView(band: band)
+                    } label: {
+                        BandView(band: band, showBandType: false)
+                            .frame(height: 32)
+                    }
+                    .swipeActions {
+                        Button {
+                            band.isOwned = !(band.isOwned ?? false)
+                            BandRepository.default.saveOwnedBands()
                         } label: {
-                            BandView(band: band, showBandType: false)
-                                .frame(height: 32)
+                            Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
                         }
+                        .tint(.blue)
+                    }
+                    .swipeActions {
+                        Button {
+                            band.isFavorite = !(band.isFavorite ?? false)
+                            BandRepository.default.saveFavoriteBands()
+                        } label: {
+                            Label("Favorite", systemImage: "star.fill")   //star.slash.fill
+                        }
+                        .tint(.purple)
                     }
                 }
-                .swipeActions {
-                    Button {
-                        print("test save as owned")
-                    } label: {
-                        Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
-                    }
-                    .tint(.blue)
-                }
-                .swipeActions {
-                    Button {
-                        print("test save as favorite")
-                    } label: {
-                        Label("Favorite", systemImage: "star.fill")   //star.slash.fill
-                    }
-                    .tint(.purple)
-                }
+                
             }
             .searchable(text: $searchText)
         }

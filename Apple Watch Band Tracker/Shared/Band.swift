@@ -82,6 +82,7 @@ class Band: Identifiable, Hashable, Codable {
     // owned band properties
     var watchSize: Int? = nil
     var isOwned: Bool? = nil
+    var isFavorite: Bool? = nil
     
     init(color: String, season: Season, year: Int, generation: Int? = nil) {
         self.bandID = UUID()
@@ -105,8 +106,6 @@ class Band: Identifiable, Hashable, Codable {
         try container.encodeIfPresent(self.colorOrder, forKey: .colorOrder)
         try container.encodeIfPresent(self.dateOrder, forKey: .dateOrder)
         try container.encodeIfPresent(self.logicalOrder, forKey: .logicalOrder)
-        //try container.encodeIfPresent(self.watchSize, forKey: .watchSize)
-        //try container.encodeIfPresent(self.isOwned, forKey: .isOwned)
     }
     
     func formattedName() -> String {
@@ -139,13 +138,6 @@ class Band: Identifiable, Hashable, Codable {
             return ""
         }
     }
-}
-
-struct BandTraits {
-    // owned band properties
-    var watchSize: Int? = nil
-    var isOwned: Bool? = nil
-    var isFavorite: Bool? = nil
 }
 
 // Band Subclasses

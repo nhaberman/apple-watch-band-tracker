@@ -20,6 +20,8 @@ class BandRepository {
         
         if loadHistories {
             loadBands()
+            loadOwnedBands()
+            loadFavoriteBands()
         }
         else {
             self.allBands = sampleBands
@@ -50,16 +52,58 @@ class BandRepository {
             
             // save a copy of loaded bands for reference
             saveBands(source)
+        }
+        catch {
+            print("unsuccessful")
+        }
+    }
+    
+    private func loadOwnedBands() {
+        do {
+            let fileName = "OwnedBands.json"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
             
-            // set all bands as 'owned' for now temporarily
-            for band in allBands {
-                band.isOwned = true
+            if FileManager.default.fileExists(atPath: fileUrl.path) {
+                let fileContents = try String(contentsOf: fileUrl)
+                let json = fileContents.data(using: .utf8)!
+                let ownedBandIDs = try! JSONDecoder().decode([UUID].self, from: json)
+                
+                // set all bands as 'owned' for now temporarily
+                for bandID in ownedBandIDs {
+                    getBandByID(bandID)?.isOwned = true
+                }
             }
         }
         catch {
             print("unsuccessful")
         }
     }
+    
+    private func loadFavoriteBands() {
+        do {
+            let fileName = "FavoriteBands.json"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            
+            if FileManager.default.fileExists(atPath: fileUrl.path) {
+                let fileContents = try String(contentsOf: fileUrl)
+                let json = fileContents.data(using: .utf8)!
+                let favoriteBandIDs = try! JSONDecoder().decode([UUID].self, from: json)
+                
+                // set all bands as 'owned' for now temporarily
+                for bandID in favoriteBandIDs {
+                    getBandByID(bandID)?.isFavorite = true
+                }
+            }
+        }
+        catch {
+            print("unsuccessful")
+        }
+    }
+    
     
     private func saveBands(_ source: AllBandsSource) {
         do {
@@ -71,6 +115,56 @@ class BandRepository {
             let jsonEncoder = JSONEncoder()
             jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
             let jsonData = try jsonEncoder.encode(source)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            
+            try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
+        }
+        catch {
+            print("unsuccessful")
+        }
+    }
+    
+    func saveOwnedBands() {
+        let ownedBandIDs = allBands.filter { band in
+            band.isOwned ?? false
+        }.map { band in
+            band.bandID
+        }
+        
+        do {
+            let fileName = "OwnedBands.json"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+            let jsonData = try jsonEncoder.encode(ownedBandIDs)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            
+            try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
+        }
+        catch {
+            print("unsuccessful")
+        }
+    }
+    
+    func saveFavoriteBands() {
+        let favoriteBandIDs = allBands.filter { band in
+            band.isFavorite ?? false
+        }.map { band in
+            band.bandID
+        }
+        
+        do {
+            let fileName = "FavoriteBands.json"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+            let jsonData = try jsonEncoder.encode(favoriteBandIDs)
             let jsonString = String(data: jsonData, encoding: .utf8)
             
             try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
