@@ -81,8 +81,8 @@ class Band: Identifiable, Hashable, Codable {
     
     // owned band properties
     var watchSize: Int? = nil
-    var isOwned: Bool? = nil
-    var isFavorite: Bool? = nil
+    var isOwned: Bool = false
+    var isFavorite: Bool = false
     
     init(color: String, season: Season, year: Int, generation: Int? = nil) {
         self.bandID = UUID()
@@ -106,6 +106,28 @@ class Band: Identifiable, Hashable, Codable {
         try container.encodeIfPresent(self.colorOrder, forKey: .colorOrder)
         try container.encodeIfPresent(self.dateOrder, forKey: .dateOrder)
         try container.encodeIfPresent(self.logicalOrder, forKey: .logicalOrder)
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        bandID = try container.decode(UUID.self, forKey: .bandID)
+        bandType = try container.decode(BandType.self, forKey: .bandType)
+        color = try container.decode(String.self, forKey: .color)
+        season = try container.decodeIfPresent(Season.self, forKey: .season)
+        year = try container.decodeIfPresent(Int.self, forKey: .year)
+        generation = try container.decodeIfPresent(Int.self, forKey: .generation)
+        edition = try container.decodeIfPresent(String.self, forKey: .edition)
+        colorOrder = try container.decodeIfPresent(Int.self, forKey: .colorOrder)
+        dateOrder = try container.decodeIfPresent(Int.self, forKey: .dateOrder)
+        logicalOrder = try container.decodeIfPresent(Int.self, forKey: .logicalOrder)
+        watchSize = try container.decodeIfPresent(Int.self, forKey: .watchSize)
+        isOwned = try container.decodeIfPresent(Bool.self, forKey: .isOwned) ?? false
+        isFavorite = try container.decodeIfPresent(Bool.self, forKey: .isFavorite) ?? false
+    }
+    
+    // coding keys for band properties
+    enum CodingKeys: String, CodingKey {
+        case bandID, bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, watchSize, isOwned, isFavorite
     }
     
     func formattedName() -> String {

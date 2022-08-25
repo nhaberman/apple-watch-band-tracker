@@ -126,7 +126,7 @@ class BandRepository {
     
     func saveOwnedBands() {
         let ownedBandIDs = allBands.filter { band in
-            band.isOwned ?? false
+            band.isOwned
         }.map { band in
             band.bandID
         }
@@ -151,7 +151,7 @@ class BandRepository {
     
     func saveFavoriteBands() {
         let favoriteBandIDs = allBands.filter { band in
-            band.isFavorite ?? false
+            band.isFavorite
         }.map { band in
             band.bandID
         }

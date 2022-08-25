@@ -26,59 +26,32 @@ struct BandsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Text("Sort By:")
-                    .font(Font.custom("System", size: 14, relativeTo: .body))
-                Picker("Sort Order", selection: $selectedSortOrder) {
-                    ForEach(BandSortOrder.allCases) { bandSortOrder in
-                        Text(bandSortOrder.rawValue.capitalized)
-                    }
-                }
-                .pickerStyle(.menu)
-                .frame(width: 100, alignment: .leading)
-                Picker("Sort Direction", selection: $selectedSortDirection) {
-                    Text("Asc").tag(SortOrder.forward)
-                    Text("Desc").tag(SortOrder.reverse)
-                }
-                .pickerStyle(.segmented)
-            }
-            .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
-            
             List {
                 let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder, sortDirection: selectedSortDirection)
                 
                 ForEach(searchText == "" ? bandsByType : bandsByType.filter({ $0.color.contains(searchText)}), id: \.self) { band in
-                    NavigationLink {
-                        BandsHistoryView(band: band)
-                    } label: {
-                        BandView(band: band, showBandType: false)
-                            .frame(height: 32)
-                    }
-                    .swipeActions {
-                        Button {
-                            band.isOwned = !(band.isOwned ?? false)
-                            BandRepository.default.saveOwnedBands()
+                    if(band.isOwned) {
+                        NavigationLink {
+                            BandsHistoryView(band: band)
                         } label: {
-                            Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
+                            BandView(band: band, showBandType: false)
+                                .frame(height: 32)
                         }
-                        .tint(.blue)
-                    }
-                    .swipeActions {
-                        Button {
-                            band.isFavorite = !(band.isFavorite ?? false)
-                            BandRepository.default.saveFavoriteBands()
-                        } label: {
-                            Label("Favorite", systemImage: "star.fill")   //star.slash.fill
+                        .swipeActions {
+                            Button {
+                                band.isFavorite.toggle()
+                                BandRepository.default.saveFavoriteBands()
+                            } label: {
+                                Label("Favorite", systemImage: "star.fill")   //star.slash.fill
+                            }
+                            .tint(.purple)
                         }
-                        .tint(.purple)
                     }
                 }
-                
             }
             .searchable(text: $searchText)
         }
         .navigationTitle(bandType.rawValue)
-        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
@@ -86,6 +59,23 @@ struct BandsView: View {
                     showTrackBandSheet = true
                 } label: {
                     Label("Track Band", systemImage: "plus.circle")
+                }
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.status) {
+                HStack {
+                    Text("Sort By:")
+                        .font(Font.custom("System", size: 14, relativeTo: .body))
+                    Picker("Sort Order", selection: $selectedSortOrder) {
+                        ForEach(BandSortOrder.allCases) { bandSortOrder in
+                            Text(bandSortOrder.rawValue.capitalized)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    Picker("Sort Direction", selection: $selectedSortDirection) {
+                        Text("Asc").tag(SortOrder.forward)
+                        Text("Desc").tag(SortOrder.reverse)
+                    }
+                    .pickerStyle(.segmented)
                 }
             }
         }

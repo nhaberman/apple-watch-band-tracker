@@ -39,7 +39,7 @@ struct TrackBandView: View {
                             let bandsByType = BandRepository.default.getBandsByType(selectedBandType, sortOrder: .logical)
                             Picker("Band", selection: $selectedBand) {
                                 ForEach(bandsByType, id: \.self) { band in
-                                    if (band.isOwned ?? false) {
+                                    if band.isOwned {
                                         Text(band.formattedName())
                                     }
                                 }

@@ -17,6 +17,7 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var selectedSortOrder: BandSortOrder = .logical
+    @State private var selectedSortDirection: SortOrder = .forward
     
     init(_ isPreview: Bool = false) {
         if isPreview {
@@ -34,6 +35,32 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
+                
+                Section("Manage Bands") {
+                    NavigationLink("Owned Bands") {
+                        ManageBandsView(.owned)
+                    }
+                    
+                    NavigationLink("Favorite Bands") {
+                        ManageBandsView(.favorite)
+                    }
+                }
+                
+                
+                Section("Default Band Sort Order") {
+                    Picker("Order", selection: $selectedSortOrder) {
+                        ForEach(BandSortOrder.allCases) { bandSortOrder in
+                            Text(bandSortOrder.rawValue.capitalized)
+                        }
+                    }
+                    Picker("Direction", selection: $selectedSortDirection) {
+                        Text("Ascending").tag(SortOrder.forward)
+                        Text("Descending").tag(SortOrder.reverse)
+                    }
+                }
+                
+                
+                
                 Section("About") {
                     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
                     
@@ -48,18 +75,6 @@ struct SettingsView: View {
                 Section("Band Repository Directory") {
                     Text(repository.getRepositoryFolderSafe())
                 }
-                
-                Section("Default Band Sort Order") {
-                    Picker("Sort Order", selection: $selectedSortOrder) {
-                        ForEach(BandSortOrder.allCases) { bandSortOrder in
-                            Text(bandSortOrder.rawValue.capitalized)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    Text(selectedSortOrder.rawValue)
-                }
-                
-                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .navigationTitle("Settings")
