@@ -21,7 +21,7 @@ class BandRepository {
     }
     var defaultSortDirection: SortOrder {
         didSet {
-            UserDefaults.standard.set(defaultSortDirection, forKey: "DefaultBandSortDirection")
+            UserDefaults.standard.set(defaultSortDirection == .forward, forKey: "DefaultBandSortDirectionIsForward")
         }
     }
     
@@ -29,8 +29,8 @@ class BandRepository {
         self.allBands = [Band]()
         
         // read default sort orders
-        self.defaultSortOrder = UserDefaults.standard.object(forKey: "DefaultBandSortOrder") as? BandSortOrder ?? .logical
-        self.defaultSortDirection = UserDefaults.standard.object(forKey: "DefaultBandSortDirection") as? SortOrder ?? .forward
+        self.defaultSortOrder = BandSortOrder(rawValue: UserDefaults.standard.object(forKey: "DefaultBandSortOrder") as? String ?? "") ?? .logical
+        self.defaultSortDirection = (UserDefaults.standard.object(forKey: "DefaultBandSortDirectionIsForward") as? Bool ?? true) ? .forward : .reverse
         
         if loadHistories {
             loadBands()

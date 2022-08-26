@@ -16,8 +16,8 @@ struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var selectedSortOrder: BandSortOrder = .logical
-    @State private var selectedSortDirection: SortOrder = .forward
+    @State private var selectedSortOrder: BandSortOrder
+    @State private var selectedSortDirection: SortOrder
     
     init(_ isPreview: Bool = false) {
         if isPreview {
@@ -30,6 +30,10 @@ struct SettingsView: View {
             self.bandRepository = BandRepository.default
             self.watchRepository = WatchRepository.default
         }
+        
+        
+        _selectedSortOrder = .init(initialValue: bandRepository.defaultSortOrder)
+        _selectedSortDirection = .init(initialValue: bandRepository.defaultSortDirection)
     }
     
     var body: some View {

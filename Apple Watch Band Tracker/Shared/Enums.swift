@@ -73,7 +73,7 @@ public enum WatchCaseFinish: String, Identifiable, Codable {
 public enum BandSortOrder: String, Identifiable, CaseIterable {
     public var id: Self { self }
     
-    case date
-    case color
-    case logical
+    case date = "Date"
+    case color = "Color"
+    case logical = "Logical"
 }
