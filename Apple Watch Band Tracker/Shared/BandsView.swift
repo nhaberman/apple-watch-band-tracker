@@ -15,13 +15,16 @@ struct BandsView: View {
     init(bandType: BandType? = nil) {
         self.bandType = bandType ?? .ClassicBuckle
         self.bandRepository = bandType == nil ? BandRepository.sample : BandRepository.default
+        
+        _selectedSortOrder = .init(initialValue: bandRepository.defaultSortOrder)
+        _selectedSortDirection = .init(initialValue: bandRepository.defaultSortDirection)
     }
     
     var bandType : BandType
     
     @State private var showTrackBandSheet = false
-    @State private var selectedSortOrder = BandSortOrder.date
-    @State private var selectedSortDirection = SortOrder.forward
+    @State private var selectedSortOrder: BandSortOrder
+    @State private var selectedSortDirection: SortOrder
     @State private var searchText = ""
     
     var body: some View {
@@ -62,7 +65,7 @@ struct BandsView: View {
                 }
             }
             ToolbarItem(placement: ToolbarItemPlacement.status) {
-                HStack {
+                HStack(alignment: .lastTextBaseline) {
                     Text("Sort By:")
                         .font(Font.custom("System", size: 14, relativeTo: .body))
                     Picker("Sort Order", selection: $selectedSortOrder) {
@@ -71,6 +74,7 @@ struct BandsView: View {
                         }
                     }
                     .pickerStyle(.menu)
+                    Spacer(minLength: 25)
                     Picker("Sort Direction", selection: $selectedSortDirection) {
                         Text("Asc").tag(SortOrder.forward)
                         Text("Desc").tag(SortOrder.reverse)
