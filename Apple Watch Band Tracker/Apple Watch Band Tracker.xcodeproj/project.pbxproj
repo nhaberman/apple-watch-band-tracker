@@ -15,6 +15,8 @@
 		072FDFAB28B1A05F0002BCCE /* AllBands_v3.json in Resources */ = {isa = PBXBuildFile; fileRef = 072FDFA928B1A05F0002BCCE /* AllBands_v3.json */; };
 		072FDFAD28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
 		072FDFAE28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
+		072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
+		072FDFB128B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
 		0796D2DF289E131C00591131 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2DE289E131C00591131 /* Tests_iOS.swift */; };
 		0796D2E1289E131C00591131 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */; };
 		0796D2EB289E131C00591131 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2EA289E131C00591131 /* Tests_macOS.swift */; };
@@ -95,6 +97,7 @@
 		07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryRepository.swift; sourceTree = "<group>"; };
 		072FDFA928B1A05F0002BCCE /* AllBands_v3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v3.json; sourceTree = "<group>"; };
 		072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBandsView.swift; sourceTree = "<group>"; };
+		072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWatchesView.swift; sourceTree = "<group>"; };
 		0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchBandTrackerApp.swift; sourceTree = "<group>"; };
 		0796D2C7289E131900591131 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0796D2C8289E131C00591131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 				07D273D028A28BB6006A8839 /* BandHistoryDetailsView.swift */,
 				07D273C928A028BC006A8839 /* SettingsView.swift */,
 				072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */,
+				072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -475,6 +479,7 @@
 				07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */,
 				07D273BB289EE9AD006A8839 /* StatsMainView.swift in Sources */,
 				07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
+				072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */,
 				07D273D128A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
 				07D273EE28A84070006A8839 /* BandHistoryView.swift in Sources */,
 				07D273B8289EE97F006A8839 /* HistoryView.swift in Sources */,
@@ -506,6 +511,7 @@
 				07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */,
 				07D273BC289EE9AD006A8839 /* StatsMainView.swift in Sources */,
 				07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
+				072FDFB128B8F0E70002BCCE /* ManageWatchesView.swift in Sources */,
 				07D273D228A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
 				07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */,
 				07D273B9289EE97F006A8839 /* HistoryView.swift in Sources */,

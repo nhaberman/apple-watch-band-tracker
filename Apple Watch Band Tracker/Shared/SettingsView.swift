@@ -39,7 +39,6 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                
                 Section("Manage Bands") {
                     NavigationLink("Owned Bands") {
                         ManageBandsView(.owned)
@@ -50,8 +49,13 @@ struct SettingsView: View {
                     }
                 }
                 
+                Section("Manage Watches") {
+                    NavigationLink("Owned Watches") {
+                        ManageWatchesView()
+                    }
+                }
                 
-                Section("Default Band Sort Order") {
+                Section("Default Band Sorting") {
                     Picker("Order", selection: $selectedSortOrder) {
                         ForEach(BandSortOrder.allCases) { bandSortOrder in
                             Text(bandSortOrder.rawValue.capitalized)
@@ -62,8 +66,6 @@ struct SettingsView: View {
                         Text("Descending").tag(SortOrder.reverse)
                     }
                 }
-                
-                
                 
                 Section("About") {
                     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String

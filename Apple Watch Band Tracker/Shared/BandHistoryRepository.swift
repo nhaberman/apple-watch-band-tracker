@@ -138,7 +138,7 @@ class BandHistoryRepository {
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategy = .iso8601
                     
-                    let bandHistories: [BandHistory] = try! jsonDecoder.decode(AllBandHistories.self, from: json).bandHistories
+                    let bandHistories: [BandHistory] = try jsonDecoder.decode(AllBandHistories.self, from: json).bandHistories
                     
                     self.bandHistories.append(contentsOf: bandHistories)
                 }
