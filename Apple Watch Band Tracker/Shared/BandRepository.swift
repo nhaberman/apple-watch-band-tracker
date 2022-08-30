@@ -132,6 +132,21 @@ class BandRepository {
             let jsonString = String(data: jsonData, encoding: .utf8)
             
             try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
+            
+            
+            
+            
+            // test - generate migration data
+            var migrationData = ""
+            
+            for band in allBands {
+                migrationData += "\n\(band.bandType.rawValue):\(band.color)|\(band.bandID)"
+            }
+            
+            let fileNameMigration = "MigrationBandIDs.txt"
+            let fileUrlMigration = folderUrl.appendingPathComponent(fileNameMigration)
+            try migrationData.write(to: fileUrlMigration, atomically: false, encoding: .utf8)
+            
         }
         catch {
             print("unsuccessful")

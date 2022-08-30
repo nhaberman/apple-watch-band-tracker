@@ -19,7 +19,8 @@ class BandHistoryRepository {
         self.bandHistories = [BandHistory]()
         
         if loadHistories {
-            loadHistory()
+            migrateHistory()
+//            loadHistory()
         }
         else {
             bandHistories = sampleBandHistories
@@ -149,6 +150,52 @@ class BandHistoryRepository {
             
             // sort the history
             bandHistories.sort()
+        }
+        catch {
+            print("load history was unsuccessful")
+        }
+    }
+    
+    private func migrateHistory() {
+        do {
+            let fileName = "BandMigration.txt"
+            let fileManager = FileManager.default
+            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            
+            if FileManager.default.fileExists(atPath: fileUrl.path) {
+                let fileContents = try String(contentsOf: fileUrl)
+                let fileStrings = fileContents.components(separatedBy: .newlines)
+                
+                for fileString in fileStrings {
+                    let elements = fileString.split(separator: "|")
+                    
+                    let watch = WatchRepository.default.getWatchByID(UUID(uuidString: String(elements[1]))!)
+                    let band = BandRepository.default.getBandByID(UUID(uuidString: String(elements[0]))!)
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    let timeWorn = dateFormatter.date(from: String(elements[2]))
+                    
+                    let bandHistory = BandHistory(band: band!, watch: watch!, timeWorn: timeWorn!)
+                    
+                    self.bandHistories.append(bandHistory)
+                }
+            }
+            // sort the history
+            bandHistories.sort()
+            
+            // generate the files for the history
+            var migrationDate = bandHistories.first!.dateWorn
+            
+            while migrationDate < Date.now {
+                let dateComponents = Calendar.current.dateComponents([.year, .month], from: migrationDate)
+                
+                try saveHistory(year: dateComponents.year!, month: dateComponents.month!)
+                
+                // increment the month
+                migrationDate = Calendar.current.date(byAdding: .month, value: 1, to: migrationDate)!
+            }
         }
         catch {
             print("load history was unsuccessful")
