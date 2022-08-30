@@ -78,6 +78,18 @@
       "year": 2015
     },
     {
+      "bandID": "694EDE9F-3930-4A5F-BB43-2C20A533FA37",
+      "bandType": "Sport Band",
+      "color": "Red",
+      "colorOrder": 50,
+      "dateOrder": 7,
+      "generation": 1,
+      "logicalOrder": 50,
+      "pin": "Gold",
+      "season": "Fall",
+      "year": 2015
+    },
+    {
       "bandID": "FB37CF91-853E-4FD9-8455-1F3AF0F641BB",
       "bandType": "Sport Band",
       "color": "Midnight Blue",
@@ -85,6 +97,30 @@
       "dateOrder": 11,
       "generation": 1,
       "logicalOrder": 620,
+      "season": "Fall",
+      "year": 2015
+    },
+    {
+      "bandID": "82D6DDFF-A08D-4058-AC21-265128AAD205",
+      "bandType": "Sport Band",
+      "color": "Midnight Blue",
+      "colorOrder": 620,
+      "dateOrder": 11,
+      "generation": 1,
+      "logicalOrder": 620,
+      "pin": "Gold",
+      "season": "Fall",
+      "year": 2015
+    },
+    {
+      "bandID": "4524A994-99F3-4676-A3B1-773160DA02BF",
+      "bandType": "Sport Band",
+      "color": "Midnight Blue",
+      "colorOrder": 620,
+      "dateOrder": 11,
+      "generation": 1,
+      "logicalOrder": 620,
+      "pin": "Rose Gold",
       "season": "Fall",
       "year": 2015
     },
@@ -130,6 +166,17 @@
       "year": 2015
     },
     {
+      "bandID": "EC061C99-EBB2-4772-B448-BCF01AB32093",
+      "bandType": "Sport Band",
+      "color": "Lavender",
+      "colorOrder": 680,
+      "dateOrder": 12,
+      "logicalOrder": 680,
+      "pin": "Rose Gold",
+      "season": "Fall",
+      "year": 2015
+    },
+    {
       "bandID": "B59CD933-880F-4184-B1D9-6BCEC6F0256D",
       "bandType": "Sport Band",
       "color": "Vintage Rose",
@@ -161,12 +208,35 @@
       "year": 2015
     },
     {
+      "bandID": "3B1F75A5-E259-4661-93EC-CC5CFF348F98",
+      "bandType": "Sport Band",
+      "color": "Stone",
+      "colorOrder": 880,
+      "dateOrder": 15,
+      "generation": 1,
+      "logicalOrder": 880,
+      "pin": "Rose Gold",
+      "season": "Fall",
+      "year": 2015
+    },
+    {
       "bandID": "33D46A7F-5CF4-4F7C-8F9A-947E7F50A959",
       "bandType": "Sport Band",
       "color": "Antique White",
       "colorOrder": 910,
       "dateOrder": 16,
       "logicalOrder": 910,
+      "season": "Fall",
+      "year": 2015
+    },
+    {
+      "bandID": "EC2129FB-ED22-4BA0-BD06-16D4288629B1",
+      "bandType": "Sport Band",
+      "color": "Antique White",
+      "colorOrder": 910,
+      "dateOrder": 16,
+      "logicalOrder": 910,
+      "pin": "Gold",
       "season": "Fall",
       "year": 2015
     },
@@ -252,6 +322,18 @@
       "year": 2016
     },
     {
+      "bandID": "FFFA0B69-F32E-4E08-AAE9-A7ED91650A81",
+      "bandType": "Sport Band",
+      "color": "Pink Sand",
+      "colorOrder": 840,
+      "dateOrder": 25,
+      "generation": 1,
+      "logicalOrder": 840,
+      "pin": "Rose Gold",
+      "season": "Fall",
+      "year": 2016
+    },
+    {
       "bandID": "8B91E5A9-6289-42D3-BA64-83209907BCC3",
       "bandType": "Sport Band",
       "color": "Ocean Blue",
@@ -268,6 +350,27 @@
       "colorOrder": 990,
       "dateOrder": 26,
       "logicalOrder": 990,
+      "season": "Fall",
+      "year": 2016
+    },
+    {
+      "bandID": "281FBF35-B223-412A-8B56-50630FBA116C",
+      "bandType": "Sport Band",
+      "color": "Concrete",
+      "colorOrder": 990,
+      "dateOrder": 26,
+      "logicalOrder": 990,
+      "pin": "Gold",
+      "season": "Fall",
+      "year": 2016
+    },
+    {
+      "bandID": "851F2EB3-22ED-4FC1-92CB-D0C68E25C57E",
+      "bandType": "Sport Band",
+      "color": "Cocoa",
+      "colorOrder": 1020,
+      "dateOrder": 27,
+      "logicalOrder": 1020,
       "season": "Fall",
       "year": 2016
     },
@@ -578,6 +681,29 @@
       "dateOrder": 59,
       "generation": 2,
       "logicalOrder": 850,
+      "season": "Fall",
+      "year": 2018
+    },
+    {
+      "bandID": "B48603CC-28D7-4668-820C-C39D4CE36B32",
+      "bandType": "Sport Band",
+      "color": "Pink Sand",
+      "colorOrder": 850,
+      "dateOrder": 59,
+      "generation": 2,
+      "logicalOrder": 850,
+      "pin": "Rose Gold",
+      "season": "Fall",
+      "year": 2018
+    },
+    {
+      "bandID": "1F5AB328-EDEC-4AD8-BBBB-7B9E27921C5A",
+      "bandType": "Sport Band",
+      "color": "Stone",
+      "colorOrder": 890,
+      "dateOrder": 60,
+      "generation": 2,
+      "logicalOrder": 890,
       "season": "Fall",
       "year": 2018
     },

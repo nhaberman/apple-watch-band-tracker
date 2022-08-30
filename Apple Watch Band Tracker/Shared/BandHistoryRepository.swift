@@ -19,8 +19,8 @@ class BandHistoryRepository {
         self.bandHistories = [BandHistory]()
         
         if loadHistories {
-            migrateHistory()
-//            loadHistory()
+//            migrateHistory()
+            loadHistory()
         }
         else {
             bandHistories = sampleBandHistories
