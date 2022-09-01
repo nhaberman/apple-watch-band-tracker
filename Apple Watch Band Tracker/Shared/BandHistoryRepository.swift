@@ -156,8 +156,11 @@ class BandHistoryRepository {
         }
     }
     
-    private func migrateHistory() {
+    func migrateHistory() {
         do {
+            // first delete all existing history
+            self.bandHistories.removeAll()
+            
             let fileName = "BandMigration.txt"
             let fileManager = FileManager.default
             let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)

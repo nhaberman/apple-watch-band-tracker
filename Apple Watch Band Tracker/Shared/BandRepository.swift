@@ -63,9 +63,6 @@ class BandRepository {
             allBands.append(contentsOf: source.milaneseLoops)
             allBands.append(contentsOf: source.linkBracelets)
             allBands.append(contentsOf: source.thirdPartyBands)
-            
-            // save a copy of loaded bands for reference
-            saveBands(source)
         }
         catch {
             print("unsuccessful")
@@ -119,37 +116,37 @@ class BandRepository {
     }
     
     
-    private func saveBands(_ source: AllBandsSource) {
+    func saveBands() -> Bool {
         do {
-            let fileName = "AllBands.json"
-            let fileManager = FileManager.default
-            let folderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            let fileUrl = folderUrl.appendingPathComponent(fileName)
+            let filePath = Bundle.main.url(forResource: "AllBands", withExtension: "json")
+            let fileContents = try String(contentsOf: filePath!)
+            let json = fileContents.data(using: .utf8)!
+            let source = try! JSONDecoder().decode(AllBandsSource.self, from: json)
             
+            let fileManager = FileManager.default
+            let outputFileName = "AllBands"
+            let outputFolderUrl = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let outputFileUrl = outputFolderUrl.appendingPathComponent(outputFileName)
+            
+            // save bands to JSON file
             let jsonEncoder = JSONEncoder()
             jsonEncoder.outputFormatting = [.sortedKeys, .prettyPrinted]
             let jsonData = try jsonEncoder.encode(source)
             let jsonString = String(data: jsonData, encoding: .utf8)
+            try jsonString?.write(to: outputFileUrl.appendingPathExtension("json"), atomically: false, encoding: .utf8)
             
-            try jsonString?.write(to: fileUrl, atomically: false, encoding: .utf8)
-            
-            
-            
-            
-            // test - generate migration data
+            // save bands to TXT file
             var migrationData = ""
-            
             for band in allBands {
-                migrationData += "\n\(band.bandType.rawValue):\(band.color)|\(band.bandID)"
+                migrationData += "\n\(band.bandType.rawValue):\(band.formattedName())|\(band.bandID)"
             }
+            try migrationData.write(to: outputFileUrl.appendingPathExtension("txt"), atomically: false, encoding: .utf8)
             
-            let fileNameMigration = "MigrationBandIDs.txt"
-            let fileUrlMigration = folderUrl.appendingPathComponent(fileNameMigration)
-            try migrationData.write(to: fileUrlMigration, atomically: false, encoding: .utf8)
-            
+            return true
         }
         catch {
             print("unsuccessful")
+            return false
         }
     }
     

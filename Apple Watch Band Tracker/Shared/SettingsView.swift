@@ -19,6 +19,10 @@ struct SettingsView: View {
     @State private var selectedSortOrder: BandSortOrder
     @State private var selectedSortDirection: SortOrder
     
+    @State private var isPresentingImportConfirm: Bool = false
+    @State private var isPresentingExportBandAlert: Bool = false
+    @State private var isPresentingExportWatchAlert: Bool = false
+    
     init(_ isPreview: Bool = false) {
         if isPreview {
             self.repository = BandHistoryRepository.sample
@@ -39,6 +43,18 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
+                
+                Section("About") {
+                    let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+                    
+                    HStack {
+                        Text("Version")
+                        Spacer()
+                        Text(appVersion)
+                            .foregroundColor(.gray)
+                    }
+                }
+                
                 Section("Manage Bands") {
                     NavigationLink("Owned Bands") {
                         ManageBandsView(.owned)
@@ -67,15 +83,35 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section("About") {
-                    let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-                    
-                    HStack {
-                        Text("Version")
-                        Spacer()
-                        Text(appVersion)
-                            .foregroundColor(.gray)
+                Section {
+                    Button {
+                        isPresentingImportConfirm = true
+                    } label: {
+                        Label("Import Band History Data", systemImage: "square.and.arrow.down.fill")
                     }
+                    .confirmationDialog("Are you sure?", isPresented: $isPresentingImportConfirm) {
+                        Button("Delete all history and import?", role: .destructive) {
+                            BandHistoryRepository.default.migrateHistory()
+                        }
+                    }
+                    Button {
+                        if BandRepository.default.saveBands() {
+                            isPresentingExportBandAlert = true
+                        }
+                    } label: {
+                        Label("Export Band Data", systemImage: "square.and.arrow.up.fill")
+                    }
+                    .alert("Bands successfully exported.", isPresented: $isPresentingExportBandAlert) { }
+                    Button {
+                        if WatchRepository.default.saveWatches() {
+                            isPresentingExportWatchAlert = true
+                        }
+                    } label: {
+                        Label("Export Watch Data", systemImage: "square.and.arrow.up.fill")
+                    }
+                    .alert("Watches successfully exported.", isPresented: $isPresentingExportWatchAlert) { }
+                } header: {
+                    Text("Migrate Data")
                 }
                 
                 Section("Band Repository Directory") {
