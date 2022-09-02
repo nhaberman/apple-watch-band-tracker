@@ -14,17 +14,20 @@ class BandHistoryRepository {
     static let `default` = BandHistoryRepository()
     
     var bandHistories: [BandHistory]
+    var groupedHistories: [HistoryDate]
     
     init(_ loadHistories: Bool = true) {
         self.bandHistories = [BandHistory]()
+        self.groupedHistories = [HistoryDate]()
         
         if loadHistories {
-//            migrateHistory()
             loadHistory()
         }
         else {
             bandHistories = sampleBandHistories
         }
+        
+        self.groupedHistories = getHistoriesGroupedByDate()
     }
     
     func trackBand(bandHistory: BandHistory, addBandHistory: Bool = true) -> Bool {
@@ -38,6 +41,22 @@ class BandHistoryRepository {
         
         // sort the history
         bandHistories.sort()
+        
+        // add the item to the grouped histories
+        if var todaysHistoryDate = groupedHistories.first(where: { item in
+            item.historyDate == bandHistory.dateWorn
+        }) {
+            todaysHistoryDate.BandHistories.append(bandHistory)
+            todaysHistoryDate.BandHistories.sort()
+        }
+        else {
+            groupedHistories.append(HistoryDate(historyDate: bandHistory.dateWorn, BandHistories: [ bandHistory ]))
+            groupedHistories.sort { first, second in
+                first.historyDate < second.historyDate
+            }
+        }
+        
+        
         
         // update the file that will store the new band history
         let calendarComponents = Calendar.current.dateComponents([.year,.month], from: bandHistory.timeWorn)
@@ -72,7 +91,7 @@ class BandHistoryRepository {
         }
     }
     
-    func getHistoriesGroupedByDate() -> [HistoryDate] {
+    private func getHistoriesGroupedByDate() -> [HistoryDate] {
         var results = [HistoryDate]()
         
         let allDates: [Date] = bandHistories.map { history in
@@ -294,7 +313,7 @@ struct AllBandHistories: Codable {
 
 struct HistoryDate: Identifiable {
     let historyDate: Date
-    let BandHistories: [BandHistory]
+    var BandHistories: [BandHistory]
     let id = UUID()
 }
 

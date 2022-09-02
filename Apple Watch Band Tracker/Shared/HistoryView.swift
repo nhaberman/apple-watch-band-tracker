@@ -74,7 +74,7 @@ struct HistoryView: View {
             alignment: .leading
         ) {
             List {
-                ForEach(repository.getHistoriesGroupedByDate()) { item in
+                ForEach(repository.groupedHistories) { item in
                     if (item.historyDate >= startDate && item.historyDate <= endDate) {
                         Section(header: Text(item.historyDate.formatted(date: .complete, time: .omitted))) {
                             ForEach(item.BandHistories) { subItem in
