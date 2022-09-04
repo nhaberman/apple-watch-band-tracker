@@ -47,16 +47,16 @@ class BandHistoryRepository {
             item.historyDate == bandHistory.dateWorn
         }) {
             todaysHistoryDate.BandHistories.append(bandHistory)
-            todaysHistoryDate.BandHistories.sort()
+            todaysHistoryDate.BandHistories.sort { first, second in
+                first.timeWorn > second.timeWorn
+            }
         }
         else {
             groupedHistories.append(HistoryDate(historyDate: bandHistory.dateWorn, BandHistories: [ bandHistory ]))
             groupedHistories.sort { first, second in
-                first.historyDate < second.historyDate
+                first.historyDate > second.historyDate
             }
         }
-        
-        
         
         // update the file that will store the new band history
         let calendarComponents = Calendar.current.dateComponents([.year,.month], from: bandHistory.timeWorn)
