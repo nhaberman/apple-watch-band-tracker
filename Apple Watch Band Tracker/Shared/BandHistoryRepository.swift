@@ -43,11 +43,11 @@ class BandHistoryRepository {
         bandHistories.sort()
         
         // add the item to the grouped histories
-        if var todaysHistoryDate = groupedHistories.first(where: { item in
+        if let index = groupedHistories.firstIndex(where: { item in
             item.historyDate == bandHistory.dateWorn
         }) {
-            todaysHistoryDate.BandHistories.append(bandHistory)
-            todaysHistoryDate.BandHistories.sort { first, second in
+            groupedHistories[index].BandHistories.append(bandHistory)
+            groupedHistories[index].BandHistories.sort { first, second in
                 first.timeWorn > second.timeWorn
             }
         }
