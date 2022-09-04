@@ -46,10 +46,11 @@ struct HistoryView: View {
             self.endDate = Date.distantFuture
         case .specificYear:
             let startDateComponents = DateComponents.init(year: lookBackYear, month: 1, day: 1)
-            let endDateComponents = DateComponents.init(year: lookBackYear + 1, month: 1, day: 1)
-            
             self.startDate = Calendar.current.date(from: startDateComponents)!
-            self.endDate = Calendar.current.date(from: endDateComponents)!
+            
+            let endDateComponents = DateComponents.init(year: lookBackYear + 1, month: 1, day: 1)
+            let firstDayOfNextYear = Calendar.current.date(from: endDateComponents)!
+            self.endDate = Calendar.current.date(byAdding: .day, value: -1, to: firstDayOfNextYear)!
         case .all:
             self.startDate = Date.distantPast
             self.endDate = Date.distantFuture
