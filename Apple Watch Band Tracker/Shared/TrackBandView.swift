@@ -36,11 +36,12 @@ struct TrackBandView: View {
                     }
                     if selectedBandType != .None {
                         List {
-                            let bandsByType = BandRepository.default.getBandsByType(selectedBandType, sortOrder: .logical)
+                            let bandsByType = BandRepository.default.getBandsByType(selectedBandType, sortOrder: BandRepository.default.defaultSortOrder, sortDirection: BandRepository.default.defaultSortDirection, useFavorites: true)
                             Picker("Band", selection: $selectedBand) {
                                 ForEach(bandsByType, id: \.self) { band in
                                     if band.isOwned {
                                         Text(band.formattedName())
+                                            .fontWeight(band.isFavorite ? .semibold : .regular)
                                     }
                                 }
                             }

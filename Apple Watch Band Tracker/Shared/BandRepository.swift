@@ -206,32 +206,35 @@ class BandRepository {
         }
     }
     
-    func getBandsByType(_ bandType: BandType, sortOrder: BandSortOrder = .logical, sortDirection: SortOrder = .forward) -> [Band] {
+    func getBandsByType(_ bandType: BandType, sortOrder: BandSortOrder = .logical, sortDirection: SortOrder = .forward, useFavorites: Bool = false) -> [Band] {
         let results: [Band] = allBands.filter { band in
             band.bandType == bandType
         }
         
-        switch sortOrder {
-        case .date:
-            switch sortDirection {
-            case .forward:
-                return results.sorted(by: {$0.dateOrder ?? 0 < $1.dateOrder ?? 0})
-            case .reverse:
-                return results.sorted(by: {$0.dateOrder ?? 0 > $1.dateOrder ?? 0})
-            }
-        case .color:
-            switch sortDirection {
-            case .forward:
-                return results.sorted(by: {$0.colorOrder ?? 0 < $1.colorOrder ?? 0})
-            case .reverse:
-                return results.sorted(by: {$0.colorOrder ?? 0 > $1.colorOrder ?? 0})
-            }
-        case .logical:
-            switch sortDirection {
-            case .forward:
-                return results.sorted(by: {$0.logicalOrder ?? 0 < $1.logicalOrder ?? 0})
-            case .reverse:
-                return results.sorted(by: {$0.logicalOrder ?? 0 > $1.logicalOrder ?? 0})
+        // return the bands sorted as requested
+        return results.sorted { firstBand, secondBand in
+            if useFavorites && firstBand.isFavorite && !secondBand.isFavorite {
+                return true
+            } else if useFavorites && secondBand.isFavorite && !firstBand.isFavorite {
+                return false
+            } else if sortDirection == .forward {
+                switch sortOrder {
+                case .date:
+                    return (firstBand.dateOrder ?? 0) < (secondBand.dateOrder ?? 0)
+                case .color:
+                    return firstBand.colorOrder ?? 0 < secondBand.colorOrder ?? 0
+                case .logical:
+                    return firstBand.logicalOrder ?? 0 < secondBand.logicalOrder ?? 0
+                }
+            } else {
+                switch sortOrder {
+                case .date:
+                    return (firstBand.dateOrder ?? 0) > (secondBand.dateOrder ?? 0)
+                case .color:
+                    return firstBand.colorOrder ?? 0 > secondBand.colorOrder ?? 0
+                case .logical:
+                    return firstBand.logicalOrder ?? 0 > secondBand.logicalOrder ?? 0
+                }
             }
         }
     }
