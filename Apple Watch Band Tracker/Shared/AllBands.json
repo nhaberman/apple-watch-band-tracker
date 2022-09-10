@@ -5282,6 +5282,102 @@
       "year": 2015
     }
   ],
+  "alpineLoops": [
+    {
+      "bandID": "AC4DC52B-D2B8-4781-A4D6-D31858F9F5A3",
+      "bandType": "Alpine Loop",
+      "color": "Orange",
+      "colorOrder": 10,
+      "dateOrder": 1,
+      "logicalOrder": 10,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "929B5989-85C4-4A87-B594-BA9C18698EC4",
+      "bandType": "Alpine Loop",
+      "color": "Green",
+      "colorOrder": 20,
+      "dateOrder": 2,
+      "logicalOrder": 20,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "14E37139-1D15-4ABF-A034-2923F9623D69",
+      "bandType": "Alpine Loop",
+      "color": "Starlight",
+      "colorOrder": 30,
+      "dateOrder": 3,
+      "logicalOrder": 30,
+      "season": "Fall",
+      "year": 2022
+    }
+  ],
+  "trailLoops": [
+    {
+      "bandID": "EDEB53DC-8E32-4E7D-9FD5-583E75A3D11C",
+      "bandType": "Trail Loop",
+      "color": "Yellow / Beige",
+      "colorOrder": 10,
+      "dateOrder": 1,
+      "logicalOrder": 10,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "000F96F5-2ACB-4955-AA04-8678FE26AD3C",
+      "bandType": "Trail Loop",
+      "color": "Blue / Gray",
+      "colorOrder": 20,
+      "dateOrder": 2,
+      "logicalOrder": 20,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "4EC6EA82-3CE0-43BB-AFD2-C1F58044F105",
+      "bandType": "Trail Loop",
+      "color": "Black / Gray",
+      "colorOrder": 30,
+      "dateOrder": 3,
+      "logicalOrder": 30,
+      "season": "Fall",
+      "year": 2022
+    }
+  ],
+  "oceanBands": [
+    {
+      "bandID": "98686B81-A4A0-41B4-B3BA-4E80753765D4",
+      "bandType": "Ocean Band",
+      "color": "Yellow",
+      "colorOrder": 10,
+      "dateOrder": 1,
+      "logicalOrder": 10,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "4B06464A-ADF9-4130-84D0-5E42D9C8E26F",
+      "bandType": "Ocean Band",
+      "color": "White",
+      "colorOrder": 20,
+      "dateOrder": 2,
+      "logicalOrder": 20,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "314393C8-D96C-42C1-B31D-6D7C1B9FEFFE",
+      "bandType": "Ocean Band",
+      "color": "Midnight",
+      "colorOrder": 30,
+      "dateOrder": 3,
+      "logicalOrder": 30,
+      "season": "Fall",
+      "year": 2022
+    }
+  ],
   "thirdPartyBands": [
     {
       "bandID": "0A7A8327-8035-4A09-8215-A8AEB90453DD",

@@ -25,6 +25,9 @@ public enum BandType: String, CaseIterable, Identifiable, Codable {
     case LeatherLink = "Leather Link"
     case MilaneseLoop = "Milanese Loop"
     case LinkBracelet = "Link Bracelet"
+    case AlpineLoop = "Alpine Loop"
+    case TrailLoop = "Trail Loop"
+    case OceanBand = "Ocean Band"
     case ThirdPartyBand = "Third Party Band"
 }
 

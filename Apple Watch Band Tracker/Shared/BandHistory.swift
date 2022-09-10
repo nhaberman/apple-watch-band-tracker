@@ -139,6 +139,12 @@ class BandHistory: Identifiable, Comparable, Hashable, Codable {
             else if band.bandType == .LeatherLink {
                 self.bandVersion = (band as! LeatherLink).bandSize.rawValue
             }
+            else if band.bandType == .AlpineLoop {
+                self.bandVersion = (band as! AlpineLoop).bandSize.rawValue
+            }
+            else if band.bandType == .TrailLoop {
+                self.bandVersion = (band as! TrailLoop).bandSize.rawValue
+            }
             else if band.bandType == .ThirdPartyBand {
                 self.manufacturer = (band as! ThirdPartyBand).manufacturer
             }

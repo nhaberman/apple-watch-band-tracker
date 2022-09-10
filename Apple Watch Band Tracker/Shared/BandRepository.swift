@@ -62,6 +62,9 @@ class BandRepository {
             allBands.append(contentsOf: source.leatherLinks)
             allBands.append(contentsOf: source.milaneseLoops)
             allBands.append(contentsOf: source.linkBracelets)
+            allBands.append(contentsOf: source.alpineLoops)
+            allBands.append(contentsOf: source.trailLoops)
+            allBands.append(contentsOf: source.oceanBands)
             allBands.append(contentsOf: source.thirdPartyBands)
         }
         catch {
@@ -253,6 +256,9 @@ class BandRepository {
         LeatherLink(color: "Dark Cherry", season: .fall, year: 2021, bandSize: .smallMedium),
         MilaneseLoop(color: "Silver", season: .spring, year: 2015),
         LinkBracelet(color: "Space Black", season: .fall, year: 2021),
+        AlpineLoop(color: "Orange", season: .fall, year: 2022),
+        TrailLoop(color: "Black / Gray", season: .fall, year: 2022),
+        OceanBand(color: "Midnight", season: .fall, year: 2022),
         ThirdPartyBand(color: "Modern Strap Rustic Brown", manufacturer: "Nomad")
     ]
 }
@@ -271,5 +277,8 @@ struct AllBandsSource: Codable {
     var leatherLinks : [LeatherLink] = [LeatherLink]()
     var milaneseLoops : [MilaneseLoop] = [MilaneseLoop]()
     var linkBracelets : [LinkBracelet] = [LinkBracelet]()
+    var alpineLoops : [AlpineLoop] = [AlpineLoop]()
+    var trailLoops : [TrailLoop] = [TrailLoop]()
+    var oceanBands : [OceanBand] = [OceanBand]()
     var thirdPartyBands : [ThirdPartyBand] = [ThirdPartyBand]()
 }

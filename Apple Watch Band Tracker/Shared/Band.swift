@@ -47,6 +47,12 @@ class Band: Identifiable, Hashable, Codable {
                 return baseEquality
             case .LinkBracelet:
                 return baseEquality
+            case .AlpineLoop:
+                return baseEquality && (lhs as! AlpineLoop).bandSize == (rhs as! AlpineLoop).bandSize
+            case .TrailLoop:
+                return baseEquality && (lhs as! TrailLoop).bandSize == (rhs as! TrailLoop).bandSize
+            case .OceanBand:
+                return baseEquality
             case .ThirdPartyBand:
                 return baseEquality && (lhs as! ThirdPartyBand).manufacturer == (rhs as! ThirdPartyBand).manufacturer
             default:
@@ -596,6 +602,90 @@ class LinkBracelet : Band {
     override init(color: String, season: Season = .spring, year: Int = 0, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.bandType = .LinkBracelet
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+    }
+}
+
+class AlpineLoop : Band {
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none}
+    
+    enum BandSize: String, Codable {
+        case none = "None"
+        case small = "S"
+        case medium = "M"
+        case large = "L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
+        self.bandType = .AlpineLoop
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
+    }
+}
+
+class TrailLoop : Band {
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none}
+    
+    enum BandSize: String, Codable {
+        case none = "None"
+        case smallMedium = "S/M"
+        case mediumLarge = "M/L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
+        self.bandType = .TrailLoop
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
+    }
+}
+
+class OceanBand : Band {
+    override init(color: String, season: Season = .spring, year: Int = 0, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self.bandType = .OceanBand
     }
     
     required init(from decoder: Decoder) throws {
