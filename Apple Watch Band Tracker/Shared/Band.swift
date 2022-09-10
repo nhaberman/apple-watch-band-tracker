@@ -300,6 +300,7 @@ class SportLoop : Band {
         case twoTone = "Two-Tone"
         case rails = "Rails"
         case split = "Split"
+        case stripes = "Stripes"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .none, generation: Int? = nil) {
@@ -337,6 +338,7 @@ class NikeSportLoop : Band {
         case original = "Original"
         case reflective = "Reflective"
         case branded = "Branded"
+        case logo = "Logo"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int? = nil) {

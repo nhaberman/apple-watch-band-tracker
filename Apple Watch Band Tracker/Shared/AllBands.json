@@ -1302,6 +1302,58 @@
       "logicalOrder": 480,
       "season": "Spring",
       "year": 2022
+    },
+    {
+      "bandID": "045969D9-87DF-4781-AA10-CB48D7F7755C",
+      "bandType": "Sport Band",
+      "color": "Red",
+      "colorOrder": 31,
+      "dateOrder": 115,
+      "generation": 6,
+      "logicalOrder": 31,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "45F8BB38-2EF1-44C9-B43B-8B7D6BE13912",
+      "bandType": "Sport Band",
+      "color": "Succulent",
+      "colorOrder": 285,
+      "dateOrder": 116,
+      "logicalOrder": 285,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "788EB30F-7BA4-40BB-8B57-054FFD19ED1D",
+      "bandType": "Sport Band",
+      "color": "Slate Blue",
+      "colorOrder": 575,
+      "dateOrder": 117,
+      "logicalOrder": 575,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "9E753CD6-C248-47D4-8C39-D277AB1963C1",
+      "bandType": "Sport Band",
+      "color": "Elderberry",
+      "colorOrder": 691,
+      "dateOrder": 118,
+      "logicalOrder": 691,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "094C0F18-C43F-4C73-A2CD-7FC062EE50F3",
+      "bandType": "Sport Band",
+      "color": "White",
+      "colorOrder": 949,
+      "dateOrder": 119,
+      "generation": 3,
+      "logicalOrder": 949,
+      "season": "Fall",
+      "year": 2022
     }
   ],
   "nikeSportBands": [
@@ -1675,6 +1727,46 @@
       "dateOrder": 37,
       "logicalOrder": 20,
       "season": "Spring",
+      "year": 2022
+    },
+    {
+      "bandID": "0786E412-4037-4765-96C0-C0E754CA28EB",
+      "bandType": "Nike Sport Band",
+      "color": "Bright Crimson / Gym Red",
+      "colorOrder": 5,
+      "dateOrder": 38,
+      "logicalOrder": 5,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "9F9362C8-50BC-4CCF-B3AB-618553019DDE",
+      "bandType": "Nike Sport Band",
+      "color": "Olive Grey / Black",
+      "colorOrder": 125,
+      "dateOrder": 39,
+      "logicalOrder": 115,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "29CE71D3-9B67-492D-B67E-874159A7AE2E",
+      "bandType": "Nike Sport Band",
+      "color": "Summit White / Black",
+      "colorOrder": 365,
+      "dateOrder": 40,
+      "logicalOrder": 345,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "C8D6C6B9-9C41-4225-A279-7F0BF09D8948",
+      "bandType": "Nike Sport Band",
+      "color": "Black / Black",
+      "colorOrder": 380,
+      "dateOrder": 41,
+      "logicalOrder": 360,
+      "season": "Fall",
       "year": 2022
     },
     {
@@ -2657,6 +2749,62 @@
       "logicalOrder": 1020,
       "season": "Summer",
       "year": 2022
+    },
+    {
+      "bandID": "4980EFEC-D55D-44BC-ACF7-5EDFB3BAF67A",
+      "bandType": "Sport Loop",
+      "bandVersion": "Stripes",
+      "color": "Red",
+      "colorOrder": 55,
+      "dateOrder": 86,
+      "generation": 6,
+      "logicalOrder": 601,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "BD16B323-92E8-41FF-BE35-C12D94B2F155",
+      "bandType": "Sport Loop",
+      "bandVersion": "Stripes",
+      "color": "Storm Blue",
+      "colorOrder": 325,
+      "dateOrder": 87,
+      "logicalOrder": 602,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "A4F3C37B-E547-447F-AFBD-77C918D426CF",
+      "bandType": "Sport Loop",
+      "bandVersion": "Stripes",
+      "color": "Elderberry",
+      "colorOrder": 435,
+      "dateOrder": 88,
+      "logicalOrder": 603,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "ADED8498-FA24-482E-B846-90A3C27904C3",
+      "bandType": "Sport Loop",
+      "bandVersion": "Stripes",
+      "color": "Starlight",
+      "colorOrder": 515,
+      "dateOrder": 89,
+      "logicalOrder": 604,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "F8F92491-33F4-46E5-B4C2-9E29C51C65CE",
+      "bandType": "Sport Loop",
+      "bandVersion": "Stripes",
+      "color": "Midnight",
+      "colorOrder": 585,
+      "dateOrder": 90,
+      "logicalOrder": 605,
+      "season": "Fall",
+      "year": 2022
     }
   ],
   "nikeSportLoops": [
@@ -2953,6 +3101,50 @@
       "logicalOrder": 1020,
       "season": "Summer",
       "year": 2022
+    },
+    {
+      "bandID": "959C7C66-A2BF-4411-9519-27E14C52B97F",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Logo",
+      "color": "Sequoia / Pure Platinum",
+      "colorOrder": 35,
+      "dateOrder": 27,
+      "logicalOrder": 501,
+      "season": "Fall",
+      "year": 2021
+    },
+    {
+      "bandID": "102FD812-5142-4648-8BAC-8905AF129486",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Logo",
+      "color": "Game Royal / Midnight Navy",
+      "colorOrder": 125,
+      "dateOrder": 28,
+      "logicalOrder": 502,
+      "season": "Fall",
+      "year": 2021
+    },
+    {
+      "bandID": "6AEAC7E8-6CE2-42B7-A469-AAF2BA14CC67",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Logo",
+      "color": "Summit White / Black",
+      "colorOrder": 215,
+      "dateOrder": 29,
+      "logicalOrder": 503,
+      "season": "Fall",
+      "year": 2021
+    },
+    {
+      "bandID": "BCA2BAC1-31FE-4AFC-966C-6EB7B253664B",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Logo",
+      "color": "Black / Summit White",
+      "colorOrder": 250,
+      "dateOrder": 30,
+      "logicalOrder": 504,
+      "season": "Fall",
+      "year": 2021
     }
   ],
   "soloLoops": [
@@ -3195,6 +3387,46 @@
       "logicalOrder": 90,
       "season": "Spring",
       "year": 2022
+    },
+    {
+      "bandID": "ED3A1A88-0BB5-4B1C-B35E-29DD5C08AFD6",
+      "bandType": "Solo Loop",
+      "color": "Sunglow",
+      "colorOrder": 65,
+      "dateOrder": 25,
+      "logicalOrder": 65,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "794D77FC-F100-41C1-A1B4-F8BBF7256F22",
+      "bandType": "Solo Loop",
+      "color": "Succulent",
+      "colorOrder": 85,
+      "dateOrder": 26,
+      "logicalOrder": 85,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "65DA138D-8663-471F-9945-742D73E633E8",
+      "bandType": "Solo Loop",
+      "color": "Storm Blue",
+      "colorOrder": 145,
+      "dateOrder": 27,
+      "logicalOrder": 145,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "811EF3C9-3B15-4A0B-BE02-06BEBD133F1D",
+      "bandType": "Solo Loop",
+      "color": "Midnight",
+      "colorOrder": 240,
+      "dateOrder": 28,
+      "logicalOrder": 240,
+      "season": "Fall",
+      "year": 2022
     }
   ],
   "braidedSoloLoops": [
@@ -3369,6 +3601,57 @@
       "dateOrder": 15,
       "logicalOrder": 50,
       "season": "Spring",
+      "year": 2022
+    },
+    {
+      "bandID": "16749931-A031-4DF4-A193-33E8D0AE8E5F",
+      "bandType": "Braided Solo Loop",
+      "color": "Red",
+      "colorOrder": 25,
+      "dateOrder": 18,
+      "generation": 3,
+      "logicalOrder": 25,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "E2DF16E4-78B0-4192-ADAF-DAB990C61FEE",
+      "bandType": "Braided Solo Loop",
+      "color": "Rainforest",
+      "colorOrder": 73,
+      "dateOrder": 19,
+      "logicalOrder": 73,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "0041DB1A-6B2F-4D30-8411-041BD7AD6C8F",
+      "bandType": "Braided Solo Loop",
+      "color": "Slate Blue",
+      "colorOrder": 76,
+      "dateOrder": 20,
+      "logicalOrder": 76,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "F5302B18-58C3-4661-96BE-03D126257610",
+      "bandType": "Braided Solo Loop",
+      "color": "Beige",
+      "colorOrder": 145,
+      "dateOrder": 21,
+      "logicalOrder": 145,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "CD9538BD-40B6-4C72-B76D-2F0DEF472F5A",
+      "bandType": "Braided Solo Loop",
+      "color": "Midnight",
+      "colorOrder": 160,
+      "dateOrder": 22,
+      "logicalOrder": 160,
+      "season": "Fall",
       "year": 2022
     }
   ],
@@ -4539,6 +4822,39 @@
       "logicalOrder": 250,
       "season": "Fall",
       "year": 2021
+    },
+    {
+      "bandID": "B83432DD-333E-419A-B8E2-8E2EB475A660",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "color": "Azure",
+      "colorOrder": 95,
+      "dateOrder": 26,
+      "logicalOrder": 95,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "2EF48897-2DE4-479C-98AB-E29C6D4CFF4F",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "color": "Umber",
+      "colorOrder": 205,
+      "dateOrder": 27,
+      "logicalOrder": 205,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "30A490A3-D9BF-4B21-AEAD-335FD4E58DCD",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "color": "Ink",
+      "colorOrder": 135,
+      "dateOrder": 28,
+      "logicalOrder": 135,
+      "season": "Fall",
+      "year": 2022
     }
   ],
   "leatherLoops": [
@@ -4866,6 +5182,28 @@
       "logicalOrder": 90,
       "season": "Fall",
       "year": 2021
+    },
+    {
+      "bandID": "0C0E90F3-5CAE-4C41-9AB8-8329B6307D8F",
+      "bandSize": "None",
+      "bandType": "Leather Link",
+      "color": "Umber",
+      "colorOrder": 65,
+      "dateOrder": 10,
+      "logicalOrder": 65,
+      "season": "Fall",
+      "year": 2022
+    },
+    {
+      "bandID": "26FA1FF1-1741-4B31-B57F-481A39B567DD",
+      "bandSize": "None",
+      "bandType": "Leather Link",
+      "color": "Ink",
+      "colorOrder": 45,
+      "dateOrder": 11,
+      "logicalOrder": 45,
+      "season": "Fall",
+      "year": 2022
     }
   ],
   "milaneseLoops": [
