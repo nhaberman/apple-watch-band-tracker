@@ -209,14 +209,16 @@ class BandHistoryRepository {
             
             // generate the files for the history
             var migrationDate = bandHistories.first!.dateWorn
+            var migrationDateComponents = Calendar.current.dateComponents([.year, .month], from: migrationDate)
             
-            while migrationDate < Date.now {
-                let dateComponents = Calendar.current.dateComponents([.year, .month], from: migrationDate)
-                
-                try saveHistory(year: dateComponents.year!, month: dateComponents.month!)
+            let currentDateComponents = Calendar.current.dateComponents([.year, .month], from: Date.now)
+            
+            while migrationDateComponents.year! < currentDateComponents.year! || (migrationDateComponents.year! == currentDateComponents.year! && migrationDateComponents.month! <= currentDateComponents.month!) {
+                try saveHistory(year: migrationDateComponents.year!, month: migrationDateComponents.month!)
                 
                 // increment the month
                 migrationDate = Calendar.current.date(byAdding: .month, value: 1, to: migrationDate)!
+                migrationDateComponents = Calendar.current.dateComponents([.year, .month], from: migrationDate)
             }
         }
         catch {
