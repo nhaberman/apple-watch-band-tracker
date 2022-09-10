@@ -116,6 +116,8 @@ class BandHistoryRepository {
     func getHistoriesForBand(band: Band) -> [BandHistory] {
         bandHistories.filter { item in
             item.band == band
+        }.sorted { first, second in
+            first.timeWorn > second.timeWorn
         }
     }
     
