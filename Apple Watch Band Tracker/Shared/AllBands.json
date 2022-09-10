@@ -2972,7 +2972,6 @@
       "color": "White",
       "colorOrder": 230,
       "dateOrder": 6,
-      "generation": 1,
       "logicalOrder": 230,
       "season": "Fall",
       "year": 2020
@@ -3194,17 +3193,6 @@
       "colorOrder": 90,
       "dateOrder": 24,
       "logicalOrder": 90,
-      "season": "Spring",
-      "year": 2022
-    },
-    {
-      "bandID": "EB4CA327-55E5-468C-84CE-B09D9A837826",
-      "bandType": "Solo Loop",
-      "color": "White",
-      "colorOrder": 240,
-      "dateOrder": 25,
-      "generation": 2,
-      "logicalOrder": 240,
       "season": "Spring",
       "year": 2022
     }
@@ -3951,6 +3939,17 @@
       "logicalOrder": 1003,
       "season": "Summer",
       "year": 2018
+    },
+    {
+      "bandID" : "526B23AF-B792-4A96-8CF7-E2DC0D7C2B11",
+      "bandType" : "Woven Nylon",
+      "bandVersion" : "None",
+      "color" : "Chinese New Year",
+      "colorOrder" : 3010,
+      "dateOrder" : 50,
+      "logicalOrder" : 3001,
+      "season" : "Spring",
+      "year" : 0
     }
   ],
   "classicBuckles": [
