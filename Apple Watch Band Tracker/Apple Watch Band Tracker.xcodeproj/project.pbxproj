@@ -1,0 +1,912 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07032FF228A1E11E003388C8 /* BandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF128A1E11E003388C8 /* BandRepository.swift */; };
+		07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF128A1E11E003388C8 /* BandRepository.swift */; };
+		07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */; };
+		07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */; };
+		072FDFAA28B1A05F0002BCCE /* AllBands_v3.json in Resources */ = {isa = PBXBuildFile; fileRef = 072FDFA928B1A05F0002BCCE /* AllBands_v3.json */; };
+		072FDFAB28B1A05F0002BCCE /* AllBands_v3.json in Resources */ = {isa = PBXBuildFile; fileRef = 072FDFA928B1A05F0002BCCE /* AllBands_v3.json */; };
+		072FDFAD28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
+		072FDFAE28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
+		072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
+		072FDFB128B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
+		0796D2DF289E131C00591131 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2DE289E131C00591131 /* Tests_iOS.swift */; };
+		0796D2E1289E131C00591131 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */; };
+		0796D2EB289E131C00591131 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2EA289E131C00591131 /* Tests_macOS.swift */; };
+		0796D2ED289E131C00591131 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2EC289E131C00591131 /* Tests_macOSLaunchTests.swift */; };
+		0796D2EE289E131C00591131 /* AppleWatchBandTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */; };
+		0796D2EF289E131C00591131 /* AppleWatchBandTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */; };
+		0796D2F0289E131C00591131 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2C7289E131900591131 /* MainTabView.swift */; };
+		0796D2F1289E131C00591131 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2C7289E131900591131 /* MainTabView.swift */; };
+		0796D2F2289E131C00591131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0796D2C8289E131C00591131 /* Assets.xcassets */; };
+		0796D2F3289E131C00591131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0796D2C8289E131C00591131 /* Assets.xcassets */; };
+		07D273B5289EE7F1006A8839 /* TrackBandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273B4289EE7F1006A8839 /* TrackBandView.swift */; };
+		07D273B6289EE7F1006A8839 /* TrackBandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273B4289EE7F1006A8839 /* TrackBandView.swift */; };
+		07D273B8289EE97F006A8839 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273B7289EE97F006A8839 /* HistoryView.swift */; };
+		07D273B9289EE97F006A8839 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273B7289EE97F006A8839 /* HistoryView.swift */; };
+		07D273BB289EE9AD006A8839 /* StatsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273BA289EE9AD006A8839 /* StatsMainView.swift */; };
+		07D273BC289EE9AD006A8839 /* StatsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273BA289EE9AD006A8839 /* StatsMainView.swift */; };
+		07D273BE289EE9B7006A8839 /* BandsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273BD289EE9B7006A8839 /* BandsMainView.swift */; };
+		07D273BF289EE9B7006A8839 /* BandsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273BD289EE9B7006A8839 /* BandsMainView.swift */; };
+		07D273C1289EEAB1006A8839 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C0289EEAB1006A8839 /* Enums.swift */; };
+		07D273C2289EEAB1006A8839 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C0289EEAB1006A8839 /* Enums.swift */; };
+		07D273C7289EF28A006A8839 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C6289EF28A006A8839 /* Band.swift */; };
+		07D273C8289EF28A006A8839 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C6289EF28A006A8839 /* Band.swift */; };
+		07D273CA28A028BC006A8839 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C928A028BC006A8839 /* SettingsView.swift */; };
+		07D273CB28A028BD006A8839 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273C928A028BC006A8839 /* SettingsView.swift */; };
+		07D273CD28A04619006A8839 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273CC28A04619006A8839 /* Watch.swift */; };
+		07D273CE28A04619006A8839 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273CC28A04619006A8839 /* Watch.swift */; };
+		07D273D128A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273D028A28BB6006A8839 /* BandHistoryDetailsView.swift */; };
+		07D273D228A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273D028A28BB6006A8839 /* BandHistoryDetailsView.swift */; };
+		07D273D428A54BF1006A8839 /* BandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273D328A54BF1006A8839 /* BandsView.swift */; };
+		07D273D528A54BF1006A8839 /* BandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273D328A54BF1006A8839 /* BandsView.swift */; };
+		07D273DD28A56086006A8839 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273DC28A56086006A8839 /* StatsView.swift */; };
+		07D273DE28A56086006A8839 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273DC28A56086006A8839 /* StatsView.swift */; };
+		07D273E228A6A92D006A8839 /* BandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E128A6A92D006A8839 /* BandView.swift */; };
+		07D273E328A6A92D006A8839 /* BandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E128A6A92D006A8839 /* BandView.swift */; };
+		07D273E528A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
+		07D273E628A6B069006A8839 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273E428A6B069006A8839 /* WatchView.swift */; };
+		07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273E728A6BAAE006A8839 /* AllBands_v1.json */; };
+		07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273E728A6BAAE006A8839 /* AllBands_v1.json */; };
+		07D273EB28A81F77006A8839 /* AllBands.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273EA28A81F77006A8839 /* AllBands.json */; };
+		07D273EC28A81F77006A8839 /* AllBands.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273EA28A81F77006A8839 /* AllBands.json */; };
+		07D273EE28A84070006A8839 /* BandHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273ED28A84070006A8839 /* BandHistoryView.swift */; };
+		07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273ED28A84070006A8839 /* BandHistoryView.swift */; };
+		07D273F228AACB72006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273F128AACB72006A8839 /* BandsHistoryView.swift */; };
+		07D273F328AACB72006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273F128AACB72006A8839 /* BandsHistoryView.swift */; };
+		07D273F528AB3DB1006A8839 /* AllBands_v2.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273F428AB3DB1006A8839 /* AllBands_v2.json */; };
+		07D273F628AB3DB1006A8839 /* AllBands_v2.json in Resources */ = {isa = PBXBuildFile; fileRef = 07D273F428AB3DB1006A8839 /* AllBands_v2.json */; };
+		07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
+		07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
+		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
+		07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
+		07ED5D0D28A1F3630044469C /* HistoryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D0C28A1F3630044469C /* HistoryMainView.swift */; };
+		07ED5D0E28A1F3630044469C /* HistoryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D0C28A1F3630044469C /* HistoryMainView.swift */; };
+		07ED5D1328A345300044469C /* AllWatches.json in Resources */ = {isa = PBXBuildFile; fileRef = 07ED5D1228A345300044469C /* AllWatches.json */; };
+		07ED5D1428A345300044469C /* AllWatches.json in Resources */ = {isa = PBXBuildFile; fileRef = 07ED5D1228A345300044469C /* AllWatches.json */; };
+		07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D1528A345CC0044469C /* WatchRepository.swift */; };
+		07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED5D1528A345CC0044469C /* WatchRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0796D2DB289E131C00591131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0796D2C1289E131900591131 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0796D2CC289E131C00591131;
+			remoteInfo = "Apple Watch Band Tracker (iOS)";
+		};
+		0796D2E7289E131C00591131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0796D2C1289E131900591131 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0796D2D2289E131C00591131;
+			remoteInfo = "Apple Watch Band Tracker (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07032FF128A1E11E003388C8 /* BandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandRepository.swift; sourceTree = "<group>"; };
+		07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryRepository.swift; sourceTree = "<group>"; };
+		072FDFA928B1A05F0002BCCE /* AllBands_v3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v3.json; sourceTree = "<group>"; };
+		072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBandsView.swift; sourceTree = "<group>"; };
+		072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWatchesView.swift; sourceTree = "<group>"; };
+		0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchBandTrackerApp.swift; sourceTree = "<group>"; };
+		0796D2C7289E131900591131 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		0796D2C8289E131C00591131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0796D2CD289E131C00591131 /* Apple Watch Band Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Watch Band Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0796D2D3289E131C00591131 /* Apple Watch Band Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Watch Band Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0796D2D5289E131C00591131 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		0796D2DA289E131C00591131 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0796D2DE289E131C00591131 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		0796D2E6289E131C00591131 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0796D2EA289E131C00591131 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		0796D2EC289E131C00591131 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		07D273B4289EE7F1006A8839 /* TrackBandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBandView.swift; sourceTree = "<group>"; };
+		07D273B7289EE97F006A8839 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		07D273BA289EE9AD006A8839 /* StatsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsMainView.swift; sourceTree = "<group>"; };
+		07D273BD289EE9B7006A8839 /* BandsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsMainView.swift; sourceTree = "<group>"; };
+		07D273C0289EEAB1006A8839 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		07D273C6289EF28A006A8839 /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		07D273C928A028BC006A8839 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		07D273CC28A04619006A8839 /* Watch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
+		07D273D028A28BB6006A8839 /* BandHistoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryDetailsView.swift; sourceTree = "<group>"; };
+		07D273D328A54BF1006A8839 /* BandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsView.swift; sourceTree = "<group>"; };
+		07D273DC28A56086006A8839 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		07D273DF28A67DAF006A8839 /* Apple-Watch-Band-Tracker--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Apple-Watch-Band-Tracker--iOS--Info.plist"; sourceTree = "<group>"; };
+		07D273E128A6A92D006A8839 /* BandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandView.swift; sourceTree = "<group>"; };
+		07D273E428A6B069006A8839 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
+		07D273E728A6BAAE006A8839 /* AllBands_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v1.json; sourceTree = "<group>"; };
+		07D273EA28A81F77006A8839 /* AllBands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands.json; sourceTree = "<group>"; };
+		07D273ED28A84070006A8839 /* BandHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryView.swift; sourceTree = "<group>"; };
+		07D273F128AACB72006A8839 /* BandsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsHistoryView.swift; sourceTree = "<group>"; };
+		07D273F428AB3DB1006A8839 /* AllBands_v2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands_v2.json; sourceTree = "<group>"; };
+		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
+		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		07ED5D0C28A1F3630044469C /* HistoryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainView.swift; sourceTree = "<group>"; };
+		07ED5D1228A345300044469C /* AllWatches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllWatches.json; sourceTree = "<group>"; };
+		07ED5D1528A345CC0044469C /* WatchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRepository.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0796D2CA289E131C00591131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2D0289E131C00591131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2D7289E131C00591131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2E3289E131C00591131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07032FF428A1E13C003388C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07D273E028A6A914006A8839 /* Objects */,
+				07D273F028AACA74006A8839 /* MainViews */,
+				07D273B7289EE97F006A8839 /* HistoryView.swift */,
+				07D273D328A54BF1006A8839 /* BandsView.swift */,
+				07D273F128AACB72006A8839 /* BandsHistoryView.swift */,
+				07D273DC28A56086006A8839 /* StatsView.swift */,
+				07D273B4289EE7F1006A8839 /* TrackBandView.swift */,
+				07D273D028A28BB6006A8839 /* BandHistoryDetailsView.swift */,
+				07D273C928A028BC006A8839 /* SettingsView.swift */,
+				072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */,
+				072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		07032FF528A1E18D003388C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07D273C0289EEAB1006A8839 /* Enums.swift */,
+				07D273C6289EF28A006A8839 /* Band.swift */,
+				07E0F6BE289F354700E75E99 /* BandHistory.swift */,
+				07D273CC28A04619006A8839 /* Watch.swift */,
+				07032FF128A1E11E003388C8 /* BandRepository.swift */,
+				07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */,
+				07ED5D1528A345CC0044469C /* WatchRepository.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		07032FF628A1E1A9003388C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07D273EA28A81F77006A8839 /* AllBands.json */,
+				072FDFA928B1A05F0002BCCE /* AllBands_v3.json */,
+				07D273F428AB3DB1006A8839 /* AllBands_v2.json */,
+				07D273E728A6BAAE006A8839 /* AllBands_v1.json */,
+				07ED5D1228A345300044469C /* AllWatches.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0796D2C0289E131900591131 = {
+			isa = PBXGroup;
+			children = (
+				07D273DF28A67DAF006A8839 /* Apple-Watch-Band-Tracker--iOS--Info.plist */,
+				0796D2C5289E131900591131 /* Shared */,
+				0796D2D4289E131C00591131 /* macOS */,
+				0796D2DD289E131C00591131 /* Tests iOS */,
+				0796D2E9289E131C00591131 /* Tests macOS */,
+				0796D2CE289E131C00591131 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0796D2C5289E131900591131 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				07032FF628A1E1A9003388C8 /* Resources */,
+				07032FF528A1E18D003388C8 /* Models */,
+				07032FF428A1E13C003388C8 /* Views */,
+				0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */,
+				07E0F6C1289F63DA00E75E99 /* Theme.swift */,
+				0796D2C8289E131C00591131 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0796D2CE289E131C00591131 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0796D2CD289E131C00591131 /* Apple Watch Band Tracker.app */,
+				0796D2D3289E131C00591131 /* Apple Watch Band Tracker.app */,
+				0796D2DA289E131C00591131 /* Tests iOS.xctest */,
+				0796D2E6289E131C00591131 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0796D2D4289E131C00591131 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				0796D2D5289E131C00591131 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		0796D2DD289E131C00591131 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0796D2DE289E131C00591131 /* Tests_iOS.swift */,
+				0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		0796D2E9289E131C00591131 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				0796D2EA289E131C00591131 /* Tests_macOS.swift */,
+				0796D2EC289E131C00591131 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		07D273E028A6A914006A8839 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				07D273E128A6A92D006A8839 /* BandView.swift */,
+				07D273ED28A84070006A8839 /* BandHistoryView.swift */,
+				07D273E428A6B069006A8839 /* WatchView.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		07D273F028AACA74006A8839 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				0796D2C7289E131900591131 /* MainTabView.swift */,
+				07ED5D0C28A1F3630044469C /* HistoryMainView.swift */,
+				07D273BD289EE9B7006A8839 /* BandsMainView.swift */,
+				07D273BA289EE9AD006A8839 /* StatsMainView.swift */,
+			);
+			name = MainViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0796D2CC289E131C00591131 /* Apple Watch Band Tracker (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0796D2F6289E131C00591131 /* Build configuration list for PBXNativeTarget "Apple Watch Band Tracker (iOS)" */;
+			buildPhases = (
+				0796D2C9289E131C00591131 /* Sources */,
+				0796D2CA289E131C00591131 /* Frameworks */,
+				0796D2CB289E131C00591131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Apple Watch Band Tracker (iOS)";
+			productName = "Apple Watch Band Tracker (iOS)";
+			productReference = 0796D2CD289E131C00591131 /* Apple Watch Band Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0796D2D2289E131C00591131 /* Apple Watch Band Tracker (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0796D2F9289E131C00591131 /* Build configuration list for PBXNativeTarget "Apple Watch Band Tracker (macOS)" */;
+			buildPhases = (
+				0796D2CF289E131C00591131 /* Sources */,
+				0796D2D0289E131C00591131 /* Frameworks */,
+				0796D2D1289E131C00591131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Apple Watch Band Tracker (macOS)";
+			productName = "Apple Watch Band Tracker (macOS)";
+			productReference = 0796D2D3289E131C00591131 /* Apple Watch Band Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0796D2D9289E131C00591131 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0796D2FC289E131C00591131 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				0796D2D6289E131C00591131 /* Sources */,
+				0796D2D7289E131C00591131 /* Frameworks */,
+				0796D2D8289E131C00591131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0796D2DC289E131C00591131 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 0796D2DA289E131C00591131 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		0796D2E5289E131C00591131 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0796D2FF289E131C00591131 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				0796D2E2289E131C00591131 /* Sources */,
+				0796D2E3289E131C00591131 /* Frameworks */,
+				0796D2E4289E131C00591131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0796D2E8289E131C00591131 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 0796D2E6289E131C00591131 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0796D2C1289E131900591131 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					0796D2CC289E131C00591131 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0796D2D2289E131C00591131 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0796D2D9289E131C00591131 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 0796D2CC289E131C00591131;
+					};
+					0796D2E5289E131C00591131 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 0796D2D2289E131C00591131;
+					};
+				};
+			};
+			buildConfigurationList = 0796D2C4289E131900591131 /* Build configuration list for PBXProject "Apple Watch Band Tracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0796D2C0289E131900591131;
+			productRefGroup = 0796D2CE289E131C00591131 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0796D2CC289E131C00591131 /* Apple Watch Band Tracker (iOS) */,
+				0796D2D2289E131C00591131 /* Apple Watch Band Tracker (macOS) */,
+				0796D2D9289E131C00591131 /* Tests iOS */,
+				0796D2E5289E131C00591131 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0796D2CB289E131C00591131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
+				07D273EB28A81F77006A8839 /* AllBands.json in Resources */,
+				07D273F528AB3DB1006A8839 /* AllBands_v2.json in Resources */,
+				072FDFAA28B1A05F0002BCCE /* AllBands_v3.json in Resources */,
+				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
+				07D273E828A6BAAE006A8839 /* AllBands_v1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2D1289E131C00591131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07ED5D1428A345300044469C /* AllWatches.json in Resources */,
+				07D273EC28A81F77006A8839 /* AllBands.json in Resources */,
+				07D273F628AB3DB1006A8839 /* AllBands_v2.json in Resources */,
+				072FDFAB28B1A05F0002BCCE /* AllBands_v3.json in Resources */,
+				0796D2F3289E131C00591131 /* Assets.xcassets in Resources */,
+				07D273E928A6BAAE006A8839 /* AllBands_v1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2D8289E131C00591131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2E4289E131C00591131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0796D2C9289E131C00591131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D273D428A54BF1006A8839 /* BandsView.swift in Sources */,
+				07D273C1289EEAB1006A8839 /* Enums.swift in Sources */,
+				07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */,
+				07ED5D0D28A1F3630044469C /* HistoryMainView.swift in Sources */,
+				07D273CD28A04619006A8839 /* Watch.swift in Sources */,
+				07D273DD28A56086006A8839 /* StatsView.swift in Sources */,
+				07D273F228AACB72006A8839 /* BandsHistoryView.swift in Sources */,
+				0796D2F0289E131C00591131 /* MainTabView.swift in Sources */,
+				07D273BE289EE9B7006A8839 /* BandsMainView.swift in Sources */,
+				07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */,
+				07032FF228A1E11E003388C8 /* BandRepository.swift in Sources */,
+				0796D2EE289E131C00591131 /* AppleWatchBandTrackerApp.swift in Sources */,
+				07D273E228A6A92D006A8839 /* BandView.swift in Sources */,
+				07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */,
+				07D273BB289EE9AD006A8839 /* StatsMainView.swift in Sources */,
+				07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
+				072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */,
+				07D273D128A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
+				07D273EE28A84070006A8839 /* BandHistoryView.swift in Sources */,
+				07D273B8289EE97F006A8839 /* HistoryView.swift in Sources */,
+				07D273CA28A028BC006A8839 /* SettingsView.swift in Sources */,
+				072FDFAD28B7A0520002BCCE /* ManageBandsView.swift in Sources */,
+				07D273B5289EE7F1006A8839 /* TrackBandView.swift in Sources */,
+				07D273E528A6B069006A8839 /* WatchView.swift in Sources */,
+				07D273C7289EF28A006A8839 /* Band.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2CF289E131C00591131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D273D528A54BF1006A8839 /* BandsView.swift in Sources */,
+				07D273C2289EEAB1006A8839 /* Enums.swift in Sources */,
+				07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */,
+				07ED5D0E28A1F3630044469C /* HistoryMainView.swift in Sources */,
+				07D273CE28A04619006A8839 /* Watch.swift in Sources */,
+				07D273DE28A56086006A8839 /* StatsView.swift in Sources */,
+				07D273F328AACB72006A8839 /* BandsHistoryView.swift in Sources */,
+				0796D2F1289E131C00591131 /* MainTabView.swift in Sources */,
+				07D273BF289EE9B7006A8839 /* BandsMainView.swift in Sources */,
+				07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */,
+				07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */,
+				0796D2EF289E131C00591131 /* AppleWatchBandTrackerApp.swift in Sources */,
+				07D273E328A6A92D006A8839 /* BandView.swift in Sources */,
+				07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */,
+				07D273BC289EE9AD006A8839 /* StatsMainView.swift in Sources */,
+				07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
+				072FDFB128B8F0E70002BCCE /* ManageWatchesView.swift in Sources */,
+				07D273D228A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
+				07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */,
+				07D273B9289EE97F006A8839 /* HistoryView.swift in Sources */,
+				07D273CB28A028BD006A8839 /* SettingsView.swift in Sources */,
+				072FDFAE28B7A0520002BCCE /* ManageBandsView.swift in Sources */,
+				07D273B6289EE7F1006A8839 /* TrackBandView.swift in Sources */,
+				07D273E628A6B069006A8839 /* WatchView.swift in Sources */,
+				07D273C8289EF28A006A8839 /* Band.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2D6289E131C00591131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0796D2E1289E131C00591131 /* Tests_iOSLaunchTests.swift in Sources */,
+				0796D2DF289E131C00591131 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0796D2E2289E131C00591131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0796D2ED289E131C00591131 /* Tests_macOSLaunchTests.swift in Sources */,
+				0796D2EB289E131C00591131 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0796D2DC289E131C00591131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0796D2CC289E131C00591131 /* Apple Watch Band Tracker (iOS) */;
+			targetProxy = 0796D2DB289E131C00591131 /* PBXContainerItemProxy */;
+		};
+		0796D2E8289E131C00591131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0796D2D2289E131C00591131 /* Apple Watch Band Tracker (macOS) */;
+			targetProxy = 0796D2E7289E131C00591131 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0796D2F4289E131C00591131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0796D2F5289E131C00591131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0796D2F7289E131C00591131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22NW9J6LJ8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Apple-Watch-Band-Tracker--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Band Tracker";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker";
+				PRODUCT_NAME = "Apple Watch Band Tracker";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0796D2F8289E131C00591131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22NW9J6LJ8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Apple-Watch-Band-Tracker--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Band Tracker";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker";
+				PRODUCT_NAME = "Apple Watch Band Tracker";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0796D2FA289E131C00591131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker";
+				PRODUCT_NAME = "Apple Watch Band Tracker";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0796D2FB289E131C00591131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker";
+				PRODUCT_NAME = "Apple Watch Band Tracker";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0796D2FD289E131C00591131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Apple Watch Band Tracker (iOS)";
+			};
+			name = Debug;
+		};
+		0796D2FE289E131C00591131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Apple Watch Band Tracker (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0796D300289E131C00591131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Apple Watch Band Tracker (macOS)";
+			};
+			name = Debug;
+		};
+		0796D301289E131C00591131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Apple Watch Band Tracker (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0796D2C4289E131900591131 /* Build configuration list for PBXProject "Apple Watch Band Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0796D2F4289E131C00591131 /* Debug */,
+				0796D2F5289E131C00591131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0796D2F6289E131C00591131 /* Build configuration list for PBXNativeTarget "Apple Watch Band Tracker (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0796D2F7289E131C00591131 /* Debug */,
+				0796D2F8289E131C00591131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0796D2F9289E131C00591131 /* Build configuration list for PBXNativeTarget "Apple Watch Band Tracker (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0796D2FA289E131C00591131 /* Debug */,
+				0796D2FB289E131C00591131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0796D2FC289E131C00591131 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0796D2FD289E131C00591131 /* Debug */,
+				0796D2FE289E131C00591131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0796D2FF289E131C00591131 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0796D300289E131C00591131 /* Debug */,
+				0796D301289E131C00591131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0796D2C1289E131900591131 /* Project object */;
+}

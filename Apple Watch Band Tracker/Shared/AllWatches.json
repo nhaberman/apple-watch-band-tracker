@@ -1,0 +1,56 @@
+
+{
+    "allWatches": [
+        {
+            "watchID": "9C976399-024D-4637-93B4-FD4A98D57FED",
+            "series": 0,
+            "material": "Stainless Steel",
+            "finish": "Silver",
+            "size": 42
+        },
+        {
+            "watchID": "32AB52C3-B3A2-4734-A87C-17EFD50345F6",
+            "series": 0,
+            "material": "Stainless Steel",
+            "finish": "Silver",
+            "size": 38
+        },
+        {
+            "watchID": "F21E1680-B09A-4085-A4A3-41EDE79795B9",
+            "series": 2,
+            "material": "Stainless Steel",
+            "finish": "Space Black",
+            "size": 42
+        },
+        {
+            "watchID": "4D6CE25B-FACA-49BA-8F05-87198210C8FB",
+            "series": 3,
+            "material": "Aluminum",
+            "finish": "Space Gray",
+            "edition": "Nike",
+            "size": 42
+        },
+        {
+            "watchID": "2F7E413B-2D1D-45B9-97E9-D22F2012BFE2",
+            "series": 5,
+            "material": "Stainless Steel",
+            "finish": "Gold",
+            "size": 44
+        },
+        {
+            "watchID": "5A0B94C2-278C-431F-B8F2-77CAF1B1169A",
+            "series": 5,
+            "material": "Stainless Steel",
+            "finish": "Space Black",
+            "size": 44
+        },
+        {
+            "watchID": "C33DB3A6-A693-4DF8-870C-54C3713F0427",
+            "series": 7,
+            "material": "Titanium",
+            "finish": "Silver",
+            "edition": "Edition",
+            "size": 45
+        },
+    ]
+}
