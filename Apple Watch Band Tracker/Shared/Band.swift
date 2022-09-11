@@ -371,6 +371,37 @@ class NikeSportLoop : Band {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
         case _bandVersion = "bandVersion"
     }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.bandVersion == .branded || self.bandVersion == .logo {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(bandVersion.rawValue))"
+            }
+            else {
+                result += " (\(bandVersion.rawValue))"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.bandVersion == .branded || self.bandVersion == .logo {
+            if result.count == 0 {
+                result = bandVersion.rawValue
+            }
+            else {
+                result += ", \(bandVersion.rawValue)"
+            }
+        }
+        
+        return result
+    }
 }
 
 class SoloLoop : Band {
@@ -464,6 +495,37 @@ class WovenNylon : Band {
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
         case _bandVersion = "bandVersion"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.bandVersion != .none && self.bandVersion != .original {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(bandVersion.rawValue))"
+            }
+            else {
+                result += " (\(bandVersion.rawValue))"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.bandVersion != .none && self.bandVersion != .original {
+            if result.count == 0 {
+                result = bandVersion.rawValue
+            }
+            else {
+                result += ", \(bandVersion.rawValue)"
+            }
+        }
+        
+        return result
     }
 }
 
