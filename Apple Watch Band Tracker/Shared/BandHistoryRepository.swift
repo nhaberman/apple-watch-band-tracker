@@ -275,6 +275,21 @@ class BandHistoryRepository {
         
         // save the bands to the file
         try jsonString?.write(toFile: fileUrl.path, atomically: false, encoding: .utf8)
+        
+        
+        
+        
+        // for now, create the backup file and save it
+        let timestamp = Date().timeIntervalSince1970
+        let currentMonthFileNameBackup = "BandHistory_Backup_\(year)-\(month)_\(timestamp).txt"
+        let backupFileUrl = folderUrl.appendingPathComponent(currentMonthFileNameBackup)
+        var backupText: String = ""
+        
+        for bandHistory in bandHistoriesToSave {
+            backupText.append(bandHistory.getFullString() + "\n")
+        }
+        
+        try backupText.write(toFile: backupFileUrl.path, atomically: false, encoding: .utf8)
     }
     
     private var sampleBandHistories: [BandHistory] {

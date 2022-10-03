@@ -76,6 +76,19 @@ class BandHistory: Identifiable, Comparable, Hashable, Codable {
         return dateFormatter.string(from: self.timeWorn)
     }
     
+    func getFullString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+        
+        var result = timeWornString() + "|"
+        result.append(self.watch.formattedName().replacingOccurrences(of: "\n", with: "_") + "|")
+        result.append(self.band.bandType.rawValue + "|")
+        result.append(self.band.formattedName())
+        
+        return result
+    }
+    
     struct BandSlim: Encodable {
         var bandType: BandType
         var color: String
