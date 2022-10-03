@@ -65,6 +65,7 @@ struct HistoryView: View {
     var pageTitle: String = "No Title Supplied"
     
     @State private var showTrackBandSheet = false
+    @State private var showingAlert = false
     
     enum HistoryLookBack {
         case none, currentDay, currentWeek, currentMonth, currentYear, specificYear, all
@@ -84,24 +85,28 @@ struct HistoryView: View {
                                 } label: {
                                     BandHistoryView(bandHistory: subItem.self)
                                 }
+                                .swipeActions(allowsFullSwipe: false) {
+                                    Button(role: .destructive) {
+                                        let wasSuccessful = repository.removeBandHistory(bandHistory: subItem)
+                                        
+                                        if !wasSuccessful {
+                                            showingAlert = true
+                                        }
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
+                                }
+                                .swipeActions {
+                                    Button {
+                                        print("test edit")
+                                    } label: {
+                                        Label("Edit", systemImage: "square.and.pencil")
+                                    }
+                                    .tint(.blue)
+                                }
                             }
                         }
                     }
-                }
-                .swipeActions {
-                    Button(role: .destructive) {
-                        print("test delete")
-                    } label: {
-                        Label("Delete", systemImage: "trash")
-                    }
-                }
-                .swipeActions {
-                    Button {
-                        print("test edit")
-                    } label: {
-                        Label("Edit", systemImage: "square.and.pencil")
-                    }
-                    .tint(.blue)
                 }
             }
 //            .refreshable(action: {
@@ -127,6 +132,12 @@ struct HistoryView: View {
         }, content: {
             TrackBandView()
         })
+        .alert(isPresented: $showingAlert) {
+            Alert(
+                title: Text("Unable to Delete Band History"),
+                message: Text("There was an error deleting the band history, it may not have been deleted."),
+                dismissButton: .default(Text("OK")))
+        }
     }
 }
 
