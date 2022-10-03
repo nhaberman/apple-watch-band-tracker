@@ -15,7 +15,10 @@ struct BandHistoryDetailsView: View {
         self.bandHistory = bandHistory
     }
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var showEditBandSheet = false
+    @State private var showingAlert = false
     
     var body: some View {
         List {
@@ -37,7 +40,15 @@ struct BandHistoryDetailsView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(role: .destructive) {
                     print("tapped delete band")
-                    // delete band
+                    let wasSuccessful = BandHistoryRepository.default.removeBandHistory(bandHistory: bandHistory)
+                    
+                    if !wasSuccessful {
+                        showingAlert = true
+                    }
+                    else {
+                        // dismiss view
+                        presentationMode.wrappedValue.dismiss()
+                    }
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }
@@ -57,6 +68,12 @@ struct BandHistoryDetailsView: View {
         }, content: {
             TrackBandView()
         })
+        .alert(isPresented: $showingAlert) {
+            Alert(
+                title: Text("Unable to Delete Band History"),
+                message: Text("There was an error deleting the band history, it may not have been deleted."),
+                dismissButton: .default(Text("OK")))
+        }
     }
 }
 
