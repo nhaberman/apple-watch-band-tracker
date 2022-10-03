@@ -35,6 +35,7 @@ struct BandsHistoryView: View {
     }
         
     @State private var showTrackBandSheet = false
+    @State private var showingAlert = false
         
     var body: some View {
         VStack(
@@ -47,21 +48,25 @@ struct BandsHistoryView: View {
                     } label: {
                         BandHistoryView(bandHistory: item.self)
                     }
-                }
-                .swipeActions {
-                    Button(role: .destructive) {
-                        print("test delete")
-                    } label: {
-                        Label("Delete", systemImage: "trash")
+                    .swipeActions(allowsFullSwipe: false) {
+                        Button(role: .destructive) {
+                            let wasSuccessful = BandHistoryRepository.default.removeBandHistory(bandHistory: item)
+                            
+                            if !wasSuccessful {
+                                showingAlert = true
+                            }
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
                     }
-                }
-                .swipeActions {
-                    Button {
-                        print("test edit")
-                    } label: {
-                        Label("Edit", systemImage: "square.and.pencil")
+                    .swipeActions {
+                        Button {
+                            print("test edit")
+                        } label: {
+                            Label("Edit", systemImage: "square.and.pencil")
+                        }
+                        .tint(.blue)
                     }
-                    .tint(.blue)
                 }
             }
             .refreshable(action: {
@@ -100,6 +105,12 @@ struct BandsHistoryView: View {
         }, content: {
             TrackBandView()
         })
+        .alert(isPresented: $showingAlert) {
+            Alert(
+                title: Text("Unable to Delete Band History"),
+                message: Text("There was an error deleting the band history, it may not have been deleted."),
+                dismissButton: .default(Text("OK")))
+        }
     }
 }
 
