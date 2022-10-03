@@ -77,10 +77,12 @@ struct SettingsView: View {
                             Text(bandSortOrder.rawValue.capitalized)
                         }
                     }
+                    .pickerStyle(.menu)
                     Picker("Direction", selection: $selectedSortDirection) {
                         Text("Ascending").tag(SortOrder.forward)
                         Text("Descending").tag(SortOrder.reverse)
                     }
+                    .pickerStyle(.menu)
                 }
                 
                 Section {
