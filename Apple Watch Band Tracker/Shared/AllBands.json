@@ -2805,6 +2805,18 @@
       "logicalOrder": 605,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "B01277E4-36BA-4C82-8762-2388C665E0A4",
+      "bandType": "Sport Loop",
+      "bandVersion": "None",
+      "color": "Black Unity",
+      "colorOrder": 1200,
+      "dateOrder": 91,
+      "edition": "2023",
+      "logicalOrder": 1100,
+      "season": "Spring",
+      "year": 2023
     }
   ],
   "nikeSportLoops": [
@@ -5476,6 +5488,15 @@
       "dateOrder": 12,
       "logicalOrder": 12,
       "manufacturer": "elago"
+    },
+    {
+      "bandID": "E315FFFF-9314-4665-8AE4-1E2155823976",
+      "bandType": "Third Party Band",
+      "color": "Ultra Orange Sport Band",
+      "colorOrder": 13,
+      "dateOrder": 13,
+      "logicalOrder": 13,
+      "manufacturer": "Nomad"
     }
   ]
 }
