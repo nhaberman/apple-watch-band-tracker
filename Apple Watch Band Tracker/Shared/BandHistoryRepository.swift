@@ -30,14 +30,9 @@ class BandHistoryRepository {
         self.groupedHistories = getHistoriesGroupedByDate()
     }
     
-    func trackBand(bandHistory: BandHistory, addBandHistory: Bool = true) -> Bool {
-        // add or remove the band to or from the band history
-        if addBandHistory {
-            bandHistories.append(bandHistory)
-        }
-        else {
-            bandHistories.removeAll(where: { $0 == bandHistory })
-        }
+    func trackBand(bandHistory: BandHistory) -> Bool {
+        // add the band to the band history
+        bandHistories.append(bandHistory)
         
         // sort the history
         bandHistories.sort()
@@ -56,6 +51,30 @@ class BandHistoryRepository {
             groupedHistories.sort { first, second in
                 first.historyDate > second.historyDate
             }
+        }
+        
+        // update the file that will store the new band history
+        let calendarComponents = Calendar.current.dateComponents([.year,.month], from: bandHistory.timeWorn)
+        let year = calendarComponents.year!
+        let month = calendarComponents.month!
+        
+        do {
+            try saveHistory(year: year, month: month)
+            return true
+        } catch {
+            return false
+        }
+    }
+    
+    func removeBandHistory(bandHistory: BandHistory) -> Bool {
+        // remove the band from the band history
+        bandHistories.removeAll(where: { $0 == bandHistory })
+        
+        // remove the band from the grouped histories
+        if let index = groupedHistories.firstIndex(where: { item in
+            item.historyDate == bandHistory.dateWorn
+        }) {
+            groupedHistories[index].BandHistories.removeAll(where: { $0 == bandHistory })
         }
         
         // update the file that will store the new band history
@@ -256,6 +275,21 @@ class BandHistoryRepository {
         
         // save the bands to the file
         try jsonString?.write(toFile: fileUrl.path, atomically: false, encoding: .utf8)
+        
+        
+        
+        
+        // for now, create the backup file and save it
+        let timestamp = Date().timeIntervalSince1970
+        let currentMonthFileNameBackup = "BandHistory_Backup_\(year)-\(month)_\(timestamp).txt"
+        let backupFileUrl = folderUrl.appendingPathComponent(currentMonthFileNameBackup)
+        var backupText: String = ""
+        
+        for bandHistory in bandHistoriesToSave {
+            backupText.append(bandHistory.getFullString() + "\n")
+        }
+        
+        try backupText.write(toFile: backupFileUrl.path, atomically: false, encoding: .utf8)
     }
     
     private var sampleBandHistories: [BandHistory] {

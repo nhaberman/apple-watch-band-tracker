@@ -29,6 +29,23 @@ struct BandsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            HStack(alignment: .lastTextBaseline) {
+                Text("Sort By:")
+                    .font(Font.custom("System", size: 14, relativeTo: .body))
+                Picker("Sort Order", selection: $selectedSortOrder) {
+                    ForEach(BandSortOrder.allCases) { bandSortOrder in
+                        Text(bandSortOrder.rawValue.capitalized)
+                    }
+                }
+                .pickerStyle(.menu)
+                Spacer(minLength: 25)
+                Picker("Sort Direction", selection: $selectedSortDirection) {
+                    Text("Asc").tag(SortOrder.forward)
+                    Text("Desc").tag(SortOrder.reverse)
+                }
+                .pickerStyle(.segmented)
+            }.padding([.leading, .trailing], 20)
+            
             List {
                 let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder, sortDirection: selectedSortDirection)
                 
@@ -64,24 +81,25 @@ struct BandsView: View {
                     Label("Track Band", systemImage: "plus.circle")
                 }
             }
-            ToolbarItem(placement: ToolbarItemPlacement.status) {
-                HStack(alignment: .lastTextBaseline) {
-                    Text("Sort By:")
-                        .font(Font.custom("System", size: 14, relativeTo: .body))
-                    Picker("Sort Order", selection: $selectedSortOrder) {
-                        ForEach(BandSortOrder.allCases) { bandSortOrder in
-                            Text(bandSortOrder.rawValue.capitalized)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    Spacer(minLength: 25)
-                    Picker("Sort Direction", selection: $selectedSortDirection) {
-                        Text("Asc").tag(SortOrder.forward)
-                        Text("Desc").tag(SortOrder.reverse)
-                    }
-                    .pickerStyle(.segmented)
-                }
-            }
+            // temporary (?) fix - move sorting options from toolbar (which doesn't work) to VStack in body (above)
+//            ToolbarItem(placement: ToolbarItemPlacement.status) {
+//                HStack(alignment: .lastTextBaseline) {
+//                    Text("Sort By:")
+//                        .font(Font.custom("System", size: 14, relativeTo: .body))
+//                    Picker("Sort Order", selection: $selectedSortOrder) {
+//                        ForEach(BandSortOrder.allCases) { bandSortOrder in
+//                            Text(bandSortOrder.rawValue.capitalized)
+//                        }
+//                    }
+//                    .pickerStyle(.menu)
+//                    Spacer(minLength: 25)
+//                    Picker("Sort Direction", selection: $selectedSortDirection) {
+//                        Text("Asc").tag(SortOrder.forward)
+//                        Text("Desc").tag(SortOrder.reverse)
+//                    }
+//                    .pickerStyle(.segmented)
+//                }
+//            }
         }
         .sheet(isPresented: $showTrackBandSheet, onDismiss: {
             print("goodbye track band sheet")

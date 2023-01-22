@@ -27,17 +27,20 @@ struct TrackBandView: View {
                 Section("Select the Band:") {
                     List {
                         Picker("Band Type", selection: $selectedBandType) {
+                            Text("Select the Band Type").tag(Optional<BandType>(nil))
                             ForEach(BandType.allCases) { bandType in
                                 if (bandType != BandType.None) {
                                     Text(bandType.rawValue)
                                 }
                             }
                         }
+                        .pickerStyle(.menu)
                     }
                     if selectedBandType != .None {
                         List {
                             let bandsByType = BandRepository.default.getBandsByType(selectedBandType, sortOrder: BandRepository.default.defaultSortOrder, sortDirection: BandRepository.default.defaultSortDirection, useFavorites: true)
                             Picker("Band", selection: $selectedBand) {
+                                Text("Select a Band").tag(Optional<Band>(nil))
                                 ForEach(bandsByType, id: \.self) { band in
                                     if band.isOwned {
                                         Text(band.formattedName())
@@ -45,15 +48,18 @@ struct TrackBandView: View {
                                     }
                                 }
                             }
+                            .pickerStyle(.menu)
                         }
                     }
                 }
                 Section("Select the Apple Watch:") {
                     Picker("Watch", selection: $selectedWatch) {
+                        Text("Select a Watch").tag(Optional<Watch>(nil))
                         ForEach(WatchRepository().allWatches, id: \.self) { watch in
                             Text(watch.formattedName())
                         }
                     }
+                    .pickerStyle(.menu)
                 }
                 Section("Select the Time:") {
                     Toggle(isOn: $useCurrentDate) {
