@@ -1345,15 +1345,34 @@
       "year": 2022
     },
     {
-      "bandID": "094C0F18-C43F-4C73-A2CD-7FC062EE50F3",
+      "bandID": "0E7C5A94-A325-423B-9994-DC5802200E0A",
       "bandType": "Sport Band",
-      "color": "White",
-      "colorOrder": 949,
+      "color": "Bright Orange",
+      "colorOrder": 155,
       "dateOrder": 119,
-      "generation": 3,
-      "logicalOrder": 949,
-      "season": "Fall",
-      "year": 2022
+      "logicalOrder": 155,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "4DDA56E3-AFA0-4CE9-8671-A3776C753552",
+      "bandType": "Sport Band",
+      "color": "Olive",
+      "colorOrder": 345,
+      "dateOrder": 120,
+      "logicalOrder": 345,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "1211E77A-FD49-43D3-A250-9E18F141E466",
+      "bandType": "Sport Band",
+      "color": "Sky",
+      "colorOrder": 455,
+      "dateOrder": 121,
+      "logicalOrder": 455,
+      "season": "Spring",
+      "year": 2023
     }
   ],
   "nikeSportBands": [
@@ -3439,6 +3458,46 @@
       "logicalOrder": 240,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "A3042B7F-DD00-468A-B2FD-A2F4AA27355E",
+      "bandType": "Solo Loop",
+      "color": "Canary Yellow",
+      "colorOrder": 55,
+      "dateOrder": 29,
+      "logicalOrder": 55,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "BCCD3D8A-95EA-4FF9-8CE5-134C8BF5C19C",
+      "bandType": "Solo Loop",
+      "color": "Sprout Green",
+      "colorOrder": 68,
+      "dateOrder": 30,
+      "logicalOrder": 68,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "EC8D010B-8C9C-4513-8E6A-70BFDB65AFE5",
+      "bandType": "Solo Loop",
+      "color": "Olive",
+      "colorOrder": 105,
+      "dateOrder": 31,
+      "logicalOrder": 105,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "3A329154-A17B-479D-893C-11E26B0CEC9F",
+      "bandType": "Solo Loop",
+      "color": "Purple Fog",
+      "colorOrder": 165,
+      "dateOrder": 32,
+      "logicalOrder": 165,
+      "season": "Spring",
+      "year": 2023
     }
   ],
   "braidedSoloLoops": [
@@ -3665,6 +3724,36 @@
       "logicalOrder": 160,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "19D5D0AA-A981-4776-B806-1D99B16D379C",
+      "bandType": "Braided Solo Loop",
+      "color": "Bright Orange",
+      "colorOrder": 35,
+      "dateOrder": 23,
+      "logicalOrder": 35,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "D9971009-9453-4953-A9DF-6BB28A5ECD19",
+      "bandType": "Braided Solo Loop",
+      "color": "Olive",
+      "colorOrder": 71,
+      "dateOrder": 24,
+      "logicalOrder": 71,
+      "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "D0452261-F6E8-44E6-A8DA-74979B0CDA33",
+      "bandType": "Braided Solo Loop",
+      "color": "Purple Fog",
+      "colorOrder": 105,
+      "dateOrder": 25,
+      "logicalOrder": 105,
+      "season": "Spring",
+      "year": 2023
     }
   ],
   "wovenNylons": [
