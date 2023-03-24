@@ -55,7 +55,7 @@ struct TrackBandView: View {
                 Section("Select the Apple Watch:") {
                     Picker("Watch", selection: $selectedWatch) {
                         Text("Select a Watch").tag(Optional<Watch>(nil))
-                        ForEach(WatchRepository().allWatches, id: \.self) { watch in
+                        ForEach(WatchRepository().allWatches.reversed(), id: \.self) { watch in
                             Text(watch.formattedName())
                         }
                     }
