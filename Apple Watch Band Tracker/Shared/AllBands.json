@@ -1373,6 +1373,17 @@
       "logicalOrder": 455,
       "season": "Spring",
       "year": 2023
+    },
+    {
+      "bandID": "D591F6FE-F5F3-42F6-82FD-B8F95FB39339",
+      "bandType": "Sport Band",
+      "color": "Cloud Blue",
+      "colorOrder": 449,
+      "dateOrder": 1001,
+      "edition": "Prototype",
+      "logicalOrder": 100010,
+      "season": "Summer",
+      "year": 2021
     }
   ],
   "nikeSportBands": [
