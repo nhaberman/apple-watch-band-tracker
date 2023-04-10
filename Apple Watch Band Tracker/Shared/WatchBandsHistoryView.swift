@@ -31,7 +31,7 @@ struct WatchBandsHistoryView: View {
     
     var watch: Watch
     var pageTitle: String {
-        watch.formattedName()
+        watch.formattedNameOneLine()
     }
         
     @State private var showTrackBandSheet = false
