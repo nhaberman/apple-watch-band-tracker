@@ -20,7 +20,7 @@ struct WatchesMainView: View {
                 List {
                     ForEach(WatchRepository().allWatches.reversed()) { watch in
                         NavigationLink {
-                            //BandsView(bandType: value)
+                            WatchBandsHistoryView(watch: watch)
                         } label: {
                             WatchView(watch: watch)
                         }
