@@ -27,6 +27,7 @@ class Watch: Identifiable, Hashable, Codable {
     
     var watchID: UUID
     var series: Int
+    var model: String?
     var material: WatchCaseMaterial
     var finish: WatchCaseFinish
     var edition: String?
@@ -52,16 +53,21 @@ class Watch: Identifiable, Hashable, Codable {
     func formattedSeries() -> String {
         var result: String = ""
         
-        if (series == 0) {
-            result = "1st Generation"
+        if (model != nil) {
+            result = model!
         }
         else {
-            result = "Series \(series)"
-        }
-        
-        // edition
-        if (edition != nil) {
-            result += " (\(edition!))"
+            if (series == 0) {
+                result = "1st Generation"
+            }
+            else {
+                result = "Series \(series)"
+            }
+            
+            // edition
+            if (edition != nil) {
+                result += " (\(edition!))"
+            }
         }
         
         return result

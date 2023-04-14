@@ -11,6 +11,7 @@ struct ManageWatchesView: View {
     
     private var watchRepository: WatchRepository
     
+    @State private var showAddWatchSheet = false
     @State var allWatches: [Watch]
     
     init(_ isPreview: Bool = false) {
@@ -33,12 +34,18 @@ struct ManageWatchesView: View {
             }
             
             Button {
-                print("add watch here")
+                print("tapped add watch")
+                showAddWatchSheet = true
             } label: {
                 Label("Add Watch", systemImage: "applewatch")
             }
 
         }
+        .sheet(isPresented: $showAddWatchSheet, onDismiss: {
+            print("goodbye add watch sheet")
+        }, content: {
+            AddWatchView()
+        })
     }
 }
 

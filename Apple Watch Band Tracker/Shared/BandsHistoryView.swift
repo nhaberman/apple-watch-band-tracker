@@ -85,20 +85,20 @@ struct BandsHistoryView: View {
                     Label("Track Band", systemImage: "plus.circle")
                 }
             }
-            ToolbarItem(placement: ToolbarItemPlacement.status) {
-                Button {
-                    print("test save as owned")
-                } label: {
-                    Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
-                }
-            }
-            ToolbarItem(placement: .status) {
-                Button {
-                    print("test save as favorite")
-                } label: {
-                    Label("Favorite", systemImage: "star.fill")   //star.slash.fill
-                }
-            }
+//            ToolbarItem(placement: ToolbarItemPlacement.status) {
+//                Button {
+//                    print("test save as owned")
+//                } label: {
+//                    Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
+//                }
+//            }
+//            ToolbarItem(placement: .status) {
+//                Button {
+//                    print("test save as favorite")
+//                } label: {
+//                    Label("Favorite", systemImage: "star.fill")   //star.slash.fill
+//                }
+//            }
         }
         .sheet(isPresented: $showTrackBandSheet, onDismiss: {
             print("goodbye track band sheet")
