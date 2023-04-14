@@ -41,7 +41,7 @@ public enum Season: String, CaseIterable, Identifiable, Codable {
     case winter = "Winter"
 }
 
-public enum WatchCaseMaterial: String, Identifiable, Codable {
+public enum WatchCaseMaterial: String, CaseIterable, Identifiable, Codable {
     public var id: Self { self }
     
     case none = "none"
@@ -52,7 +52,7 @@ public enum WatchCaseMaterial: String, Identifiable, Codable {
     case gold = "Gold"
 }
 
-public enum WatchCaseFinish: String, Identifiable, Codable {
+public enum WatchCaseFinish: String, CaseIterable, Identifiable, Codable {
     public var id: Self { self }
     
     case none = "none"
