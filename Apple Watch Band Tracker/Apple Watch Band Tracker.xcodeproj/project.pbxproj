@@ -15,6 +15,12 @@
 		072FDFAE28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
 		072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
 		072FDFB128B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
+		076182F429E39CB8009D9C15 /* WatchesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076182F329E39CB8009D9C15 /* WatchesMainView.swift */; };
+		076182F529E39CB8009D9C15 /* WatchesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076182F329E39CB8009D9C15 /* WatchesMainView.swift */; };
+		076182F729E3A80F009D9C15 /* WatchBandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */; };
+		076182F829E3A80F009D9C15 /* WatchBandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */; };
+		077FB08F29E4E58700D00F60 /* AddWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077FB08E29E4E58700D00F60 /* AddWatchView.swift */; };
+		077FB09029E4E58700D00F60 /* AddWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077FB08E29E4E58700D00F60 /* AddWatchView.swift */; };
 		0796D2DF289E131C00591131 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2DE289E131C00591131 /* Tests_iOS.swift */; };
 		0796D2E1289E131C00591131 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */; };
 		0796D2EB289E131C00591131 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2EA289E131C00591131 /* Tests_macOS.swift */; };
@@ -91,6 +97,9 @@
 		07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryRepository.swift; sourceTree = "<group>"; };
 		072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBandsView.swift; sourceTree = "<group>"; };
 		072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWatchesView.swift; sourceTree = "<group>"; };
+		076182F329E39CB8009D9C15 /* WatchesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchesMainView.swift; sourceTree = "<group>"; };
+		076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBandsHistoryView.swift; sourceTree = "<group>"; };
+		077FB08E29E4E58700D00F60 /* AddWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWatchView.swift; sourceTree = "<group>"; };
 		0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchBandTrackerApp.swift; sourceTree = "<group>"; };
 		0796D2C7289E131900591131 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0796D2C8289E131C00591131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +182,8 @@
 				07D273C928A028BC006A8839 /* SettingsView.swift */,
 				072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */,
 				072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */,
+				076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */,
+				077FB08E29E4E58700D00F60 /* AddWatchView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 				07ED5D0C28A1F3630044469C /* HistoryMainView.swift */,
 				07D273BD289EE9B7006A8839 /* BandsMainView.swift */,
 				07D273BA289EE9AD006A8839 /* StatsMainView.swift */,
+				076182F329E39CB8009D9C15 /* WatchesMainView.swift */,
 			);
 			name = MainViews;
 			sourceTree = "<group>";
@@ -457,9 +469,12 @@
 				07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */,
 				07032FF228A1E11E003388C8 /* BandRepository.swift in Sources */,
 				0796D2EE289E131C00591131 /* AppleWatchBandTrackerApp.swift in Sources */,
+				077FB08F29E4E58700D00F60 /* AddWatchView.swift in Sources */,
 				07D273E228A6A92D006A8839 /* BandView.swift in Sources */,
 				07ED5D1628A345CC0044469C /* WatchRepository.swift in Sources */,
 				07D273BB289EE9AD006A8839 /* StatsMainView.swift in Sources */,
+				076182F729E3A80F009D9C15 /* WatchBandsHistoryView.swift in Sources */,
+				076182F429E39CB8009D9C15 /* WatchesMainView.swift in Sources */,
 				07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
 				072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */,
 				07D273D128A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
@@ -489,9 +504,12 @@
 				07E0F6C3289F63DA00E75E99 /* Theme.swift in Sources */,
 				07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */,
 				0796D2EF289E131C00591131 /* AppleWatchBandTrackerApp.swift in Sources */,
+				077FB09029E4E58700D00F60 /* AddWatchView.swift in Sources */,
 				07D273E328A6A92D006A8839 /* BandView.swift in Sources */,
 				07ED5D1728A345CC0044469C /* WatchRepository.swift in Sources */,
 				07D273BC289EE9AD006A8839 /* StatsMainView.swift in Sources */,
+				076182F829E3A80F009D9C15 /* WatchBandsHistoryView.swift in Sources */,
+				076182F529E39CB8009D9C15 /* WatchesMainView.swift in Sources */,
 				07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */,
 				072FDFB128B8F0E70002BCCE /* ManageWatchesView.swift in Sources */,
 				07D273D228A28BB6006A8839 /* BandHistoryDetailsView.swift in Sources */,
@@ -673,7 +691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker";
 				PRODUCT_NAME = "Apple Watch Band Tracker";
 				SDKROOT = iphoneos;
@@ -706,7 +724,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker";
 				PRODUCT_NAME = "Apple Watch Band Tracker";
 				SDKROOT = iphoneos;

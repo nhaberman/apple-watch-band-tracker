@@ -140,6 +140,14 @@ class BandHistoryRepository {
         }
     }
     
+    func getHistoriesForWatch(watch: Watch) -> [BandHistory] {
+        bandHistories.filter { item in
+            item.watch == watch
+        }.sorted { first, second in
+            first.timeWorn > second.timeWorn
+        }
+    }
+    
     private func getRepositoryFolder() throws -> URL {
         let fileManager = FileManager.default
         

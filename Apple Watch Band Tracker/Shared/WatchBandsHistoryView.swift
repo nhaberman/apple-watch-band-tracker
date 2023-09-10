@@ -1,13 +1,13 @@
 //
-//  BandHistoryView.swift
+//  WatchBandsHistoryView.swift
 //  Apple Watch Band Tracker
 //
-//  Created by Nick Haberman on 8/15/22.
+//  Created by Nick Haberman on 4/9/23.
 //
 
 import SwiftUI
 
-struct BandsHistoryView: View {
+struct WatchBandsHistoryView: View {
     //    init() {
     //        Theme.navigationBarColors(background: .blue, titleColor: .white)
     //    }
@@ -16,22 +16,22 @@ struct BandsHistoryView: View {
     private var repository: BandHistoryRepository
     private var bandRepository: BandRepository
     
-    init(band: Band? = nil) {
-        if band == nil {
+    init(watch: Watch? = nil) {
+        if watch == nil {
             self.bandRepository = BandRepository.sample
             self.repository = BandHistoryRepository.sample
-            self.band = bandRepository.allBands[0]
+            self.watch = WatchRepository.sample.allWatches[0]
         }
         else {
             self.bandRepository = BandRepository.default
             self.repository = BandHistoryRepository.default
-            self.band = band!
+            self.watch = watch!
         }
     }
     
-    var band: Band
+    var watch: Watch
     var pageTitle: String {
-        band.formattedName()
+        watch.formattedNameOneLine()
     }
         
     @State private var showTrackBandSheet = false
@@ -42,7 +42,7 @@ struct BandsHistoryView: View {
             alignment: .leading
         ) {
             List {
-                ForEach(repository.getHistoriesForBand(band: band)) { item in
+                ForEach(repository.getHistoriesForWatch(watch: watch)) { item in
                     NavigationLink {
                         BandHistoryDetailsView(bandHistory: item.self)
                     } label: {
@@ -85,20 +85,20 @@ struct BandsHistoryView: View {
                     Label("Track Band", systemImage: "plus.circle")
                 }
             }
-//            ToolbarItem(placement: ToolbarItemPlacement.status) {
-//                Button {
-//                    print("test save as owned")
-//                } label: {
-//                    Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
-//                }
-//            }
-//            ToolbarItem(placement: .status) {
-//                Button {
-//                    print("test save as favorite")
-//                } label: {
-//                    Label("Favorite", systemImage: "star.fill")   //star.slash.fill
-//                }
-//            }
+            ToolbarItem(placement: ToolbarItemPlacement.status) {
+                Button {
+                    print("test save as owned")
+                } label: {
+                    Label("Owned", systemImage: "bag.badge.plus") //bag.badge.minus
+                }
+            }
+            ToolbarItem(placement: .status) {
+                Button {
+                    print("test save as favorite")
+                } label: {
+                    Label("Favorite", systemImage: "star.fill")   //star.slash.fill
+                }
+            }
         }
         .sheet(isPresented: $showTrackBandSheet, onDismiss: {
             print("goodbye track band sheet")
@@ -114,8 +114,8 @@ struct BandsHistoryView: View {
     }
 }
 
-struct BandsHistoryView_Previews: PreviewProvider {
+struct WatchBandsHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        BandsHistoryView()
+        WatchBandsHistoryView()
     }
 }

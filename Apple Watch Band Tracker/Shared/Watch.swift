@@ -27,6 +27,7 @@ class Watch: Identifiable, Hashable, Codable {
     
     var watchID: UUID
     var series: Int
+    var model: String?
     var material: WatchCaseMaterial
     var finish: WatchCaseFinish
     var edition: String?
@@ -45,14 +46,41 @@ class Watch: Identifiable, Hashable, Codable {
         "\(formattedSeries())\n\(formattedColor())\n\(formattedSize())"
     }
     
+    func formattedNameOneLine() -> String {
+        "\(formattedShortSeries()) \(formattedShortColor()) - \(formattedSize())"
+    }
+    
     func formattedSeries() -> String {
         var result: String = ""
         
-        if (series == 0) {
-            result = "1st Generation"
+        if (model != nil) {
+            result = model!
         }
         else {
-            result = "Series \(series)"
+            if (series == 0) {
+                result = "1st Generation"
+            }
+            else {
+                result = "Series \(series)"
+            }
+            
+            // edition
+            if (edition != nil) {
+                result += " (\(edition!))"
+            }
+        }
+        
+        return result
+    }
+    
+    func formattedShortSeries() -> String {
+        var result: String = ""
+        
+        if (series == 0) {
+            result = "1G"
+        }
+        else {
+            result = "S\(series)"
         }
         
         // edition
@@ -69,6 +97,76 @@ class Watch: Identifiable, Hashable, Codable {
         }
         else {
             return finish.rawValue + " " + material.rawValue
+        }
+    }
+    
+    func formattedShortColor() -> String {
+        switch material {
+        case .aluminum:
+            switch finish {
+            case .silver:
+                return "SA"
+            case .spaceGray:
+                return "SGA"
+            case .gold:
+                return "GA"
+            case .roseGold:
+                return "RGA"
+            case .blue:
+                return "Blue"
+            case .red:
+                return "Red"
+            case .green:
+                return "Green"
+            case .starlight:
+                return "SlA"
+            case .midnight:
+                return "MnA"
+            default:
+                return ""
+            }
+        case .stainlessSteel:
+            switch finish {
+            case .silver:
+                return "SS"
+            case .gold:
+                return "GSS"
+            case .spaceBlack:
+                return "SBSS"
+            case .graphite:
+                return "GrSS"
+            default:
+                return ""
+            }
+        case .titanium:
+            switch finish {
+            case .silver:
+                return "Ti"
+            case .spaceBlack:
+                return "SB Ti"
+            default:
+                return ""
+            }
+        case .ceramic:
+            switch finish {
+            case .whiteCeramic:
+                return "C (E)"
+            case .grayCeramic:
+                return "GC (E)"
+            default:
+                return ""
+            }
+        case .gold:
+            switch finish {
+            case .yellowGoldEdition:
+                return "YG (E)"
+            case .roseGoldEdition:
+                return "RG (E)"
+            default:
+                return ""
+            }
+        default:
+            return ""
         }
     }
     

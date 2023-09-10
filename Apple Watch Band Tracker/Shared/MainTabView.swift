@@ -18,10 +18,14 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Bands", systemImage: "applewatch.side.right")
                 }.tag(2)
+            WatchesMainView()
+                .tabItem {
+                    Label("Watches", systemImage: "applewatch")
+                }.tag(3)
             StatsMainView()
                 .tabItem {
                     Label("Stats", systemImage: "chart.bar.xaxis")
-                }.tag(3)
+                }.tag(4)
         }
     }
 }
