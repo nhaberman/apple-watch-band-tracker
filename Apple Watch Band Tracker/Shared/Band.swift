@@ -235,9 +235,19 @@ class SportBand : Band {
 class NikeSportBand : Band {
     var pin: String?
     
-    init(color: String, season: Season, year: Int, pin: String = "", generation: Int? = nil) {
+    private var _bandVersion: NikeSportBandVersion?
+    var bandVersion: NikeSportBandVersion { _bandVersion ?? .none}
+    
+    enum NikeSportBandVersion: String, Codable {
+        case none = "None"
+        case classic = "Classic"
+        case colorFlakes = "Color Flakes"
+    }
+    
+    init(color: String, season: Season, year: Int, pin: String = "", bandVersion: NikeSportBandVersion = .none, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self.pin = pin
+        self._bandVersion = bandVersion
         self.bandType = .NikeSportBand
     }
     
@@ -257,6 +267,7 @@ class NikeSportBand : Band {
     // coding keys for specific band properties
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned, pin
+        case _bandVersion = "bandVersion"
     }
     
     override func formattedName() -> String {
@@ -307,6 +318,7 @@ class SportLoop : Band {
         case rails = "Rails"
         case split = "Split"
         case stripes = "Stripes"
+        case singleTone = "Single-Tone"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .none, generation: Int? = nil) {
@@ -345,6 +357,7 @@ class NikeSportLoop : Band {
         case reflective = "Reflective"
         case branded = "Branded"
         case logo = "Logo"
+        case pullTab = "Pull Tab"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int? = nil) {
@@ -627,6 +640,42 @@ class LeatherLink : Band {
         super.init(color: color, season: season, year: year, generation: generation)
         self._bandSize = bandSize
         self.bandType = .LeatherLink
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
+    }
+}
+
+class MagneticLink : Band {
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none}
+    
+    enum BandSize: String, Codable {
+        case none = "None"
+        case smallMedium = "S/M"
+        case mediumLarge = "M/L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
+        self.bandType = .MagneticLink
     }
     
     required init(from decoder: Decoder) throws {
