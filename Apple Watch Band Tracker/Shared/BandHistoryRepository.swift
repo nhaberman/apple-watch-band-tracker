@@ -181,6 +181,13 @@ class BandHistoryRepository {
             
             // for each file, open it and add the history to bandHistories
             for file in folderContents {
+                
+                // skip backup files
+                if file.lastPathComponent.contains(/BandHistory_Backup_.*\.txt/) {
+                    print("skipping backup file:  \(file.lastPathComponent)")
+                    continue
+                }
+                    
                 do {
                     let fileContents = try String(contentsOf: file)
                     let json = fileContents.data(using: .utf8)!
