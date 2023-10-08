@@ -256,6 +256,7 @@ class NikeSportBand : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         pin = try values.decodeIfPresent(String.self, forKey: .pin)
+        _bandVersion = try values.decodeIfPresent(NikeSportBandVersion.self, forKey: ._bandVersion)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -564,9 +565,19 @@ class ModernBuckle : Band {
         case large = "L"
     }
     
-    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
+    private var _bandVersion: ModernBuckleVersion?
+    var bandVersion: ModernBuckleVersion { _bandVersion ?? .none}
+    
+    enum ModernBuckleVersion: String, Codable {
+        case none = "None"
+        case leather = "Leather"
+        case fineWoven = "FineWoven"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, bandVersion: ModernBuckleVersion = .none, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self._bandSize = bandSize
+        self._bandVersion = bandVersion
         self.bandType = .ModernBuckle
     }
     
@@ -575,6 +586,7 @@ class ModernBuckle : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+        _bandVersion = try values.decodeIfPresent(ModernBuckleVersion.self, forKey: ._bandVersion)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -587,6 +599,38 @@ class ModernBuckle : Band {
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
         case _bandSize = "bandSize"
+        case _bandVersion = "bandVersion"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.bandVersion == .fineWoven {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(bandVersion.rawValue))"
+            }
+            else {
+                result += " (\(bandVersion.rawValue))"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.bandVersion == .fineWoven {
+            if result.count == 0 {
+                result = bandVersion.rawValue
+            }
+            else {
+                result += ", \(bandVersion.rawValue)"
+            }
+        }
+        
+        return result
     }
 }
 
