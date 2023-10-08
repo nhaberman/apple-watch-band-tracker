@@ -244,16 +244,17 @@ class BandRepository {
     
     private var sampleBands: [Band] = [
         SportBand(color: "Capri Blue", season: .spring, year: 2021),
-        NikeSportBand(color: "Obsidian / Black", season: .summer, year: 2017),
+        NikeSportBand(color: "Obsidian / Black", season: .summer, year: 2017, bandVersion: .classic),
         SportLoop(color: "Red", season: .fall, year: 2018, bandVersion: .fleck, generation: 1),
         NikeSportLoop(color: "Purple Pulse", season: .fall, year: 2020, bandVersion: .reflective),
         SoloLoop(color: "Plum", season: .winter, year: 2020, bandSize: 6),
         BraidedSoloLoop(color: "Charcoal", season: .fall, year: 2020, bandSize: 5),
         WovenNylon(color: "Pearl", season: .spring, year: 2016, bandVersion: .original),
         ClassicBuckle(color: "Saddle Brown", season: .spring, year: 2016, generation: 3),
-        ModernBuckle(color: "Black", season: .spring, year: 2015, bandSize: .large, generation: 1),
+        ModernBuckle(color: "Black", season: .spring, year: 2015, bandSize: .large, bandVersion: .leather, generation: 1),
         LeatherLoop(color: "Bright Blue", season: .spring, year: 2015, bandSize: .large),
         LeatherLink(color: "Dark Cherry", season: .fall, year: 2021, bandSize: .smallMedium),
+        MagneticLink(color: "Pacific Blue", season: .fall, year: 2023, bandSize: .smallMedium),
         MilaneseLoop(color: "Silver", season: .spring, year: 2015),
         LinkBracelet(color: "Space Black", season: .fall, year: 2021),
         AlpineLoop(color: "Orange", season: .fall, year: 2022),
@@ -275,6 +276,7 @@ struct AllBandsSource: Codable {
     var modernBuckles : [ModernBuckle] = [ModernBuckle]()
     var leatherLoops : [LeatherLoop] = [LeatherLoop]()
     var leatherLinks : [LeatherLink] = [LeatherLink]()
+    var magneticLinks : [MagneticLink] = [MagneticLink]()
     var milaneseLoops : [MilaneseLoop] = [MilaneseLoop]()
     var linkBracelets : [LinkBracelet] = [LinkBracelet]()
     var alpineLoops : [AlpineLoop] = [AlpineLoop]()

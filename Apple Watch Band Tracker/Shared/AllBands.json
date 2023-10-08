@@ -306,6 +306,7 @@
       "color": "Light Pink",
       "colorOrder": 780,
       "dateOrder": 23,
+      "generation": 1,
       "logicalOrder": 780,
       "season": "Spring",
       "year": 2016
@@ -1375,6 +1376,57 @@
       "year": 2023
     },
     {
+      "bandID": "78FA992F-CB6C-4FC6-92C0-3C6E3638CFD1",
+      "bandType": "Sport Band",
+      "color": "Winter Blue",
+      "colorOrder": 485,
+      "dateOrder": 122,
+      "logicalOrder": 485,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "BEF031AD-AEE5-44B9-8579-B97E3B556892",
+      "bandType": "Sport Band",
+      "color": "Storm Blue",
+      "colorOrder": 615,
+      "dateOrder": 123,
+      "logicalOrder": 615,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "D5F9611D-1182-4231-A1F6-FCE5BDC13FD9",
+      "bandType": "Sport Band",
+      "color": "Mulberry",
+      "colorOrder": 699,
+      "dateOrder": 124,
+      "logicalOrder": 699,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "5014C19E-D382-4373-8CE4-E3C445400E6F",
+      "bandType": "Sport Band",
+      "color": "Light Pink",
+      "colorOrder": 835,
+      "dateOrder": 125,
+      "generation": 2,
+      "logicalOrder": 835,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "8F34897F-034F-4542-B785-FF11A2D8067E",
+      "bandType": "Sport Band",
+      "color": "Clay",
+      "colorOrder": 1015,
+      "dateOrder": 126,
+      "logicalOrder": 1015,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
       "bandID": "D591F6FE-F5F3-42F6-82FD-B8F95FB39339",
       "bandType": "Sport Band",
       "color": "Cloud Blue",
@@ -1390,6 +1442,7 @@
     {
       "bandID": "B79427FE-972F-404E-B741-F6097551820A",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Flat Silver / White",
       "colorOrder": 340,
       "dateOrder": 2,
@@ -1400,6 +1453,7 @@
     {
       "bandID": "30C873DC-4420-4C49-B71B-F2BAC6A52A9E",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Flat Silver / Volt",
       "colorOrder": 330,
       "dateOrder": 1,
@@ -1410,6 +1464,7 @@
     {
       "bandID": "6F71C428-7BF1-4DEF-9F46-4281A88559A7",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / Cool Gray",
       "colorOrder": 270,
       "dateOrder": 3,
@@ -1420,6 +1475,7 @@
     {
       "bandID": "E0E07751-727F-44B5-AE37-F9BA74852FC2",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / Volt",
       "colorOrder": 320,
       "dateOrder": 4,
@@ -1430,6 +1486,7 @@
     {
       "bandID": "8409A040-1525-4AB7-9628-564477ED19E8",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Anthracite / Black",
       "colorOrder": 370,
       "dateOrder": 5,
@@ -1440,6 +1497,7 @@
     {
       "bandID": "F301A48A-6636-4F0D-A2C5-554866C50151",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Pure Platinum / White",
       "colorOrder": 350,
       "dateOrder": 6,
@@ -1450,17 +1508,19 @@
     {
       "bandID": "D0513817-6592-4518-92E6-43F047ED041D",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Light Bone / Black",
       "colorOrder": 90,
       "dateOrder": 7,
       "edition": "NikeLab Edition",
-      "logicalOrder": 1010,
+      "logicalOrder": 10010,
       "season": "Spring",
       "year": 2017
     },
     {
       "bandID": "F55B045B-E6D5-4C79-B436-B5225C741AF2",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Light Violet / White",
       "colorOrder": 40,
       "dateOrder": 8,
@@ -1471,6 +1531,7 @@
     {
       "bandID": "88EF0EF4-3068-40A4-9C55-54642C0505EC",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Violet Dust / Plum Fog",
       "colorOrder": 50,
       "dateOrder": 9,
@@ -1481,6 +1542,7 @@
     {
       "bandID": "9EBD1D25-D818-48AB-A5C5-866BE06477DE",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Blue Orbit / Gamma Blue",
       "colorOrder": 200,
       "dateOrder": 10,
@@ -1491,6 +1553,7 @@
     {
       "bandID": "5C10C249-5466-431E-93FE-7B986A21A915",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Obsidian / Black",
       "colorOrder": 210,
       "dateOrder": 11,
@@ -1501,6 +1564,7 @@
     {
       "bandID": "7142B69B-AD89-4D02-A1B5-6DE01FE41088",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Pure Platinum / Black",
       "colorOrder": 360,
       "dateOrder": 12,
@@ -1511,6 +1575,7 @@
     {
       "bandID": "C6792DCA-9A5E-4EFA-95BF-B5ED651A514E",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Barely Rose / Pearl Pink",
       "colorOrder": 30,
       "dateOrder": 13,
@@ -1521,6 +1586,7 @@
     {
       "bandID": "9CD49010-C07F-47E7-8BF1-043FB9FA4FCD",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Cargo Khaki / Black",
       "colorOrder": 130,
       "dateOrder": 14,
@@ -1531,6 +1597,7 @@
     {
       "bandID": "A943CE40-470C-4104-8256-5F5EBB25C2DC",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / White",
       "colorOrder": 280,
       "dateOrder": 15,
@@ -1541,6 +1608,7 @@
     {
       "bandID": "A683631C-C5AB-42BF-B117-F2EFA9E86142",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Smokey Mauve / Particle Beige",
       "colorOrder": 60,
       "dateOrder": 16,
@@ -1551,6 +1619,7 @@
     {
       "bandID": "0832F6D8-EBA5-4B33-B7B0-13FF0B301657",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Olive Flak / Black",
       "colorOrder": 110,
       "dateOrder": 17,
@@ -1561,6 +1630,7 @@
     {
       "bandID": "7B688335-2FC9-4620-9A3B-FDCBA9D76D08",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Celestial Teal / Black",
       "colorOrder": 180,
       "dateOrder": 18,
@@ -1571,6 +1641,7 @@
     {
       "bandID": "7B603407-42CE-4CB9-B74E-8DFFCBC0AB75",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Spruce Fog / Vintage Lichen",
       "colorOrder": 100,
       "dateOrder": 19,
@@ -1581,6 +1652,7 @@
     {
       "bandID": "D3954B87-0DE0-4B96-8099-9DCE126A7796",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Teal Tint / Tropical Twist",
       "colorOrder": 150,
       "dateOrder": 20,
@@ -1591,6 +1663,7 @@
     {
       "bandID": "840276A1-058F-414F-BC77-9DF43100CFC5",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / Hyper Grape",
       "colorOrder": 300,
       "dateOrder": 21,
@@ -1601,6 +1674,7 @@
     {
       "bandID": "825A0E31-0E53-4877-A101-62AA3C44090D",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Desert Sand / Black",
       "colorOrder": 80,
       "dateOrder": 22,
@@ -1611,6 +1685,7 @@
     {
       "bandID": "05D12F97-03F2-4597-A6CE-867D21706E16",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Royal Pulse / Black",
       "colorOrder": 240,
       "dateOrder": 23,
@@ -1621,6 +1696,7 @@
     {
       "bandID": "CA146FA2-4F57-4844-AFD0-FCB7FD0DF2B6",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / Pink Blast",
       "colorOrder": 290,
       "dateOrder": 24,
@@ -1631,6 +1707,7 @@
     {
       "bandID": "738DCC48-60F0-4E52-961C-D7E94EC7CA33",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Midnight Turquoise / Aurora Green",
       "colorOrder": 160,
       "dateOrder": 25,
@@ -1641,6 +1718,7 @@
     {
       "bandID": "055092FE-8BB0-497F-929D-EF0E0C813AF2",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / Lime Blast",
       "colorOrder": 310,
       "dateOrder": 26,
@@ -1651,17 +1729,19 @@
     {
       "bandID": "8E999AF9-7FF9-4374-A72B-1097880A368E",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Pride Edition",
       "colorOrder": 1000,
       "dateOrder": 27,
       "edition": "2020",
-      "logicalOrder": 2010,
+      "logicalOrder": 20010,
       "season": "Summer",
       "year": 2020
     },
     {
       "bandID": "823CD2F1-6149-4140-8FA4-717DC941CBB3",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Blue Black / Bright Mango",
       "colorOrder": 230,
       "dateOrder": 29,
@@ -1672,6 +1752,7 @@
     {
       "bandID": "698BCA16-D4CF-450B-8B2C-D88960C7BBFD",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Spruce Aura / Vapor Green",
       "colorOrder": 140,
       "dateOrder": 28,
@@ -1682,6 +1763,7 @@
     {
       "bandID": "A45B39E8-FE6A-4C13-B2F5-0448D291C70C",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Obsidian Mist / Black",
       "colorOrder": 250,
       "dateOrder": 30,
@@ -1692,6 +1774,7 @@
     {
       "bandID": "9603A0B6-F7B8-47A2-8AA6-5A46DC04EF3D",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Chlorine Blue / Green Glow",
       "colorOrder": 190,
       "dateOrder": 32,
@@ -1702,6 +1785,7 @@
     {
       "bandID": "6F37C84F-A6C6-4A84-89A6-0EB5CBF2F1CE",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Hasta / Light Silver",
       "colorOrder": 170,
       "dateOrder": 31,
@@ -1712,6 +1796,7 @@
     {
       "bandID": "BDB4F6BD-E577-4CA7-A4AE-5E230D6E384B",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Ironstone / Black",
       "colorOrder": 70,
       "dateOrder": 33,
@@ -1722,6 +1807,7 @@
     {
       "bandID": "12861930-F28E-41FE-9FB5-BF018CD36BB9",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Magic Ember / Crimson Bliss",
       "colorOrder": 10,
       "dateOrder": 34,
@@ -1732,6 +1818,7 @@
     {
       "bandID": "1E52B2F1-459F-4910-983D-EB47962EFDA9",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Midnight Navy / Mystic Navy",
       "colorOrder": 220,
       "dateOrder": 35,
@@ -1742,6 +1829,7 @@
     {
       "bandID": "481B7733-8E7A-4FC7-9D1F-A3A886DD2385",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Olive Gray / Cargo Khaki",
       "colorOrder": 120,
       "dateOrder": 36,
@@ -1752,6 +1840,7 @@
     {
       "bandID": "DA43BFAA-364D-4681-B91F-B9CD06813E60",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Pink Oxford / Rose Whisper",
       "colorOrder": 20,
       "dateOrder": 37,
@@ -1762,6 +1851,7 @@
     {
       "bandID": "0786E412-4037-4765-96C0-C0E754CA28EB",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Bright Crimson / Gym Red",
       "colorOrder": 5,
       "dateOrder": 38,
@@ -1772,6 +1862,7 @@
     {
       "bandID": "9F9362C8-50BC-4CCF-B3AB-618553019DDE",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Olive Grey / Black",
       "colorOrder": 125,
       "dateOrder": 39,
@@ -1782,6 +1873,7 @@
     {
       "bandID": "29CE71D3-9B67-492D-B67E-874159A7AE2E",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Summit White / Black",
       "colorOrder": 365,
       "dateOrder": 40,
@@ -1792,6 +1884,7 @@
     {
       "bandID": "C8D6C6B9-9C41-4225-A279-7F0BF09D8948",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Black / Black",
       "colorOrder": 380,
       "dateOrder": 41,
@@ -1800,13 +1893,80 @@
       "year": 2022
     },
     {
+      "bandID": "50635307-30F0-42BD-A18B-52AC11B2A66A",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Magic Ember",
+      "colorOrder": 15,
+      "dateOrder": 42,
+      "logicalOrder": 1010,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "CC775B04-791B-4AD2-A188-0CE5331F1BB9",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Cargo Khaki",
+      "colorOrder": 128,
+      "dateOrder": 43,
+      "logicalOrder": 1020,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "610EF1F5-E9B2-4D69-A358-AA6C99CB2E56",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Blue Flame",
+      "colorOrder": 225,
+      "dateOrder": 44,
+      "logicalOrder": 1030,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "71855BE1-5848-4E69-8345-B5A0FD45E93B",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Desert Stone",
+      "colorOrder": 75,
+      "dateOrder": 45,
+      "logicalOrder": 1040,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "8040DF27-DAFE-4636-8C7C-F0D00AAD10C2",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Pure Platinum",
+      "colorOrder": 355,
+      "dateOrder": 46,
+      "logicalOrder": 1050,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "93935C5A-867F-4B1F-AC19-3A43DFF47EA2",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Midnight Sky",
+      "colorOrder": 368,
+      "dateOrder": 47,
+      "logicalOrder": 1060,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
       "bandID": "E3E5BA4B-4128-4EBA-A429-55B9A4BAD579",
       "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
       "color": "Magnet Gray / Anthracite",
       "colorOrder": 260,
       "dateOrder": 100,
       "edition": "Prototype",
-      "logicalOrder": 3010,
+      "logicalOrder": 30010,
       "pin": "Space Black",
       "season": "Spring",
       "year": 0
@@ -1840,7 +2000,7 @@
       "bandType": "Sport Loop",
       "bandVersion": "Shimmer",
       "color": "Seashell",
-      "colorOrder": 520,
+      "colorOrder": 545,
       "dateOrder": 6,
       "logicalOrder": 110,
       "season": "Fall",
@@ -2821,6 +2981,7 @@
       "color": "Starlight",
       "colorOrder": 515,
       "dateOrder": 89,
+      "generation": 1,
       "logicalOrder": 604,
       "season": "Fall",
       "year": 2022
@@ -2832,6 +2993,7 @@
       "color": "Midnight",
       "colorOrder": 585,
       "dateOrder": 90,
+      "generation": 1,
       "logicalOrder": 605,
       "season": "Fall",
       "year": 2022
@@ -2846,6 +3008,63 @@
       "edition": "2023",
       "logicalOrder": 1100,
       "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "8061D7CB-7946-4367-B181-C685D6FFCC51",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Cypress",
+      "colorOrder": 235,
+      "dateOrder": 92,
+      "logicalOrder": 701,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "DE1FC2EE-C718-453B-B868-38B2CFA50386",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Winter Blue",
+      "colorOrder": 275,
+      "dateOrder": 93,
+      "logicalOrder": 702,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "23A87AEF-94DC-4642-9DF7-F385A5DC6CE7",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Light Pink",
+      "colorOrder": 475,
+      "dateOrder": 94,
+      "logicalOrder": 703,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "D61959B4-1C2F-4DEF-82D1-1FB0AA382445",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Starlight",
+      "colorOrder": 520,
+      "dateOrder": 95,
+      "generation": 2,
+      "logicalOrder": 704,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "E80E2DF5-ACB5-4812-80D1-C4796D059E3C",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Midnight",
+      "colorOrder": 587,
+      "dateOrder": 96,
+      "generation": 2,
+      "logicalOrder": 705,
+      "season": "Fall",
       "year": 2023
     }
   ],
@@ -3153,7 +3372,7 @@
       "dateOrder": 27,
       "logicalOrder": 501,
       "season": "Fall",
-      "year": 2021
+      "year": 2022
     },
     {
       "bandID": "102FD812-5142-4648-8BAC-8905AF129486",
@@ -3164,7 +3383,7 @@
       "dateOrder": 28,
       "logicalOrder": 502,
       "season": "Fall",
-      "year": 2021
+      "year": 2022
     },
     {
       "bandID": "6AEAC7E8-6CE2-42B7-A469-AAF2BA14CC67",
@@ -3175,7 +3394,7 @@
       "dateOrder": 29,
       "logicalOrder": 503,
       "season": "Fall",
-      "year": 2021
+      "year": 2022
     },
     {
       "bandID": "BCA2BAC1-31FE-4AFC-966C-6EB7B253664B",
@@ -3186,7 +3405,62 @@
       "dateOrder": 30,
       "logicalOrder": 504,
       "season": "Fall",
-      "year": 2021
+      "year": 2022
+    },
+    {
+      "bandID": "0B29C1A1-9F03-4E8C-ABF7-4DC263CF0343",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Pull Tab",
+      "color": "Sequoia / Orange",
+      "colorOrder": 32,
+      "dateOrder": 31,
+      "logicalOrder": 601,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "37EB4AA0-D8B5-4EB8-A55F-C7D1699DF126",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Pull Tab",
+      "color": "Bright Green / Blue",
+      "colorOrder": 75,
+      "dateOrder": 32,
+      "logicalOrder": 602,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "F208A5A5-853B-4A1C-97C8-6884BE791025",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Pull Tab",
+      "color": "Game Royal / Orange",
+      "colorOrder": 122,
+      "dateOrder": 33,
+      "logicalOrder": 603,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "C3D80F5D-0934-4E19-B593-B8C2782DC5A8",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Pull Tab",
+      "color": "Starlight / Pink",
+      "colorOrder": 195,
+      "dateOrder": 34,
+      "logicalOrder": 604,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "A0C35854-64B7-405A-B545-D376BE6D7409",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Pull Tab",
+      "color": "Black / Blue",
+      "colorOrder": 260,
+      "dateOrder": 35,
+      "logicalOrder": 605,
+      "season": "Fall",
+      "year": 2023
     }
   ],
   "soloLoops": [
@@ -3344,7 +3618,7 @@
       "bandID": "467BCE8F-783A-4F9E-9A93-9228AD848E6B",
       "bandType": "Solo Loop",
       "color": "Clover",
-      "colorOrder": 100,
+      "colorOrder": 105,
       "dateOrder": 15,
       "logicalOrder": 100,
       "season": "Fall",
@@ -3494,7 +3768,7 @@
       "bandID": "EC8D010B-8C9C-4513-8E6A-70BFDB65AFE5",
       "bandType": "Solo Loop",
       "color": "Olive",
-      "colorOrder": 105,
+      "colorOrder": 100,
       "dateOrder": 31,
       "logicalOrder": 105,
       "season": "Spring",
@@ -3508,6 +3782,46 @@
       "dateOrder": 32,
       "logicalOrder": 165,
       "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "5E4591E9-030E-4A06-9E8E-E0A6AE4FF53D",
+      "bandType": "Solo Loop",
+      "color": "Orange Sorbet",
+      "colorOrder": 45,
+      "dateOrder": 33,
+      "logicalOrder": 45,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "C8B3681C-4347-469B-B136-AF734C5B46E6",
+      "bandType": "Solo Loop",
+      "color": "Cypress",
+      "colorOrder": 95,
+      "dateOrder": 34,
+      "logicalOrder": 95,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "C65813DF-A4F4-43B9-B5EE-8BCE438C2626",
+      "bandType": "Solo Loop",
+      "color": "Winter Blue",
+      "colorOrder": 115,
+      "dateOrder": 35,
+      "logicalOrder": 115,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "5C7E6E18-2604-493C-92BF-C9C8F58C32F0",
+      "bandType": "Solo Loop",
+      "color": "Light Pink",
+      "colorOrder": 195,
+      "dateOrder": 36,
+      "logicalOrder": 195,
+      "season": "Fall",
       "year": 2023
     }
   ],
@@ -3629,7 +3943,7 @@
       "bandID": "FE5FEA57-1AE3-4AE9-913D-FF25892CFEF5",
       "bandType": "Braided Solo Loop",
       "color": "Dark Cherry",
-      "colorOrder": 110,
+      "colorOrder": 100,
       "dateOrder": 13,
       "logicalOrder": 110,
       "season": "Fall",
@@ -3639,7 +3953,7 @@
       "bandID": "1FE7C519-CD12-4DE3-B175-593F35D24BF9",
       "bandType": "Braided Solo Loop",
       "color": "English Lavender",
-      "colorOrder": 100,
+      "colorOrder": 105,
       "dateOrder": 12,
       "logicalOrder": 100,
       "season": "Fall",
@@ -3760,10 +4074,40 @@
       "bandID": "D0452261-F6E8-44E6-A8DA-74979B0CDA33",
       "bandType": "Braided Solo Loop",
       "color": "Purple Fog",
-      "colorOrder": 105,
+      "colorOrder": 110,
       "dateOrder": 25,
       "logicalOrder": 105,
       "season": "Spring",
+      "year": 2023
+    },
+    {
+      "bandID": "C9CDF75C-37B3-4A01-B962-4BCA29B0B943",
+      "bandType": "Braided Solo Loop",
+      "color": "Guava",
+      "colorOrder": 115,
+      "dateOrder": 26,
+      "logicalOrder": 115,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "4F0E2C07-32F9-4D07-859F-99AE732BBBC5",
+      "bandType": "Braided Solo Loop",
+      "color": "Storm Blue",
+      "colorOrder": 95,
+      "dateOrder": 27,
+      "logicalOrder": 95,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "CE095AB2-E8BF-44EB-9BEE-DFD5102F9781",
+      "bandType": "Braided Solo Loop",
+      "color": "Clay",
+      "colorOrder": 148,
+      "dateOrder": 28,
+      "logicalOrder": 148,
+      "season": "Fall",
       "year": 2023
     }
   ],
@@ -4662,10 +5006,11 @@
       "bandID": "FA8470CB-C921-41C8-917E-F5E25280902B",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Midnight Blue",
       "colorOrder": 120,
       "dateOrder": 1,
-      "logicalOrder": 120,
+      "logicalOrder": 1013,
       "season": "Spring",
       "year": 2015
     },
@@ -4673,11 +5018,12 @@
       "bandID": "C3FAA810-9175-4D7E-9F23-7B670E53FA3D",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Black",
       "colorOrder": 240,
       "dateOrder": 4,
       "generation": 1,
-      "logicalOrder": 240,
+      "logicalOrder": 1027,
       "season": "Spring",
       "year": 2015
     },
@@ -4685,10 +5031,11 @@
       "bandID": "4D6D2D4E-FD8A-4E05-B6A3-592586988027",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Soft Pink",
       "colorOrder": 190,
       "dateOrder": 2,
-      "logicalOrder": 190,
+      "logicalOrder": 1021,
       "season": "Spring",
       "year": 2015
     },
@@ -4696,10 +5043,11 @@
       "bandID": "9C348EE6-F809-4DD4-8D84-A897312B0631",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Brown",
       "colorOrder": 210,
       "dateOrder": 3,
-      "logicalOrder": 210,
+      "logicalOrder": 1024,
       "season": "Spring",
       "year": 2015
     },
@@ -4707,10 +5055,11 @@
       "bandID": "DB5F11BD-B074-4BC1-997A-7C9E7338A6FB",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Red",
       "colorOrder": 40,
       "dateOrder": 5,
-      "logicalOrder": 40,
+      "logicalOrder": 1004,
       "season": "Spring",
       "year": 2016
     },
@@ -4718,10 +5067,11 @@
       "bandID": "DA41ABF1-39F5-4DB3-BBF0-FD6A287A95F9",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Marigold",
       "colorOrder": 60,
       "dateOrder": 6,
-      "logicalOrder": 60,
+      "logicalOrder": 1006,
       "season": "Spring",
       "year": 2016
     },
@@ -4729,10 +5079,11 @@
       "bandID": "E85C8E22-A489-49F5-ABCA-EA89593B55C3",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Blue Jay",
       "colorOrder": 80,
       "dateOrder": 7,
-      "logicalOrder": 80,
+      "logicalOrder": 1008,
       "season": "Spring",
       "year": 2016
     },
@@ -4740,10 +5091,11 @@
       "bandID": "EB85A72D-1887-49B4-96FC-BD5A03D7489D",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Ruby Red",
       "colorOrder": 20,
       "dateOrder": 8,
-      "logicalOrder": 20,
+      "logicalOrder": 1002,
       "season": "Fall",
       "year": 2018
     },
@@ -4751,10 +5103,11 @@
       "bandID": "278EBDB2-66BB-4508-8B03-AF089BC2A3AC",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Forest Green",
       "colorOrder": 70,
       "dateOrder": 9,
-      "logicalOrder": 70,
+      "logicalOrder": 1007,
       "season": "Fall",
       "year": 2018
     },
@@ -4762,10 +5115,11 @@
       "bandID": "B2DEB9E4-3693-4764-9DE0-3ECD68F64E8E",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Cape Cod Blue",
       "colorOrder": 100,
       "dateOrder": 10,
-      "logicalOrder": 100,
+      "logicalOrder": 1011,
       "season": "Fall",
       "year": 2018
     },
@@ -4773,10 +5127,11 @@
       "bandID": "3503B9AD-A984-4475-91FA-8338D4B3359E",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Peony Pink",
       "colorOrder": 170,
       "dateOrder": 11,
-      "logicalOrder": 170,
+      "logicalOrder": 1019,
       "season": "Fall",
       "year": 2018
     },
@@ -4784,10 +5139,11 @@
       "bandID": "2A82DF0A-E2E2-4D04-9EE1-C384CE362458",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Sunset",
       "colorOrder": 50,
       "dateOrder": 12,
-      "logicalOrder": 50,
+      "logicalOrder": 1005,
       "season": "Spring",
       "year": 2019
     },
@@ -4795,10 +5151,11 @@
       "bandID": "C21F2ECD-7F1A-4E87-8A70-A1EDF350CFA6",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Cornflower",
       "colorOrder": 90,
       "dateOrder": 13,
-      "logicalOrder": 90,
+      "logicalOrder": 1009,
       "season": "Spring",
       "year": 2019
     },
@@ -4806,10 +5163,11 @@
       "bandID": "E07CF65C-B72D-4125-969B-F101D281212F",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Lilac",
       "colorOrder": 150,
       "dateOrder": 14,
-      "logicalOrder": 150,
+      "logicalOrder": 1017,
       "season": "Spring",
       "year": 2019
     },
@@ -4817,10 +5175,11 @@
       "bandID": "4143972E-4B26-4616-A6E2-4E8CEA72FDA7",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Aubergine",
       "colorOrder": 130,
       "dateOrder": 15,
-      "logicalOrder": 130,
+      "logicalOrder": 1014,
       "season": "Fall",
       "year": 2019
     },
@@ -4828,10 +5187,11 @@
       "bandID": "8CA1934E-4DD4-4DB2-AA36-9CABB6D8E41F",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Saddle Brown",
       "colorOrder": 200,
       "dateOrder": 16,
-      "logicalOrder": 200,
+      "logicalOrder": 1022,
       "season": "Fall",
       "year": 2019
     },
@@ -4839,11 +5199,12 @@
       "bandID": "E0CE0A1A-6141-4D0F-8ECF-8E726DD6A9FE",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Black",
       "colorOrder": 230,
       "dateOrder": 17,
       "generation": 2,
-      "logicalOrder": 230,
+      "logicalOrder": 1026,
       "season": "Fall",
       "year": 2019
     },
@@ -4851,10 +5212,11 @@
       "bandID": "9D929DD4-A247-4446-BD7B-166CE3F03072",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Deep Sea Blue",
       "colorOrder": 110,
       "dateOrder": 19,
-      "logicalOrder": 110,
+      "logicalOrder": 1012,
       "season": "Spring",
       "year": 2020
     },
@@ -4862,10 +5224,11 @@
       "bandID": "6C385C42-E3E7-402A-90D8-EB3FAF5ACD79",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Raspberry",
       "colorOrder": 160,
       "dateOrder": 18,
-      "logicalOrder": 160,
+      "logicalOrder": 1018,
       "season": "Spring",
       "year": 2020
     },
@@ -4873,10 +5236,11 @@
       "bandID": "C0F0A04E-7743-4ABD-B8A9-3D8C6BB95914",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Scarlet",
       "colorOrder": 30,
       "dateOrder": 21,
-      "logicalOrder": 30,
+      "logicalOrder": 1003,
       "season": "Fall",
       "year": 2020
     },
@@ -4884,10 +5248,11 @@
       "bandID": "EDC8995E-E44A-41B8-88C2-158B26B99D68",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Pink Citrus",
       "colorOrder": 180,
       "dateOrder": 22,
-      "logicalOrder": 180,
+      "logicalOrder": 1020,
       "season": "Fall",
       "year": 2020
     },
@@ -4895,10 +5260,11 @@
       "bandID": "172758CB-E7F8-46F8-A1BF-1A06E011E8A1",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Garnet",
       "colorOrder": 10,
       "dateOrder": 20,
-      "logicalOrder": 10,
+      "logicalOrder": 1001,
       "season": "Fall",
       "year": 2020
     },
@@ -4906,10 +5272,11 @@
       "bandID": "A16E250A-DFDD-49DC-9766-D8B63C30B53D",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Wisteria",
       "colorOrder": 140,
       "dateOrder": 23,
-      "logicalOrder": 140,
+      "logicalOrder": 1016,
       "season": "Fall",
       "year": 2021
     },
@@ -4917,10 +5284,11 @@
       "bandID": "7B3420DF-08A7-4620-AF4D-CB5FDD1A67DB",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Chalk",
       "colorOrder": 220,
       "dateOrder": 24,
-      "logicalOrder": 220,
+      "logicalOrder": 1025,
       "season": "Fall",
       "year": 2021
     },
@@ -4928,10 +5296,11 @@
       "bandID": "7CF4FE90-6B97-4128-8A95-2DFF595AD5D3",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Midnight",
       "colorOrder": 250,
       "dateOrder": 25,
-      "logicalOrder": 250,
+      "logicalOrder": 1028,
       "season": "Fall",
       "year": 2021
     },
@@ -4939,10 +5308,11 @@
       "bandID": "B83432DD-333E-419A-B8E2-8E2EB475A660",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Azure",
       "colorOrder": 95,
       "dateOrder": 26,
-      "logicalOrder": 95,
+      "logicalOrder": 1010,
       "season": "Fall",
       "year": 2022
     },
@@ -4950,10 +5320,11 @@
       "bandID": "2EF48897-2DE4-479C-98AB-E29C6D4CFF4F",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Umber",
       "colorOrder": 205,
       "dateOrder": 27,
-      "logicalOrder": 205,
+      "logicalOrder": 1023,
       "season": "Fall",
       "year": 2022
     },
@@ -4961,12 +5332,49 @@
       "bandID": "30A490A3-D9BF-4B21-AEAD-335FD4E58DCD",
       "bandSize": "None",
       "bandType": "Modern Buckle",
+      "bandVersion": "Leather",
       "color": "Ink",
-      "colorOrder": 135,
+      "colorOrder": 125,
       "dateOrder": 28,
-      "logicalOrder": 135,
+      "logicalOrder": 1015,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "2EC64594-C045-4A8E-AA2F-9DE01DA196DF",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "FineWoven",
+      "color": "Lavender Blue",
+      "colorOrder": 155,
+      "dateOrder": 29,
+      "logicalOrder": 2050,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "BF75132E-3E0A-4420-89A7-D7D38C78268B",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "FineWoven",
+      "color": "Mulberry",
+      "colorOrder": 135,
+      "dateOrder": 30,
+      "logicalOrder": 2100,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "3D757320-3E77-4C8A-ABC1-0265E82DE92C",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "FineWoven",
+      "color": "Tan",
+      "colorOrder": 195,
+      "dateOrder": 31,
+      "logicalOrder": 2150,
+      "season": "Fall",
+      "year": 2023
     }
   ],
   "leatherLoops": [
@@ -5278,9 +5686,9 @@
       "bandSize": "None",
       "bandType": "Leather Link",
       "color": "Golden Brown",
-      "colorOrder": 50,
+      "colorOrder": 5,
       "dateOrder": 8,
-      "logicalOrder": 50,
+      "logicalOrder": 5,
       "season": "Fall",
       "year": 2021
     },
@@ -5300,9 +5708,9 @@
       "bandSize": "None",
       "bandType": "Leather Link",
       "color": "Umber",
-      "colorOrder": 65,
+      "colorOrder": 1,
       "dateOrder": 10,
-      "logicalOrder": 65,
+      "logicalOrder": 1,
       "season": "Fall",
       "year": 2022
     },
@@ -5311,11 +5719,46 @@
       "bandSize": "None",
       "bandType": "Leather Link",
       "color": "Ink",
-      "colorOrder": 45,
+      "colorOrder": 35,
       "dateOrder": 11,
-      "logicalOrder": 45,
+      "logicalOrder": 35,
       "season": "Fall",
       "year": 2022
+    }
+  ],
+  "magneticLinks": [
+    {
+      "bandID": "536BAEF4-5126-4EE0-9154-CFE766F323CD",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Evergreen",
+      "colorOrder": 50,
+      "dateOrder": 1,
+      "logicalOrder": 50,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "227A080E-7FCF-4CAD-88E5-4DFCEA745460",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Pacific Blue",
+      "colorOrder": 100,
+      "dateOrder": 2,
+      "logicalOrder": 100,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "4A36259E-7BC8-464F-82CD-C5E0F93B7B43",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Taupe",
+      "colorOrder": 150,
+      "dateOrder": 3,
+      "logicalOrder": 150,
+      "season": "Fall",
+      "year": 2023
     }
   ],
   "milaneseLoops": [
@@ -5424,6 +5867,36 @@
       "logicalOrder": 30,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "89B3E8BA-286B-4712-B7E4-8944EFF5C930",
+      "bandType": "Alpine Loop",
+      "color": "Olive",
+      "colorOrder": 15,
+      "dateOrder": 4,
+      "logicalOrder": 15,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "61B1507C-0A2A-45F3-9D73-0F7AF9EF42DD",
+      "bandType": "Alpine Loop",
+      "color": "Blue",
+      "colorOrder": 23,
+      "dateOrder": 5,
+      "logicalOrder": 23,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "8BA7A045-C52B-433D-B599-FA42A78926C8",
+      "bandType": "Alpine Loop",
+      "color": "Indigo",
+      "colorOrder": 27,
+      "dateOrder": 6,
+      "logicalOrder": 27,
+      "season": "Fall",
+      "year": 2023
     }
   ],
   "trailLoops": [
@@ -5456,6 +5929,36 @@
       "logicalOrder": 30,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "CA194842-14B0-491F-92A7-E9F652E8EAE3",
+      "bandType": "Trail Loop",
+      "color": "Orange / Beige",
+      "colorOrder": 5,
+      "dateOrder": 4,
+      "logicalOrder": 5,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "7A31BE2D-1E92-4275-90DB-0D9E8BD8A26C",
+      "bandType": "Trail Loop",
+      "color": "Green / Gray",
+      "colorOrder": 15,
+      "dateOrder": 5,
+      "logicalOrder": 15,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "F772C797-B8F6-4F6E-9DA4-58FC1C42A724",
+      "bandType": "Trail Loop",
+      "color": "Blue / Black",
+      "colorOrder": 25,
+      "dateOrder": 6,
+      "logicalOrder": 25,
+      "season": "Fall",
+      "year": 2023
     }
   ],
   "oceanBands": [
@@ -5488,6 +5991,26 @@
       "logicalOrder": 30,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "FAF77C6B-2E9C-4B45-ABA1-92B06EEDBF21",
+      "bandType": "Ocean Band",
+      "color": "Orange",
+      "colorOrder": 5,
+      "dateOrder": 4,
+      "logicalOrder": 5,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
+      "bandID": "E42EE39B-3926-41AE-AF66-A219F37D19F1",
+      "bandType": "Ocean Band",
+      "color": "Blue",
+      "colorOrder": 15,
+      "dateOrder": 5,
+      "logicalOrder": 15,
+      "season": "Fall",
+      "year": 2023
     }
   ],
   "thirdPartyBands": [
