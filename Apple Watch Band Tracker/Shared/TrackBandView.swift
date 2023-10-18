@@ -134,8 +134,13 @@ struct TrackBandView: View {
     }
     
     func randomizeBand() {
-        print("get random band")
-        print("set band properties")
+        // get a random band
+        let randomBand = BandRepository.default.getRandomOwnedBand()!
+        print("retrieved random band:  \(randomBand.bandType), \(randomBand.formattedName())")
+        
+        // set the properties to match the random band
+        selectedBandType = randomBand.bandType
+        selectedBand = randomBand
     }
     
 }

@@ -203,6 +203,14 @@ class BandRepository {
         }
     }
     
+    func getRandomOwnedBand() -> Band? {
+        let ownedBands: [Band] = allBands.filter { band in
+            band.isOwned
+        }
+        
+        return ownedBands.randomElement()
+    }
+    
     func getBandByID(_ bandID: UUID) -> Band? {
         return allBands.first { band in
             band.bandID == bandID
