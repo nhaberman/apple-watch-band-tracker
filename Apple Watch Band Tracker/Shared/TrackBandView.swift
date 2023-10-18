@@ -100,7 +100,15 @@ struct TrackBandView: View {
                         print("tapped cancel")
                         presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Label("Cancel", systemImage: "xmark.circle")
+                        Label("Cancel", systemImage: "xmark.circle.fill")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        print("tapped random")
+                        randomizeBand()
+                    } label: {
+                        Label("Randomize", systemImage: "dice.fill")
                     }
                 }
             }
@@ -123,6 +131,11 @@ struct TrackBandView: View {
                 presentationMode.wrappedValue.dismiss()
             }
         }
+    }
+    
+    func randomizeBand() {
+        print("get random band")
+        print("set band properties")
     }
     
 }
