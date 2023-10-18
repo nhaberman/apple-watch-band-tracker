@@ -36,7 +36,7 @@ struct WatchesMainView: View {
                         print("tapped settings")
                         showSettingsSheet = true
                     } label: {
-                        Label("Settings", systemImage: "gear.circle")
+                        Label("Settings", systemImage: "gear.circle.fill")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -44,7 +44,7 @@ struct WatchesMainView: View {
                         print("tapped track band")
                         showTrackBandSheet = true
                     } label: {
-                        Label("Track Band", systemImage: "plus.circle")
+                        Label("Track Band", systemImage: "plus.circle.fill")
                     }
                 }
             }

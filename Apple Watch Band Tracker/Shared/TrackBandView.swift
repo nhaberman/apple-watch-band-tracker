@@ -100,7 +100,15 @@ struct TrackBandView: View {
                         print("tapped cancel")
                         presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Label("Cancel", systemImage: "xmark.circle")
+                        Label("Cancel", systemImage: "xmark.circle.fill")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        print("tapped random")
+                        randomizeBand()
+                    } label: {
+                        Label("Randomize", systemImage: "dice.fill")
                     }
                 }
             }
@@ -123,6 +131,16 @@ struct TrackBandView: View {
                 presentationMode.wrappedValue.dismiss()
             }
         }
+    }
+    
+    func randomizeBand() {
+        // get a random band
+        let randomBand = BandRepository.default.getRandomOwnedBand()!
+        print("retrieved random band:  \(randomBand.bandType), \(randomBand.formattedName())")
+        
+        // set the properties to match the random band
+        selectedBandType = randomBand.bandType
+        selectedBand = randomBand
     }
     
 }
