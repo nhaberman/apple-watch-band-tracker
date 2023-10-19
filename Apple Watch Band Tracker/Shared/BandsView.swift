@@ -49,7 +49,7 @@ struct BandsView: View {
             List {
                 let bandsByType = bandRepository.getBandsByType(bandType, sortOrder: selectedSortOrder, sortDirection: selectedSortDirection)
                 
-                ForEach(searchText == "" ? bandsByType : bandsByType.filter({ $0.color.contains(searchText)}), id: \.self) { band in
+                ForEach(searchText == "" ? bandsByType : bandsByType.filter({ $0.color.localizedCaseInsensitiveContains(searchText)}), id: \.self) { band in
                     if(band.isOwned) {
                         NavigationLink {
                             BandsHistoryView(band: band)
