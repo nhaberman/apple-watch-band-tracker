@@ -104,11 +104,30 @@ struct TrackBandView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        print("tapped random")
-                        randomizeBand()
+                    Menu {
+                        Button("Any Band") {
+                            print("tapped any random band")
+                            randomizeBand()
+                        }
+//                        Button("Not Recently Worn") {
+//                            print("tapped random band not recently worn")
+//                            randomizeBand(excludeRecentBands: true)
+//                        }
+                        Menu("Band Type") {
+                            ForEach(BandType.allCases) { bandType in
+                                if (bandType != BandType.None) {
+                                    Button(bandType.rawValue) {
+                                        print("tapped random band from type: \(bandType.rawValue)")
+                                        randomizeBand(bandType: bandType)
+                                    }
+                                }
+                            }
+                        }
                     } label: {
                         Label("Randomize", systemImage: "dice.fill")
+                    } primaryAction: {
+                        print("tapped random by default")
+                        randomizeBand()
                     }
                 }
             }
@@ -133,9 +152,17 @@ struct TrackBandView: View {
         }
     }
     
-    func randomizeBand() {
+    func randomizeBand(excludeRecentBands: Bool = false, bandType: BandType = .None) {
+        var randomBand: Band
+        
         // get a random band
-        let randomBand = BandRepository.default.getRandomOwnedBand()!
+        if (excludeRecentBands) {
+            //randomBand = BandRepository.default.getRandomOwnedBand()!
+            randomBand = SportBand(color: "White", season: .spring, year: 2015)
+        } else {
+            randomBand = BandRepository.default.getRandomOwnedBand(bandType)!
+        }
+        
         print("retrieved random band:  \(randomBand.bandType), \(randomBand.formattedName())")
         
         // set the properties to match the random band

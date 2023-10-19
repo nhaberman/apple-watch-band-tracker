@@ -203,9 +203,9 @@ class BandRepository {
         }
     }
     
-    func getRandomOwnedBand() -> Band? {
+    func getRandomOwnedBand(_ bandType: BandType = .None) -> Band? {
         let ownedBands: [Band] = allBands.filter { band in
-            band.isOwned
+            band.isOwned && (bandType == .None || band.bandType == bandType)
         }
         
         return ownedBands.randomElement()
