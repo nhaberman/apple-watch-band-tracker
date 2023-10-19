@@ -82,7 +82,7 @@ struct BandsHistoryView: View {
                     print("tapped track band")
                     showTrackBandSheet = true
                 } label: {
-                    Label("Track Band", systemImage: "plus.circle")
+                    Label("Track Band", systemImage: "plus.circle.fill")
                 }
             }
 //            ToolbarItem(placement: ToolbarItemPlacement.status) {

@@ -78,7 +78,7 @@ struct BandsView: View {
                     print("tapped track band")
                     showTrackBandSheet = true
                 } label: {
-                    Label("Track Band", systemImage: "plus.circle")
+                    Label("Track Band", systemImage: "plus.circle.fill")
                 }
             }
             // temporary (?) fix - move sorting options from toolbar (which doesn't work) to VStack in body (above)
