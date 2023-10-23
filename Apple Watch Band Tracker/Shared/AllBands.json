@@ -6120,6 +6120,15 @@
       "dateOrder": 13,
       "logicalOrder": 13,
       "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "84CB163E-9871-4A99-B3AA-10321DBA0606",
+      "bandType": "Third Party Band",
+      "color": "White Sport Band",
+      "colorOrder": 14,
+      "dateOrder": 14,
+      "logicalOrder": 14,
+      "manufacturer": "Nomad"
     }
   ]
 }
