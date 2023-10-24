@@ -105,15 +105,22 @@ struct TrackBandView: View {
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Menu {
-                        Button("Any Band") {
-                            print("tapped any random band")
-                            randomizeBand()
+                        Section("Randomize") {
+                            Button("Any Band") {
+                                print("tapped any random band")
+                                randomizeBand()
+                            }
+    //                        Button("Not Worn this Month") {
+    //                            print("tapped random band not recently worn")
+    //                            randomizeBand(excludeRecentBands: true)
+    //                        }
+    //                        Button("Not Worn this Year") {
+    //                            print("tapped random band not recently worn")
+    //                            randomizeBand(excludeRecentBands: true)
+    //                        }
                         }
-//                        Button("Not Recently Worn") {
-//                            print("tapped random band not recently worn")
-//                            randomizeBand(excludeRecentBands: true)
-//                        }
-                        Menu("Band Type") {
+                        Divider()
+                        Menu("Specific Band Type") {
                             ForEach(BandType.allCases) { bandType in
                                 if (bandType != BandType.None) {
                                     Button(bandType.rawValue) {
