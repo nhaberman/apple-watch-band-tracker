@@ -6129,6 +6129,33 @@
       "dateOrder": 14,
       "logicalOrder": 14,
       "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "642264BF-9598-4899-A945-DB8A65A1DA58",
+      "bandType": "Third Party Band",
+      "color": "Chestnut Leather Pilot Band",
+      "colorOrder": 15,
+      "dateOrder": 15,
+      "logicalOrder": 15,
+      "manufacturer": "Pad & Quill"
+    },
+    {
+      "bandID": "8778787C-9FA5-4FF7-AD04-CBE11DB16184",
+      "bandType": "Third Party Band",
+      "color": "Cordura Charcoal & Whiskey Leather Field Strap",
+      "colorOrder": 16,
+      "dateOrder": 16,
+      "logicalOrder": 16,
+      "manufacturer": "Pad & Quill"
+    },
+    {
+      "bandID": "21759A07-3CB9-4488-9917-21B4AB6CF035",
+      "bandType": "Third Party Band",
+      "color": "Whiskey Leather Cafe Cuff",
+      "colorOrder": 17,
+      "dateOrder": 17,
+      "logicalOrder": 17,
+      "manufacturer": "Pad & Quill"
     }
   ]
 }
