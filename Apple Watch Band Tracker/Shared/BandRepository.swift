@@ -118,7 +118,6 @@ class BandRepository {
         }
     }
     
-    
     func saveBands() -> Bool {
         do {
             let filePath = Bundle.main.url(forResource: "AllBands", withExtension: "json")

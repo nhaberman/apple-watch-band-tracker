@@ -8,17 +8,19 @@
 import Foundation
 import SwiftUI
 
-class BandHistoryRepository {
+class BandHistoryRepository : ObservableObject {
     // static repositories
     static let sample = BandHistoryRepository(false)
     static let `default` = BandHistoryRepository()
     
-    var bandHistories: [BandHistory]
-    var groupedHistories: [HistoryDate]
+    @Published var bandHistories: [BandHistory]
+    @Published var groupedHistories: [HistoryDate]
+    @Published var mostRecentHistoriesByBand: [Band: BandHistory]
     
     init(_ loadHistories: Bool = true) {
         self.bandHistories = [BandHistory]()
         self.groupedHistories = [HistoryDate]()
+        self.mostRecentHistoriesByBand = [:]
         
         if loadHistories {
             loadHistory()
@@ -28,6 +30,7 @@ class BandHistoryRepository {
         }
         
         self.groupedHistories = getHistoriesGroupedByDate()
+        self.mostRecentHistoriesByBand = getMostRecentHistoriesByBand()
     }
     
     func trackBand(bandHistory: BandHistory) -> Bool {
@@ -127,6 +130,16 @@ class BandHistoryRepository {
             let itemToAdd = HistoryDate(historyDate: date, BandHistories: histories)
             
             results.append(itemToAdd)
+        }
+        
+        return results
+    }
+    
+    private func getMostRecentHistoriesByBand() -> [Band: BandHistory] {
+        var results = [Band: BandHistory]()
+        
+        BandRepository.default.allBands.forEach { band in
+            results[band] = getHistoriesForBand(band: band).first
         }
         
         return results
@@ -305,6 +318,14 @@ class BandHistoryRepository {
         }
         
         try backupText.write(toFile: backupFileUrl.path, atomically: false, encoding: .utf8)
+    }
+        
+    func refreshData() {
+        groupedHistories = [HistoryDate]()
+        groupedHistories = getHistoriesGroupedByDate()
+        
+        mostRecentHistoriesByBand = [Band: BandHistory]()
+        mostRecentHistoriesByBand = getMostRecentHistoriesByBand()
     }
     
     private var sampleBandHistories: [BandHistory] {
