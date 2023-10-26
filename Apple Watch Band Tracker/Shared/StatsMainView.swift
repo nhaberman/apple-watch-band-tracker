@@ -40,6 +40,11 @@ struct StatsMainView: View {
                         } label: {
                             Label("Watches", systemImage: "applewatch.watchface")
                         }
+                        NavigationLink {
+                            RecentBandsView()
+                        } label: {
+                            Label("Most Recent Worn Time", systemImage: "clock.arrow.circlepath")
+                        }
                     }
                     
                     if let currentBandHistory = BandHistoryRepository.default.getCurrentBand() {
