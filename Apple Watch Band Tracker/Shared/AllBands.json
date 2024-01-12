@@ -1376,11 +1376,22 @@
       "year": 2023
     },
     {
+      "bandID": "C6307276-18DE-4D0E-960B-FE9F3F3AD486",
+      "bandType": "Sport Band",
+      "color": "Red",
+      "colorOrder": 35,
+      "dateOrder": 122,
+      "generation": 7,
+      "logicalOrder": 35,
+      "season": "Fall",
+      "year": 2023
+    },
+    {
       "bandID": "78FA992F-CB6C-4FC6-92C0-3C6E3638CFD1",
       "bandType": "Sport Band",
       "color": "Winter Blue",
       "colorOrder": 485,
-      "dateOrder": 122,
+      "dateOrder": 123,
       "logicalOrder": 485,
       "season": "Fall",
       "year": 2023
@@ -1390,7 +1401,7 @@
       "bandType": "Sport Band",
       "color": "Storm Blue",
       "colorOrder": 615,
-      "dateOrder": 123,
+      "dateOrder": 124,
       "logicalOrder": 615,
       "season": "Fall",
       "year": 2023
@@ -1400,7 +1411,7 @@
       "bandType": "Sport Band",
       "color": "Mulberry",
       "colorOrder": 699,
-      "dateOrder": 124,
+      "dateOrder": 125,
       "logicalOrder": 699,
       "season": "Fall",
       "year": 2023
@@ -1410,7 +1421,7 @@
       "bandType": "Sport Band",
       "color": "Light Pink",
       "colorOrder": 835,
-      "dateOrder": 125,
+      "dateOrder": 126,
       "generation": 2,
       "logicalOrder": 835,
       "season": "Fall",
@@ -1421,7 +1432,7 @@
       "bandType": "Sport Band",
       "color": "Clay",
       "colorOrder": 1015,
-      "dateOrder": 126,
+      "dateOrder": 127,
       "logicalOrder": 1015,
       "season": "Fall",
       "year": 2023
@@ -6156,6 +6167,15 @@
       "dateOrder": 17,
       "logicalOrder": 17,
       "manufacturer": "Pad & Quill"
+    },
+    {
+      "bandID": "940730C7-EF13-4CAE-8625-41EBDC61BEA6",
+      "bandType": "Third Party Band",
+      "color": "Noir Leather Single Tour",
+      "colorOrder": 18,
+      "dateOrder": 18,
+      "logicalOrder": 18,
+      "manufacturer": "Hermès"
     }
   ]
 }
