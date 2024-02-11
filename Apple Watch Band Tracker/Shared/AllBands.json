@@ -1376,11 +1376,22 @@
       "year": 2023
     },
     {
+      "bandID": "6E2EF3E8-A2F4-4E0A-AB7D-B8B7C38C9F15",
+      "bandType": "Sport Band",
+      "color": "Pride Edition",
+      "colorOrder": 1135,
+      "dateOrder": 122,
+      "edition": "2023",
+      "logicalOrder": 20020,
+      "season": "Summer",
+      "year": 2023
+    },
+    {
       "bandID": "C6307276-18DE-4D0E-960B-FE9F3F3AD486",
       "bandType": "Sport Band",
       "color": "Red",
       "colorOrder": 35,
-      "dateOrder": 122,
+      "dateOrder": 123,
       "generation": 7,
       "logicalOrder": 35,
       "season": "Fall",
@@ -1391,7 +1402,7 @@
       "bandType": "Sport Band",
       "color": "Winter Blue",
       "colorOrder": 485,
-      "dateOrder": 123,
+      "dateOrder": 124,
       "logicalOrder": 485,
       "season": "Fall",
       "year": 2023
@@ -1401,7 +1412,7 @@
       "bandType": "Sport Band",
       "color": "Storm Blue",
       "colorOrder": 615,
-      "dateOrder": 124,
+      "dateOrder": 125,
       "logicalOrder": 615,
       "season": "Fall",
       "year": 2023
@@ -1411,7 +1422,7 @@
       "bandType": "Sport Band",
       "color": "Mulberry",
       "colorOrder": 699,
-      "dateOrder": 125,
+      "dateOrder": 126,
       "logicalOrder": 699,
       "season": "Fall",
       "year": 2023
@@ -1421,7 +1432,7 @@
       "bandType": "Sport Band",
       "color": "Light Pink",
       "colorOrder": 835,
-      "dateOrder": 126,
+      "dateOrder": 127,
       "generation": 2,
       "logicalOrder": 835,
       "season": "Fall",
@@ -1432,10 +1443,21 @@
       "bandType": "Sport Band",
       "color": "Clay",
       "colorOrder": 1015,
-      "dateOrder": 127,
+      "dateOrder": 128,
       "logicalOrder": 1015,
       "season": "Fall",
       "year": 2023
+    },
+    {
+      "bandID": "80465C21-AB86-43A2-A4C6-9F40947B7805",
+      "bandType": "Sport Band",
+      "color": "Black Unity",
+      "colorOrder": 1145,
+      "dateOrder": 129,
+      "edition": "2024",
+      "logicalOrder": 30020,
+      "season": "Spring",
+      "year": 2024
     },
     {
       "bandID": "D591F6FE-F5F3-42F6-82FD-B8F95FB39339",
