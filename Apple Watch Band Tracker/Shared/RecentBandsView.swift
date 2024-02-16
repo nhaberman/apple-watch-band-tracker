@@ -26,7 +26,7 @@ struct RecentBandsView: View {
     
     var body: some View {
         
-        var histories = repository.mostRecentHistoriesByBand.values.sorted(by: {$0.timeWorn > $1.timeWorn})
+        let histories = repository.mostRecentHistoriesByBand.values.sorted(by: {$0.timeWorn > $1.timeWorn})
         
         VStack(
             alignment: .leading

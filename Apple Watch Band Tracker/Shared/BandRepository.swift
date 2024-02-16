@@ -60,6 +60,7 @@ class BandRepository {
             allBands.append(contentsOf: source.modernBuckles)
             allBands.append(contentsOf: source.leatherLoops)
             allBands.append(contentsOf: source.leatherLinks)
+            allBands.append(contentsOf: source.magneticLinks)
             allBands.append(contentsOf: source.milaneseLoops)
             allBands.append(contentsOf: source.linkBracelets)
             allBands.append(contentsOf: source.alpineLoops)
