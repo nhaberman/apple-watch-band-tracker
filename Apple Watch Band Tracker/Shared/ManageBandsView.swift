@@ -8,6 +8,25 @@
 import SwiftUI
 
 struct ManageBandsView: View {
+    @State var showingDefaultSection = true
+    @State var showingSportBandSection = false
+    @State var showingNikeSportBandSection = false
+    @State var showingSportLoopSection = false
+    @State var showingNikeSportLoopSection = false
+    @State var showingSoloLoopSection = false
+    @State var showingBraidedSoloLoopSection = false
+    @State var showingWovenNylonSection = false
+    @State var showingClassicBuckleSection = false
+    @State var showingModernBuckleSection = false
+    @State var showingLeatherLoopSection = false
+    @State var showingLeatherLinkSection = false
+    @State var showingMagneticLinkSection = false
+    @State var showingMilaneseLoopSection = false
+    @State var showingLinkBraceletSection = false
+    @State var showingAlpineLoopSection = false
+    @State var showingTrailLoopSection = false
+    @State var showingOceanBandSection = false
+    @State var showingThirdPartyBandSection = false
     
     private var bandRepository: BandRepository
     private var manageType: ManageType
@@ -28,12 +47,60 @@ struct ManageBandsView: View {
     
     @State var allBands: [Band]
     
+    func GetStateValue(bandType: BandType, manageType: ManageType) -> Binding<Bool> {
+        if manageType == .favorite {
+            return $showingDefaultSection
+        }
+        else {
+            switch bandType {
+            case .SportBand:
+                return $showingSportBandSection
+            case .NikeSportBand:
+                return $showingNikeSportBandSection
+            case .SportLoop:
+                return $showingSportLoopSection
+            case .NikeSportLoop:
+                return $showingNikeSportLoopSection
+            case .SoloLoop:
+                return $showingSoloLoopSection
+            case .BraidedSoloLoop:
+                return $showingBraidedSoloLoopSection
+            case .WovenNylon:
+                return $showingWovenNylonSection
+            case .ClassicBuckle:
+                return $showingClassicBuckleSection
+            case .ModernBuckle:
+                return $showingModernBuckleSection
+            case .LeatherLoop:
+                return $showingLeatherLoopSection
+            case .LeatherLink:
+                return $showingLeatherLinkSection
+            case .MagneticLink:
+                return $showingMagneticLinkSection
+            case .MilaneseLoop:
+                return $showingMagneticLinkSection
+            case .LinkBracelet:
+                return $showingLinkBraceletSection
+            case .AlpineLoop:
+                return $showingAlpineLoopSection
+            case .TrailLoop:
+                return $showingTrailLoopSection
+            case .OceanBand:
+                return $showingOceanBandSection
+            case .ThirdPartyBand:
+                return $showingThirdPartyBandSection
+            default:
+                return $showingDefaultSection
+            }
+        }
+    }
+    
     var body: some View {
         List {
             ForEach(BandType.allCases) { bandType in
                 let bands = bandRepository.getBandsByType(bandType)
                 if bands.count > 0 {
-                    Section(bandType.rawValue) {
+                    Section(isExpanded: GetStateValue(bandType: bandType, manageType: manageType)) {
                         ForEach(bands) { band in
                             let index = allBands.firstIndex(of: band)
                                 
@@ -46,10 +113,13 @@ struct ManageBandsView: View {
                                 }
                             }
                         }
+                    } header: {
+                        Text(bandType.rawValue)
                     }
                 }
             }
         }
+        .listStyle(.sidebar)
         .onDisappear {
             switch manageType {
             case .owned:
