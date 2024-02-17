@@ -23,6 +23,9 @@ struct SettingsView: View {
     @State private var isPresentingExportBandAlert: Bool = false
     @State private var isPresentingExportWatchAlert: Bool = false
     
+    @State private var isRefreshInProgress: Bool = false
+    @State private var isRefreshComplete: Bool = false
+    
     init(_ isPreview: Bool = false) {
         if isPreview {
             self.repository = BandHistoryRepository.sample
@@ -52,6 +55,29 @@ struct SettingsView: View {
                         Spacer()
                         Text(appVersion)
                             .foregroundColor(.gray)
+                    }
+                }
+                
+                Section("Manage Data") {
+                    if (!isRefreshInProgress && !isRefreshComplete) {
+                        Button {
+                            isRefreshInProgress = true
+                            Task {
+                                print("kick off refresh")
+                                BandHistoryRepository.default.refreshData()
+                                print("refresh complete")
+                                isRefreshComplete = true
+                                isRefreshInProgress = false
+                            }
+                        } label: {
+                            Label("Force Refresh All Data", systemImage: "arrow.clockwise")
+                        }
+                    }
+                    if (isRefreshInProgress) {
+                        Text("Refresh in Progress...")
+                    }
+                    if (isRefreshComplete) {
+                        Text("Refresh Complete!")
                     }
                 }
                 

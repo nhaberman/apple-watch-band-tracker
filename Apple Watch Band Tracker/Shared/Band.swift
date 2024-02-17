@@ -43,6 +43,8 @@ class Band: Identifiable, Hashable, Codable {
                 return baseEquality && (lhs as! LeatherLoop).bandSize == (rhs as! LeatherLoop).bandSize
             case .LeatherLink:
                 return baseEquality && (lhs as! LeatherLink).bandSize == (rhs as! LeatherLink).bandSize
+            case .MagneticLink:
+                return baseEquality && (lhs as! MagneticLink).bandSize == (rhs as! MagneticLink).bandSize
             case .MilaneseLoop:
                 return baseEquality
             case .LinkBracelet:

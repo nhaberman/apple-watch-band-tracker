@@ -60,6 +60,7 @@ class BandRepository {
             allBands.append(contentsOf: source.modernBuckles)
             allBands.append(contentsOf: source.leatherLoops)
             allBands.append(contentsOf: source.leatherLinks)
+            allBands.append(contentsOf: source.magneticLinks)
             allBands.append(contentsOf: source.milaneseLoops)
             allBands.append(contentsOf: source.linkBracelets)
             allBands.append(contentsOf: source.alpineLoops)
@@ -117,7 +118,6 @@ class BandRepository {
             print("unsuccessful")
         }
     }
-    
     
     func saveBands() -> Bool {
         do {
@@ -203,9 +203,9 @@ class BandRepository {
         }
     }
     
-    func getRandomOwnedBand() -> Band? {
+    func getRandomOwnedBand(_ bandType: BandType = .None) -> Band? {
         let ownedBands: [Band] = allBands.filter { band in
-            band.isOwned
+            band.isOwned && (bandType == .None || band.bandType == bandType)
         }
         
         return ownedBands.randomElement()

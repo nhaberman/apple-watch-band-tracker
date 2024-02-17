@@ -21,6 +21,8 @@
 		076182F829E3A80F009D9C15 /* WatchBandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */; };
 		077FB08F29E4E58700D00F60 /* AddWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077FB08E29E4E58700D00F60 /* AddWatchView.swift */; };
 		077FB09029E4E58700D00F60 /* AddWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077FB08E29E4E58700D00F60 /* AddWatchView.swift */; };
+		078D9D3B2AEA119000C526C4 /* RecentBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D9D3A2AEA119000C526C4 /* RecentBandsView.swift */; };
+		078D9D3C2AEA119000C526C4 /* RecentBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D9D3A2AEA119000C526C4 /* RecentBandsView.swift */; };
 		0796D2DF289E131C00591131 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2DE289E131C00591131 /* Tests_iOS.swift */; };
 		0796D2E1289E131C00591131 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2E0289E131C00591131 /* Tests_iOSLaunchTests.swift */; };
 		0796D2EB289E131C00591131 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796D2EA289E131C00591131 /* Tests_macOS.swift */; };
@@ -100,6 +102,7 @@
 		076182F329E39CB8009D9C15 /* WatchesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchesMainView.swift; sourceTree = "<group>"; };
 		076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBandsHistoryView.swift; sourceTree = "<group>"; };
 		077FB08E29E4E58700D00F60 /* AddWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWatchView.swift; sourceTree = "<group>"; };
+		078D9D3A2AEA119000C526C4 /* RecentBandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBandsView.swift; sourceTree = "<group>"; };
 		0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchBandTrackerApp.swift; sourceTree = "<group>"; };
 		0796D2C7289E131900591131 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0796D2C8289E131C00591131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */,
 				076182F629E3A80F009D9C15 /* WatchBandsHistoryView.swift */,
 				077FB08E29E4E58700D00F60 /* AddWatchView.swift */,
+				078D9D3A2AEA119000C526C4 /* RecentBandsView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -463,6 +467,7 @@
 				07ED5D0D28A1F3630044469C /* HistoryMainView.swift in Sources */,
 				07D273CD28A04619006A8839 /* Watch.swift in Sources */,
 				07D273DD28A56086006A8839 /* StatsView.swift in Sources */,
+				078D9D3B2AEA119000C526C4 /* RecentBandsView.swift in Sources */,
 				07D273F228AACB72006A8839 /* BandsHistoryView.swift in Sources */,
 				0796D2F0289E131C00591131 /* MainTabView.swift in Sources */,
 				07D273BE289EE9B7006A8839 /* BandsMainView.swift in Sources */,
@@ -498,6 +503,7 @@
 				07ED5D0E28A1F3630044469C /* HistoryMainView.swift in Sources */,
 				07D273CE28A04619006A8839 /* Watch.swift in Sources */,
 				07D273DE28A56086006A8839 /* StatsView.swift in Sources */,
+				078D9D3C2AEA119000C526C4 /* RecentBandsView.swift in Sources */,
 				07D273F328AACB72006A8839 /* BandsHistoryView.swift in Sources */,
 				0796D2F1289E131C00591131 /* MainTabView.swift in Sources */,
 				07D273BF289EE9B7006A8839 /* BandsMainView.swift in Sources */,
@@ -688,7 +694,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -721,7 +727,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
