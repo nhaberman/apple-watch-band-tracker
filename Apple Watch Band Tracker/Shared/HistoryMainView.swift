@@ -30,45 +30,45 @@ struct HistoryMainView: View {
     var body: some View {
         NavigationView {
             List {
-                Section("Recent") {
-                    NavigationLink {
-                        HistoryView(pageTitle: "Recent", lookBackType: .currentDay)
-                    } label: {
-                        Label("Today", systemImage: "list.bullet")
-                    }
-                    NavigationLink {
-                        HistoryView(pageTitle: "This Week", lookBackType: .currentWeek)
-                    } label: {
-                        Label("This Week", systemImage: "list.bullet")
-                    }
-                    NavigationLink {
-                        HistoryView(pageTitle: "This Month", lookBackType: .currentMonth)
-                    } label: {
-                        Label("This Month", systemImage: "list.bullet")
-                    }
-                    NavigationLink {
-                        HistoryView(pageTitle: "Year to Date", lookBackType: .currentYear)
-                    } label: {
-                        Label("Year to Date", systemImage: "list.bullet")
-                    }
+            Section("Recent") {
+                NavigationLink {
+                    HistoryView(pageTitle: "Recent", lookBackType: .currentDay)
+                } label: {
+                    Label("Today", systemImage: "list.bullet")
                 }
-                Section("By Year") {
-                    ForEach(repository.getYearsWithHistory()) { bandYear in
-                        NavigationLink {
-                            HistoryView(pageTitle: String(bandYear.year), lookBackType: .specificYear, lookBackYear: bandYear.year)
-                        } label: {
-                            Label(String(bandYear.year), systemImage: "calendar")
-                        }
-                    }
+                NavigationLink {
+                    HistoryView(pageTitle: "This Week", lookBackType: .currentWeek)
+                } label: {
+                    Label("This Week", systemImage: "list.bullet")
                 }
-                Section("All") {
+                NavigationLink {
+                    HistoryView(pageTitle: "This Month", lookBackType: .currentMonth)
+                } label: {
+                    Label("This Month", systemImage: "list.bullet")
+                }
+                NavigationLink {
+                    HistoryView(pageTitle: "Year to Date", lookBackType: .currentYear)
+                } label: {
+                    Label("Year to Date", systemImage: "list.bullet")
+                }
+            }
+            Section("By Year") {
+                ForEach(repository.getYearsWithHistory()) { bandYear in
                     NavigationLink {
-                        HistoryView(pageTitle: "All Bands", lookBackType: .all)
+                        HistoryView(pageTitle: String(bandYear.year), lookBackType: .specificYear, lookBackYear: bandYear.year)
                     } label: {
-                        Label("All Bands", systemImage: "applewatch.side.right")
+                        Label(String(bandYear.year), systemImage: "calendar")
                     }
                 }
             }
+            Section("All") {
+                NavigationLink {
+                    HistoryView(pageTitle: "All Bands", lookBackType: .all)
+                } label: {
+                    Label("All Bands", systemImage: "applewatch.side.right")
+                }
+            }
+        }
             .listStyle(.sidebar)
             .navigationTitle("History")
             .toolbar {
@@ -90,7 +90,7 @@ struct HistoryMainView: View {
                 }
             }
             
-            Label("Please select a section to begin...", systemImage: "sparkles.rectangle.stack")
+            Label("Select a Timeframe", systemImage: "filemenu.and.selection")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")

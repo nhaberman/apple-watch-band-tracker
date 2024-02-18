@@ -51,7 +51,7 @@ struct BandsMainView: View {
                 }
             }
             
-            Label("Please select a band type to begin...", systemImage: "sparkles.rectangle.stack")
+            Label("Select a Band Type", systemImage: "filemenu.and.selection")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")

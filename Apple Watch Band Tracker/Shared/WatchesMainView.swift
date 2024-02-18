@@ -49,7 +49,7 @@ struct WatchesMainView: View {
                 }
             }
             
-            Label("Please select a watch to begin...", systemImage: "sparkles.rectangle.stack")
+            Label("Select a Watch", systemImage: "filemenu.and.selection")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")

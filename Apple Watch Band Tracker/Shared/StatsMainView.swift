@@ -85,7 +85,7 @@ struct StatsMainView: View {
                 }
             }
             
-            Label("Please select something to begin...", systemImage: "sparkles.rectangle.stack")
+            Label("Select a Category", systemImage: "filemenu.and.selection")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")
