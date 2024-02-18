@@ -21,6 +21,10 @@ struct TrackBandView: View {
     @State private var useCurrentDate = true
     @State private var showingAlert = false
     
+    private var isFormValid: Bool {
+        selectedWatch.series != -1 && selectedBandType != .None && selectedBand.color != ""
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -81,7 +85,8 @@ struct TrackBandView: View {
                             .frame(width: 20, height: 20, alignment: .center)
                         Text("Track Band")
                     }
-                }
+                }.disabled(!isFormValid)
+                
             }
             .alert(isPresented: $showingAlert) {
                 Alert(
