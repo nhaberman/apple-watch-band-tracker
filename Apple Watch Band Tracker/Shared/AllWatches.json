@@ -53,7 +53,7 @@
             "size": 44
         },
         {
-            "watchID": "39f1e50c-ebce-48fb-b8c0-67f9b33afe5b",
+            "watchID": "39F1E50C-EBCE-48FB-B8C0-67F9B33AFE5B",
             "series": 6,
             "material": "Stainless Steel",
             "finish": "Silver",
@@ -72,6 +72,13 @@
             "material": "Titanium",
             "finish": "Silver",
             "edition": "Edition",
+            "size": 45
+        },
+        {
+            "watchID": "D2175221-11EA-4AF9-AB84-2CAFB04C06CC",
+            "series": 9,
+            "material": "Aluminum",
+            "finish": "Midnight",
             "size": 45
         },
     ]
