@@ -46,8 +46,10 @@ class Watch: Identifiable, Hashable, Codable {
         "\(formattedSeries())\n\(formattedColor())\n\(formattedSize())"
     }
     
-    func formattedNameOneLine() -> String {
-        "\(formattedShortSeries()) \(formattedShortColor()) - \(formattedSize())"
+    func formattedNameOneLine(useShortFormat: Bool = true) -> String {
+        useShortFormat ?
+            "\(formattedShortSeries()) \(formattedShortColor()) - \(formattedSize())" :
+            "\(formattedSeries()), \(formattedColor()), \(formattedSize())"
     }
     
     func formattedSeries() -> String {

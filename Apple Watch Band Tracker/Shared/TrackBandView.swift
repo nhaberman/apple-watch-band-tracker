@@ -56,7 +56,7 @@ struct TrackBandView: View {
                     Picker("Watch", selection: $selectedWatch) {
                         Text("Select a Watch").tag(Optional<Watch>(nil))
                         ForEach(WatchRepository().allWatches.reversed(), id: \.self) { watch in
-                            Text(watch.formattedName())
+                            Text(watch.formattedNameOneLine(useShortFormat: false))
                         }
                     }
                     .pickerStyle(.menu)
