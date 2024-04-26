@@ -6319,6 +6319,15 @@
       "dateOrder": 19,
       "logicalOrder": 19,
       "manufacturer": "Hermès"
+    },
+    {
+      "bandID": "5A541576-C552-47E5-8473-8B6CCAE8C740",
+      "bandType": "Third Party Band",
+      "color": "Glow 2.0 Sport Band",
+      "colorOrder": 20,
+      "dateOrder": 20,
+      "logicalOrder": 20,
+      "manufacturer": "Nomad"
     }
   ]
 }
