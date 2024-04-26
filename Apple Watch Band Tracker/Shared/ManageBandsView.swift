@@ -47,51 +47,47 @@ struct ManageBandsView: View {
     
     @State var allBands: [Band]
     
-    func GetStateValue(bandType: BandType, manageType: ManageType) -> Binding<Bool> {
-        if manageType == .favorite {
+    func GetStateValue(bandType: BandType) -> Binding<Bool> {
+        
+        switch bandType {
+        case .SportBand:
+            return $showingSportBandSection
+        case .NikeSportBand:
+            return $showingNikeSportBandSection
+        case .SportLoop:
+            return $showingSportLoopSection
+        case .NikeSportLoop:
+            return $showingNikeSportLoopSection
+        case .SoloLoop:
+            return $showingSoloLoopSection
+        case .BraidedSoloLoop:
+            return $showingBraidedSoloLoopSection
+        case .WovenNylon:
+            return $showingWovenNylonSection
+        case .ClassicBuckle:
+            return $showingClassicBuckleSection
+        case .ModernBuckle:
+            return $showingModernBuckleSection
+        case .LeatherLoop:
+            return $showingLeatherLoopSection
+        case .LeatherLink:
+            return $showingLeatherLinkSection
+        case .MagneticLink:
+            return $showingMagneticLinkSection
+        case .MilaneseLoop:
+            return $showingMagneticLinkSection
+        case .LinkBracelet:
+            return $showingLinkBraceletSection
+        case .AlpineLoop:
+            return $showingAlpineLoopSection
+        case .TrailLoop:
+            return $showingTrailLoopSection
+        case .OceanBand:
+            return $showingOceanBandSection
+        case .ThirdPartyBand:
+            return $showingThirdPartyBandSection
+        default:
             return $showingDefaultSection
-        }
-        else {
-            switch bandType {
-            case .SportBand:
-                return $showingSportBandSection
-            case .NikeSportBand:
-                return $showingNikeSportBandSection
-            case .SportLoop:
-                return $showingSportLoopSection
-            case .NikeSportLoop:
-                return $showingNikeSportLoopSection
-            case .SoloLoop:
-                return $showingSoloLoopSection
-            case .BraidedSoloLoop:
-                return $showingBraidedSoloLoopSection
-            case .WovenNylon:
-                return $showingWovenNylonSection
-            case .ClassicBuckle:
-                return $showingClassicBuckleSection
-            case .ModernBuckle:
-                return $showingModernBuckleSection
-            case .LeatherLoop:
-                return $showingLeatherLoopSection
-            case .LeatherLink:
-                return $showingLeatherLinkSection
-            case .MagneticLink:
-                return $showingMagneticLinkSection
-            case .MilaneseLoop:
-                return $showingMagneticLinkSection
-            case .LinkBracelet:
-                return $showingLinkBraceletSection
-            case .AlpineLoop:
-                return $showingAlpineLoopSection
-            case .TrailLoop:
-                return $showingTrailLoopSection
-            case .OceanBand:
-                return $showingOceanBandSection
-            case .ThirdPartyBand:
-                return $showingThirdPartyBandSection
-            default:
-                return $showingDefaultSection
-            }
         }
     }
     
@@ -100,7 +96,7 @@ struct ManageBandsView: View {
             ForEach(BandType.allCases) { bandType in
                 let bands = bandRepository.getBandsByType(bandType)
                 if bands.count > 0 {
-                    Section(isExpanded: GetStateValue(bandType: bandType, manageType: manageType)) {
+                    Section(isExpanded: GetStateValue(bandType: bandType)) {
                         ForEach(bands) { band in
                             let index = allBands.firstIndex(of: band)
                                 
