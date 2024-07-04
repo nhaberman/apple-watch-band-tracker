@@ -4254,6 +4254,17 @@
       "logicalOrder": 113,
       "season": "Spring",
       "year": 2024
+    },
+    {
+      "bandID": "474AB532-66B1-4073-80F0-7DEEAC4BA3A7",
+      "bandType": "Braided Solo Loop",
+      "color": "Pride Edition",
+      "colorOrder": 1020,
+      "dateOrder": 32,
+      "edition": "2024",
+      "logicalOrder": 1020,
+      "season": "Summer",
+      "year": 2024
     }
   ],
   "wovenNylons": [
@@ -6327,6 +6338,24 @@
       "colorOrder": 20,
       "dateOrder": 20,
       "logicalOrder": 20,
+      "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "557CC0B0-D466-4877-AD3C-FBDAD3C35899",
+      "bandType": "Third Party Band",
+      "color": "Blurple Sport Band",
+      "colorOrder": 21,
+      "dateOrder": 21,
+      "logicalOrder": 21,
+      "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "5E6D4F39-0293-4ED8-8A8D-927AFCBC66D8",
+      "bandType": "Third Party Band",
+      "color": "Bone Sport Slim Band",
+      "colorOrder": 22,
+      "dateOrder": 22,
+      "logicalOrder": 22,
       "manufacturer": "Nomad"
     }
   ]
