@@ -28,7 +28,7 @@ struct StatsMainView: View {
     @State private var showSettingsSheet = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(
                 alignment: .leading
             ) {
@@ -84,8 +84,6 @@ struct StatsMainView: View {
                     }
                 }
             }
-            
-            Label("Please select something to begin...", systemImage: "sparkles.rectangle.stack")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")

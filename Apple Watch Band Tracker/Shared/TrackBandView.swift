@@ -22,7 +22,7 @@ struct TrackBandView: View {
     @State private var showingAlert = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section("Select the Band:") {
                     List {

@@ -16,7 +16,7 @@ struct BandsMainView: View {
     @State private var showSettingsSheet = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(
                 alignment: .leading
             ) {
@@ -50,8 +50,6 @@ struct BandsMainView: View {
                     }
                 }
             }
-            
-            Label("Please select a band type to begin...", systemImage: "sparkles.rectangle.stack")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")
