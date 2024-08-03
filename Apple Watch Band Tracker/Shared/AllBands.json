@@ -6357,6 +6357,16 @@
       "dateOrder": 22,
       "logicalOrder": 22,
       "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "01EF7DC1-D77A-43C4-A1A6-18656F195BA7",
+      "bandType": "Third Party Band",
+      "color": "Summer Games Sport Band",
+      "colorOrder": 23,
+      "dateOrder": 23,
+      "edition": "2024",
+      "logicalOrder": 23,
+      "manufacturer": "Nomad"
     }
   ]
 }
