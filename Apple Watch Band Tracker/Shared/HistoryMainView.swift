@@ -28,7 +28,7 @@ struct HistoryMainView: View {
     @State private var showSettingsSheet = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Section("Recent") {
                     NavigationLink {
@@ -89,8 +89,6 @@ struct HistoryMainView: View {
                     }
                 }
             }
-            
-            Label("Please select a section to begin...", systemImage: "sparkles.rectangle.stack")
         }
         .sheet(isPresented: $showSettingsSheet, onDismiss: {
             print("goodbye settings sheet")

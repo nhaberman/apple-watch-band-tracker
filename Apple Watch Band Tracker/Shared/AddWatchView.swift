@@ -21,7 +21,7 @@ struct AddWatchView: View {
     @State private var showingAlert = false
        
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section("Enter the Watch information:") {
                     List {
