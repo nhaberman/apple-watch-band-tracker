@@ -66,6 +66,7 @@ class BandRepository {
             allBands.append(contentsOf: source.alpineLoops)
             allBands.append(contentsOf: source.trailLoops)
             allBands.append(contentsOf: source.oceanBands)
+            allBands.append(contentsOf: source.titaniumMilaneseLoops)
             allBands.append(contentsOf: source.thirdPartyBands)
         }
         catch {
