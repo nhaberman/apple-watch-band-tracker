@@ -238,7 +238,7 @@ class NikeSportBand : Band {
     var pin: String?
     
     private var _bandVersion: NikeSportBandVersion?
-    var bandVersion: NikeSportBandVersion { _bandVersion ?? .none}
+    var bandVersion: NikeSportBandVersion { _bandVersion ?? .none }
     
     enum NikeSportBandVersion: String, Codable {
         case none = "None"
@@ -311,7 +311,7 @@ class NikeSportBand : Band {
 
 class SportLoop : Band {
     private var _bandVersion: SportLoopVersion?
-    var bandVersion: SportLoopVersion { _bandVersion ?? .none}
+    var bandVersion: SportLoopVersion { _bandVersion ?? .none }
     
     enum SportLoopVersion: String, Codable {
         case none = "None"
@@ -321,6 +321,7 @@ class SportLoop : Band {
         case rails = "Rails"
         case split = "Split"
         case stripes = "Stripes"
+        case connectors = "Connectors"
         case singleTone = "Single-Tone"
     }
     
@@ -352,7 +353,7 @@ class SportLoop : Band {
 
 class NikeSportLoop : Band {
     private var _bandVersion: NikeSportLoopVersion?
-    var bandVersion: NikeSportLoopVersion { _bandVersion ?? .none}
+    var bandVersion: NikeSportLoopVersion { _bandVersion ?? .none }
     
     enum NikeSportLoopVersion: String, Codable {
         case none = "None"
@@ -478,7 +479,7 @@ class BraidedSoloLoop : Band {
 
 class WovenNylon : Band {
     private var _bandVersion: WovenNylonVersion?
-    var bandVersion: WovenNylonVersion { _bandVersion ?? .none}
+    var bandVersion: WovenNylonVersion { _bandVersion ?? .none }
     
     enum WovenNylonVersion: String, Codable {
         case none = "None"
@@ -558,7 +559,7 @@ class ClassicBuckle : Band {
 
 class ModernBuckle : Band {
     private var _bandSize: BandSize?
-    var bandSize: BandSize { _bandSize ?? .none}
+    var bandSize: BandSize { _bandSize ?? .none }
     
     enum BandSize: String, Codable {
         case none = "None"
@@ -638,7 +639,7 @@ class ModernBuckle : Band {
 
 class LeatherLoop : Band {
     private var _bandSize: BandSize?
-    var bandSize: BandSize { _bandSize ?? .none}
+    var bandSize: BandSize { _bandSize ?? .none }
     
     enum BandSize: String, Codable {
         case none = "None"
@@ -674,7 +675,7 @@ class LeatherLoop : Band {
 
 class LeatherLink : Band {
     private var _bandSize: BandSize?
-    var bandSize: BandSize { _bandSize ?? .none}
+    var bandSize: BandSize { _bandSize ?? .none }
     
     enum BandSize: String, Codable {
         case none = "None"
@@ -710,7 +711,7 @@ class LeatherLink : Band {
 
 class MagneticLink : Band {
     private var _bandSize: BandSize?
-    var bandSize: BandSize { _bandSize ?? .none}
+    var bandSize: BandSize { _bandSize ?? .none }
     
     enum BandSize: String, Codable {
         case none = "None"
@@ -768,7 +769,235 @@ class LinkBracelet : Band {
 
 class AlpineLoop : Band {
     private var _bandSize: BandSize?
-    var bandSize: BandSize { _bandSize ?? .none}
+    var bandSize: BandSize { _bandSize ?? .none }
+    
+    enum BandSize: String, Codable {
+        case none = "None"
+        case small = "S"
+        case medium = "M"
+        case large = "L"
+    }
+    
+    private var _hardwareFinish: HardwareFinish?
+    var hardwareFinish: HardwareFinish { _hardwareFinish ?? .none }
+    
+    enum HardwareFinish: String, Codable {
+        case none = "None"
+        case natural = "Natural"
+        case black = "Black"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, hardwareFinish: HardwareFinish = .none, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
+        self._hardwareFinish = hardwareFinish
+        self.bandType = .AlpineLoop
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+        _hardwareFinish = try values.decodeIfPresent(HardwareFinish.self, forKey: ._hardwareFinish)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try container.encode(self.hardwareFinish, forKey: ._hardwareFinish)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
+        case _hardwareFinish = "hardwareFinish"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.hardwareFinish == .natural || self.hardwareFinish == .black {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(hardwareFinish.rawValue) Hardware)"
+            }
+            else {
+                result += " (\(hardwareFinish.rawValue) Hardware)"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.hardwareFinish == .natural || self.hardwareFinish == .black {
+            if result.count == 0 {
+                result = hardwareFinish.rawValue + " Hardware"
+            }
+            else {
+                result += ", \(hardwareFinish.rawValue) Hardware"
+            }
+        }
+        
+        return result
+    }
+}
+
+class TrailLoop : Band {
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none }
+    
+    enum BandSize: String, Codable {
+        case none = "None"
+        case smallMedium = "S/M"
+        case mediumLarge = "M/L"
+    }
+    
+    private var _hardwareFinish: HardwareFinish?
+    var hardwareFinish: HardwareFinish { _hardwareFinish ?? .none }
+    
+    enum HardwareFinish: String, Codable {
+        case none = "None"
+        case natural = "Natural"
+        case black = "Black"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, hardwareFinish: HardwareFinish = .none, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
+        self._hardwareFinish = hardwareFinish
+        self.bandType = .TrailLoop
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+        _hardwareFinish = try values.decodeIfPresent(HardwareFinish.self, forKey: ._hardwareFinish)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try container.encode(self.hardwareFinish, forKey: ._hardwareFinish)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
+        case _hardwareFinish = "hardwareFinish"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.hardwareFinish == .natural || self.hardwareFinish == .black {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(hardwareFinish.rawValue) Hardware)"
+            }
+            else {
+                result += " (\(hardwareFinish.rawValue) Hardware)"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.hardwareFinish == .natural || self.hardwareFinish == .black {
+            if result.count == 0 {
+                result = hardwareFinish.rawValue + " Hardware"
+            }
+            else {
+                result += ", \(hardwareFinish.rawValue) Hardware"
+            }
+        }
+        
+        return result
+    }
+}
+
+class OceanBand : Band {
+    private var _hardwareFinish: HardwareFinish?
+    var hardwareFinish: HardwareFinish { _hardwareFinish ?? .none }
+    
+    enum HardwareFinish: String, Codable {
+        case none = "None"
+        case natural = "Natural"
+        case black = "Black"
+    }
+    
+    init(color: String, season: Season, year: Int, hardwareFinish: HardwareFinish = .none, generation: Int? = nil) {
+        super.init(color: color, season: season, year: year, generation: generation)
+        self._hardwareFinish = hardwareFinish
+        self.bandType = .OceanBand
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _hardwareFinish = try values.decodeIfPresent(HardwareFinish.self, forKey: ._hardwareFinish)
+    }
+    
+    override func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.hardwareFinish, forKey: ._hardwareFinish)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _hardwareFinish = "hardwareFinish"
+    }
+    
+    override func formattedName() -> String {
+        var result = super.formattedName()
+        
+        if self.hardwareFinish == .natural || self.hardwareFinish == .black {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(hardwareFinish.rawValue) Hardware)"
+            }
+            else {
+                result += " (\(hardwareFinish.rawValue) Hardware)"
+            }
+        }
+        
+        return result
+    }
+    
+    override func formattedDetails() -> String {
+        var result = super.formattedDetails()
+        
+        if self.hardwareFinish == .natural || self.hardwareFinish == .black {
+            if result.count == 0 {
+                result = hardwareFinish.rawValue + " Hardware"
+            }
+            else {
+                result += ", \(hardwareFinish.rawValue) Hardware"
+            }
+        }
+        
+        return result
+    }
+}
+
+class TitaniumMilaneseLoop : Band {
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none }
     
     enum BandSize: String, Codable {
         case none = "None"
@@ -780,7 +1009,7 @@ class AlpineLoop : Band {
     init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self._bandSize = bandSize
-        self.bandType = .AlpineLoop
+        self.bandType = .TitaniumMilaneseLoop
     }
     
     required init(from decoder: Decoder) throws {
@@ -800,53 +1029,6 @@ class AlpineLoop : Band {
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
         case _bandSize = "bandSize"
-    }
-}
-
-class TrailLoop : Band {
-    private var _bandSize: BandSize?
-    var bandSize: BandSize { _bandSize ?? .none}
-    
-    enum BandSize: String, Codable {
-        case none = "None"
-        case smallMedium = "S/M"
-        case mediumLarge = "M/L"
-    }
-    
-    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
-        super.init(color: color, season: season, year: year, generation: generation)
-        self._bandSize = bandSize
-        self.bandType = .TrailLoop
-    }
-    
-    required init(from decoder: Decoder) throws {
-        try super.init(from: decoder)
-        
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
-    }
-    
-    override func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.bandSize, forKey: ._bandSize)
-        try super.encode(to: encoder)
-    }
-    
-    // coding keys for specific band properties
-    enum CodingKeys: String, CodingKey {
-        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
-        case _bandSize = "bandSize"
-    }
-}
-
-class OceanBand : Band {
-    override init(color: String, season: Season = .spring, year: Int = 0, generation: Int? = nil) {
-        super.init(color: color, season: season, year: year, generation: generation)
-        self.bandType = .OceanBand
-    }
-    
-    required init(from decoder: Decoder) throws {
-        try super.init(from: decoder)
     }
 }
 

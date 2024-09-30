@@ -29,6 +29,7 @@ public enum BandType: String, CaseIterable, Identifiable, Codable {
     case AlpineLoop = "Alpine Loop"
     case TrailLoop = "Trail Loop"
     case OceanBand = "Ocean Band"
+    case TitaniumMilaneseLoop = "Titanium Milanese Loop"
     case ThirdPartyBand = "Third Party Band"
 }
 
