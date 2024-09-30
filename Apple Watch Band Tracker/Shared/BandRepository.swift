@@ -267,7 +267,8 @@ class BandRepository {
         LinkBracelet(color: "Space Black", season: .fall, year: 2021),
         AlpineLoop(color: "Orange", season: .fall, year: 2022),
         TrailLoop(color: "Black / Gray", season: .fall, year: 2022),
-        OceanBand(color: "Midnight", season: .fall, year: 2022),
+        OceanBand(color: "Ice Blue", season: .fall, year: 2024, hardwareFinish: .black),
+        TitaniumMilaneseLoop(color: "Black", season: .fall, year: 2024),
         ThirdPartyBand(color: "Modern Strap Rustic Brown", manufacturer: "Nomad")
     ]
 }
@@ -290,5 +291,6 @@ struct AllBandsSource: Codable {
     var alpineLoops : [AlpineLoop] = [AlpineLoop]()
     var trailLoops : [TrailLoop] = [TrailLoop]()
     var oceanBands : [OceanBand] = [OceanBand]()
+    var titaniumMilaneseLoops : [TitaniumMilaneseLoop] = [TitaniumMilaneseLoop]()
     var thirdPartyBands : [ThirdPartyBand] = [ThirdPartyBand]()
 }

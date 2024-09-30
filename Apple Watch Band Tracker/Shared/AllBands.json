@@ -6440,6 +6440,72 @@
       "logicalOrder": 27,
       "season": "Fall",
       "year": 2023
+    },
+    {
+      "bandID": "4220EA71-14C6-4F0D-8A33-D048B5C43CB6",
+      "bandType": "Alpine Loop",
+      "color": "Tan",
+      "colorOrder": 12,
+      "dateOrder": 7,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 12,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "69F24C80-28E7-46F1-9525-F6828878C2D6",
+      "bandType": "Alpine Loop",
+      "color": "Tan",
+      "colorOrder": 12,
+      "dateOrder": 7,
+      "hardwareFinish": "Black",
+      "logicalOrder": 12,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "988726B5-1FA5-4439-99DF-977F6F344091",
+      "bandType": "Alpine Loop",
+      "color": "Dark Green",
+      "colorOrder": 21,
+      "dateOrder": 8,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 21,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "0492BF9C-A08D-4DB3-AEBE-C06321A95E81",
+      "bandType": "Alpine Loop",
+      "color": "Dark Green",
+      "colorOrder": 21,
+      "dateOrder": 8,
+      "hardwareFinish": "Black",
+      "logicalOrder": 21,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "9EDBAC82-BE00-4572-AC50-D678E84EB1E1",
+      "bandType": "Alpine Loop",
+      "color": "Navy",
+      "colorOrder": 25,
+      "dateOrder": 9,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 25,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "1340529F-7870-4C1E-966B-24DCDBF96C5F",
+      "bandType": "Alpine Loop",
+      "color": "Navy",
+      "colorOrder": 25,
+      "dateOrder": 9,
+      "hardwareFinish": "Black",
+      "logicalOrder": 25,
+      "season": "Fall",
+      "year": 2024
     }
   ],
   "trailLoops": [
@@ -6502,6 +6568,72 @@
       "logicalOrder": 25,
       "season": "Fall",
       "year": 2023
+    },
+    {
+      "bandID": "CF4C4AA1-A33B-40F5-9E3C-9CABDFD3A376",
+      "bandType": "Trail Loop",
+      "color": "Green",
+      "colorOrder": 18,
+      "dateOrder": 7,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 25,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "5DFAD54A-5807-4E04-BB20-94847A86D44A",
+      "bandType": "Trail Loop",
+      "color": "Green",
+      "colorOrder": 18,
+      "dateOrder": 7,
+      "hardwareFinish": "Black",
+      "logicalOrder": 25,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "E382029D-A5E9-457A-A6DB-C038696B217A",
+      "bandType": "Trail Loop",
+      "color": "Blue",
+      "colorOrder": 22,
+      "dateOrder": 8,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 22,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "55C6C4D2-450B-4167-8A4D-F82001A24D0A",
+      "bandType": "Trail Loop",
+      "color": "Blue",
+      "colorOrder": 22,
+      "dateOrder": 8,
+      "hardwareFinish": "Black",
+      "logicalOrder": 22,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "AD66708C-F56E-4EF9-A7B7-C7DA63A7039D",
+      "bandType": "Trail Loop",
+      "color": "Black",
+      "colorOrder": 35,
+      "dateOrder": 9,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 35,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "626DF4EE-FE63-4E1B-B4F5-4824CB975161",
+      "bandType": "Trail Loop",
+      "color": "Black",
+      "colorOrder": 35,
+      "dateOrder": 9,
+      "hardwareFinish": "Black",
+      "logicalOrder": 35,
+      "season": "Fall",
+      "year": 2024
     }
   ],
   "oceanBands": [
@@ -6554,6 +6686,94 @@
       "logicalOrder": 15,
       "season": "Fall",
       "year": 2023
+    },
+    {
+      "bandID": "2EF8EC83-8716-45E0-AECD-B4E6F2CE2607",
+      "bandType": "Ocean Band",
+      "color": "Ice Blue",
+      "colorOrder": 12,
+      "dateOrder": 6,
+      "hardwareFinish" :"Natural",
+      "logicalOrder": 12,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "07BBF8C9-625B-4221-9E73-8A65D4A7462B",
+      "bandType": "Ocean Band",
+      "color": "Ice Blue",
+      "colorOrder": 12,
+      "dateOrder": 6,
+      "hardwareFinish" :"Natural",
+      "logicalOrder": 12,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "31296877-28A6-441B-9526-B45F54CEE47B",
+      "bandType": "Ocean Band",
+      "color": "Navy",
+      "colorOrder": 18,
+      "dateOrder": 7,
+      "hardwareFinish" :"Natural",
+      "logicalOrder": 18,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "8444332C-58D2-4B98-B744-D480EB1A32D0",
+      "bandType": "Ocean Band",
+      "color": "Navy",
+      "colorOrder": 18,
+      "dateOrder": 7,
+      "hardwareFinish" :"Natural",
+      "logicalOrder": 18,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "DBDB3C14-94EF-444C-9775-EFAC9E029411",
+      "bandType": "Ocean Band",
+      "color": "Black",
+      "colorOrder": 40,
+      "dateOrder": 8,
+      "hardwareFinish" :"Natural",
+      "logicalOrder": 40,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "50851FC9-B4ED-4265-B96F-64E2F75A3DAC",
+      "bandType": "Ocean Band",
+      "color": "Black",
+      "colorOrder": 40,
+      "dateOrder": 8,
+      "hardwareFinish" :"Natural",
+      "logicalOrder": 40,
+      "season": "Fall",
+      "year": 2024
+    }
+  ],
+  "titaniumMilaneseLoops": [
+    {
+      "bandID": "5782F050-0A5C-4CD1-9C21-0D29F1704BCA",
+      "bandType": "Titanium Milanese Loop",
+      "color": "Natural",
+      "colorOrder": 10,
+      "dateOrder": 1,
+      "logicalOrder": 10,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
+      "bandID": "7655E453-0081-4137-A69F-AD7CF5D289FE",
+      "bandType": "Titanium Milanese Loop",
+      "color": "Black",
+      "colorOrder": 20,
+      "dateOrder": 2,
+      "logicalOrder": 20,
+      "season": "Fall",
+      "year": 2024
     }
   ],
   "thirdPartyBands": [
