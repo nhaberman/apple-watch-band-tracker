@@ -5880,6 +5880,18 @@
       "logicalOrder": 35,
       "season": "Fall",
       "year": 2022
+    },
+    {
+      "bandID": "9CAB2AEE-B309-411E-9438-76AFEC2AF589",
+      "bandSize": "None",
+      "bandType": "Leather Link",
+      "color": "Electric Blue",
+      "colorOrder": 25,
+      "dateOrder": 101,
+      "edition": "Prototype",
+      "logicalOrder": 101,
+      "season": "Spring",
+      "year": 0
     }
   ],
   "magneticLinks": [
@@ -6367,6 +6379,24 @@
       "edition": "2024",
       "logicalOrder": 23,
       "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "D89D83B1-C4FB-486C-A4D5-B9671B9FB62E",
+      "bandType": "Third Party Band",
+      "color": "Graphite Steel Band",
+      "colorOrder": 24,
+      "dateOrder": 24,
+      "logicalOrder": 24,
+      "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "56C9B670-7153-4790-A335-E3FB29396869",
+      "bandType": "Third Party Band",
+      "color": "Titanium Leather Band",
+      "colorOrder": 25,
+      "dateOrder": 25,
+      "logicalOrder": 25,
+      "manufacturer": "Burton Goods"
     }
   ]
 }
