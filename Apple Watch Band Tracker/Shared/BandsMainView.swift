@@ -20,13 +20,11 @@ struct BandsMainView: View {
             VStack(
                 alignment: .leading
             ) {
-                List(BandType.allCases) { value in
-                    if (value != BandType.None) {
-                        NavigationLink {
-                            BandsView(bandType: value)
-                        } label: {
-                            Label(value.rawValue, systemImage: "applewatch.side.right")
-                        }
+                List(BandType.getAllBandTypes()) { value in
+                    NavigationLink {
+                        BandsView(bandType: value)
+                    } label: {
+                        Label(value.rawValue, systemImage: "applewatch.side.right")
                     }
                 }
             }
