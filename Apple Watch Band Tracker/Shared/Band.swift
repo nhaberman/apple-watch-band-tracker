@@ -50,11 +50,13 @@ class Band: Identifiable, Hashable, Codable {
             case .LinkBracelet:
                 return baseEquality
             case .AlpineLoop:
-                return baseEquality && (lhs as! AlpineLoop).bandSize == (rhs as! AlpineLoop).bandSize
+                return baseEquality && (lhs as! AlpineLoop).bandSize == (rhs as! AlpineLoop).bandSize && (lhs as! AlpineLoop).hardwareFinish == (rhs as! AlpineLoop).hardwareFinish
             case .TrailLoop:
-                return baseEquality && (lhs as! TrailLoop).bandSize == (rhs as! TrailLoop).bandSize
+                return baseEquality && (lhs as! TrailLoop).bandSize == (rhs as! TrailLoop).bandSize && (lhs as! TrailLoop).hardwareFinish == (rhs as! TrailLoop).hardwareFinish
             case .OceanBand:
-                return baseEquality
+                return baseEquality && (lhs as! OceanBand).hardwareFinish == (rhs as! OceanBand).hardwareFinish
+            case .TitaniumMilaneseLoop:
+                return baseEquality && (lhs as! TitaniumMilaneseLoop).bandSize == (rhs as! TitaniumMilaneseLoop).bandSize
             case .ThirdPartyBand:
                 return baseEquality && (lhs as! ThirdPartyBand).manufacturer == (rhs as! ThirdPartyBand).manufacturer
             default:

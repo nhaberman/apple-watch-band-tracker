@@ -39,7 +39,7 @@ struct TrackBandView: View {
                             Picker("Band", selection: $selectedBand) {
                                 ForEach(bandsByType, id: \.self) { band in
                                     if band.isOwned {
-                                        Text(band.formattedName())
+                                        BandView(band: band)
                                             .fontWeight(band.isFavorite ? .semibold : .regular)
                                     }
                                 }
@@ -51,7 +51,7 @@ struct TrackBandView: View {
                 Section("Select the Apple Watch:") {
                     Picker("Watch", selection: $selectedWatch) {
                         ForEach(WatchRepository().allWatches.reversed(), id: \.self) { watch in
-                            Text(watch.formattedNameOneLine(useShortFormat: false))
+                            WatchView(watch: watch)
                         }
                     }
                     .pickerStyle(.navigationLink)
