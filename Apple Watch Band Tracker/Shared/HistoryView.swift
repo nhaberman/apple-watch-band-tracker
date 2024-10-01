@@ -31,18 +31,8 @@ struct HistoryView: View {
         let todaysDate = Calendar.current.date(from: dateComponents)!
         
         switch (lookBackType) {
-        case .currentDay:
-            self.startDate = todaysDate
-            self.endDate = Date.distantFuture
-        case .currentWeek:
-            self.startDate = Calendar.current.date(byAdding: .day, value: -1 * (dateComponents.weekday! - 1), to: todaysDate)!
-            self.endDate = Date.distantFuture
-        case .currentMonth:
-            self.startDate = Calendar.current.date(byAdding: .day, value: -1 * (dateComponents.day! - 1), to: todaysDate)!
-            self.endDate = Date.distantFuture
-        case .currentYear:
-            let firstOfMonth = Calendar.current.date(byAdding: .day, value: -1 * (dateComponents.day! - 1), to: todaysDate)!
-            self.startDate = Calendar.current.date(byAdding: .month, value: -1 * (dateComponents.month! - 1), to: firstOfMonth)!
+        case .recent:
+            self.startDate = Calendar.current.date(byAdding: .day, value: -7, to: todaysDate)!
             self.endDate = Date.distantFuture
         case .specificYear:
             let startDateComponents = DateComponents.init(year: lookBackYear, month: 1, day: 1)
@@ -68,7 +58,7 @@ struct HistoryView: View {
     @State private var showingAlert = false
     
     enum HistoryLookBack {
-        case none, currentDay, currentWeek, currentMonth, currentYear, specificYear, all
+        case none, recent, specificYear, all
     }
     
     var body: some View {

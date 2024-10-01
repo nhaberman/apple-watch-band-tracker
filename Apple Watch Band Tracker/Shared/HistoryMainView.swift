@@ -30,42 +30,25 @@ struct HistoryMainView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Recent") {
+                Section("Relative History") {
                     NavigationLink {
-                        HistoryView(pageTitle: "Recent", lookBackType: .currentDay)
+                        HistoryView(pageTitle: "Recent", lookBackType: .recent)
                     } label: {
-                        Label("Today", systemImage: "list.bullet")
+                        Label("Recent Bands", systemImage: "clock.arrow.circlepath")
                     }
                     NavigationLink {
-                        HistoryView(pageTitle: "This Week", lookBackType: .currentWeek)
+                        HistoryView(pageTitle: "All Bands", lookBackType: .all)
                     } label: {
-                        Label("This Week", systemImage: "list.bullet")
-                    }
-                    NavigationLink {
-                        HistoryView(pageTitle: "This Month", lookBackType: .currentMonth)
-                    } label: {
-                        Label("This Month", systemImage: "list.bullet")
-                    }
-                    NavigationLink {
-                        HistoryView(pageTitle: "Year to Date", lookBackType: .currentYear)
-                    } label: {
-                        Label("Year to Date", systemImage: "list.bullet")
+                        Label("All Bands", systemImage: "archivebox")
                     }
                 }
-                Section("By Year") {
+                Section("History By Year") {
                     ForEach(repository.getYearsWithHistory()) { bandYear in
                         NavigationLink {
                             HistoryView(pageTitle: String(bandYear.year), lookBackType: .specificYear, lookBackYear: bandYear.year)
                         } label: {
                             Label(String(bandYear.year), systemImage: "calendar")
                         }
-                    }
-                }
-                Section("All") {
-                    NavigationLink {
-                        HistoryView(pageTitle: "All Bands", lookBackType: .all)
-                    } label: {
-                        Label("All Bands", systemImage: "applewatch.side.right")
                     }
                 }
             }
