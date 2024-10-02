@@ -748,13 +748,38 @@ class MagneticLink : Band {
 }
 
 class MilaneseLoop : Band {
-    override init(color: String, season: Season = .spring, year: Int = 0, generation: Int? = nil) {
+    private var _bandSize: BandSize?
+    var bandSize: BandSize { _bandSize ?? .none }
+    
+    enum BandSize: String, Codable {
+        case none = "None"
+        case smallMedium = "S/M"
+        case mediumLarge = "M/L"
+    }
+    
+    init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
+        self._bandSize = bandSize
         self.bandType = .MilaneseLoop
     }
     
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        _bandSize = try values.decodeIfPresent(BandSize.self, forKey: ._bandSize)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.bandSize, forKey: ._bandSize)
+        try super.encode(to: encoder)
+    }
+    
+    // coding keys for specific band properties
+    enum CodingKeys: String, CodingKey {
+        case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
+        case _bandSize = "bandSize"
     }
 }
 
