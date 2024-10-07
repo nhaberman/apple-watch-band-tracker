@@ -84,9 +84,6 @@ struct TrackBandView: View {
                     message: Text("A value is required for all fields in order to track the band."),
                     dismissButton: .default(Text("OK")))
             }
-//            .actionSheet(isPresented: $showingAlert) {
-//                ActionSheet(title: Text("Unable to Track Band"), message: Text("A value is required for all fields in order to track the band."), buttons: [.default(Text("one")){}, .default(Text("two")){ presentationMode.wrappedValue.dismiss()}, .cancel()])
-//            }
             .navigationTitle("Track Band")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

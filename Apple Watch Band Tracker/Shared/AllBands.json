@@ -3725,36 +3725,6 @@
       "year": 2020
     },
     {
-      "bandID": "798FA2E8-B63B-4982-BAAD-285583DDB4C3",
-      "bandType": "Solo Loop",
-      "color": "White",
-      "colorOrder": 230,
-      "dateOrder": 6,
-      "logicalOrder": 230,
-      "season": "Fall",
-      "year": 2020
-    },
-    {
-      "bandID": "11FD1864-6991-4635-82BB-110ACFBA6032",
-      "bandType": "Solo Loop",
-      "color": "Black",
-      "colorOrder": 250,
-      "dateOrder": 7,
-      "logicalOrder": 250,
-      "season": "Fall",
-      "year": 2020
-    },
-    {
-      "bandID": "B4575FB1-6049-408A-BCA9-B31E7D6280D5",
-      "bandType": "Solo Loop",
-      "color": "Pink Citrus",
-      "colorOrder": 190,
-      "dateOrder": 5,
-      "logicalOrder": 190,
-      "season": "Fall",
-      "year": 2020
-    },
-    {
       "bandID": "248DECEB-AF78-46B6-9E4C-8094C352150F",
       "bandType": "Solo Loop",
       "color": "Ginger",
@@ -3781,6 +3751,37 @@
       "colorOrder": 150,
       "dateOrder": 4,
       "logicalOrder": 150,
+      "season": "Fall",
+      "year": 2020
+    },
+    {
+      "bandID": "B4575FB1-6049-408A-BCA9-B31E7D6280D5",
+      "bandType": "Solo Loop",
+      "color": "Pink Citrus",
+      "colorOrder": 190,
+      "dateOrder": 5,
+      "logicalOrder": 190,
+      "season": "Fall",
+      "year": 2020
+    },
+    {
+      "bandID": "798FA2E8-B63B-4982-BAAD-285583DDB4C3",
+      "bandType": "Solo Loop",
+      "color": "White",
+      "colorOrder": 230,
+      "dateOrder": 6,
+      "logicalOrder": 230,
+      "season": "Fall",
+      "year": 2020
+    },
+    {
+      "bandID": "11FD1864-6991-4635-82BB-110ACFBA6032",
+      "bandType": "Solo Loop",
+      "color": "Black",
+      "colorOrder": 250,
+      "dateOrder": 7,
+      "generation": 1,
+      "logicalOrder": 250,
       "season": "Fall",
       "year": 2020
     },
@@ -4143,7 +4144,18 @@
       "logicalOrder": 194,
       "season": "Fall",
       "year": 2024
-    }
+    },
+    {
+      "bandID": "E9763E64-7464-4B2E-B7A4-E96D69674CB3",
+      "bandType": "Solo Loop",
+      "color": "Black",
+      "colorOrder": 260,
+      "dateOrder": 44,
+      "generation": 2,
+      "logicalOrder": 260,
+      "season": "Fall",
+      "year": 2024
+    },
   ],
   "braidedSoloLoops": [
     {

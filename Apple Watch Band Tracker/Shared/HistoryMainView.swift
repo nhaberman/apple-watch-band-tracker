@@ -30,7 +30,7 @@ struct HistoryMainView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Relative History") {
+                Section("Band History") {
                     NavigationLink {
                         HistoryView(pageTitle: "Recent", lookBackType: .recent)
                     } label: {
