@@ -26,6 +26,7 @@ struct ManageBandsView: View {
     @State var showingAlpineLoopSection = false
     @State var showingTrailLoopSection = false
     @State var showingOceanBandSection = false
+    @State var showingTitaniumMilaneseLoopSection = false
     @State var showingThirdPartyBandSection = false
     
     private var bandRepository: BandRepository
@@ -84,6 +85,8 @@ struct ManageBandsView: View {
             return $showingTrailLoopSection
         case .OceanBand:
             return $showingOceanBandSection
+        case .TitaniumMilaneseLoop:
+            return $showingTitaniumMilaneseLoopSection
         case .ThirdPartyBand:
             return $showingThirdPartyBandSection
         default:
@@ -93,7 +96,7 @@ struct ManageBandsView: View {
     
     var body: some View {
         List {
-            ForEach(BandType.allCases) { bandType in
+            ForEach(BandType.getAllBandTypes()) { bandType in
                 let bands = bandRepository.getBandsByType(bandType)
                 if bands.count > 0 {
                     Section(isExpanded: GetStateValue(bandType: bandType)) {

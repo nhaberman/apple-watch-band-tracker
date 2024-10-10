@@ -29,7 +29,14 @@ public enum BandType: String, CaseIterable, Identifiable, Codable {
     case AlpineLoop = "Alpine Loop"
     case TrailLoop = "Trail Loop"
     case OceanBand = "Ocean Band"
+    case TitaniumMilaneseLoop = "Titanium Milanese Loop"
     case ThirdPartyBand = "Third Party Band"
+    
+    static func getAllBandTypes() -> [BandType] {
+        return BandType.allCases.filter { item in
+            item != .None
+        }
+    }
 }
 
 public enum Season: String, CaseIterable, Identifiable, Codable {

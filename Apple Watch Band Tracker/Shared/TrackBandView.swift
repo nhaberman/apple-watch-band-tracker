@@ -27,39 +27,34 @@ struct TrackBandView: View {
                 Section("Select the Band:") {
                     List {
                         Picker("Band Type", selection: $selectedBandType) {
-                            Text("Select the Band Type").tag(Optional<BandType>(nil))
-                            ForEach(BandType.allCases) { bandType in
-                                if (bandType != BandType.None) {
-                                    Text(bandType.rawValue)
-                                }
+                            ForEach(BandType.getAllBandTypes()) { bandType in
+                                Text(bandType.rawValue)
                             }
                         }
-                        .pickerStyle(.menu)
+                        .pickerStyle(.navigationLink)
                     }
                     if selectedBandType != .None {
                         List {
                             let bandsByType = BandRepository.default.getBandsByType(selectedBandType, sortOrder: BandRepository.default.defaultSortOrder, sortDirection: BandRepository.default.defaultSortDirection, useFavorites: true)
                             Picker("Band", selection: $selectedBand) {
-                                Text("Select a Band").tag(Optional<Band>(nil))
                                 ForEach(bandsByType, id: \.self) { band in
                                     if band.isOwned {
-                                        Text(band.formattedName())
+                                        BandView(band: band)
                                             .fontWeight(band.isFavorite ? .semibold : .regular)
                                     }
                                 }
                             }
-                            .pickerStyle(.menu)
+                            .pickerStyle(.navigationLink)
                         }
                     }
                 }
                 Section("Select the Apple Watch:") {
                     Picker("Watch", selection: $selectedWatch) {
-                        Text("Select a Watch").tag(Optional<Watch>(nil))
                         ForEach(WatchRepository().allWatches.reversed(), id: \.self) { watch in
-                            Text(watch.formattedNameOneLine(useShortFormat: false))
+                            WatchView(watch: watch)
                         }
                     }
-                    .pickerStyle(.menu)
+                    .pickerStyle(.navigationLink)
                 }
                 Section("Select the Time:") {
                     Toggle(isOn: $useCurrentDate) {
@@ -89,9 +84,6 @@ struct TrackBandView: View {
                     message: Text("A value is required for all fields in order to track the band."),
                     dismissButton: .default(Text("OK")))
             }
-//            .actionSheet(isPresented: $showingAlert) {
-//                ActionSheet(title: Text("Unable to Track Band"), message: Text("A value is required for all fields in order to track the band."), buttons: [.default(Text("one")){}, .default(Text("two")){ presentationMode.wrappedValue.dismiss()}, .cancel()])
-//            }
             .navigationTitle("Track Band")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -120,13 +112,11 @@ struct TrackBandView: View {
     //                        }
                         }
                         Divider()
-                        Menu("Specific Band Type") {
-                            ForEach(BandType.allCases) { bandType in
-                                if (bandType != BandType.None) {
-                                    Button(bandType.rawValue) {
-                                        print("tapped random band from type: \(bandType.rawValue)")
-                                        randomizeBand(bandType: bandType)
-                                    }
+                        Section("Specific Band Type") {
+                            ForEach(BandType.getAllBandTypes()) { bandType in
+                                Button(bandType.rawValue) {
+                                    print("tapped random band from type: \(bandType.rawValue)")
+                                    randomizeBand(bandType: bandType)
                                 }
                             }
                         }

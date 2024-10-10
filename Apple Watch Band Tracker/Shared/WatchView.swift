@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct WatchView : View {
+    init(watch: Watch, showIcon: Bool = true) {
+        self.watch = watch
+        self.showIcon = showIcon
+    }
+    
     let watch: Watch
+    var showIcon: Bool
     
     var body: some View {
         HStack {
-            Image(systemName: "applewatch")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40, alignment: .center)
-                .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(watch.getDisplayColor())
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+            if showIcon {
+                Image(systemName: "applewatch")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 40, height: 40, alignment: .center)
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundStyle(watch.getDisplayColor())
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+            }
             VStack(alignment: .leading) {
                 Text(watch.formattedSeries())
                     .font(.headline)
