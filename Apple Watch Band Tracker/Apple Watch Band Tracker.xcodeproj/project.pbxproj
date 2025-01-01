@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -65,6 +65,9 @@
 		07D273EF28A84070006A8839 /* BandHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273ED28A84070006A8839 /* BandHistoryView.swift */; };
 		07D273F228AACB72006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273F128AACB72006A8839 /* BandsHistoryView.swift */; };
 		07D273F328AACB72006A8839 /* BandsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D273F128AACB72006A8839 /* BandsHistoryView.swift */; };
+		07D8EB442D25EECE00DF14CA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8EB432D25EECE00DF14CA /* WidgetKit.framework */; };
+		07D8EB462D25EECE00DF14CA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D8EB452D25EECE00DF14CA /* SwiftUI.framework */; };
+		07D8EB532D25EECF00DF14CA /* AppleWatchBandTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 07D8EB412D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E0F6BF289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C0289F354700E75E99 /* BandHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6BE289F354700E75E99 /* BandHistory.swift */; };
 		07E0F6C2289F63DA00E75E99 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E0F6C1289F63DA00E75E99 /* Theme.swift */; };
@@ -92,7 +95,28 @@
 			remoteGlobalIDString = 0796D2D2289E131C00591131;
 			remoteInfo = "Apple Watch Band Tracker (macOS)";
 		};
+		07D8EB512D25EECF00DF14CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0796D2C1289E131900591131 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07D8EB402D25EECE00DF14CA;
+			remoteInfo = AppleWatchBandTrackerWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07D8EB542D25EECF00DF14CA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				07D8EB532D25EECF00DF14CA /* AppleWatchBandTrackerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		07032FF128A1E11E003388C8 /* BandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandRepository.swift; sourceTree = "<group>"; };
@@ -132,12 +156,29 @@
 		07D273EA28A81F77006A8839 /* AllBands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllBands.json; sourceTree = "<group>"; };
 		07D273ED28A84070006A8839 /* BandHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryView.swift; sourceTree = "<group>"; };
 		07D273F128AACB72006A8839 /* BandsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsHistoryView.swift; sourceTree = "<group>"; };
+		07D8EB412D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AppleWatchBandTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		07D8EB432D25EECE00DF14CA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		07D8EB452D25EECE00DF14CA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		07E0F6BE289F354700E75E99 /* BandHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistory.swift; sourceTree = "<group>"; };
 		07E0F6C1289F63DA00E75E99 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		07ED5D0C28A1F3630044469C /* HistoryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMainView.swift; sourceTree = "<group>"; };
 		07ED5D1228A345300044469C /* AllWatches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllWatches.json; sourceTree = "<group>"; };
 		07ED5D1528A345CC0044469C /* WatchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		07D8EB572D25EECF00DF14CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 07D8EB402D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07D8EB472D25EECE00DF14CA /* AppleWatchBandTrackerWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (07D8EB572D25EECF00DF14CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = AppleWatchBandTrackerWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0796D2CA289E131C00591131 /* Frameworks */ = {
@@ -165,6 +206,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07D8EB3E2D25EECE00DF14CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D8EB462D25EECE00DF14CA /* SwiftUI.framework in Frameworks */,
+				07D8EB442D25EECE00DF14CA /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +273,8 @@
 				0796D2D4289E131C00591131 /* macOS */,
 				0796D2DD289E131C00591131 /* Tests iOS */,
 				0796D2E9289E131C00591131 /* Tests macOS */,
+				07D8EB472D25EECE00DF14CA /* AppleWatchBandTrackerWidget */,
+				07D8EB422D25EECE00DF14CA /* Frameworks */,
 				0796D2CE289E131C00591131 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -247,6 +299,7 @@
 				0796D2D3289E131C00591131 /* Apple Watch Band Tracker.app */,
 				0796D2DA289E131C00591131 /* Tests iOS.xctest */,
 				0796D2E6289E131C00591131 /* Tests macOS.xctest */,
+				07D8EB412D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +352,15 @@
 			name = MainViews;
 			sourceTree = "<group>";
 		};
+		07D8EB422D25EECE00DF14CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07D8EB432D25EECE00DF14CA /* WidgetKit.framework */,
+				07D8EB452D25EECE00DF14CA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,10 +371,12 @@
 				0796D2C9289E131C00591131 /* Sources */,
 				0796D2CA289E131C00591131 /* Frameworks */,
 				0796D2CB289E131C00591131 /* Resources */,
+				07D8EB542D25EECF00DF14CA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				07D8EB522D25EECF00DF14CA /* PBXTargetDependency */,
 			);
 			name = "Apple Watch Band Tracker (iOS)";
 			productName = "Apple Watch Band Tracker (iOS)";
@@ -372,6 +436,28 @@
 			productReference = 0796D2E6289E131C00591131 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		07D8EB402D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07D8EB582D25EECF00DF14CA /* Build configuration list for PBXNativeTarget "AppleWatchBandTrackerWidgetExtension" */;
+			buildPhases = (
+				07D8EB3D2D25EECE00DF14CA /* Sources */,
+				07D8EB3E2D25EECE00DF14CA /* Frameworks */,
+				07D8EB3F2D25EECE00DF14CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07D8EB472D25EECE00DF14CA /* AppleWatchBandTrackerWidget */,
+			);
+			name = AppleWatchBandTrackerWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = AppleWatchBandTrackerWidgetExtension;
+			productReference = 07D8EB412D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -379,7 +465,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					0796D2CC289E131C00591131 = {
@@ -395,6 +481,9 @@
 					0796D2E5289E131C00591131 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 0796D2D2289E131C00591131;
+					};
+					07D8EB402D25EECE00DF14CA = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -415,6 +504,7 @@
 				0796D2D2289E131C00591131 /* Apple Watch Band Tracker (macOS) */,
 				0796D2D9289E131C00591131 /* Tests iOS */,
 				0796D2E5289E131C00591131 /* Tests macOS */,
+				07D8EB402D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -448,6 +538,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0796D2E4289E131C00591131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07D8EB3F2D25EECE00DF14CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,6 +644,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07D8EB3D2D25EECE00DF14CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -559,6 +663,11 @@
 			isa = PBXTargetDependency;
 			target = 0796D2D2289E131C00591131 /* Apple Watch Band Tracker (macOS) */;
 			targetProxy = 0796D2E7289E131C00591131 /* PBXContainerItemProxy */;
+		};
+		07D8EB522D25EECF00DF14CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07D8EB402D25EECE00DF14CA /* AppleWatchBandTrackerWidgetExtension */;
+			targetProxy = 07D8EB512D25EECF00DF14CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -872,6 +981,74 @@
 			};
 			name = Release;
 		};
+		07D8EB552D25EECF00DF14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22NW9J6LJ8;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleWatchBandTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppleWatchBandTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker.AppleWatchBandTrackerWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07D8EB562D25EECF00DF14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22NW9J6LJ8;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleWatchBandTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppleWatchBandTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nhaberman.Apple-Watch-Band-Tracker.AppleWatchBandTrackerWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -916,6 +1093,15 @@
 			buildConfigurations = (
 				0796D300289E131C00591131 /* Debug */,
 				0796D301289E131C00591131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07D8EB582D25EECF00DF14CA /* Build configuration list for PBXNativeTarget "AppleWatchBandTrackerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07D8EB552D25EECF00DF14CA /* Debug */,
+				07D8EB562D25EECF00DF14CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
