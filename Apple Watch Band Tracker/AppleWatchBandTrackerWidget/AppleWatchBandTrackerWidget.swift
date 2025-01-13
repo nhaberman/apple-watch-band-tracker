@@ -53,6 +53,8 @@ struct AppleWatchBandTrackerWidgetEntryView : View {
 
             Text("Emoji:")
             Text(entry.emoji)
+            
+            //BandHistoryView()
         }
     }
 }
