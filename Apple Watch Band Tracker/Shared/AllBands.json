@@ -7004,6 +7004,15 @@
       "dateOrder": 25,
       "logicalOrder": 25,
       "manufacturer": "Burton Goods"
+    },
+    {
+      "bandID": "0760A6F6-5950-45BC-A4B4-B2EF721FDC46",
+      "bandType": "Third Party Band",
+      "color": "Silver Steel Band",
+      "colorOrder": 26,
+      "dateOrder": 26,
+      "logicalOrder": 26,
+      "manufacturer": "Nomad"
     }
   ]
 }
