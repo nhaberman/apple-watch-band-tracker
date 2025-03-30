@@ -4232,6 +4232,36 @@
       "season": "Fall",
       "year": 2024
     },
+    {
+      "bandID": "3C307F02-B269-4ACE-A34F-CA22BF195E9B",
+      "bandType": "Solo Loop",
+      "color": "Northern Lights",
+      "colorOrder": 67,
+      "dateOrder": 45,
+      "logicalOrder": 67,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "F654676D-D669-45E2-B0D6-CA4C202F4D68",
+      "bandType": "Solo Loop",
+      "color": "Periwinkle",
+      "colorOrder": 125,
+      "dateOrder": 46,
+      "logicalOrder": 125,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "33823DFD-D1F3-4D3F-AB41-0946A72E6D3B",
+      "bandType": "Solo Loop",
+      "color": "Peony",
+      "colorOrder": 193,
+      "dateOrder": 47,
+      "logicalOrder": 193,
+      "season": "Spring",
+      "year": 2025
+    }
   ],
   "braidedSoloLoops": [
     {
@@ -4598,6 +4628,36 @@
       "logicalOrder": 112,
       "season": "Fall",
       "year": 2024
+    },
+    {
+      "bandID": "AEBFFA3D-973B-41C9-8DDC-6EFD3B3539DB",
+      "bandType": "Braided Solo Loop",
+      "color": "Tangerine",
+      "colorOrder": 32,
+      "dateOrder": 37,
+      "logicalOrder": 32,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "E200E0F0-3BD6-4DF1-85BF-4B3328F438F6",
+      "bandType": "Braided Solo Loop",
+      "color": "Aquamarine",
+      "colorOrder": 65,
+      "dateOrder": 38,
+      "logicalOrder": 65,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "5D5CAB58-F688-4B7D-BCB0-E41BF15CCEDD",
+      "bandType": "Braided Solo Loop",
+      "color": "Peony",
+      "colorOrder": 135,
+      "dateOrder": 39,
+      "logicalOrder": 135,
+      "season": "Spring",
+      "year": 2025
     }
   ],
   "wovenNylons": [
