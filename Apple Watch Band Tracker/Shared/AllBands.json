@@ -1455,7 +1455,7 @@
       "color": "Black Unity",
       "colorOrder": 1145,
       "dateOrder": 129,
-      "edition": "2024",
+      "edition": "2024 - Unity Bloom",
       "logicalOrder": 30020,
       "season": "Spring",
       "year": 2024
@@ -3283,6 +3283,18 @@
       "logicalOrder": 805,
       "season": "Fall",
       "year": 2024
+    },
+    {
+      "bandID": "2B10ED45-CBB7-49EA-8952-A2DE8FECDA36",
+      "bandType": "Sport Loop",
+      "bandVersion": "None",
+      "color": "Black Unity",
+      "colorOrder": 1210,
+      "dateOrder": 104,
+      "edition": "2025 - Unity Rhythm",
+      "logicalOrder": 1110,
+      "season": "Spring",
+      "year": 2025
     }
   ],
   "nikeSportLoops": [
