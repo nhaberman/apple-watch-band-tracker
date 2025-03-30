@@ -1260,6 +1260,7 @@
       "color": "Starlight",
       "colorOrder": 900,
       "dateOrder": 110,
+      "generation": 1,
       "logicalOrder": 900,
       "season": "Fall",
       "year": 2021
@@ -1532,11 +1533,22 @@
       "year": 2024
     },
     {
+      "bandID": "B1771848-3324-4CA2-8145-229A96485786",
+      "bandType": "Sport Band",
+      "color": "Starlight",
+      "colorOrder": 905,
+      "dateOrder": 137,
+      "generation": 2,
+      "logicalOrder": 905,
+      "season": "Fall",
+      "year": 2024
+    },
+    {
       "bandID": "E216E6DE-476B-4F32-A60C-81DBB8C7D7E8",
       "bandType": "Sport Band",
       "color": "Stone Gray",
       "colorOrder": 1018,
-      "dateOrder": 137,
+      "dateOrder": 138,
       "logicalOrder": 1018,
       "season": "Fall",
       "year": 2024
@@ -1546,12 +1558,42 @@
       "bandType": "Sport Band",
       "color": "Black",
       "colorOrder": 1065,
-      "dateOrder": 138,
+      "dateOrder": 139,
       "generation": 3,
       "logicalOrder": 1065,
       "pin": "Space Black",
       "season": "Fall",
       "year": 2024
+    },
+    {
+      "bandID": "3BF2F196-B185-46F7-9C03-D1FFCF128DB3",
+      "bandType": "Sport Band",
+      "color": "Tangerine",
+      "colorOrder": 105,
+      "dateOrder": 140,
+      "logicalOrder": 105,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "666C7C53-71AB-4C19-B9C3-D7DD3C678F47",
+      "bandType": "Sport Band",
+      "color": "Aquamarine",
+      "colorOrder": 274,
+      "dateOrder": 141,
+      "logicalOrder": 274,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "AE1D1EBA-E713-45EA-AB87-2CB99C64C694",
+      "bandType": "Sport Band",
+      "color": "Periwinkle",
+      "colorOrder": 562,
+      "dateOrder": 142,
+      "logicalOrder": 562,
+      "season": "Spring",
+      "year": 2025
     },
     {
       "bandID": "D591F6FE-F5F3-42F6-82FD-B8F95FB39339",
