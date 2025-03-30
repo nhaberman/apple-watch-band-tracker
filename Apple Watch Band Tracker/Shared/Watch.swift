@@ -120,10 +120,14 @@ class Watch: Identifiable, Hashable, Codable {
                 return "Red"
             case .green:
                 return "Green"
+            case .pink:
+                return "Pink"
             case .starlight:
                 return "SlA"
             case .midnight:
                 return "MnA"
+            case .jetBlack:
+                return "JBA"
             default:
                 return ""
             }
@@ -146,6 +150,14 @@ class Watch: Identifiable, Hashable, Codable {
                 return "Ti"
             case .spaceBlack:
                 return "SB Ti"
+            case .natural:
+                return "NT"
+            case .gold:
+                return "GT"
+            case .slate:
+                return "ST"
+            case .black:
+                return "BT"
             default:
                 return ""
             }
@@ -177,6 +189,10 @@ class Watch: Identifiable, Hashable, Codable {
     }
     
     func getDisplayColor() -> Color {
+
+        // There must be a color defined in Assets for each finish+material combination.
+        // If not, no color or icon will be shown as this will return nothing.
+        
         let colorName = (finish.rawValue.capitalized + material.rawValue.capitalized).replacingOccurrences(of: " ", with: "")
         return Color(colorName)
     }
