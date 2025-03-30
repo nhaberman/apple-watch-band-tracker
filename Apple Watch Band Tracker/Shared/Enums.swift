@@ -64,17 +64,30 @@ public enum WatchCaseFinish: String, CaseIterable, Identifiable, Codable {
     public var id: Self { self }
     
     case none = "none"
-    case silver = "Silver"
+    
+    // aluminum finishes
+    case silver = "Silver" // also stainless steel and Titanium
     case spaceGray = "Space Gray"
-    case gold = "Gold"
+    case gold = "Gold"  // also stainless steel
     case roseGold = "Rose Gold"
     case blue = "Blue"
     case red = "Red"
     case green = "Green"
+    case pink = "Pink"
     case starlight = "Starlight"
     case midnight = "Midnight"
-    case spaceBlack = "Space Black"
+    case jetBlack = "Jet Black"
+    
+    // stainless steel finishes
+    case spaceBlack = "Space Black" // also titanium
     case graphite = "Graphite"
+    
+    // titanium finishes
+    case natural = "Natural"
+    case slate = "Slate"
+    case black = "Black"
+    
+    // edition finishes
     case yellowGoldEdition = "Yellow"
     case roseGoldEdition = "Rose"
     case whiteCeramic = "White"
