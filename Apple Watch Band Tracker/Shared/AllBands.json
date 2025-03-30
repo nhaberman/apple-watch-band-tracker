@@ -3277,7 +3277,7 @@
       "color": "Lake Green",
       "colorOrder": 232,
       "dateOrder": 99,
-      "logicalOrder": 801,
+      "logicalOrder": 802,
       "season": "Fall",
       "year": 2024
     },
@@ -3288,7 +3288,7 @@
       "color": "Blue Cloud",
       "colorOrder": 255,
       "dateOrder": 100,
-      "logicalOrder": 802,
+      "logicalOrder": 803,
       "season": "Fall",
       "year": 2024
     },
@@ -3299,7 +3299,7 @@
       "color": "Ultramarine",
       "colorOrder": 297,
       "dateOrder": 101,
-      "logicalOrder": 803,
+      "logicalOrder": 805,
       "season": "Fall",
       "year": 2024
     },
@@ -3311,7 +3311,7 @@
       "colorOrder": 405,
       "dateOrder": 102,
       "generation": 2,
-      "logicalOrder": 804,
+      "logicalOrder": 806,
       "season": "Fall",
       "year": 2024
     },
@@ -3322,7 +3322,7 @@
       "color": "Ink",
       "colorOrder": 589,
       "dateOrder": 103,
-      "logicalOrder": 805,
+      "logicalOrder": 807,
       "season": "Fall",
       "year": 2024
     },
@@ -3335,6 +3335,28 @@
       "dateOrder": 104,
       "edition": "2025 - Unity Rhythm",
       "logicalOrder": 1110,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "E1891172-52DD-4E6B-9698-D7069BA29EC0",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Sage",
+      "colorOrder": 231,
+      "dateOrder": 105,
+      "logicalOrder": 801,
+      "season": "Spring",
+      "year": 2025
+    },
+    {
+      "bandID": "A7D5E1C8-E9F0-40AC-9F97-64DF743B9591",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Periwinkle",
+      "colorOrder": 272,
+      "dateOrder": 106,
+      "logicalOrder": 804,
       "season": "Spring",
       "year": 2025
     }
