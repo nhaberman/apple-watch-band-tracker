@@ -7149,6 +7149,15 @@
       "dateOrder": 26,
       "logicalOrder": 26,
       "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "26D6AC1B-8DF3-43A4-9711-C25A2D7579F0",
+      "bandType": "Third Party Band",
+      "color": "Naval Blue Sport Band",
+      "colorOrder": 27,
+      "dateOrder": 27,
+      "logicalOrder": 27,
+      "manufacturer": "Nomad"
     }
   ]
 }
