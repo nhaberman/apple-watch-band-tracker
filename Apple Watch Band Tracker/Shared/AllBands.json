@@ -1596,6 +1596,17 @@
       "year": 2025
     },
     {
+      "bandID": "A2FEFDCE-B70E-49C8-A1FE-F1F617E9CC9F",
+      "bandType": "Sport Band",
+      "color": "Pride Edition",
+      "colorOrder": 1137,
+      "dateOrder": 143,
+      "edition": "2025",
+      "logicalOrder": 20030,
+      "season": "Summer",
+      "year": 2025
+    },
+    {
       "bandID": "D591F6FE-F5F3-42F6-82FD-B8F95FB39339",
       "bandType": "Sport Band",
       "color": "Cloud Blue",
@@ -7158,6 +7169,15 @@
       "dateOrder": 27,
       "logicalOrder": 27,
       "manufacturer": "Nomad"
+    },
+    {
+      "bandID": "B3D33BF3-24D3-4CA7-97E1-BDB63AFEA985",
+      "bandType": "Third Party Band",
+      "color": "Navy Blue Lite Fit Pro Case",
+      "colorOrder": 28,
+      "dateOrder": 28,
+      "logicalOrder": 28,
+      "manufacturer": "Spigen"
     }
   ]
 }
