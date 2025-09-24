@@ -364,6 +364,7 @@ class NikeSportLoop : Band {
         case branded = "Branded"
         case logo = "Logo"
         case pullTab = "Pull Tab"
+        case reflectiveTab = "Reflective Tab"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int? = nil) {
