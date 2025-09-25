@@ -18,7 +18,6 @@ struct TrackBandView: View {
     @State private var selectedBandType: BandType = .None
     @State private var selectedBand: Band = Band(color: "", season: .spring, year: 0)
     @State private var selectedDate = Date()
-    @State private var useCurrentDate = true
     @State private var showingAlert = false
     
     var body: some View {
@@ -57,11 +56,15 @@ struct TrackBandView: View {
                     .pickerStyle(.navigationLink)
                 }
                 Section("Select the Time:") {
-                    Toggle(isOn: $useCurrentDate) {
-                        Text("Use Current Time")
-                    }
-                    if (!useCurrentDate) {
-                        DatePicker("Time Worn", selection: $selectedDate)
+                    DatePicker("Time Worn", selection: $selectedDate)
+                    Button {
+                        print("using current time")
+                        selectedDate = Date()
+                    } label: {
+                        HStack {
+                            Image(systemName: "clock")
+                            Text("Use Current Time")
+                        }
                     }
                 }
                 
