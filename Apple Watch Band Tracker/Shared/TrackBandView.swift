@@ -57,16 +57,8 @@ struct TrackBandView: View {
                 }
                 Section("Select the Time:") {
                     DatePicker("Time Worn", selection: $selectedDate)
-                    Button {
-                        print("using current time")
-                        selectedDate = Date()
-                    } label: {
-                        HStack {
-                            Image(systemName: "clock")
-                            Text("Use Current Time")
-                        }
-                    }
                 }
+                
                 
                 Button {
                     print("Save Band")

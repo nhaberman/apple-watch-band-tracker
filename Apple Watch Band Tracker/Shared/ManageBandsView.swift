@@ -76,7 +76,7 @@ struct ManageBandsView: View {
         case .MagneticLink:
             return $showingMagneticLinkSection
         case .MilaneseLoop:
-            return $showingMagneticLinkSection
+            return $showingMilaneseLoopSection
         case .LinkBracelet:
             return $showingLinkBraceletSection
         case .AlpineLoop:
