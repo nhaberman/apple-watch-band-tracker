@@ -2180,13 +2180,26 @@
       "year": 2024
     },
     {
+      "bandID": "B1E173A6B-6264-4985-98CA-A5C5C3E6F6A1",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Color Flakes",
+      "color": "Volt Splash",
+      "colorOrder": 96,
+      "dateOrder": 49,
+      "logicalOrder": 1021,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2025
+    },
+    {
       "bandID": "9FEFB64F-CB5F-41E7-871C-82DAC3169542",
       "bandType": "Nike Sport Band",
       "bandVersion": "Color Flakes",
       "color": "Blue Ribbon",
       "colorOrder": 222,
-      "dateOrder": 49,
+      "dateOrder": 50,
       "logicalOrder": 1060,
+      "pin": "Engraved",
       "season": "Fall",
       "year": 2025
     },
@@ -2196,8 +2209,9 @@
       "bandVersion": "Color Flakes",
       "color": "Alpenglow Pink",
       "colorOrder": 18,
-      "dateOrder": 50,
+      "dateOrder": 51,
       "logicalOrder": 1015,
+      "pin": "Engraved",
       "season": "Fall",
       "year": 2025
     },
@@ -2206,9 +2220,10 @@
       "bandType": "Nike Sport Band",
       "bandVersion": "Color Flakes",
       "color": "Veiled Grey",
-      "colorOrder": 95,
-      "dateOrder": 48,
-      "logicalOrder": 1020,
+      "colorOrder": 358,
+      "dateOrder": 52,
+      "logicalOrder": 1140,
+      "pin": "Engraved",
       "season": "Fall",
       "year": 2025
     },
@@ -2218,8 +2233,9 @@
       "bandVersion": "Color Flakes",
       "color": "Midnight Black",
       "colorOrder": 375,
-      "dateOrder": 52,
+      "dateOrder": 53,
       "logicalOrder": 1170,
+      "pin": "Engraved",
       "season": "Fall",
       "year": 2025
     },
