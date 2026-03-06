@@ -2251,6 +2251,45 @@
       "pin": "Space Black",
       "season": "Spring",
       "year": 0
+    },
+    {
+      "bandID": "2C243C49-BEC3-4C80-A81D-99ED0529A490",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
+      "color": "Plum Eclipse / Burgandy",
+      "colorOrder": 260,
+      "dateOrder": 100,
+      "edition": "Prototype",
+      "logicalOrder": 30010,
+      "pin": "Space Black",
+      "season": "Spring",
+      "year": 0
+    },
+    {
+      "bandID": "C9258172-F6E9-4F01-8ED2-7AE7611D4A64",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
+      "color": "Luminous Green / Armory Navy",
+      "colorOrder": 260,
+      "dateOrder": 100,
+      "edition": "Prototype",
+      "logicalOrder": 30010,
+      "pin": "Space Black",
+      "season": "Spring",
+      "year": 0
+    },
+    {
+      "bandID": "A34A4A7A-0995-4228-ABB2-36F3FECB4BFB",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Classic",
+      "color": "Concord / Bronzine",
+      "colorOrder": 260,
+      "dateOrder": 100,
+      "edition": "Prototype",
+      "logicalOrder": 30010,
+      "pin": "Space Black",
+      "season": "Spring",
+      "year": 0
     }
   ],
   "sportLoops": [
