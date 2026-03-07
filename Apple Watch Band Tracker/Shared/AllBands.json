@@ -869,6 +869,7 @@
       "color": "Clementine",
       "colorOrder": 110,
       "dateOrder": 72,
+      "generation": 1,
       "logicalOrder": 110,
       "season": "Fall",
       "year": 2019
@@ -1611,7 +1612,7 @@
       "bandType": "Sport Band",
       "color": "Neon Yellow",
       "colorOrder": 255,
-      "dateOrder": 143,
+      "dateOrder": 144,
       "logicalOrder": 255,
       "season": "Fall",
       "year": 2025
@@ -1621,7 +1622,7 @@
       "bandType": "Sport Band",
       "color": "Anchor Blue",
       "colorOrder": 567,
-      "dateOrder": 144,
+      "dateOrder": 145,
       "logicalOrder": 567,
       "season": "Fall",
       "year": 2025
@@ -1631,10 +1632,41 @@
       "bandType": "Sport Band",
       "color": "Purple Fog",
       "colorOrder": 665,
-      "dateOrder": 145,
+      "dateOrder": 146,
       "logicalOrder": 665,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "42AA6834-4644-4C05-B74C-53E2EF6635C5",
+      "bandType": "Sport Band",
+      "color": "Clementine",
+      "colorOrder": 145,
+      "dateOrder": 147,
+      "generation": 2,
+      "logicalOrder": 145,
+      "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "9DFB1069-9F23-46A7-9033-FCDCC080B0D6",
+      "bandType": "Sport Band",
+      "color": "Bright Guava",
+      "colorOrder": 755,
+      "dateOrder": 148,
+      "logicalOrder": 755,
+      "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "3EC5CC75-5ACC-40DE-8141-D5D42C69C6ED",
+      "bandType": "Sport Band",
+      "color": "Soft Pink",
+      "colorOrder": 836,
+      "dateOrder": 149,
+      "logicalOrder": 836,
+      "season": "Spring",
+      "year": 2026
     },
     {
       "bandID": "D591F6FE-F5F3-42F6-82FD-B8F95FB39339",
@@ -3554,6 +3586,39 @@
       "logicalOrder": 880,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "ACBFE1F0-5739-4CA1-B229-16FEBF8962C5",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Cantaloupe",
+      "colorOrder": 75,
+      "dateOrder": 112,
+      "logicalOrder": 805,
+      "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "ADCCB066-B166-41DA-B3ED-EF827C3D1AE9",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Blue Mist",
+      "colorOrder": 252,
+      "dateOrder": 113,
+      "logicalOrder": 835,
+      "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "7AF66679-25AF-4ED6-9454-CE7EE500E663",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Bright Guava",
+      "colorOrder": 455,
+      "dateOrder": 114,
+      "logicalOrder": 875,
+      "season": "Spring",
+      "year": 2026
     }
   ],
   "nikeSportLoops": [
@@ -4683,6 +4748,7 @@
       "color": "Black Unity",
       "colorOrder": 2010,
       "dateOrder": 14,
+      "edition": "2022",
       "logicalOrder": 2010,
       "season": "Spring",
       "year": 2022
@@ -4978,6 +5044,17 @@
       "logicalOrder": 93,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "C40325A5-E1EC-4F18-9A94-E1F733BDC16D",
+      "bandType": "Braided Solo Loop",
+      "color": "Black Unity",
+      "colorOrder": 2020,
+      "dateOrder": 44,
+      "edition": "2026",
+      "logicalOrder": 2020,
+      "season": "Spring",
+      "year": 2026
     }
   ],
   "wovenNylons": [
