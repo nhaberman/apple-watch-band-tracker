@@ -86,6 +86,7 @@ struct BandHistoryDetailsView_Previews: PreviewProvider {
                 year: 2017,
                 generation: 4),
             watch: Watch(
+                model: .series,
                 series: 0,
                 material: .stainlessSteel,
                 finish: .silver,

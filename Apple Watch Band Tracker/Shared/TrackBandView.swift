@@ -14,7 +14,7 @@ struct TrackBandView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var selectedWatch: Watch = Watch(series: -1, material: .none, finish: .none, size: 0)
+    @State private var selectedWatch: Watch = Watch(model: .none, series: -1, material: .none, finish: .none, size: 0)
     @State private var selectedBandType: BandType = .None
     @State private var selectedBand: Band = Band(color: "", season: .spring, year: 0)
     @State private var selectedDate = Date()

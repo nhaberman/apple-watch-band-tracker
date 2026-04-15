@@ -28,7 +28,7 @@ struct WatchView : View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
             }
             VStack(alignment: .leading) {
-                Text(watch.formattedSeries())
+                Text(watch.formattedModel())
                     .font(.headline)
                 Text(watch.formattedColor())
                 Text(watch.formattedSize())

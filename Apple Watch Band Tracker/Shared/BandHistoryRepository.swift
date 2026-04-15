@@ -332,9 +332,9 @@ class BandHistoryRepository : ObservableObject {
         var result = [BandHistory]()
         
         let watches: [Watch] = [
-            Watch(series: 3, material: .aluminum, finish: .spaceGray, size: 42, edition: "Nike"),
-            Watch(series: 5, material: .stainlessSteel, finish: .gold, size: 44),
-            Watch(series: 7, material: .titanium, finish: .silver, size: 45, edition: "Edition"),
+            Watch(model: .series, series: 3, material: .aluminum, finish: .spaceGray, size: 42, edition: "Nike"),
+            Watch(model: .series, series: 5, material: .stainlessSteel, finish: .gold, size: 44),
+            Watch(model: .series, series: 7, material: .titanium, finish: .silver, size: 45, edition: "Edition"),
         ]
         
         let bands: [Band] = [
