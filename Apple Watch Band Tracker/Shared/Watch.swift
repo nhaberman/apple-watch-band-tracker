@@ -45,6 +45,22 @@ class Watch: Identifiable, Hashable, Codable {
         self.size = size
     }
     
+    required init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        watchID = try container.decode(UUID.self, forKey: .watchID)
+        model = try container.decodeIfPresent(WatchModel.self, forKey: .model) ?? .series
+        series = try container.decode(Int.self, forKey: .series)
+        material = try container.decode(WatchCaseMaterial.self, forKey: .material)
+        finish = try container.decode(WatchCaseFinish.self, forKey: .finish)
+        edition = try container.decodeIfPresent(String.self, forKey: .edition)
+        size = try container.decode(Int.self, forKey: .size)
+    }
+    
+    // coding keys for watch properties
+    enum CodingKeys: String, CodingKey {
+        case watchID, model, series, material, finish, edition, size
+    }
+    
     func formattedName() -> String {
         "\(formattedModel())\n\(formattedColor())\n\(formattedSize())"
     }
