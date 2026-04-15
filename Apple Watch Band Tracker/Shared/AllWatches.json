@@ -123,6 +123,14 @@
             "material": "Titanium",
             "finish": "Slate",
             "size": 46
+        },
+        {
+            "watchID": "B0A0C63A-A08F-40E5-B2C7-5DF412AE1372",
+            "model": "Ultra",
+            "series": 3,
+            "material": "Titanium",
+            "finish": "Natural",
+            "size": 49
         }
     ]
 }
