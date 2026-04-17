@@ -10,7 +10,8 @@ import SwiftUI
 
 class Watch: Identifiable, Hashable, Codable {
     static func == (lhs: Watch, rhs: Watch) -> Bool {
-        return lhs.series == rhs.series
+        return lhs.model == rhs.model
+            && lhs.series == rhs.series
             && lhs.material == rhs.material
             && lhs.finish == rhs.finish
             && lhs.edition == rhs.edition
@@ -18,6 +19,7 @@ class Watch: Identifiable, Hashable, Codable {
     }
     
     func hash(into hasher: inout Hasher) {
+        hasher.combine(model)
         hasher.combine(series)
         hasher.combine(material)
         hasher.combine(finish)
@@ -26,15 +28,16 @@ class Watch: Identifiable, Hashable, Codable {
     }
     
     var watchID: UUID
+    var model: WatchModel
     var series: Int
-    var model: String?
     var material: WatchCaseMaterial
     var finish: WatchCaseFinish
     var edition: String?
     var size: Int = 0
     
-    init(series: Int, material: WatchCaseMaterial, finish: WatchCaseFinish, size: Int, edition: String? = nil) {
+    init(model: WatchModel, series: Int, material: WatchCaseMaterial, finish: WatchCaseFinish, size: Int, edition: String? = nil) {
         self.watchID = UUID()
+        self.model = model
         self.series = series
         self.material = material
         self.finish = finish
@@ -42,47 +45,78 @@ class Watch: Identifiable, Hashable, Codable {
         self.size = size
     }
     
+    required init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        watchID = try container.decode(UUID.self, forKey: .watchID)
+        model = try container.decodeIfPresent(WatchModel.self, forKey: .model) ?? .series
+        series = try container.decode(Int.self, forKey: .series)
+        material = try container.decode(WatchCaseMaterial.self, forKey: .material)
+        finish = try container.decode(WatchCaseFinish.self, forKey: .finish)
+        edition = try container.decodeIfPresent(String.self, forKey: .edition)
+        size = try container.decode(Int.self, forKey: .size)
+    }
+    
+    // coding keys for watch properties
+    enum CodingKeys: String, CodingKey {
+        case watchID, model, series, material, finish, edition, size
+    }
+    
     func formattedName() -> String {
-        "\(formattedSeries())\n\(formattedColor())\n\(formattedSize())"
+        "\(formattedModel())\n\(formattedColor())\n\(formattedSize())"
     }
     
     func formattedNameOneLine(useShortFormat: Bool = true) -> String {
         useShortFormat ?
-            "\(formattedShortSeries()) \(formattedShortColor()) - \(formattedSize())" :
-            "\(formattedSeries()), \(formattedColor()), \(formattedSize())"
+            "\(formattedShortModel()) \(formattedShortColor()) - \(formattedSize())" :
+            "\(formattedModel()), \(formattedColor()), \(formattedSize())"
     }
     
-    func formattedSeries() -> String {
+    func formattedModel() -> String {
         var result: String = ""
         
-        if (model != nil) {
-            result = model!
-        }
-        else {
+        switch model {
+        case .none:
+            break
+        case .series:
             if (series == 0) {
                 result = "1st Generation"
             }
             else {
-                result = "Series \(series)"
+                result = "\(model.rawValue) \(series)"
             }
+        case .se, .ultra:
+            result = "\(model.rawValue)"
             
-            // edition
-            if (edition != nil) {
-                result += " (\(edition!))"
+            if (series > 1) {
+                result += " \(series)"
             }
+        }
+        
+        // edition
+        if (edition != nil) {
+            result += " (\(edition!))"
         }
         
         return result
     }
     
-    func formattedShortSeries() -> String {
+    func formattedShortModel() -> String {
         var result: String = ""
         
-        if (series == 0) {
-            result = "1G"
-        }
-        else {
-            result = "S\(series)"
+        switch model {
+        case .none:
+            break
+        case .series:
+            if (series == 0) {
+                result = "1G"
+            }
+            else {
+                result = "S\(series)"
+            }
+        case .se:
+            result = "SE\(series)"
+        case .ultra:
+            result = "U\(series)"
         }
         
         // edition
@@ -185,7 +219,7 @@ class Watch: Identifiable, Hashable, Codable {
     }
     
     func formattedSize() -> String {
-        return "\(size)mm"
+        return "\(size) mm"
     }
     
     func getDisplayColor() -> Color {

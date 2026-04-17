@@ -49,6 +49,15 @@ public enum Season: String, CaseIterable, Identifiable, Codable {
     case winter = "Winter"
 }
 
+public enum WatchModel: String, CaseIterable, Identifiable, Codable {
+    public var id: Self {self}
+    
+    case none = "none"
+    case series = "Series"
+    case se = "SE"
+    case ultra = "Ultra"
+}
+
 public enum WatchCaseMaterial: String, CaseIterable, Identifiable, Codable {
     public var id: Self { self }
     
