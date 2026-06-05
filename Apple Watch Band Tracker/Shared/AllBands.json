@@ -7717,7 +7717,9 @@
       "colorOrder": 18,
       "dateOrder": 18,
       "logicalOrder": 18,
-      "manufacturer": "Hermès"
+      "manufacturer": "Hermès",
+      "season": "Fall",
+      "year": 2019
     },
     {
       "bandID": "02F76158-E2AB-43E1-A0E6-4B9079A8FF14",
@@ -7726,7 +7728,9 @@
       "colorOrder": 19,
       "dateOrder": 19,
       "logicalOrder": 19,
-      "manufacturer": "Hermès"
+      "manufacturer": "Hermès",
+      "season": "Fall",
+      "year": 2021
     },
     {
       "bandID": "5A541576-C552-47E5-8473-8B6CCAE8C740",
@@ -7809,6 +7813,17 @@
       "dateOrder": 28,
       "logicalOrder": 28,
       "manufacturer": "Spigen"
+    },
+    {
+      "bandID": "DA1D5E2B-69BD-4747-BEEF-55884A37B9CB",
+      "bandType": "Third Party Band",
+      "color": "Navy Leather Single Tour",
+      "colorOrder": 29,
+      "dateOrder": 29,
+      "logicalOrder": 29,
+      "manufacturer": "Hermès",
+      "season": "Fall",
+      "year": 2020
     }
   ]
 }
