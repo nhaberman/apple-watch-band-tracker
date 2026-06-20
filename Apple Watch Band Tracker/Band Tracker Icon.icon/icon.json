@@ -1,0 +1,82 @@
+{
+  "fill-specializations" : [
+    {
+      "value" : {
+        "automatic-gradient" : "display-p3:0.22548,0.38685,0.61809,1.00000"
+      }
+    },
+    {
+      "appearance" : "dark",
+      "value" : "automatic"
+    }
+  ],
+  "groups" : [
+    {
+      "blur-material" : null,
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill" : {
+            "solid" : "display-p3:0.13256,0.30881,0.57863,1.00000"
+          },
+          "glass" : false,
+          "image-name" : "03-foreground-watchband.svg",
+          "name" : "03-foreground-watchband"
+        }
+      ],
+      "lighting" : "individual",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "blend-mode" : "darken",
+      "blur-material" : null,
+      "layers" : [
+        {
+          "fill-specializations" : [
+            {
+              "value" : "automatic"
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "display-p3:0.38403,0.64839,1.04685,1.00000"
+              }
+            }
+          ],
+          "image-name" : "01-background-cover.svg",
+          "name" : "01-background-cover"
+        },
+        {
+          "fill" : {
+            "automatic-gradient" : "extended-gray:0.00000,1.00000"
+          },
+          "image-name" : "02-midground-binding.svg",
+          "name" : "02-midground-binding"
+        }
+      ],
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
