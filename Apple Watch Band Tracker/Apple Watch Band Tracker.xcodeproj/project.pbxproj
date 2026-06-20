@@ -11,6 +11,7 @@
 		07032FF328A1E11E003388C8 /* BandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF128A1E11E003388C8 /* BandRepository.swift */; };
 		07032FF828A1E30E003388C8 /* BandHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */; };
 		07032FF928A1E30E003388C8 /* BandHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */; };
+		070C7BAA2FE6345E00B01ECD /* Band Tracker Icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 070C7BA92FE6345D00B01ECD /* Band Tracker Icon.icon */; };
 		072FDFAD28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
 		072FDFAE28B7A0520002BCCE /* ManageBandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */; };
 		072FDFB028B8F0E70002BCCE /* ManageWatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */; };
@@ -97,6 +98,7 @@
 /* Begin PBXFileReference section */
 		07032FF128A1E11E003388C8 /* BandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandRepository.swift; sourceTree = "<group>"; };
 		07032FF728A1E30E003388C8 /* BandHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandHistoryRepository.swift; sourceTree = "<group>"; };
+		070C7BA92FE6345D00B01ECD /* Band Tracker Icon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "Band Tracker Icon.icon"; sourceTree = SOURCE_ROOT; };
 		072FDFAC28B7A0520002BCCE /* ManageBandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBandsView.swift; sourceTree = "<group>"; };
 		072FDFAF28B8F0E70002BCCE /* ManageWatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWatchesView.swift; sourceTree = "<group>"; };
 		076182F329E39CB8009D9C15 /* WatchesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchesMainView.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				0796D2C6289E131900591131 /* AppleWatchBandTrackerApp.swift */,
 				07E0F6C1289F63DA00E75E99 /* Theme.swift */,
 				0796D2C8289E131C00591131 /* Assets.xcassets */,
+				070C7BA92FE6345D00B01ECD /* Band Tracker Icon.icon */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -380,7 +383,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					0796D2CC289E131C00591131 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -427,6 +430,7 @@
 				07ED5D1328A345300044469C /* AllWatches.json in Resources */,
 				07D273EB28A81F77006A8839 /* AllBands.json in Resources */,
 				0796D2F2289E131C00591131 /* Assets.xcassets in Resources */,
+				070C7BAA2FE6345E00B01ECD /* Band Tracker Icon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +622,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -671,6 +676,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -679,7 +685,7 @@
 		0796D2F7289E131C00591131 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Band Tracker Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -712,7 +718,7 @@
 		0796D2F8289E131C00591131 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Band Tracker Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
