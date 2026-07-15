@@ -7824,6 +7824,15 @@
       "manufacturer": "Hermès",
       "season": "Fall",
       "year": 2020
+    },
+    {
+      "bandID": "B88FD104-115C-4C06-915D-657B12F529DC",
+      "bandType": "Third Party Band",
+      "color": "Atlantic Blue Rugged Band",
+      "colorOrder": 30,
+      "dateOrder": 30,
+      "logicalOrder": 30,
+      "manufacturer": "Nomad"
     }
   ]
 }
