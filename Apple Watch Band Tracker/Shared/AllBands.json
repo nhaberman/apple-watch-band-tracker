@@ -3619,6 +3619,18 @@
       "logicalOrder": 875,
       "season": "Spring",
       "year": 2026
+    },
+    {
+      "bandID": "A649A1D1-9862-41D8-99BB-5C040036DD21",
+      "bandType": "Sport Loop",
+      "bandVersion": "None",
+      "color": "Close Your Rings",
+      "colorOrder": 10001,
+      "dateOrder": 115,
+      "edition": "2026",
+      "logicalOrder": 2020,
+      "season": "Summer",
+      "year": 2026
     }
   ],
   "nikeSportLoops": [
