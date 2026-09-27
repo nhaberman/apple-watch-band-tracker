@@ -4373,6 +4373,61 @@
       "logicalOrder": 750,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "BC8E4853-6A4D-4C87-88A6-2E258EB2B516",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Chalk Calm",
+      "colorOrder": 26,
+      "dateOrder": 44,
+      "logicalOrder": 810,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C766D637-976D-4852-B6B0-9866838759E2",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Green Spark",
+      "colorOrder": 72,
+      "dateOrder": 45,
+      "logicalOrder": 820,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B25E95BC-BF9F-4B79-8675-098A1B581558",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Pavement Grey",
+      "colorOrder": 192,
+      "dateOrder": 46,
+      "logicalOrder": 830,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "22E9BFDB-E040-4B7B-8000-F8C90F7F27F2",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Essential White",
+      "colorOrder": 203,
+      "dateOrder": 47,
+      "logicalOrder": 840,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "105A3F14-2E25-4183-BB2B-DF6A4ED2F8F8",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "After Dark Black",
+      "colorOrder": 265,
+      "dateOrder": 48,
+      "logicalOrder": 850,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "soloLoops": [
