@@ -5176,9 +5176,9 @@
       "bandID": "0041DB1A-6B2F-4D30-8411-041BD7AD6C8F",
       "bandType": "Braided Solo Loop",
       "color": "Slate Blue",
-      "colorOrder": 76,
+      "colorOrder": 78,
       "dateOrder": 20,
-      "logicalOrder": 76,
+      "logicalOrder": 78,
       "season": "Fall",
       "year": 2022
     },
@@ -5218,6 +5218,7 @@
       "color": "Olive",
       "colorOrder": 71,
       "dateOrder": 24,
+      "generation": 1,
       "logicalOrder": 71,
       "season": "Spring",
       "year": 2023
@@ -5307,9 +5308,9 @@
       "bandID": "8064D218-EC1C-43C9-9FE7-1862C559B1B7",
       "bandType": "Braided Solo Loop",
       "color": "Chartreuse",
-      "colorOrder": 42,
+      "colorOrder": 48,
       "dateOrder": 33,
-      "logicalOrder": 42,
+      "logicalOrder": 48,
       "season": "Fall",
       "year": 2024
     },
@@ -5339,6 +5340,7 @@
       "color": "Magenta",
       "colorOrder": 112,
       "dateOrder": 36,
+      "generation": 1,
       "logicalOrder": 112,
       "season": "Fall",
       "year": 2024
@@ -5422,6 +5424,68 @@
       "edition": "2026",
       "logicalOrder": 2020,
       "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "C28BF851-BFC8-4120-95A8-E132F3362828",
+      "bandType": "Braided Solo Loop",
+      "color": "Olive",
+      "colorOrder": 49,
+      "dateOrder": 45,
+      "generation": 2,
+      "logicalOrder": 49,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "F3A5FF3C-F2E8-4989-B1B9-D8AD87FDEAA5",
+      "bandType": "Braided Solo Loop",
+      "color": "Wildflower Blue",
+      "colorOrder": 77,
+      "dateOrder": 46,
+      "logicalOrder": 77,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B8BCAE32-4183-45DB-9223-437823E99BC6",
+      "bandType": "Braided Solo Loop",
+      "color": "Navy Blue",
+      "colorOrder": 98,
+      "dateOrder": 47,
+      "logicalOrder": 98,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "E0470BE8-5988-4341-875F-D3945A817596",
+      "bandType": "Braided Solo Loop",
+      "color": "Burgundy",
+      "colorOrder": 102,
+      "dateOrder": 48,
+      "logicalOrder": 102,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B2D776CD-C8F5-49C4-AA37-26A7B9FCF809",
+      "bandType": "Braided Solo Loop",
+      "color": "Magenta",
+      "colorOrder": 111,
+      "dateOrder": 49,
+      "generation": 2,
+      "logicalOrder": 111,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "BED64C32-05D9-45BA-9AE4-B1799C6D2700",
+      "bandType": "Braided Solo Loop",
+      "color": "Black",
+      "colorOrder": 170,
+      "dateOrder": 50,
+      "logicalOrder": 170,
+      "season": "Fall",
       "year": 2026
     }
   ],
