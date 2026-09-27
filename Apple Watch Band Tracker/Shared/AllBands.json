@@ -4738,7 +4738,8 @@
       "color": "Olive",
       "colorOrder": 100,
       "dateOrder": 31,
-      "logicalOrder": 105,
+      "generation": 1,
+      "logicalOrder": 100,
       "season": "Spring",
       "year": 2023
     },
@@ -4932,6 +4933,47 @@
       "logicalOrder": 139,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "855DA32B-A830-40F5-9482-51855B13823E",
+      "bandType": "Solo Loop",
+      "color": "Olive",
+      "colorOrder": 108,
+      "dateOrder": 51,
+      "generation": 2,
+      "logicalOrder": 108,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "402FB645-77C8-477E-B9E8-04550CDEFB35",
+      "bandType": "Solo Loop",
+      "color": "Wildflower Blue",
+      "colorOrder": 113,
+      "dateOrder": 52,
+      "logicalOrder": 113,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C028CBC7-D930-4EE3-8F3F-68CE884D4E3D",
+      "bandType": "Solo Loop",
+      "color": "Navy Blue",
+      "colorOrder": 155,
+      "dateOrder": 53,
+      "logicalOrder": 155,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "60B0FCF5-543D-443B-9AB8-2ED1BED2354B",
+      "bandType": "Solo Loop",
+      "color": "Burgundy",
+      "colorOrder": 175,
+      "dateOrder": 54,
+      "logicalOrder": 175,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "braidedSoloLoops": [
