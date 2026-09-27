@@ -2847,7 +2847,7 @@
       "color": "Pomegranate",
       "colorOrder": 450,
       "dateOrder": 33,
-      "logicalOrder": 310,
+      "logicalOrder": 311,
       "season": "Fall",
       "year": 2019
     },
@@ -2869,7 +2869,7 @@
       "color": "Anchor Gray",
       "colorOrder": 570,
       "dateOrder": 34,
-      "logicalOrder": 312,
+      "logicalOrder": 313,
       "season": "Fall",
       "year": 2019
     },
@@ -2924,7 +2924,7 @@
       "color": "Neon Pink",
       "colorOrder": 490,
       "dateOrder": 39,
-      "logicalOrder": 311,
+      "logicalOrder": 312,
       "season": "Spring",
       "year": 2020
     },
@@ -3059,6 +3059,7 @@
       "color": "Olive",
       "colorOrder": 220,
       "dateOrder": 49,
+      "generation": 1,
       "logicalOrder": 405,
       "season": "Spring",
       "year": 2021
@@ -3789,15 +3790,105 @@
       "year": 2026
     },
     {
+      "bandID": "60B5F92C-7463-4ABC-91CD-831964FBDD5D",
+      "bandType": "Sport Loop",
+      "bandVersion": "None",
+      "color": "Pride Edition",
+      "colorOrder": 1120,
+      "dateOrder": 115,
+      "edition": "2026",
+      "logicalOrder": 1030,
+      "season": "Summer",
+      "year": 2026
+    },
+    {
       "bandID": "A649A1D1-9862-41D8-99BB-5C040036DD21",
       "bandType": "Sport Loop",
       "bandVersion": "None",
       "color": "Close Your Rings",
       "colorOrder": 10001,
-      "dateOrder": 115,
+      "dateOrder": 116,
       "edition": "2026",
       "logicalOrder": 2020,
       "season": "Summer",
+      "year": 2026
+    },
+    {
+      "bandID": "E1E57CE4-4BE6-4F89-9434-881FDF558023",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Limestone",
+      "colorOrder": 155,
+      "dateOrder": 117,
+      "logicalOrder": 807,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "9ABD1AB6-D6AE-45D7-B2A9-A6C0817FE957",
+      "bandType": "Sport Loop",
+      "bandVersion": "Plaid",
+      "color": "Light Umber Plaid",
+      "colorOrder": 163,
+      "dateOrder": 118,
+      "logicalOrder": 910,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B8EC99C2-AF62-44EA-A114-966DB55FE858",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Olive",
+      "colorOrder": 166,
+      "dateOrder": 119,
+      "generation": 2,
+      "logicalOrder": 808,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "6358D901-BEFF-4884-A149-48A45917B468",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Chambray Blue",
+      "colorOrder": 251,
+      "dateOrder": 120,
+      "logicalOrder": 832,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "EAFB2AA2-3FCF-46D1-B4C7-A7DE2495E83F",
+      "bandType": "Sport Loop",
+      "bandVersion": "Plaid",
+      "color": "Burgundy Plaid",
+      "colorOrder": 402,
+      "dateOrder": 121,
+      "logicalOrder": 950,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "D1455484-4DED-4CC8-A94D-8FE910C43011",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Burgundy",
+      "colorOrder": 403,
+      "dateOrder": 122,
+      "logicalOrder": 868,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "1E6B15A6-7B1F-4D29-90D5-0006C9576CDC",
+      "bandType": "Sport Loop",
+      "bandVersion": "Two-Tone",
+      "color": "Magenta",
+      "colorOrder": 445,
+      "dateOrder": 123,
+      "logicalOrder": 310,
+      "season": "Fall",
       "year": 2026
     }
   ],
