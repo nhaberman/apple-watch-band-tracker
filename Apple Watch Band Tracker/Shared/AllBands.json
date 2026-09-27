@@ -2380,6 +2380,66 @@
       "year": 2025
     },
     {
+      "bandID": "5F11B90F-008A-4D4E-AF24-F166BC6392BC",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Chalk Calm",
+      "colorOrder": 85,
+      "dateOrder": 54,
+      "logicalOrder": 2020,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "DC1F5C5A-7334-422E-8F35-7543E39833AD",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Green Spark",
+      "colorOrder": 155,
+      "dateOrder": 55,
+      "logicalOrder": 2040,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "96170FFC-E076-427A-9556-E72B536E369D",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Pavement Grey",
+      "colorOrder": 126,
+      "dateOrder": 56,
+      "logicalOrder": 2060,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "492872B6-4026-4535-9607-33066AB9AAAA",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Essential White",
+      "colorOrder": 359,
+      "dateOrder": 57,
+      "logicalOrder": 2080,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "23F1EE50-E9E3-4A20-9E13-BB7DE11C3086",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "After Dark Black",
+      "colorOrder": 367,
+      "dateOrder": 58,
+      "logicalOrder": 2100,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
       "bandID": "E3E5BA4B-4128-4EBA-A429-55B9A4BAD579",
       "bandType": "Nike Sport Band",
       "bandVersion": "Classic",
