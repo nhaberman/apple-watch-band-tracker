@@ -7337,6 +7337,50 @@
       "logicalOrder": 140,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "BFAF424F-363F-4249-A8AD-5B724F61F597",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Camel",
+      "colorOrder": 10,
+      "dateOrder": 10,
+      "logicalOrder": 10,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "843B5641-C706-4E7D-B83B-2E69412E5DB0",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Wildflower Blue",
+      "colorOrder": 80,
+      "dateOrder": 11,
+      "logicalOrder": 80,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "82E8CB4E-7DBD-4F18-BC09-3EFC0FE51390",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Burgundy",
+      "colorOrder": 130,
+      "dateOrder": 12,
+      "logicalOrder": 130,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "A55E6AE8-F38B-479B-B5AE-94EB6F1BBE58",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Midnight",
+      "colorOrder": 240,
+      "dateOrder": 13,
+      "logicalOrder": 240,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "milaneseLoops": [
