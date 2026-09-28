@@ -7442,6 +7442,7 @@
       "color": "Natural",
       "colorOrder": 15,
       "dateOrder": 6,
+      "generation": 1,
       "logicalOrder": 15,
       "season": "Fall",
       "year": 2024
@@ -7466,6 +7467,36 @@
       "logicalOrder": 35,
       "season": "Fall",
       "year": 2024
+    },
+    {
+      "bandID": "5E43AFD4-F902-4C0C-B246-8D8725472B68",
+      "bandType": "Milanese Loop",
+      "color": "Natural",
+      "colorOrder": 16,
+      "dateOrder": 9,
+      "logicalOrder": 16,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "01DE9268-825B-4C6E-8822-154BC57DEC88",
+      "bandType": "Milanese Loop",
+      "color": "Radiant Gold",
+      "colorOrder": 22,
+      "dateOrder": 10,
+      "logicalOrder": 22,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "922A177E-FC13-4FDC-B426-CEE87DC727E1",
+      "bandType": "Milanese Loop",
+      "color": "Dark Bronze",
+      "colorOrder": 32,
+      "dateOrder": 11,
+      "logicalOrder": 32,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "linkBracelets": [
