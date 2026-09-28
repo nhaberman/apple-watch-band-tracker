@@ -6738,6 +6738,7 @@
       "color": "Mulberry",
       "colorOrder": 135,
       "dateOrder": 30,
+      "generation": 1,
       "logicalOrder": 2100,
       "season": "Fall",
       "year": 2023
@@ -6825,6 +6826,55 @@
       "logicalOrder": 2175,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "5812600D-0418-4A1E-9B1C-F80262ADC9AD",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Camel",
+      "colorOrder": 66,
+      "dateOrder": 38,
+      "logicalOrder": 3100,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "BEF6A27E-B4C2-4257-8E43-8119CA8BD07A",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Sage",
+      "colorOrder": 67,
+      "dateOrder": 39,
+      "logicalOrder": 3200,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "509F86CF-17B4-458F-AC96-90FA1DE98895",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Navy Blue",
+      "colorOrder": 127,
+      "dateOrder": 40,
+      "logicalOrder": 3300,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "9937516C-73E4-4D3A-83DD-C0DBF8E33097",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Mulberry",
+      "colorOrder": 131,
+      "dateOrder": 41,
+      "generation": 1,
+      "logicalOrder": 3400,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "leatherLoops": [
