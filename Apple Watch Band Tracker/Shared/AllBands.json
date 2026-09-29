@@ -7766,6 +7766,72 @@
       "logicalOrder": 40,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "A7538CBD-01E0-46D5-A59F-7EDA7EDA4EA4",
+      "bandType": "Alpine Loop",
+      "color": "Desert",
+      "colorOrder": 13,
+      "dateOrder": 13,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 13,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C05ADAFB-F4FB-4064-A6A9-E64303CC8BA5",
+      "bandType": "Alpine Loop",
+      "color": "Desert",
+      "colorOrder": 13,
+      "dateOrder": 13,
+      "hardwareFinish": "Black",
+      "logicalOrder": 13,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "BF3FD13D-9667-4C03-9BA1-A5ED0BAA3619",
+      "bandType": "Alpine Loop",
+      "color": "Dark Olive",
+      "colorOrder": 17,
+      "dateOrder": 14,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 17,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "D526C56C-F84E-4388-B5EE-BD70DA76758A",
+      "bandType": "Alpine Loop",
+      "color": "Dark Olive",
+      "colorOrder": 17,
+      "dateOrder": 14,
+      "hardwareFinish": "Black",
+      "logicalOrder": 17,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "30FC0511-7162-40C1-8032-50BAF54128E2",
+      "bandType": "Alpine Loop",
+      "color": "Burgundy",
+      "colorOrder": 28,
+      "dateOrder": 15,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 28,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "064C7FB8-1EC9-4BC4-809A-C3A989AD6542",
+      "bandType": "Alpine Loop",
+      "color": "Burgundy",
+      "colorOrder": 28,
+      "dateOrder": 15,
+      "hardwareFinish": "Black",
+      "logicalOrder": 28,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "trailLoops": [
