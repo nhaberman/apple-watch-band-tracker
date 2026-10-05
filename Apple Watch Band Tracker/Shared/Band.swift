@@ -246,6 +246,7 @@ class NikeSportBand : Band {
         case none = "None"
         case classic = "Classic"
         case colorFlakes = "Color Flakes"
+        case organicPattern = "Organic Pattern"
     }
     
     init(color: String, season: Season, year: Int, pin: String = "", bandVersion: NikeSportBandVersion = .none, generation: Int? = nil) {
@@ -325,6 +326,7 @@ class SportLoop : Band {
         case stripes = "Stripes"
         case connectors = "Connectors"
         case singleTone = "Single-Tone"
+        case plaid = "Plaid"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: SportLoopVersion = .none, generation: Int? = nil) {
@@ -365,6 +367,7 @@ class NikeSportLoop : Band {
         case logo = "Logo"
         case pullTab = "Pull Tab"
         case reflectiveTab = "Reflective Tab"
+        case organicPattern = "Organic Pattern"
     }
     
     init(color: String, season: Season, year: Int, bandVersion: NikeSportLoopVersion = .none, generation: Int? = nil) {
@@ -578,6 +581,7 @@ class ModernBuckle : Band {
         case none = "None"
         case leather = "Leather"
         case fineWoven = "FineWoven"
+        case texturedFineWoven = "Textured FineWoven"
     }
     
     init(color: String, season: Season, year: Int, bandSize: BandSize? = nil, bandVersion: ModernBuckleVersion = .none, generation: Int? = nil) {
@@ -611,7 +615,7 @@ class ModernBuckle : Band {
     override func formattedName() -> String {
         var result = super.formattedName()
         
-        if self.bandVersion == .fineWoven {
+        if self.bandVersion == .fineWoven || self.bandVersion == .texturedFineWoven {
             if result.last == ")" {
                 result.removeLast()
                 result += ", \(bandVersion.rawValue))"
@@ -627,7 +631,7 @@ class ModernBuckle : Band {
     override func formattedDetails() -> String {
         var result = super.formattedDetails()
         
-        if self.bandVersion == .fineWoven {
+        if self.bandVersion == .fineWoven || self.bandVersion == .texturedFineWoven {
             if result.count == 0 {
                 result = bandVersion.rawValue
             }
