@@ -970,9 +970,19 @@ class OceanBand : Band {
         case black = "Black"
     }
     
-    init(color: String, season: Season, year: Int, hardwareFinish: HardwareFinish = .none, generation: Int? = nil) {
+    private var _bandVersion: OceanBandVersion?
+        var bandVersion: OceanBandVersion { _bandVersion ?? .none}
+        
+        enum OceanBandVersion: String, Codable {
+            case none = "None"
+            case fluoroelastomer = "Fluoroelastomer"
+            case silicone = "Silicone"
+        }
+    
+    init(color: String, season: Season, year: Int, hardwareFinish: HardwareFinish = .none, bandVersion: OceanBandVersion = .none, generation: Int? = nil) {
         super.init(color: color, season: season, year: year, generation: generation)
         self._hardwareFinish = hardwareFinish
+        self._bandVersion = bandVersion
         self.bandType = .OceanBand
     }
     
@@ -981,6 +991,7 @@ class OceanBand : Band {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         _hardwareFinish = try values.decodeIfPresent(HardwareFinish.self, forKey: ._hardwareFinish)
+        _bandVersion = try values.decodeIfPresent(OceanBandVersion.self, forKey: ._bandVersion)
     }
     
     override func encode(to encoder: any Encoder) throws {
@@ -993,10 +1004,21 @@ class OceanBand : Band {
     enum CodingKeys: String, CodingKey {
         case bandType, color, season, year, generation, edition, colorOrder, dateOrder, logicalOrder, size, isOwned
         case _hardwareFinish = "hardwareFinish"
+        case _bandVersion = "bandVersion"
     }
     
     override func formattedName() -> String {
         var result = super.formattedName()
+        
+        if self.bandVersion == .silicone {
+            if result.last == ")" {
+                result.removeLast()
+                result += ", \(bandVersion.rawValue))"
+            }
+            else {
+                result += " (\(bandVersion.rawValue))"
+            }
+        }
         
         if self.hardwareFinish == .natural || self.hardwareFinish == .black {
             if result.last == ")" {
@@ -1013,6 +1035,15 @@ class OceanBand : Band {
     
     override func formattedDetails() -> String {
         var result = super.formattedDetails()
+        
+        if self.bandVersion == .silicone {
+            if result.count == 0 {
+                result = bandVersion.rawValue
+            }
+            else {
+                result += ", \(bandVersion.rawValue)"
+            }
+        }
         
         if self.hardwareFinish == .natural || self.hardwareFinish == .black {
             if result.count == 0 {
