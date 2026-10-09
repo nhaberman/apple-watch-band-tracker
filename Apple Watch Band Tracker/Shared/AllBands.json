@@ -1364,6 +1364,7 @@
       "color": "Olive",
       "colorOrder": 345,
       "dateOrder": 120,
+      "generation": 1,
       "logicalOrder": 345,
       "season": "Spring",
       "year": 2023
@@ -1424,9 +1425,9 @@
       "bandID": "D5F9611D-1182-4231-A1F6-FCE5BDC13FD9",
       "bandType": "Sport Band",
       "color": "Mulberry",
-      "colorOrder": 699,
+      "colorOrder": 696,
       "dateOrder": 126,
-      "logicalOrder": 699,
+      "logicalOrder": 696,
       "season": "Fall",
       "year": 2023
     },
@@ -1666,6 +1667,113 @@
       "dateOrder": 149,
       "logicalOrder": 836,
       "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "1F868E37-99C5-4937-9F8E-F514207F99F0",
+      "bandType": "Sport Band",
+      "color": "Pale Succulent",
+      "colorOrder": 258,
+      "dateOrder": 150,
+      "logicalOrder": 258,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "E8BBAD08-33D9-4125-9BE2-F5B937B6A249",
+      "bandType": "Sport Band",
+      "color": "Olive",
+      "colorOrder": 355,
+      "dateOrder": 151,
+      "generation": 2,
+      "logicalOrder": 355,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "81D1695E-8E24-4334-BF35-698591D78231",
+      "bandType": "Sport Band",
+      "color": "Wildflower Blue",
+      "colorOrder": 465,
+      "dateOrder": 152,
+      "logicalOrder": 465,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "53BF6FCE-5460-418F-BEC7-2FD7E3AEF358",
+      "bandType": "Sport Band",
+      "color": "Navy Blue",
+      "colorOrder": 645,
+      "dateOrder": 153,
+      "logicalOrder": 645,
+      "pin": "Silver",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "3492663D-F4F4-4E2B-A4DD-160F8743D021",
+      "bandType": "Sport Band",
+      "color": "Navy Blue",
+      "colorOrder": 645,
+      "dateOrder": 153,
+      "logicalOrder": 645,
+      "pin": "Ceramic",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "CD510D5D-A0A1-485D-A7CB-24E86AC9BEB4",
+      "bandType": "Sport Band",
+      "color": "Burgundy",
+      "colorOrder": 698,
+      "dateOrder": 154,
+      "logicalOrder": 698,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "2983DAD1-3F5B-4546-8F0D-B752E55D613E",
+      "bandType": "Sport Band",
+      "color": "Magenta",
+      "colorOrder": 705,
+      "dateOrder": 155,
+      "logicalOrder": 705,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "F349553B-B9F0-45BF-8184-FE7BE500511C",
+      "bandType": "Sport Band",
+      "color": "Sand",
+      "colorOrder": 902,
+      "dateOrder": 156,
+      "logicalOrder": 902,
+      "pin": "Silver",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "CEB3556F-7D69-4EFB-822C-26BF2C0504F4",
+      "bandType": "Sport Band",
+      "color": "Sand",
+      "colorOrder": 902,
+      "dateOrder": 156,
+      "logicalOrder": 902,
+      "pin": "Ceramic",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "6AF9C38A-51BE-45FA-A56F-CE7F95059D7A",
+      "bandType": "Sport Band",
+      "color": "Black",
+      "colorOrder": 1063,
+      "dateOrder": 157,
+      "generation": 4,
+      "logicalOrder": 1063,
+      "pin": "Space Black",
+      "season": "Fall",
       "year": 2026
     },
     {
@@ -2272,6 +2380,66 @@
       "year": 2025
     },
     {
+      "bandID": "5F11B90F-008A-4D4E-AF24-F166BC6392BC",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Chalk Calm",
+      "colorOrder": 85,
+      "dateOrder": 54,
+      "logicalOrder": 2020,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "DC1F5C5A-7334-422E-8F35-7543E39833AD",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Green Spark",
+      "colorOrder": 155,
+      "dateOrder": 55,
+      "logicalOrder": 2040,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "96170FFC-E076-427A-9556-E72B536E369D",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Pavement Grey",
+      "colorOrder": 126,
+      "dateOrder": 56,
+      "logicalOrder": 2060,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "492872B6-4026-4535-9607-33066AB9AAAA",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "Essential White",
+      "colorOrder": 359,
+      "dateOrder": 57,
+      "logicalOrder": 2080,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "23F1EE50-E9E3-4A20-9E13-BB7DE11C3086",
+      "bandType": "Nike Sport Band",
+      "bandVersion": "Organic Pattern",
+      "color": "After Dark Black",
+      "colorOrder": 367,
+      "dateOrder": 58,
+      "logicalOrder": 2100,
+      "pin": "Engraved",
+      "season": "Fall",
+      "year": 2026
+    },
+    {
       "bandID": "E3E5BA4B-4128-4EBA-A429-55B9A4BAD579",
       "bandType": "Nike Sport Band",
       "bandVersion": "Classic",
@@ -2679,7 +2847,7 @@
       "color": "Pomegranate",
       "colorOrder": 450,
       "dateOrder": 33,
-      "logicalOrder": 310,
+      "logicalOrder": 311,
       "season": "Fall",
       "year": 2019
     },
@@ -2701,7 +2869,7 @@
       "color": "Anchor Gray",
       "colorOrder": 570,
       "dateOrder": 34,
-      "logicalOrder": 312,
+      "logicalOrder": 313,
       "season": "Fall",
       "year": 2019
     },
@@ -2756,7 +2924,7 @@
       "color": "Neon Pink",
       "colorOrder": 490,
       "dateOrder": 39,
-      "logicalOrder": 311,
+      "logicalOrder": 312,
       "season": "Spring",
       "year": 2020
     },
@@ -2891,6 +3059,7 @@
       "color": "Olive",
       "colorOrder": 220,
       "dateOrder": 49,
+      "generation": 1,
       "logicalOrder": 405,
       "season": "Spring",
       "year": 2021
@@ -3621,15 +3790,105 @@
       "year": 2026
     },
     {
+      "bandID": "60B5F92C-7463-4ABC-91CD-831964FBDD5D",
+      "bandType": "Sport Loop",
+      "bandVersion": "None",
+      "color": "Pride Edition",
+      "colorOrder": 1120,
+      "dateOrder": 115,
+      "edition": "2026",
+      "logicalOrder": 1030,
+      "season": "Summer",
+      "year": 2026
+    },
+    {
       "bandID": "A649A1D1-9862-41D8-99BB-5C040036DD21",
       "bandType": "Sport Loop",
       "bandVersion": "None",
       "color": "Close Your Rings",
       "colorOrder": 10001,
-      "dateOrder": 115,
+      "dateOrder": 116,
       "edition": "2026",
       "logicalOrder": 2020,
       "season": "Summer",
+      "year": 2026
+    },
+    {
+      "bandID": "E1E57CE4-4BE6-4F89-9434-881FDF558023",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Limestone",
+      "colorOrder": 155,
+      "dateOrder": 117,
+      "logicalOrder": 807,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "9ABD1AB6-D6AE-45D7-B2A9-A6C0817FE957",
+      "bandType": "Sport Loop",
+      "bandVersion": "Plaid",
+      "color": "Light Umber Plaid",
+      "colorOrder": 163,
+      "dateOrder": 118,
+      "logicalOrder": 910,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B8EC99C2-AF62-44EA-A114-966DB55FE858",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Olive",
+      "colorOrder": 166,
+      "dateOrder": 119,
+      "generation": 2,
+      "logicalOrder": 808,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "6358D901-BEFF-4884-A149-48A45917B468",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Chambray Blue",
+      "colorOrder": 251,
+      "dateOrder": 120,
+      "logicalOrder": 832,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "EAFB2AA2-3FCF-46D1-B4C7-A7DE2495E83F",
+      "bandType": "Sport Loop",
+      "bandVersion": "Plaid",
+      "color": "Burgundy Plaid",
+      "colorOrder": 402,
+      "dateOrder": 121,
+      "logicalOrder": 950,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "D1455484-4DED-4CC8-A94D-8FE910C43011",
+      "bandType": "Sport Loop",
+      "bandVersion": "Single-Tone",
+      "color": "Burgundy",
+      "colorOrder": 403,
+      "dateOrder": 122,
+      "logicalOrder": 868,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "1E6B15A6-7B1F-4D29-90D5-0006C9576CDC",
+      "bandType": "Sport Loop",
+      "bandVersion": "Two-Tone",
+      "color": "Magenta",
+      "colorOrder": 445,
+      "dateOrder": 123,
+      "logicalOrder": 310,
+      "season": "Fall",
       "year": 2026
     }
   ],
@@ -4114,6 +4373,61 @@
       "logicalOrder": 750,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "BC8E4853-6A4D-4C87-88A6-2E258EB2B516",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Chalk Calm",
+      "colorOrder": 26,
+      "dateOrder": 44,
+      "logicalOrder": 810,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C766D637-976D-4852-B6B0-9866838759E2",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Green Spark",
+      "colorOrder": 72,
+      "dateOrder": 45,
+      "logicalOrder": 820,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B25E95BC-BF9F-4B79-8675-098A1B581558",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Pavement Grey",
+      "colorOrder": 192,
+      "dateOrder": 46,
+      "logicalOrder": 830,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "22E9BFDB-E040-4B7B-8000-F8C90F7F27F2",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "Essential White",
+      "colorOrder": 203,
+      "dateOrder": 47,
+      "logicalOrder": 840,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "105A3F14-2E25-4183-BB2B-DF6A4ED2F8F8",
+      "bandType": "Nike Sport Loop",
+      "bandVersion": "Organic Pattern",
+      "color": "After Dark Black",
+      "colorOrder": 265,
+      "dateOrder": 48,
+      "logicalOrder": 850,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "soloLoops": [
@@ -4424,7 +4738,8 @@
       "color": "Olive",
       "colorOrder": 100,
       "dateOrder": 31,
-      "logicalOrder": 105,
+      "generation": 1,
+      "logicalOrder": 100,
       "season": "Spring",
       "year": 2023
     },
@@ -4618,6 +4933,47 @@
       "logicalOrder": 139,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "855DA32B-A830-40F5-9482-51855B13823E",
+      "bandType": "Solo Loop",
+      "color": "Olive",
+      "colorOrder": 108,
+      "dateOrder": 51,
+      "generation": 2,
+      "logicalOrder": 108,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "402FB645-77C8-477E-B9E8-04550CDEFB35",
+      "bandType": "Solo Loop",
+      "color": "Wildflower Blue",
+      "colorOrder": 113,
+      "dateOrder": 52,
+      "logicalOrder": 113,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C028CBC7-D930-4EE3-8F3F-68CE884D4E3D",
+      "bandType": "Solo Loop",
+      "color": "Navy Blue",
+      "colorOrder": 155,
+      "dateOrder": 53,
+      "logicalOrder": 155,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "60B0FCF5-543D-443B-9AB8-2ED1BED2354B",
+      "bandType": "Solo Loop",
+      "color": "Burgundy",
+      "colorOrder": 175,
+      "dateOrder": 54,
+      "logicalOrder": 175,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "braidedSoloLoops": [
@@ -4820,9 +5176,9 @@
       "bandID": "0041DB1A-6B2F-4D30-8411-041BD7AD6C8F",
       "bandType": "Braided Solo Loop",
       "color": "Slate Blue",
-      "colorOrder": 76,
+      "colorOrder": 78,
       "dateOrder": 20,
-      "logicalOrder": 76,
+      "logicalOrder": 78,
       "season": "Fall",
       "year": 2022
     },
@@ -4862,6 +5218,7 @@
       "color": "Olive",
       "colorOrder": 71,
       "dateOrder": 24,
+      "generation": 1,
       "logicalOrder": 71,
       "season": "Spring",
       "year": 2023
@@ -4951,9 +5308,9 @@
       "bandID": "8064D218-EC1C-43C9-9FE7-1862C559B1B7",
       "bandType": "Braided Solo Loop",
       "color": "Chartreuse",
-      "colorOrder": 42,
+      "colorOrder": 48,
       "dateOrder": 33,
-      "logicalOrder": 42,
+      "logicalOrder": 48,
       "season": "Fall",
       "year": 2024
     },
@@ -4983,6 +5340,7 @@
       "color": "Magenta",
       "colorOrder": 112,
       "dateOrder": 36,
+      "generation": 1,
       "logicalOrder": 112,
       "season": "Fall",
       "year": 2024
@@ -5066,6 +5424,68 @@
       "edition": "2026",
       "logicalOrder": 2020,
       "season": "Spring",
+      "year": 2026
+    },
+    {
+      "bandID": "C28BF851-BFC8-4120-95A8-E132F3362828",
+      "bandType": "Braided Solo Loop",
+      "color": "Olive",
+      "colorOrder": 49,
+      "dateOrder": 45,
+      "generation": 2,
+      "logicalOrder": 49,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "F3A5FF3C-F2E8-4989-B1B9-D8AD87FDEAA5",
+      "bandType": "Braided Solo Loop",
+      "color": "Wildflower Blue",
+      "colorOrder": 77,
+      "dateOrder": 46,
+      "logicalOrder": 77,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B8BCAE32-4183-45DB-9223-437823E99BC6",
+      "bandType": "Braided Solo Loop",
+      "color": "Navy Blue",
+      "colorOrder": 98,
+      "dateOrder": 47,
+      "logicalOrder": 98,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "E0470BE8-5988-4341-875F-D3945A817596",
+      "bandType": "Braided Solo Loop",
+      "color": "Burgundy",
+      "colorOrder": 102,
+      "dateOrder": 48,
+      "logicalOrder": 102,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "B2D776CD-C8F5-49C4-AA37-26A7B9FCF809",
+      "bandType": "Braided Solo Loop",
+      "color": "Magenta",
+      "colorOrder": 111,
+      "dateOrder": 49,
+      "generation": 2,
+      "logicalOrder": 111,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "BED64C32-05D9-45BA-9AE4-B1799C6D2700",
+      "bandType": "Braided Solo Loop",
+      "color": "Black",
+      "colorOrder": 170,
+      "dateOrder": 50,
+      "logicalOrder": 170,
+      "season": "Fall",
       "year": 2026
     }
   ],
@@ -6318,6 +6738,7 @@
       "color": "Mulberry",
       "colorOrder": 135,
       "dateOrder": 30,
+      "generation": 1,
       "logicalOrder": 2100,
       "season": "Fall",
       "year": 2023
@@ -6405,6 +6826,55 @@
       "logicalOrder": 2175,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "5812600D-0418-4A1E-9B1C-F80262ADC9AD",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Camel",
+      "colorOrder": 66,
+      "dateOrder": 38,
+      "logicalOrder": 3100,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "BEF6A27E-B4C2-4257-8E43-8119CA8BD07A",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Sage",
+      "colorOrder": 67,
+      "dateOrder": 39,
+      "logicalOrder": 3200,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "509F86CF-17B4-458F-AC96-90FA1DE98895",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Navy Blue",
+      "colorOrder": 127,
+      "dateOrder": 40,
+      "logicalOrder": 3300,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "9937516C-73E4-4D3A-83DD-C0DBF8E33097",
+      "bandSize": "None",
+      "bandType": "Modern Buckle",
+      "bandVersion": "Textured FineWoven",
+      "color": "Mulberry",
+      "colorOrder": 131,
+      "dateOrder": 41,
+      "generation": 2,
+      "logicalOrder": 3400,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "leatherLoops": [
@@ -6867,6 +7337,50 @@
       "logicalOrder": 140,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "BFAF424F-363F-4249-A8AD-5B724F61F597",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Camel",
+      "colorOrder": 10,
+      "dateOrder": 10,
+      "logicalOrder": 10,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "843B5641-C706-4E7D-B83B-2E69412E5DB0",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Wildflower Blue",
+      "colorOrder": 80,
+      "dateOrder": 11,
+      "logicalOrder": 80,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "82E8CB4E-7DBD-4F18-BC09-3EFC0FE51390",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Burgundy",
+      "colorOrder": 130,
+      "dateOrder": 12,
+      "logicalOrder": 130,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "A55E6AE8-F38B-479B-B5AE-94EB6F1BBE58",
+      "bandSize": "None",
+      "bandType": "Magnetic Link",
+      "color": "Midnight",
+      "colorOrder": 240,
+      "dateOrder": 13,
+      "logicalOrder": 240,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "milaneseLoops": [
@@ -6928,6 +7442,7 @@
       "color": "Natural",
       "colorOrder": 15,
       "dateOrder": 6,
+      "generation": 1,
       "logicalOrder": 15,
       "season": "Fall",
       "year": 2024
@@ -6952,6 +7467,37 @@
       "logicalOrder": 35,
       "season": "Fall",
       "year": 2024
+    },
+    {
+      "bandID": "5E43AFD4-F902-4C0C-B246-8D8725472B68",
+      "bandType": "Milanese Loop",
+      "color": "Natural",
+      "colorOrder": 16,
+      "dateOrder": 9,
+      "generation": 2,
+      "logicalOrder": 16,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "01DE9268-825B-4C6E-8822-154BC57DEC88",
+      "bandType": "Milanese Loop",
+      "color": "Radiant Gold",
+      "colorOrder": 22,
+      "dateOrder": 10,
+      "logicalOrder": 22,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "922A177E-FC13-4FDC-B426-CEE87DC727E1",
+      "bandType": "Milanese Loop",
+      "color": "Dark Bronze",
+      "colorOrder": 32,
+      "dateOrder": 11,
+      "logicalOrder": 32,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "linkBracelets": [
@@ -6981,6 +7527,7 @@
       "color": "Natural",
       "colorOrder": 20,
       "dateOrder": 3,
+      "generation": 1,
       "logicalOrder": 20,
       "season": "Fall",
       "year": 2024
@@ -7004,6 +7551,27 @@
       "logicalOrder": 40,
       "season": "Fall",
       "year": 2024
+    },
+    {
+      "bandID": "E7A0BF33-1A62-4AD6-BB8A-81627501EC36",
+      "bandType": "Link Bracelet",
+      "color": "Natural",
+      "colorOrder": 22,
+      "dateOrder": 6,
+      "generation": 2,
+      "logicalOrder": 22,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "1CDAC45E-28A0-4698-B73D-2950277B4188",
+      "bandType": "Link Bracelet",
+      "color": "Radiant Gold",
+      "colorOrder": 28,
+      "dateOrder": 7,
+      "logicalOrder": 28,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "alpineLoops": [
@@ -7198,6 +7766,72 @@
       "logicalOrder": 40,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "A7538CBD-01E0-46D5-A59F-7EDA7EDA4EA4",
+      "bandType": "Alpine Loop",
+      "color": "Desert",
+      "colorOrder": 13,
+      "dateOrder": 13,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 13,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C05ADAFB-F4FB-4064-A6A9-E64303CC8BA5",
+      "bandType": "Alpine Loop",
+      "color": "Desert",
+      "colorOrder": 13,
+      "dateOrder": 13,
+      "hardwareFinish": "Black",
+      "logicalOrder": 13,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "BF3FD13D-9667-4C03-9BA1-A5ED0BAA3619",
+      "bandType": "Alpine Loop",
+      "color": "Dark Olive",
+      "colorOrder": 17,
+      "dateOrder": 14,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 17,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "D526C56C-F84E-4388-B5EE-BD70DA76758A",
+      "bandType": "Alpine Loop",
+      "color": "Dark Olive",
+      "colorOrder": 17,
+      "dateOrder": 14,
+      "hardwareFinish": "Black",
+      "logicalOrder": 17,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "30FC0511-7162-40C1-8032-50BAF54128E2",
+      "bandType": "Alpine Loop",
+      "color": "Burgundy",
+      "colorOrder": 28,
+      "dateOrder": 15,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 28,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "064C7FB8-1EC9-4BC4-809A-C3A989AD6542",
+      "bandType": "Alpine Loop",
+      "color": "Burgundy",
+      "colorOrder": 28,
+      "dateOrder": 15,
+      "hardwareFinish": "Black",
+      "logicalOrder": 28,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "trailLoops": [
@@ -7392,168 +8026,321 @@
       "logicalOrder": 33,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "026193DA-070C-4724-9BB3-8FB23ADEB64B",
+      "bandType": "Trail Loop",
+      "color": "Sand",
+      "colorOrder": 3,
+      "dateOrder": 13,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 3,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "3BA22891-985C-421A-8BBF-72A19F69C387",
+      "bandType": "Trail Loop",
+      "color": "Sand",
+      "colorOrder": 3,
+      "dateOrder": 13,
+      "hardwareFinish": "Black",
+      "logicalOrder": 3,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "4D092214-4A8C-4432-ACD7-98AB40B8A043",
+      "bandType": "Trail Loop",
+      "color": "Burgundy",
+      "colorOrder": 23,
+      "dateOrder": 14,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 23,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "F7A69339-BB39-4EE8-8E93-6F41362B6DD9",
+      "bandType": "Trail Loop",
+      "color": "Burgundy",
+      "colorOrder": 23,
+      "dateOrder": 14,
+      "hardwareFinish": "Black",
+      "logicalOrder": 23,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "2314BC5D-4C9A-499D-8023-E65D925313F4",
+      "bandType": "Trail Loop",
+      "color": "Dark Umber",
+      "colorOrder": 24,
+      "dateOrder": 15,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 24,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "EBEEDEFB-3C32-4AFB-9C4E-E17D9193B090",
+      "bandType": "Trail Loop",
+      "color": "Dark Umber",
+      "colorOrder": 24,
+      "dateOrder": 15,
+      "hardwareFinish": "Black",
+      "logicalOrder": 24,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "oceanBands": [
     {
       "bandID": "98686B81-A4A0-41B4-B3BA-4E80753765D4",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Yellow",
-      "colorOrder": 10,
+      "colorOrder": 20,
       "dateOrder": 1,
-      "logicalOrder": 10,
+      "logicalOrder": 1020,
       "season": "Fall",
       "year": 2022
     },
     {
       "bandID": "4B06464A-ADF9-4130-84D0-5E42D9C8E26F",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "White",
-      "colorOrder": 20,
+      "colorOrder": 90,
       "dateOrder": 2,
-      "logicalOrder": 20,
+      "logicalOrder": 1090,
       "season": "Fall",
       "year": 2022
     },
     {
       "bandID": "314393C8-D96C-42C1-B31D-6D7C1B9FEFFE",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Midnight",
-      "colorOrder": 30,
+      "colorOrder": 120,
       "dateOrder": 3,
-      "logicalOrder": 30,
+      "logicalOrder": 1120,
       "season": "Fall",
       "year": 2022
     },
     {
       "bandID": "FAF77C6B-2E9C-4B45-ABA1-92B06EEDBF21",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Orange",
-      "colorOrder": 5,
+      "colorOrder": 10,
       "dateOrder": 4,
-      "logicalOrder": 5,
+      "logicalOrder": 1010,
       "season": "Fall",
       "year": 2023
     },
     {
       "bandID": "E42EE39B-3926-41AE-AF66-A219F37D19F1",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Blue",
-      "colorOrder": 15,
+      "colorOrder": 70,
       "dateOrder": 5,
-      "logicalOrder": 15,
+      "logicalOrder": 1070,
       "season": "Fall",
       "year": 2023
     },
     {
       "bandID": "2EF8EC83-8716-45E0-AECD-B4E6F2CE2607",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Ice Blue",
-      "colorOrder": 12,
+      "colorOrder": 50,
       "dateOrder": 6,
       "hardwareFinish": "Natural",
-      "logicalOrder": 12,
+      "logicalOrder": 1050,
       "season": "Fall",
       "year": 2024
     },
     {
       "bandID": "07BBF8C9-625B-4221-9E73-8A65D4A7462B",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Ice Blue",
-      "colorOrder": 12,
+      "colorOrder": 50,
       "dateOrder": 6,
       "hardwareFinish": "Black",
-      "logicalOrder": 12,
+      "logicalOrder": 1050,
       "season": "Fall",
       "year": 2024
     },
     {
       "bandID": "31296877-28A6-441B-9526-B45F54CEE47B",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Navy",
-      "colorOrder": 18,
+      "colorOrder": 80,
       "dateOrder": 7,
       "hardwareFinish": "Natural",
-      "logicalOrder": 18,
+      "logicalOrder": 1080,
       "season": "Fall",
       "year": 2024
     },
     {
       "bandID": "8444332C-58D2-4B98-B744-D480EB1A32D0",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Navy",
-      "colorOrder": 18,
+      "colorOrder": 80,
       "dateOrder": 7,
       "hardwareFinish": "Black",
-      "logicalOrder": 18,
+      "logicalOrder": 1080,
       "season": "Fall",
       "year": 2024
     },
     {
       "bandID": "DBDB3C14-94EF-444C-9775-EFAC9E029411",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Black",
-      "colorOrder": 40,
+      "colorOrder": 130,
       "dateOrder": 8,
       "hardwareFinish": "Natural",
-      "logicalOrder": 40,
+      "logicalOrder": 1130,
       "season": "Fall",
       "year": 2024
     },
     {
       "bandID": "50851FC9-B4ED-4265-B96F-64E2F75A3DAC",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Black",
-      "colorOrder": 40,
+      "colorOrder": 130,
       "dateOrder": 8,
       "hardwareFinish": "Black",
-      "logicalOrder": 40,
+      "logicalOrder": 1130,
       "season": "Fall",
       "year": 2024
     },
     {
       "bandID": "5CC775C7-F9D8-4964-9382-39446306561F",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Neon Green",
-      "colorOrder": 11,
+      "colorOrder": 30,
       "dateOrder": 9,
       "hardwareFinish": "Natural",
-      "logicalOrder": 11,
+      "logicalOrder": 1030,
       "season": "Fall",
       "year": 2025
     },
     {
       "bandID": "9A099AC2-7E00-46E4-93C1-D902296F8C60",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Neon Green",
-      "colorOrder": 11,
+      "colorOrder": 30,
       "dateOrder": 9,
       "hardwareFinish": "Black",
-      "logicalOrder": 11,
+      "logicalOrder": 1030,
       "season": "Fall",
       "year": 2025
     },
     {
       "bandID": "645B4BE6-C526-4B21-8A10-E9F73A53EFA4",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Anchor Blue",
-      "colorOrder": 14,
+      "colorOrder": 60,
       "dateOrder": 10,
       "hardwareFinish": "Natural",
-      "logicalOrder": 14,
+      "logicalOrder": 1060,
       "season": "Fall",
       "year": 2025
     },
     {
       "bandID": "432C08B3-3890-4362-B24E-032ADBC1E4F5",
       "bandType": "Ocean Band",
+      "bandVersion": "Fluoroelastomer",
       "color": "Anchor Blue",
-      "colorOrder": 14,
+      "colorOrder": 60,
       "dateOrder": 10,
       "hardwareFinish": "Black",
-      "logicalOrder": 14,
+      "logicalOrder": 1060,
       "season": "Fall",
       "year": 2025
+    },
+    {
+      "bandID": "254AD61D-C6C8-4322-AAC2-0F897140A69B",
+      "bandType": "Ocean Band",
+      "bandVersion": "Silicone",
+      "color": "Translucent Kelp",
+      "colorOrder": 40,
+      "dateOrder": 11,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 2040,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "4448F8F8-BB2C-47C2-B963-AB804B3112AC",
+      "bandType": "Ocean Band",
+      "bandVersion": "Silicone",
+      "color": "Translucent Kelp",
+      "colorOrder": 40,
+      "dateOrder": 11,
+      "hardwareFinish": "Black",
+      "logicalOrder": 2040,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "95150E1B-92A9-43A9-848D-1860295889FE",
+      "bandType": "Ocean Band",
+      "bandVersion": "Silicone",
+      "color": "Translucent Gray",
+      "colorOrder": 100,
+      "dateOrder": 12,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 2100,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "037424CF-90F9-4C56-940D-1F30305B756F",
+      "bandType": "Ocean Band",
+      "bandVersion": "Silicone",
+      "color": "Translucent Gray",
+      "colorOrder": 100,
+      "dateOrder": 12,
+      "hardwareFinish": "Black",
+      "logicalOrder": 2100,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "C1930626-B955-4724-9B63-1D3BC1F19F2E",
+      "bandType": "Ocean Band",
+      "bandVersion": "Silicone",
+      "color": "Translucent Black",
+      "colorOrder": 110,
+      "dateOrder": 13,
+      "hardwareFinish": "Natural",
+      "logicalOrder": 2110,
+      "season": "Fall",
+      "year": 2026
+    },
+    {
+      "bandID": "D84C8764-FE8E-47B5-BBBF-38706094DC5B",
+      "bandType": "Ocean Band",
+      "bandVersion": "Silicone",
+      "color": "Translucent Black",
+      "colorOrder": 110,
+      "dateOrder": 13,
+      "hardwareFinish": "Black",
+      "logicalOrder": 2110,
+      "season": "Fall",
+      "year": 2026
     }
   ],
   "titaniumMilaneseLoops": [
